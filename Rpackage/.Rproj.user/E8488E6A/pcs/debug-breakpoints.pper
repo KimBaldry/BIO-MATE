@@ -1,0 +1,21 @@
+{
+    "debugBreakpointsState" : {
+        "breakpoints" : [
+            {
+                "editor_line_number" : 147,
+                "editor_state" : 2,
+                "function_name" : "PIG_to_WHPE",
+                "function_steps" : "",
+                "id" : 0,
+                "is_package_breakpoint" : true,
+                "is_pending_debug_completion" : false,
+                "line_number" : 147,
+                "needs_updated_steps" : true,
+                "package_name" : "BIOMATE",
+                "path" : "~/Projects/BIO-MATE/BIO-MATE.v0/Rpackage/R/PIG_to_WHPE.R",
+                "state" : 2,
+                "type" : 0
+            }
+        ]
+    }
+}

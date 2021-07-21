@@ -1,0 +1,13 @@
+These notes were made by Kimberlee Baldry based on the cruise report of 06AQ19990318
+
+Quality Assurance notes
+- CTD system worked reliably
+- Temperature calibrations were carried out with both mercury and electronic reversing thermometers
+- Salinity calibrations were made on board with a Guildline Autosal Salinometer
+- Oxygen calibrations were done by means of Winkler titrations 
+- An intercalibration Cast was made with the Neil-Brown Mark 111 CTD-probe contributed by the Institute of Oceanography, Gothenburg which had been used during EPOS Leg 1
+- Chlorophyll a [µg/l] (Chl a) * PI: Jacques, G * METHOD: Aminco-Bowman spectrofluorometer * COMMENT: Neveux & Panouse, 1987
+- CTD data has been flagged quality B (Driemel et al. 2017):it is Within WOCE accuracy
+- there is information on ice cover in the cruise report
+
+Headers in files were altered to remove special characters
