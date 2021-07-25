@@ -1,0 +1,5 @@
+"0","```r
+split_compiled_delim_file(path = \"E:/Data_downloads/PAL-LTER/pigments/CHL\", file_name = \"Chlorophyll (Cruise).csv\", delim = \",\",synonym_var_name = \"studyName\",station_split = F, fillcell = T)
+
+split_compiled_delim_file(path = \"E:/Data_downloads/PAL-LTER/pigments/HPLC\", file_name = \"High Performance Liquid Chromatography Pigments.csv\", delim = \",\",synonym_var_name = \"studyName\",station_split = F)
+```"

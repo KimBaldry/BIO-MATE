@@ -1,0 +1,21 @@
+"0","```r
+dirs = list.dirs(\"E:/Data_downloads/PANGEAE\",full.names = T, recursive = F)
+for(dr in dirs){
+  fname = list.files(file.path(dr,\"ctd\"),pattern = \".tab\", full.names = T)
+  # find the line where the data table starts
+  f <- file( fname, open = \"r\" )
+  n=0
+  while( TRUE ){
+    line <- readLines( f, 1L )
+    n = n+1
+    if(grepl(pattern = \"\\*\\/\" ,x = line)){
+      ls = n +1
+      break
+    }
+  }
+  close( f )
+
+split_compiled_delim_file(path = file.path(dr,\"ctd\"), file_name = basename(fname), delim = \"\t\" , expo_split = F, station_var_name = \"Event\",station_split = T, fillcell = T, line_start = ls)  
+
+}
+```"

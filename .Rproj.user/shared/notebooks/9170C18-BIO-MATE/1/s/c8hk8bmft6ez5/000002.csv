@@ -1,0 +1,12 @@
+"0","```r
+MAREDAT_df = fread(\"E:/Data_downloads/MAREDAT/MAREDAT_pigments_master_file_Updated210313.csv\")
+MAREDAT_df = MAREDAT_df %>% filter(Cruise_des %in% c(119:122))
+for(ex in unique(MAREDAT_df$Cruise_des))
+{
+  ex_df = MAREDAT_df %>% filter(Cruise_des == ex)
+  ex_dir = file.path(\"E:/Data_downloads/MAREDAT\", ex)
+  if(!file.exists(ex_dir))
+    {dir.create(ex_dir)}
+  write.csv(ex_df, paste(ex_dir, \"/MAREDAT.2019_split_\",ex,\".csv\", sep = \"\"), row.names = F)
+}
+```"

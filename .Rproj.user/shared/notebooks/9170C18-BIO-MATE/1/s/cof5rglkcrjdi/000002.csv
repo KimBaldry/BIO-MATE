@@ -1,0 +1,19 @@
+"0","```r
+GLODAP_df = fread(\"E:/Data_downloads/GLODAP/GLODAPv2.2020_Merged_Master_File.csv\")
+```"
+"1","|--------------------------------------------------|
+|==================================================|
+|--------------------------------------------------|
+|==================================================|
+"
+"0","```r
+colnames(GLODAP_df) = sub( \"G2\", \"\",colnames(GLODAP_df))
+for(ex in unique(GLODAP_df$cruise))
+{
+  ex_df = GLODAP_df %>% filter(cruise == ex)
+  ex_dir = file.path(\"E:/Data_downloads/GLODAP\", ex)
+  if(!file.exists(ex_dir))
+    {dir.create(ex_dir)}
+  write.csv(ex_df, paste(ex_dir, \"/GLODAPv2.2020_split_\",ex,\".csv\", sep = \"\"), row.names = F)
+}
+```"

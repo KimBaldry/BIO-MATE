@@ -1,0 +1,37 @@
+"0","```r
+heads = fread(\"E:/Data_downloads/MGDS/Missing_headers.csv\", header = T)
+for(sp in 1:length(heads$EXPOCODE))
+{
+  files = list.files(heads$path[sp], pattern = \".cnv\", full.names = T)
+  for(fname in files){
+  new_file_path =   file.path(heads$path[sp],\"adapted\",paste(\"heads_insert_\",basename(fname), sep = \"\"))
+  if(!file.exists(file.path(heads$path[sp],\"adapted\"))){dir.create(file.path(heads$path[sp],\"adapted\"))}
+  
+  f <- file( fname, open = \"r\" )
+  n=0
+  while( TRUE ){
+    line <- readLines( f, 1L )
+    n = n+1
+    if(grepl(pattern = \"\\*END\\*\" ,x = line)){
+    
+    break
+    }
+  }
+  close( f )
+  
+  f <- file( fname, open = \"r\" )
+  fd <- file(new_file_path, open = \"wt\")
+  writeLines(readLines(f,n),fd)
+  h = heads[sp,3:24]
+  l = !unlist(lapply(h, FUN = is.empty))
+  h = as.character(h)[l]
+  writeLines(paste(h, collapse = \"\t\", sep = \"\"),fd)
+  writeLines(readLines(f,-1L),fd)
+  close( f )
+  close(fd)
+  tf = file(file.path(heads$path[sp],\"adapted\",paste(\"Data_amendments\",Sys.Date(),\".txt\", sep = \"\")),open = \"wt\")
+      writeLines(paste(\"A header line was inserted into\",fname),tf)
+close(tf)
+  }
+}
+```"
