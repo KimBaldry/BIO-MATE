@@ -182,7 +182,7 @@ PROF_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,
         }else{
       if(is.na(info$missing_value)){data = as.data.frame(fread(fl,stringsAsFactors = F, skip = b-1,strip.white = T, header = F, keepLeadingZeros = T))
 }else{
-        data = as.data.frame(fread(fl,stringsAsFactors = F, skip = b-1, na.strings = info$missing_value,strip.white = T, header = F, keepLeadingZeros = T))
+        data = as.data.frame(fread(fl,stringsAsFactors = F, skip = b-1, na.strings = as.character(info$missing_value),strip.white = T, header = F, keepLeadingZeros = T))
 
       }
       # get the header line

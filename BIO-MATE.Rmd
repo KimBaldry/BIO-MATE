@@ -14,11 +14,8 @@ library(readr)
 library(geosphere)
 library(stringi)
 library(tidyr)
-source(file.path("./src","Marlin_SS_split_CTD.R"))
-source(file.path("./src","split_compiled_delim_file.R"))
-source(file.path("./src","PROF_to_WHPE.R"))
-source(file.path("./src","isempty.R"))
-source(file.path("./src","PIG_to_WHPE.R"))
+library(devtools)
+devtools::install_github("KimBaldry/BIO-MATE", subdir = "Rpackage")
 
 ```
 
@@ -83,8 +80,8 @@ write.csv(x = hplc,file = "E:/Data_downloads/PAL-LTER/pigments/HPLC/33LG20070101
 ```
 
 
-
 ### PANGEA CTD data
+
 split into station files
 ```{r}
 dirs = list.dirs("E:/Data_downloads/PANGEAE",full.names = T, recursive = F)
@@ -107,6 +104,24 @@ split_compiled_delim_file(path = file.path(dr,"ctd"), file_name = basename(fname
 
 }
 ```
+
+filter and split TARA oceans ctd 
+```{r}
+file_name = "TARA_physical.tab"
+path = "E:/Data_downloads/PANGEAE/35XI20090905/ctd"
+delim = "\t"
+
+data = read.table(file = file.path(path,file_name), header = T, sep = delim, skip = 0, stringsAsFactors = F, strip.white = T,fill = T)
+
+data = data %>% filter(Station != "")
+for(sn in unique(data$Station)){
+  sub_data = data %>% dplyr::filter(data[,"Station"] == sn)
+  write.csv(sub_data, file = file.path(path,"split",paste("35XI20090905","_",sn,"_from_", "TARA_physical",".csv", sep = "")), row.names = F)
+}
+
+
+```
+
 
 # Something is wrong with a couple of profiles
 ```{r}
@@ -190,7 +205,7 @@ for(ex in unique(GLODAP_df$cruise))
 Split MAREDAT by cruise IDs
 ```{r}
 MAREDAT_df = fread("E:/Data_downloads/MAREDAT/MAREDAT_pigments_master_file_Updated210313.csv")
-MAREDAT_df = MAREDAT_df %>% filter(Cruise_des %in% c(119:122))
+MAREDAT_df = MAREDAT_df %>% filter(Cruise_des %in% c(18,47,119:122))
 for(ex in unique(MAREDAT_df$Cruise_des))
 {
   ex_df = MAREDAT_df %>% filter(Cruise_des == ex)
@@ -230,6 +245,50 @@ for(dir in list.dirs("E:/Data_downloads/JGOFS", recursive = F)){
 ```
 
 
+# SISMER data
+```{r}
+expos = c("35MF19940126", "35MF19950927", "35MF19980121", "35MF20040103")
+for(ex in expos){
+  path = paste("E:/Data_downloads/SISMER", ex, "ctd", sep = "/")
+  fname = list.files(path, pattern = "*.txt")
+  fl = file.path(path,fname)
+ 
+  f <- file( fl, open = "r" )
+      n = 0
+      while( TRUE ){
+        line <- readLines( f, 1L )
+        n = n+1
+        if(BIOMATE::is.empty(line)){next}
+        if(substr(line,1,2) != "//"){break}
+      }
+      close(f)
+
+  data = read.table(file = fl, header = T, sep = "\t", stringsAsFactors = F, strip.white = T,fill = T, skip = n-1)
+  
+  # change header names 
+  if(ex == "35MF19940126" | ex == "35MF19950927"){
+  colnames(data)[c(4,5,6,10,12,14,16)] = c("TIME","LATITUDE", "LONGITUDE","PRES", "TEMP", "PSAL", "DOXY")}
+  if(ex == "35MF19980121"){colnames(data)[c(4,5,6,10,14,16)] = c("TIME","LATITUDE", "LONGITUDE","PRES", "TEMP", "PSAL")}
+  if(ex == "35MF20040103"){colnames(data)[c(4,5,6,10,14,16,18)] = c("TIME","LATITUDE", "LONGITUDE","PRES", "TEMP", "PSAL","FLUOR")}
+  
+  # split according to finite station type
+  idx = which(is.finite(data$Station))
+  for(st in 1:length(idx)){
+    if(st == length(idx)){sub_data = data[idx[st]:length(data),]}else{sub_data = data[idx[st]:(idx[st+1]-1),]}
+    
+  
+    # fill in missing values
+    sub_data[,c("Cruise","Station", "TIME", "LATITUDE", "LONGITUDE")] = sub_data[1,c("Cruise","Station", "TIME", "LATITUDE", "LONGITUDE")]
+    
+    # save file in new split directory
+    write.csv(sub_data, file.path(paste("E:/Data_downloads/SISMER", ex, "ctd","split", sep = "/"), paste(ex,"ctd_", sub_data$Station[1],".csv", sep = "")), row.names = F )
+  }
+  
+}
+```
+
+
+
 # Reformat Files
 Bulk run
 ```{r}
@@ -249,91 +308,91 @@ for(ch in chunks[2:5]){
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE"
-PROF_to_WHPE(path_out = file.path(path,"regression_test","reformatted_data"), file_path = file.path(path,"processing_metadata","regression_test"),userID = "IMASUTASKB") 
+PROF_to_WHPE(path_out = file.path(path,"regression_test","reformatted_data"), file_path = file.path(path,"product_data","processing_metadata","regression_test"),userID = "IMASUTASKB") 
 ```
 
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE"
-PIG_to_WHPE(path_out = file.path(path,"regression_test","reformatted_data"), file_path = file.path(path,"processing_metadata","regression_test"),userID = "IMASUTASKB")
+PIG_to_WHPE(path_out = file.path(path,"regression_test","reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","regression_test"),userID = "IMASUTASKB")
 ```
 
 ## Cluster 0
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","regression_test"),userID = "IMASUTASKB") 
+BIOMATE::PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","regression_test"),userID = "IMASUTASKB") 
 ```
 
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","regression_test"),userID = "IMASUTASKB")
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","regression_test"),userID = "IMASUTASKB")
 ```
 
 ## Cluster 1
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","C1"),userID = "IMASUTASKB") 
+PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C1"),userID = "IMASUTASKB") 
 ```
 
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","C1"),userID = "IMASUTASKB")
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C1"),userID = "IMASUTASKB")
 ```
 
 ## Cluster 2
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","C2"),userID = "IMASUTASKB")
+PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C2"),userID = "IMASUTASKB")
 ```
 
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","C2"),userID = "IMASUTASKB")
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C2"),userID = "IMASUTASKB")
 ```
 
 ## Cluster 3
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","C3"),userID = "IMASUTASKB", row_start = 2, row_end = 2)
+PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C3"),userID = "IMASUTASKB", row_start = 2, row_end = 2)
 ```
 
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","C3"),userID = "IMASUTASKB")
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C3"),userID = "IMASUTASKB")
 ```
 
 ## Cluster 4
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0"
-PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","C4"),userID = "IMASUTASKB", row_start = 14)
+PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C4"),userID = "IMASUTASKB", row_start = 14)
 ```
 
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","C4"),userID = "IMASUTASKB", row_start = )
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C4"),userID = "IMASUTASKB", row_start = 1)
 ```
 
 ## Cluster 5
 ### reformat profiling_sensor files
 ```{r}
-path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0"
-PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","C5"),userID = "IMASUTASKB", row_start = 14)
+path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
+BIOMATE::PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C5"),userID = "IMASUTASKB")
 ```
 
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","processing_metadata","C5"),userID = "IMASUTASKB", row_start = )
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"product_data","processing_metadata","C5"),userID = "IMASUTASKB", row_start = )
 ```
 
 ## Cluster 6

@@ -5,16 +5,16 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "737438613",
+    "hash" : "1630924686",
     "id" : "E89E90C5",
-    "lastKnownWriteTime" : 1626858875,
-    "last_content_update" : 1626858875264,
+    "lastKnownWriteTime" : 1628203284,
+    "last_content_update" : 1628203284134,
     "path" : "~/Projects/BIO-MATE/BIO-MATE/BIO-MATE.Rmd",
     "project_path" : "BIO-MATE.Rmd",
     "properties" : {
         "chunk_output_type" : "inline",
-        "cursorPosition" : "321,50",
-        "scrollLine" : "307"
+        "cursorPosition" : "19,0",
+        "scrollLine" : "4"
     },
     "relative_order" : 1,
     "source_on_save" : false,
