@@ -365,7 +365,7 @@ PROF_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,
       # split based on delimiter
           lat = gsub("[[:alpha:]]","",header_data$LATITUDE_b)
           lat = strsplit(lat,split = delim)
-          lat = lat[[1]][which(!is.empty(lat[[1]])]
+          lat = lat[[1]][which(!is.empty(lat[[1]]))]
           lon = gsub("[[:alpha:]]","",header_data$LONGITUDE_b)
           lon = strsplit(lon,split = delim)
           lon = lon[[1]][which(!is.empty(lon[[1]]))]
