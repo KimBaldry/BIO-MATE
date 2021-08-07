@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1628304407712.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "491|37|514|6|\n",
+    "hash" : "0",
+    "id" : "7AEFC363",
+    "lastKnownWriteTime" : 1628310650,
+    "last_content_update" : 1628310650113,
+    "path" : "~/Projects/BIO-MATE/BIO-MATE/Rpackage/R/PROF_to_WHPE.R",
+    "project_path" : "Rpackage/R/PROF_to_WHPE.R",
+    "properties" : {
+        "cursorPosition" : "197,94",
+        "scrollLine" : "187"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

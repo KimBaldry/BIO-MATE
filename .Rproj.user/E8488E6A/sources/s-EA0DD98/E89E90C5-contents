@@ -86,6 +86,8 @@ split into station files
 ```{r}
 dirs = list.dirs("E:/Data_downloads/PANGEAE",full.names = T, recursive = F)
 for(dr in dirs){
+  if(all(!grepl(file.path(dr,"ctd"), list.dirs(file.path(dr))))){next}
+  
   fname = list.files(file.path(dr,"ctd"),pattern = ".tab", full.names = T)
   # find the line where the data table starts
   f <- file( fname, open = "r" )
@@ -100,7 +102,7 @@ for(dr in dirs){
   }
   close( f )
 
-split_compiled_delim_file(path = file.path(dr,"ctd"), file_name = basename(fname), delim = "\t" , expo_split = F, station_var_name = "Event",station_split = T, fillcell = T, line_start = ls)  
+split_delim_file(path = file.path(dr,"ctd"), file_name = basename(fname), delim = "\t" , expo_split = F, station_var_name = "Event",station_split = T, fillcell = T, line_start = ls)  
 
 }
 ```
@@ -108,7 +110,7 @@ split_compiled_delim_file(path = file.path(dr,"ctd"), file_name = basename(fname
 filter and split TARA oceans ctd 
 ```{r}
 file_name = "TARA_physical.tab"
-path = "E:/Data_downloads/PANGEAE/35XI20090905/ctd"
+path = "E:/Data_downloads/TARA_PANGEAE/35XI20090905/ctd"
 delim = "\t"
 
 data = read.table(file = file.path(path,file_name), header = T, sep = delim, skip = 0, stringsAsFactors = F, strip.white = T,fill = T)
@@ -386,13 +388,13 @@ PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-BIOMATE::PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C5"),userID = "IMASUTASKB")
+BIOMATE::PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C5"),userID = "IMASUTASKB", row_start =12, row_end = 12 )
 ```
 
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"product_data","processing_metadata","C5"),userID = "IMASUTASKB", row_start = )
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C5"),userID = "IMASUTASKB")
 ```
 
 ## Cluster 6

@@ -195,7 +195,7 @@ PROF_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,
       # remove empty columns
       if(length(which(!is.na(data[,ncol(data)]))) == 0){data = data[,-ncol(data)]}
       # remove empty rows
-      data = data[rowSums(is.na(data) | (data == "")) != ncol(data),]
+      data = data[rowSums(matrix(unlist(lapply(as.matrix(data),is.empty)), ncol = ncol(data))) != ncol(data),]
       #data = data[rowSums(!is.na(data) | (data != "")) > 1,]
 
       # reassign missing value
