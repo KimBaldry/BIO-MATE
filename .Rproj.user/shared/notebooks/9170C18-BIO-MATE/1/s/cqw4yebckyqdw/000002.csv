@@ -1,39 +1,12 @@
 "0","library(dplyr)"
-"2","
-Attaching package: ‘dplyr’
-
-"
-"2","The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-"
-"2","The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-"
 "0","library(tools)"
 "0","library(data.table)"
-"2","data.table 1.14.0 using 2 threads (see ?getDTthreads).  Latest news: r-datatable.com
-"
-"2","
-Attaching package: ‘data.table’
-
-"
-"2","The following objects are masked from ‘package:dplyr’:
-
-    between, first, last
-
-"
 "0","library(ncdf4)"
 "0","library(readr)"
 "0","library(geosphere)"
 "0","library(stringi)"
 "0","library(tidyr)"
 "0","library(devtools)"
-"2","Loading required package: usethis
-"
 "0","devtools::install_github(""KimBaldry/BIO-MATE"", subdir = ""Rpackage"")"
 "2","Downloading GitHub repo KimBaldry/BIO-MATE@HEAD
 "
@@ -113,7 +86,7 @@ Which would you like to update?"
 "1","  "
 "1",""
 "1","  "
-"1","[32mâˆš[39m  [38;5;247mchecking for file 'E:\Temp\RtmpszLCP3\remotes2c041bb96ba4\KimBaldry-BIO-MATE-3edecc7\Rpackage/DESCRIPTION'[39m[36m[36m (441ms)[36m[39m"
+"1","[32mâˆš[39m  [38;5;247mchecking for file 'E:\Temp\RtmpszLCP3\remotes2c048cc6fe7\KimBaldry-BIO-MATE-4a881ab\Rpackage/DESCRIPTION'[39m[36m[36m (660ms)[36m[39m"
 "1","
 "
 "1",""
@@ -121,7 +94,7 @@ Which would you like to update?"
 "1","  "
 "1",""
 "1","  "
-"1","[38;5;247m-[39m[38;5;247m  [39m[38;5;247mpreparing 'BIOMATE':[39m[36m[36m (888ms)[36m[39m"
+"1","[38;5;247m-[39m[38;5;247m  [39m[38;5;247mpreparing 'BIOMATE':[39m[36m[36m (1.2s)[36m[39m"
 "1","
 "
 "1","   checking DESCRIPTION meta-information ..."
@@ -140,9 +113,15 @@ Which would you like to update?"
 "
 "1",""
 "1","  "
+"1","  "
+"1",""
+"1","  "
 "1","[38;5;247m-[39m[38;5;247m  [39m[38;5;247mchecking for empty or unneeded directories[39m[36m[39m"
 "1","
 "
+"1",""
+"1","  "
+"1","  "
 "1",""
 "1","  "
 "1","[38;5;247m-[39m[38;5;247m  [39m[38;5;247mbuilding 'BIOMATE_0.1.0.tar.gz'[39m[36m[39m"
@@ -163,45 +142,20 @@ Which would you like to update?"
 "
 "1","** R
 "
-"1","** inst
+"1","Error in parse(outFile) : 
 "
-"1","** byte-compile and prepare package for lazy loading
+"1","  C:/Users/kabaldry/AppData/Local/Temp/RtmpILtjKU/R.INSTALL275c63942da6/BIOMATE/R/PROF_to_WHPE.R:368:51: unexpected ']'
 "
-"1","** help
+"1","367:           lat = strsplit(lat,split = delim)
 "
-"1","*** installing help indices
+"1","368:           lat = lat[[1]][which(!is.empty(lat[[1]])]
 "
-"1","  converting help for package 'BIOMATE'
+"1","                                                       ^
 "
-"1","    finding HTML links ... done
+"1","ERROR: unable to collate and parse R files for package 'BIOMATE'
 "
-"1","    PIG_to_WHPE                             html  
+"1","* removing 'C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/R/win-library/3.6/BIOMATE'
 "
-"1","    PROF_to_WHPE                            html  
+"1","* restoring previous 'C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/R/win-library/3.6/BIOMATE'
 "
-"1","    SS_CTDsplit                             html  
-"
-"1","    export_ref                              html  
-"
-"1","    is.empty                                html  
-"
-"1","    split_delim_file                        html  
-"
-"1","** building package indices
-"
-"1","** testing if installed package can be loaded from temporary location
-"
-"1","*** arch - i386
-"
-"1","*** arch - x64
-"
-"1","** testing if installed package can be loaded from final location
-"
-"1","*** arch - i386
-"
-"1","*** arch - x64
-"
-"1","** testing if installed package keeps a record of temporary installation path
-"
-"1","* DONE (BIOMATE)
-"
+"2","installation of package ‘E:/Temp/RtmpszLCP3/file2c046e7214ff/BIOMATE_0.1.0.tar.gz’ had non-zero exit status"

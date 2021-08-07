@@ -16,7 +16,7 @@ library(stringi)
 library(tidyr)
 library(devtools)
 devtools::install_github("KimBaldry/BIO-MATE", subdir = "Rpackage")
-
+library(BIOMATE)
 ```
 
 # Split large data files from various sources
@@ -372,7 +372,7 @@ PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path
 ## Cluster 4
 ### reformat profiling_sensor files
 ```{r}
-path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0"
+path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE"
 PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C4"),userID = "IMASUTASKB", row_start = 14)
 ```
 
