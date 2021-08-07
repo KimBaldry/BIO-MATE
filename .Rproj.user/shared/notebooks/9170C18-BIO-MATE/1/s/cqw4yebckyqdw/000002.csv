@@ -1,5 +1,207 @@
-"0","devtools::install_github(""KimBaldry/BIO-MATE"", subdir = ""Rpackage"")
+"0","library(dplyr)"
+"2","
+Attaching package: ‘dplyr’
+
 "
-"2","Skipping install of 'BIOMATE' from a github remote, the SHA1 (01fd4eb3) has not changed since last install.
-  Use `force = TRUE` to force installation
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(tools)"
+"0","library(data.table)"
+"2","data.table 1.14.0 using 2 threads (see ?getDTthreads).  Latest news: r-datatable.com
+"
+"2","
+Attaching package: ‘data.table’
+
+"
+"2","The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+"
+"0","library(ncdf4)"
+"0","library(readr)"
+"0","library(geosphere)"
+"0","library(stringi)"
+"0","library(tidyr)"
+"0","library(devtools)"
+"2","Loading required package: usethis
+"
+"0","devtools::install_github(""KimBaldry/BIO-MATE"", subdir = ""Rpackage"")"
+"2","Downloading GitHub repo KimBaldry/BIO-MATE@HEAD
+"
+"1","These packages have more recent versions available.
+It is recommended to update all of them.
+Which would you like to update?"
+"1","
+"
+"1","
+"
+"1"," 1: All                                 "
+"1","
+"
+"1"," 2: CRAN packages only                  "
+"1","
+"
+"1"," 3: None                                "
+"1","
+"
+"1"," 4: rlang      (0.4.10 -> 0.4.11) [CRAN]"
+"1","
+"
+"1"," 5: utf8       (1.1.4  -> 1.2.2 ) [CRAN]"
+"1","
+"
+"1"," 6: fansi      (0.4.2  -> 0.5.0 ) [CRAN]"
+"1","
+"
+"1"," 7: crayon     (1.4.0  -> 1.4.1 ) [CRAN]"
+"1","
+"
+"1"," 8: cli        (2.3.0  -> 3.0.1 ) [CRAN]"
+"1","
+"
+"1"," 9: pillar     (1.4.7  -> 1.6.2 ) [CRAN]"
+"1","
+"
+"1","10: vctrs      (0.3.6  -> 0.3.8 ) [CRAN]"
+"1","
+"
+"1","11: tidyselect (1.1.0  -> 1.1.1 ) [CRAN]"
+"1","
+"
+"1","12: tibble     (3.0.5  -> 3.1.3 ) [CRAN]"
+"1","
+"
+"1","13: lifecycle  (0.2.0  -> 1.0.0 ) [CRAN]"
+"1","
+"
+"1","14: ellipsis   (0.3.1  -> 0.3.2 ) [CRAN]"
+"1","
+"
+"1","15: withr      (2.4.1  -> 2.4.2 ) [CRAN]"
+"1","
+"
+"1","16: hms        (1.0.0  -> 1.1.0 ) [CRAN]"
+"1","
+"
+"1","17: dplyr      (1.0.3  -> 1.0.7 ) [CRAN]"
+"1","
+"
+"1","18: vroom      (1.5.3  -> 1.5.4 ) [CRAN]"
+"1","
+"
+"1","19: tidyr      (1.1.2  -> 1.1.3 ) [CRAN]"
+"1","
+"
+"1","20: stringi    (1.5.3  -> 1.7.3 ) [CRAN]"
+"1","
+"
+"1","21: readr      (1.4.0  -> 2.0.0 ) [CRAN]"
+"1","
+"
+"1","
+"
+"1","  "
+"1","  "
+"1",""
+"1","  "
+"1","[32mâˆš[39m  [38;5;247mchecking for file 'E:\Temp\RtmpszLCP3\remotes2c041bb96ba4\KimBaldry-BIO-MATE-3edecc7\Rpackage/DESCRIPTION'[39m[36m[36m (441ms)[36m[39m"
+"1","
+"
+"1",""
+"1","  "
+"1","  "
+"1",""
+"1","  "
+"1","[38;5;247m-[39m[38;5;247m  [39m[38;5;247mpreparing 'BIOMATE':[39m[36m[36m (888ms)[36m[39m"
+"1","
+"
+"1","   checking DESCRIPTION meta-information ..."
+"1",""
+"1","  "
+"1","[32mâˆš[39m  [38;5;247mchecking DESCRIPTION meta-information[39m[36m[39m"
+"1","
+"
+"1",""
+"1","  "
+"1","  "
+"1",""
+"1","  "
+"1","[38;5;247m-[39m[38;5;247m  [39m[38;5;247mchecking for LF line-endings in source and make files and shell scripts[39m[36m[39m"
+"1","
+"
+"1",""
+"1","  "
+"1","[38;5;247m-[39m[38;5;247m  [39m[38;5;247mchecking for empty or unneeded directories[39m[36m[39m"
+"1","
+"
+"1",""
+"1","  "
+"1","[38;5;247m-[39m[38;5;247m  [39m[38;5;247mbuilding 'BIOMATE_0.1.0.tar.gz'[39m[36m[39m"
+"1","
+"
+"1",""
+"1","  "
+"1","   "
+"1","
+"
+"1",""
+"2","Installing package into ‘C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/R/win-library/3.6’
+(as ‘lib’ is unspecified)
+"
+"1","* installing *source* package 'BIOMATE' ...
+"
+"1","** using staged installation
+"
+"1","** R
+"
+"1","** inst
+"
+"1","** byte-compile and prepare package for lazy loading
+"
+"1","** help
+"
+"1","*** installing help indices
+"
+"1","  converting help for package 'BIOMATE'
+"
+"1","    finding HTML links ... done
+"
+"1","    PIG_to_WHPE                             html  
+"
+"1","    PROF_to_WHPE                            html  
+"
+"1","    SS_CTDsplit                             html  
+"
+"1","    export_ref                              html  
+"
+"1","    is.empty                                html  
+"
+"1","    split_delim_file                        html  
+"
+"1","** building package indices
+"
+"1","** testing if installed package can be loaded from temporary location
+"
+"1","*** arch - i386
+"
+"1","*** arch - x64
+"
+"1","** testing if installed package can be loaded from final location
+"
+"1","*** arch - i386
+"
+"1","*** arch - x64
+"
+"1","** testing if installed package keeps a record of temporary installation path
+"
+"1","* DONE (BIOMATE)
 "

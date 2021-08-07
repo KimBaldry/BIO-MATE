@@ -1,0 +1,6 @@
+"0","path = ""C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0"""
+"0","PROF_to_WHPE(path_out = file.path(path,""reformatted_data""), file_path = file.path(path,""BIO-MATE"",""product_data"",""processing_metadata"",""C4""),userID = ""IMASUTASKB"", row_start = 14)"
+"2","cannot create dir 'C:\Users\kabaldry\OneDrive - University of Tasmania\Documents\Projects\BIO-MATE\BIO-MATE.v0\reformatted_data\profiling_sensors', reason 'No such file or directory'"
+"2","Error in PROF_to_WHPE(path_out = file.path(path, ""reformatted_data""),  : 
+  Error: There is no file named PROF_meta.csv located in the dirctory C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0/BIO-MATE/product_data/processing_metadata/C4
+"

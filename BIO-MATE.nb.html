@@ -242,13 +242,134 @@ summary {
 <h3>load required functions</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKFwiS2ltQmFsZHJ5L0JJTy1NQVRFXCIsIHN1YmRpciA9IFwiUnBhY2thZ2VcIilcblxuYGBgIn0= -->
-<pre class="r"><code>devtools::install_github(&quot;KimBaldry/BIO-MATE&quot;, subdir = &quot;Rpackage&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmBgYCJ9 -->
+<pre class="r"><code>library(dplyr)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiU2tpcHBpbmcgaW5zdGFsbCBvZiAnQklPTUFURScgZnJvbSBhIGdpdGh1YiByZW1vdGUsIHRoZSBTSEExICgwMWZkNGViMykgaGFzIG5vdCBjaGFuZ2VkIHNpbmNlIGxhc3QgaW5zdGFsbC5cbiAgVXNlIGBmb3JjZSA9IFRSVUVgIHRvIGZvcmNlIGluc3RhbGxhdGlvblxuIn0= -->
-<pre><code>Skipping install of 'BIOMATE' from a github remote, the SHA1 (01fd4eb3) has not changed since last install.
-  Use `force = TRUE` to force installation</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog46S847ixZHBseXLjpLzjuLJcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDjpLzjuLFwYWNrYWdlOnN0YXRz46S847iyOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDjpLzjuLFwYWNrYWdlOmJhc2XjpLzjuLI6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuIn0= -->
+<pre><code>
+Attaching package: 㤼㸱dplyr㤼㸲
+
+The following objects are masked from 㤼㸱package:stats㤼㸲:
+
+    filter, lag
+
+The following objects are masked from 㤼㸱package:base㤼㸲:
+
+    intersect, setdiff, setequal, union</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0b29scylcbmxpYnJhcnkoZGF0YS50YWJsZSlcbmBgYCJ9 -->
+<pre class="r"><code>library(tools)
+library(data.table)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiZGF0YS50YWJsZSAxLjE0LjAgdXNpbmcgMiB0aHJlYWRzIChzZWUgP2dldERUdGhyZWFkcykuICBMYXRlc3QgbmV3czogci1kYXRhdGFibGUuY29tXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDjpLzjuLFkYXRhLnRhYmxl46S847iyXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g46S847ixcGFja2FnZTpkcGx5cuOkvOO4sjpcblxuICAgIGJldHdlZW4sIGZpcnN0LCBsYXN0XG4ifQ== -->
+<pre><code>data.table 1.14.0 using 2 threads (see ?getDTthreads).  Latest news: r-datatable.com
+
+Attaching package: 㤼㸱data.table㤼㸲
+
+The following objects are masked from 㤼㸱package:dplyr㤼㸲:
+
+    between, first, last</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShuY2RmNClcbmxpYnJhcnkocmVhZHIpXG5saWJyYXJ5KGdlb3NwaGVyZSlcbmxpYnJhcnkoc3RyaW5naSlcbmxpYnJhcnkodGlkeXIpXG5saWJyYXJ5KGRldnRvb2xzKVxuYGBgIn0= -->
+<pre class="r"><code>library(ncdf4)
+library(readr)
+library(geosphere)
+library(stringi)
+library(tidyr)
+library(devtools)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiB1c2V0aGlzXG4ifQ== -->
+<pre><code>Loading required package: usethis</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKFwiS2ltQmFsZHJ5L0JJTy1NQVRFXCIsIHN1YmRpciA9IFwiUnBhY2thZ2VcIilcbmBgYCJ9 -->
+<pre class="r"><code>devtools::install_github(&quot;KimBaldry/BIO-MATE&quot;, subdir = &quot;Rpackage&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRG93bmxvYWRpbmcgR2l0SHViIHJlcG8gS2ltQmFsZHJ5L0JJTy1NQVRFQEhFQURcbiJ9 -->
+<pre><code>Downloading GitHub repo KimBaldry/BIO-MATE@HEAD</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGhlc2UgcGFja2FnZXMgaGF2ZSBtb3JlIHJlY2VudCB2ZXJzaW9ucyBhdmFpbGFibGUuXG5JdCBpcyByZWNvbW1lbmRlZCB0byB1cGRhdGUgYWxsIG9mIHRoZW0uXG5XaGljaCB3b3VsZCB5b3UgbGlrZSB0byB1cGRhdGU/XG5cbiAxOiBBbGwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAyOiBDUkFOIHBhY2thZ2VzIG9ubHkgICAgICAgICAgICAgICAgICBcbiAzOiBOb25lICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiA0OiBybGFuZyAgICAgICgwLjQuMTAgLT4gMC40LjExKSBbQ1JBTl1cbiA1OiB1dGY4ICAgICAgICgxLjEuNCAgLT4gMS4yLjIgKSBbQ1JBTl1cbiA2OiBmYW5zaSAgICAgICgwLjQuMiAgLT4gMC41LjAgKSBbQ1JBTl1cbiA3OiBjcmF5b24gICAgICgxLjQuMCAgLT4gMS40LjEgKSBbQ1JBTl1cbiA4OiBjbGkgICAgICAgICgyLjMuMCAgLT4gMy4wLjEgKSBbQ1JBTl1cbiA5OiBwaWxsYXIgICAgICgxLjQuNyAgLT4gMS42LjIgKSBbQ1JBTl1cbjEwOiB2Y3RycyAgICAgICgwLjMuNiAgLT4gMC4zLjggKSBbQ1JBTl1cbjExOiB0aWR5c2VsZWN0ICgxLjEuMCAgLT4gMS4xLjEgKSBbQ1JBTl1cbjEyOiB0aWJibGUgICAgICgzLjAuNSAgLT4gMy4xLjMgKSBbQ1JBTl1cbjEzOiBsaWZlY3ljbGUgICgwLjIuMCAgLT4gMS4wLjAgKSBbQ1JBTl1cbjE0OiBlbGxpcHNpcyAgICgwLjMuMSAgLT4gMC4zLjIgKSBbQ1JBTl1cbjE1OiB3aXRociAgICAgICgyLjQuMSAgLT4gMi40LjIgKSBbQ1JBTl1cbjE2OiBobXMgICAgICAgICgxLjAuMCAgLT4gMS4xLjAgKSBbQ1JBTl1cbjE3OiBkcGx5ciAgICAgICgxLjAuMyAgLT4gMS4wLjcgKSBbQ1JBTl1cbjE4OiB2cm9vbSAgICAgICgxLjUuMyAgLT4gMS41LjQgKSBbQ1JBTl1cbjE5OiB0aWR5ciAgICAgICgxLjEuMiAgLT4gMS4xLjMgKSBbQ1JBTl1cbjIwOiBzdHJpbmdpICAgICgxLjUuMyAgLT4gMS43LjMgKSBbQ1JBTl1cbjIxOiByZWFkciAgICAgICgxLjQuMCAgLT4gMi4wLjAgKSBbQ1JBTl1cblxuICBcbiAgXG4gIFxuXHUwMDFiWzMybeKImlx1MDAxYlszOW0gIFx1MDAxYlszODs1OzI0N21jaGVja2luZyBmb3IgZmlsZSAnRTpcXFRlbXBcXFJ0bXBzekxDUDNcXHJlbW90ZXMyYzA0MWJiOTZiYTRcXEtpbUJhbGRyeS1CSU8tTUFURS0zZWRlY2M3XFxScGFja2FnZS9ERVNDUklQVElPTidcdTAwMWJbMzltXHUwMDFiWzM2bVx1MDAxYlszNm0gKDQ0MW1zKVx1MDAxYlszNm1cdTAwMWJbMzltXG5cbiAgXG4gIFxuICBcblx1MDAxYlszODs1OzI0N20tXHUwMDFiWzM5bVx1MDAxYlszODs1OzI0N20gIFx1MDAxYlszOW1cdTAwMWJbMzg7NTsyNDdtcHJlcGFyaW5nICdCSU9NQVRFJzpcdTAwMWJbMzltXHUwMDFiWzM2bVx1MDAxYlszNm0gKDg4OG1zKVx1MDAxYlszNm1cdTAwMWJbMzltXG4gICBjaGVja2luZyBERVNDUklQVElPTiBtZXRhLWluZm9ybWF0aW9uIC4uLlxuICBcblx1MDAxYlszMm3iiJpcdTAwMWJbMzltICBcdTAwMWJbMzg7NTsyNDdtY2hlY2tpbmcgREVTQ1JJUFRJT04gbWV0YS1pbmZvcm1hdGlvblx1MDAxYlszOW1cdTAwMWJbMzZtXHUwMDFiWzM5bVxuXG4gIFxuICBcbiAgXG5cdTAwMWJbMzg7NTsyNDdtLVx1MDAxYlszOW1cdTAwMWJbMzg7NTsyNDdtICBcdTAwMWJbMzltXHUwMDFiWzM4OzU7MjQ3bWNoZWNraW5nIGZvciBMRiBsaW5lLWVuZGluZ3MgaW4gc291cmNlIGFuZCBtYWtlIGZpbGVzIGFuZCBzaGVsbCBzY3JpcHRzXHUwMDFiWzM5bVx1MDAxYlszNm1cdTAwMWJbMzltXG5cbiAgXG5cdTAwMWJbMzg7NTsyNDdtLVx1MDAxYlszOW1cdTAwMWJbMzg7NTsyNDdtICBcdTAwMWJbMzltXHUwMDFiWzM4OzU7MjQ3bWNoZWNraW5nIGZvciBlbXB0eSBvciB1bm5lZWRlZCBkaXJlY3Rvcmllc1x1MDAxYlszOW1cdTAwMWJbMzZtXHUwMDFiWzM5bVxuXG4gIFxuXHUwMDFiWzM4OzU7MjQ3bS1cdTAwMWJbMzltXHUwMDFiWzM4OzU7MjQ3bSAgXHUwMDFiWzM5bVx1MDAxYlszODs1OzI0N21idWlsZGluZyAnQklPTUFURV8wLjEuMC50YXIuZ3onXHUwMDFiWzM5bVx1MDAxYlszNm1cdTAwMWJbMzltXG5cbiAgXG4gICBcbiJ9 -->
+<pre><code>These packages have more recent versions available.
+It is recommended to update all of them.
+Which would you like to update?
+
+ 1: All                                 
+ 2: CRAN packages only                  
+ 3: None                                
+ 4: rlang      (0.4.10 -&gt; 0.4.11) [CRAN]
+ 5: utf8       (1.1.4  -&gt; 1.2.2 ) [CRAN]
+ 6: fansi      (0.4.2  -&gt; 0.5.0 ) [CRAN]
+ 7: crayon     (1.4.0  -&gt; 1.4.1 ) [CRAN]
+ 8: cli        (2.3.0  -&gt; 3.0.1 ) [CRAN]
+ 9: pillar     (1.4.7  -&gt; 1.6.2 ) [CRAN]
+10: vctrs      (0.3.6  -&gt; 0.3.8 ) [CRAN]
+11: tidyselect (1.1.0  -&gt; 1.1.1 ) [CRAN]
+12: tibble     (3.0.5  -&gt; 3.1.3 ) [CRAN]
+13: lifecycle  (0.2.0  -&gt; 1.0.0 ) [CRAN]
+14: ellipsis   (0.3.1  -&gt; 0.3.2 ) [CRAN]
+15: withr      (2.4.1  -&gt; 2.4.2 ) [CRAN]
+16: hms        (1.0.0  -&gt; 1.1.0 ) [CRAN]
+17: dplyr      (1.0.3  -&gt; 1.0.7 ) [CRAN]
+18: vroom      (1.5.3  -&gt; 1.5.4 ) [CRAN]
+19: tidyr      (1.1.2  -&gt; 1.1.3 ) [CRAN]
+20: stringi    (1.5.3  -&gt; 1.7.3 ) [CRAN]
+21: readr      (1.4.0  -&gt; 2.0.0 ) [CRAN]
+
+  
+  
+  
+[32m√[39m  [38;5;247mchecking for file 'E:\Temp\RtmpszLCP3\remotes2c041bb96ba4\KimBaldry-BIO-MATE-3edecc7\Rpackage/DESCRIPTION'[39m[36m[36m (441ms)[36m[39m
+
+  
+  
+  
+[38;5;247m-[39m[38;5;247m  [39m[38;5;247mpreparing 'BIOMATE':[39m[36m[36m (888ms)[36m[39m
+   checking DESCRIPTION meta-information ...
+  
+[32m√[39m  [38;5;247mchecking DESCRIPTION meta-information[39m[36m[39m
+
+  
+  
+  
+[38;5;247m-[39m[38;5;247m  [39m[38;5;247mchecking for LF line-endings in source and make files and shell scripts[39m[36m[39m
+
+  
+[38;5;247m-[39m[38;5;247m  [39m[38;5;247mchecking for empty or unneeded directories[39m[36m[39m
+
+  
+[38;5;247m-[39m[38;5;247m  [39m[38;5;247mbuilding 'BIOMATE_0.1.0.tar.gz'[39m[36m[39m
+
+  
+   </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiSW5zdGFsbGluZyBwYWNrYWdlIGludG8gkUM6L1VzZXJzL2thYmFsZHJ5L09uZURyaXZlIC0gVW5pdmVyc2l0eSBvZiBUYXNtYW5pYS9Eb2N1bWVudHMvUi93aW4tbGlicmFyeS8zLjaSXG4oYXMgkWxpYpIgaXMgdW5zcGVjaWZpZWQpXG4ifQ== -->
+<pre><code>Installing package into 㤼㸱C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/R/win-library/3.6㤼㸲
+(as 㤼㸱lib㤼㸲 is unspecified)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiKiBpbnN0YWxsaW5nICpzb3VyY2UqIHBhY2thZ2UgJ0JJT01BVEUnIC4uLlxuKiogdXNpbmcgc3RhZ2VkIGluc3RhbGxhdGlvblxuKiogUlxuKiogaW5zdFxuKiogYnl0ZS1jb21waWxlIGFuZCBwcmVwYXJlIHBhY2thZ2UgZm9yIGxhenkgbG9hZGluZ1xuKiogaGVscFxuKioqIGluc3RhbGxpbmcgaGVscCBpbmRpY2VzXG4gIGNvbnZlcnRpbmcgaGVscCBmb3IgcGFja2FnZSAnQklPTUFURSdcbiAgICBmaW5kaW5nIEhUTUwgbGlua3MgLi4uIGRvbmVcbiAgICBQSUdfdG9fV0hQRSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaHRtbCAgXG4gICAgUFJPRl90b19XSFBFICAgICAgICAgICAgICAgICAgICAgICAgICAgIGh0bWwgIFxuICAgIFNTX0NURHNwbGl0ICAgICAgICAgICAgICAgICAgICAgICAgICAgICBodG1sICBcbiAgICBleHBvcnRfcmVmICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaHRtbCAgXG4gICAgaXMuZW1wdHkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGh0bWwgIFxuICAgIHNwbGl0X2RlbGltX2ZpbGUgICAgICAgICAgICAgICAgICAgICAgICBodG1sICBcbioqIGJ1aWxkaW5nIHBhY2thZ2UgaW5kaWNlc1xuKiogdGVzdGluZyBpZiBpbnN0YWxsZWQgcGFja2FnZSBjYW4gYmUgbG9hZGVkIGZyb20gdGVtcG9yYXJ5IGxvY2F0aW9uXG4qKiogYXJjaCAtIGkzODZcbioqKiBhcmNoIC0geDY0XG4qKiB0ZXN0aW5nIGlmIGluc3RhbGxlZCBwYWNrYWdlIGNhbiBiZSBsb2FkZWQgZnJvbSBmaW5hbCBsb2NhdGlvblxuKioqIGFyY2ggLSBpMzg2XG4qKiogYXJjaCAtIHg2NFxuKiogdGVzdGluZyBpZiBpbnN0YWxsZWQgcGFja2FnZSBrZWVwcyBhIHJlY29yZCBvZiB0ZW1wb3JhcnkgaW5zdGFsbGF0aW9uIHBhdGhcbiogRE9ORSAoQklPTUFURSlcbiJ9 -->
+<pre><code>* installing *source* package 'BIOMATE' ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+  converting help for package 'BIOMATE'
+    finding HTML links ... done
+    PIG_to_WHPE                             html  
+    PROF_to_WHPE                            html  
+    SS_CTDsplit                             html  
+    export_ref                              html  
+    is.empty                                html  
+    split_delim_file                        html  
+** building package indices
+** testing if installed package can be loaded from temporary location
+*** arch - i386
+*** arch - x64
+** testing if installed package can be loaded from final location
+*** arch - i386
+*** arch - x64
+** testing if installed package keeps a record of temporary installation path
+* DONE (BIOMATE)</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -661,11 +782,14 @@ PIG_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metada
 <h3>reformat profiling_sensor files</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucGF0aCA9IFxcQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9CSU8tTUFURS52MFxcXG5QUk9GX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcXHJlZm9ybWF0dGVkX2RhdGFcXCksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFxccHJvY2Vzc2luZ19tZXRhZGF0YVxcLFxcQzRcXCksdXNlcklEID0gXFxJTUFTVVRBU0tCXFwsIHJvd19zdGFydCA9IDE0KVxuYGBgXG5gYGAifQ== -->
-<p><code>r</code>r path = :/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0<br />
-PROF_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metadata,4),userID = , row_start = 14)</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9CSU8tTUFURS52MFwiXG5QUk9GX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcInJlZm9ybWF0dGVkX2RhdGFcIiksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFwiQklPLU1BVEVcIixcInByb2R1Y3RfZGF0YVwiLFwicHJvY2Vzc2luZ19tZXRhZGF0YVwiLFwiQzRcIiksdXNlcklEID0gXCJJTUFTVVRBU0tCXCIsIHJvd19zdGFydCA9IDE0KVxuYGBgIn0= -->
+<pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0&quot;
+PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C4&quot;),userID = &quot;IMASUTASKB&quot;, row_start = 14)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiY2Fubm90IGNyZWF0ZSBkaXIgJ0M6XFxVc2Vyc1xca2FiYWxkcnlcXE9uZURyaXZlIC0gVW5pdmVyc2l0eSBvZiBUYXNtYW5pYVxcRG9jdW1lbnRzXFxQcm9qZWN0c1xcQklPLU1BVEVcXEJJTy1NQVRFLnYwXFxyZWZvcm1hdHRlZF9kYXRhXFxwcm9maWxpbmdfc2Vuc29ycycsIHJlYXNvbiAnTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeSdFcnJvciBpbiBQUk9GX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCwgXCJyZWZvcm1hdHRlZF9kYXRhXCIpLCAgOiBcbiAgRXJyb3I6IFRoZXJlIGlzIG5vIGZpbGUgbmFtZWQgUFJPRl9tZXRhLmNzdiBsb2NhdGVkIGluIHRoZSBkaXJjdG9yeSBDOi9Vc2Vycy9rYWJhbGRyeS9PbmVEcml2ZSAtIFVuaXZlcnNpdHkgb2YgVGFzbWFuaWEvRG9jdW1lbnRzL1Byb2plY3RzL0JJTy1NQVRFL0JJTy1NQVRFLnYwL0JJTy1NQVRFL3Byb2R1Y3RfZGF0YS9wcm9jZXNzaW5nX21ldGFkYXRhL0M0XG4ifQ== -->
+<pre><code>cannot create dir 'C:\Users\kabaldry\OneDrive - University of Tasmania\Documents\Projects\BIO-MATE\BIO-MATE.v0\reformatted_data\profiling_sensors', reason 'No such file or directory'Error in PROF_to_WHPE(path_out = file.path(path, &quot;reformatted_data&quot;),  : 
+  Error: There is no file named PROF_meta.csv located in the dirctory C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0/BIO-MATE/product_data/processing_metadata/C4</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -691,9 +815,8 @@ PIG_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path =
 <pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
 BIOMATE::PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C5&quot;),userID = &quot;IMASUTASKB&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gZnJlYWQoZmwsIHN0cmluZ3NBc0ZhY3RvcnMgPSBGLCBza2lwID0gYiAtIDEsIG5hLnN0cmluZ3MgPSBpbmZvJG1pc3NpbmdfdmFsdWUsICA6IFxuICBpcy5udWxsKG5hLnN0cmluZ3MpIHx8IGlzLmNoYXJhY3RlcihuYS5zdHJpbmdzKSBpcyBub3QgVFJVRVxuIn0= -->
-<pre><code>Error in fread(fl, stringsAsFactors = F, skip = b - 1, na.strings = info$missing_value,  : 
-  is.null(na.strings) || is.character(na.strings) is not TRUE</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiRGlzY2FyZGVkIHNpbmdsZS1saW5lIGZvb3RlcjogPDxFTkRfREFUQT4+RXJyb3IgaW4gaWYgKGluZm8kVElNRV9iICE9IFwiXCIpIHsgOiBtaXNzaW5nIHZhbHVlIHdoZXJlIFRSVUUvRkFMU0UgbmVlZGVkXG4ifQ== -->
+<pre><code>Discarded single-line footer: &lt;&lt;END_DATA&gt;&gt;Error in if (info$TIME_b != &quot;&quot;) { : missing value where TRUE/FALSE needed</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
