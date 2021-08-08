@@ -1,0 +1,6 @@
+"0","path_out = file.path(path,""reformatted_data"")
+"
+"2","Error: unexpected symbol in:
+""path = ""C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/
+path_out = file.path(path,""reformatted_data""
+"

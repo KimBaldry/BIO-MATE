@@ -1,0 +1,49 @@
+"0","library(dplyr)"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(tools)"
+"0","library(data.table)"
+"2","data.table 1.14.0 using 2 threads (see ?getDTthreads).  Latest news: r-datatable.com
+"
+"2","
+Attaching package: ‘data.table’
+
+"
+"2","The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+"
+"0","library(ncdf4)"
+"0","library(readr)"
+"0","library(geosphere)"
+"0","library(stringi)"
+"0","library(tidyr)"
+"0","library(devtools)"
+"2","Loading required package: usethis
+"
+"0","#devtools::install_github(""KimBaldry/BIO-MATE"", subdir = ""Rpackage"")"
+"0","library(BIOMATE)"
+"2","Loading required package: purrr
+"
+"2","
+Attaching package: ‘purrr’
+
+"
+"2","The following object is masked from ‘package:data.table’:
+
+    transpose
+
+"

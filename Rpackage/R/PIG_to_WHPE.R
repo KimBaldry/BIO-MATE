@@ -86,7 +86,7 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
 
     # list variables that have info in the files
     vars = colnames(info)[-c(1:which(colnames(info) == "start_data_var"))]
-    vars = vars[!is.empty(info[,..vars])]
+    vars = vars[!unlist(lapply(info[,..vars], is.empty))]
     # list variables where data is stored in file headers - if any
     if(any(grepl("header-",info[,..vars]))){header_vars = vars[grepl("header-",info[,..vars])]
     # variables
@@ -110,7 +110,7 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
             if(info$file_type == "text delim"){
 
               # get the number of headers that are specified in the meta file to check that enough have been found in the file
-              names = data_vars[which(!is.empty(info[,..data_vars]))]
+              names = data_vars[which(!unlist(lapply(info[,..data_vars],is.empty)))]
               n_headers = length(which(colnames(info[,..names])[!duplicated(as.character(info[,..names]))] %in% all_headers))
 
               # 2 data variables to one header variable - find less header matches
@@ -141,7 +141,7 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
                   break}
                 if(length(line)== 0){next}
                 # searching for data variables in headers
-                dv = data_vars[which(!is.empty(info[,..data_vars]))]
+                dv = data_vars[which(!unlist(lapply(info[,..data_vars],is.empty)))]
                 header_in_line = unlist(lapply(dv,function(x){grepl(info[,..x],line, fixed = T)}))
 
                 if(length(which(header_in_line == T) ) < n_headers & length(which(header_in_line == T) ) > 2){missing = dv[!header_in_line]
