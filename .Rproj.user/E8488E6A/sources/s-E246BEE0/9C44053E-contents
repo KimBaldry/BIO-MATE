@@ -24,7 +24,7 @@
 #' @export
 
 
-PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,row_end = NA){
+PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,row_end = NA, t_thresh = 3, d_thresh = 1000){
 
   # this small function prevents the drop of midnight 00:00:00
   print.POSIXct2 <- function(x){format(x,"%Y-%m-%d %H:%M:%S %Z")}
@@ -321,22 +321,22 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
     data2$CASTNO = gsub("[^[:alnum:]]","",data2$CASTNO)
     data2$CASTNO = stri_replace_all_regex(data2$CASTNO, "\\b0*(\\d+)\\b", "$1")
     
-    # remove repeated character strings
-    # query STNNBR entries and find longest common (forward) substring. Taking the first and last means leading 0's in a count wont be removed
-    # This only deals with leading repitition. e.g TARA01, TARA02...TARA10 becomes 01,02,10
-    # Doesnt deal with internal or end repitition e.g PS01C2, PS02C1...PS10C1 becomes 01C2, 02C2, 10C1
-    sstr <- stri_sub(data2$STNNBR[1], 1, 1:nchar(data2$STNNBR[1]))
-    for(i in 2:nrow(data2)){
-      #iterively compare strings
-      sstr <- na.omit(stri_extract_all_coll(data2$STNNBR[i], sstr, simplify=TRUE)) 
-    }
-    if(length(sstr)>0){
-      ## match the longest one
-      lcs = sstr[which.max(nchar(sstr))]
-      # double check and remove common substring
-      if(all(grepl(lcs, data2$STNNBR))){data2$STNNBR = gsub(lcs, "", data2$STNNBR)}
-    }
-   
+    # # remove repeated character strings
+    # # query STNNBR entries and find longest common (forward) substring. Taking the first and last means leading 0's in a count wont be removed
+    # # This only deals with leading repitition. e.g TARA01, TARA02...TARA10 becomes 01,02,10
+    # # Doesnt deal with internal or end repitition e.g PS01C2, PS02C1...PS10C1 becomes 01C2, 02C2, 10C1
+    # sstr <- stri_sub(data2$STNNBR[1], 1, 1:nchar(data2$STNNBR[1]))
+    # for(i in 2:nrow(data2)){
+    #   #iterively compare strings
+    #   sstr <- na.omit(stri_extract_all_coll(data2$STNNBR[i], sstr, simplify=TRUE)) 
+    # }
+    # if(length(sstr)>0){
+    #   ## match the longest one
+    #   lcs = sstr[which.max(nchar(sstr))]
+    #   # double check and remove common substring
+    #   if(all(grepl(lcs, data2$STNNBR))){data2$STNNBR = gsub(lcs, "", data2$STNNBR)}
+    # }
+    # 
     
     ### Underway data assignment ### This process seems round-about. Can Mike improve it?
     if(nchar(info$Underway_ID)>0){
@@ -567,7 +567,9 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
         
         # identify if missmatch
         if(!is.na(CTD_info_exact$t_diff[idx])){
-        if(CTD_info_exact$p_diff[idx] > 5000 | CTD_info_exact$t_diff[idx] > 1){CTD_info_exact$nomatch = T}else{CTD_info_exact$nomatch = F}}else{if(CTD_info_exact$p_diff[idx] > 5000){CTD_info_exact$nomatch = T}else{CTD_info_exact$nomatch = F}}
+          #note here t_diff is in days
+          # use Johnson 2017 suggestion
+        if(CTD_info_exact$p_diff[idx] > 8000 | CTD_info_exact$t_diff[idx] > 1){CTD_info_exact$nomatch = T}else{CTD_info_exact$nomatch = F}}else{if(CTD_info_exact$p_diff[idx] > 5000){CTD_info_exact$nomatch = T}else{CTD_info_exact$nomatch = F}}
         
         }
     
@@ -699,7 +701,7 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
             #                                   }
 
             # check it is within 3 hours and assign CTD_ID
-            unmatched_df_t = unmatched_df_t %>% filter(!is.na(closest_t), t_diff < 3)
+            unmatched_df_t = unmatched_df_t %>% filter(!is.na(closest_t), t_diff < t_thresh)
 
             # Any matches?
             if(nrow(unmatched_df_p) == 0 & nrow(unmatched_df_t) > 0){
@@ -718,7 +720,7 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
           unmatched_df_p$dist_min  = unlist(lapply(1:nrow(unmatched_df_p), calc.dist.min))
           unmatched_df_p$d_diff = unlist(lapply(1:nrow(unmatched_df_p), calc.dist.diff))
           # check within 1 km
-          unmatched_df_p  = unmatched_df_p %>% filter(d_diff < 1000)
+          unmatched_df_p  = unmatched_df_p %>% filter(d_diff < d_thresh)
 
 
           # Any matches?

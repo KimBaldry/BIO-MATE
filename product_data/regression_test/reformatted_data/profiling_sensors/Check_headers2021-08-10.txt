@@ -1,0 +1,15 @@
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103101_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
