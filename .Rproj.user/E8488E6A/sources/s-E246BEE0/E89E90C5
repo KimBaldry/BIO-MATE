@@ -7,14 +7,14 @@
     "folds" : "",
     "hash" : "0",
     "id" : "E89E90C5",
-    "lastKnownWriteTime" : 1628310696,
-    "last_content_update" : 1628400670132,
+    "lastKnownWriteTime" : 1628413227,
+    "last_content_update" : 1628413414757,
     "path" : "~/Projects/BIO-MATE/BIO-MATE/BIO-MATE.Rmd",
     "project_path" : "BIO-MATE.Rmd",
     "properties" : {
         "chunk_output_type" : "inline",
-        "cursorPosition" : "396,162",
-        "scrollLine" : "387"
+        "cursorPosition" : "396,161",
+        "scrollLine" : "391"
     },
     "relative_order" : 1,
     "source_on_save" : false,

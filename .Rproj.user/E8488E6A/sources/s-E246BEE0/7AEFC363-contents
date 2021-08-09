@@ -423,7 +423,24 @@ PROF_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,
       header_data$STNNBR = stri_replace_all_regex(header_data$STNNBR, "\\b0*(\\d+)\\b", "$1")
       header_data$CASTNO = gsub("[^[:alnum:]]","",header_data$CASTNO)
       header_data$CASTNO = stri_replace_all_regex(header_data$CASTNO, "\\b0*(\\d+)\\b", "$1")
-
+      
+      # remove repeated character strings
+      # query STNNBR entries and find longest common (forward) substring. Taking the first and last means leading 0's in a count wont be removed
+      # This only deals with leading repitition. e.g TARA01, TARA02...TARA10 becomes 01,02,10
+      # Doesnt deal with internal or end repitition e.g PS01C2, PS02C1...PS10C1 becomes 01C2, 02C2, 10C1
+      sstr <- stri_sub(data2$STNNBR[1], 1, 1:nchar(data2$STNNBR[1]))
+      for(i in 2:nrow(data2)){
+        #iterively compare strings
+        sstr <- na.omit(stri_extract_all_coll(data2$STNNBR[i], sstr, simplify=TRUE)) 
+      }
+      if(length(sstr)>0){
+        ## match the longest one
+        lcs = sstr[which.max(nchar(sstr))]
+        # double check and remove common substring
+        if(all(grepl(lcs, data2$STNNBR))){data2$STNNBR = gsub(lcs, "", data2$STNNBR)}
+      }
+      
+      
 
       # if there is no station info, the station number will be assigned as the file number
       if(is.empty(info$STNNBR)){header_data$STNNBR = which(ctd_files == fl)}

@@ -28,7 +28,11 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
 
   # this small function prevents the drop of midnight 00:00:00
   print.POSIXct2 <- function(x){format(x,"%Y-%m-%d %H:%M:%S %Z")}
-
+  calc.dist.min = function(x){which.min(distGeo(c(unmatched_df_p$LON[x], unmatched_df_p$LAT[x]), as.matrix(CTD_df[,c("LON","LAT")])))[1]}
+  calc.dist.diff = function(x){distGeo(c(unmatched_df_p$LON[x], unmatched_df_p$LAT[x]), as.matrix(CTD_df[unmatched_df_p$dist_min[x],c("LON","LAT")]))}
+  calc.time.min = function(x){which.min(abs(unlist(lapply(col_t, FUN = function(y){CTD_df[,y] - unmatched_df_t$time_m[x]}))))[1]}
+  calc.time.diff =  function(x){abs(unlist(lapply(col_t, FUN = function(y){CTD_df[,y] - unmatched_df_t$time_m[x]})))[unmatched_df_t$closest_t[x]]}
+  
   ### directories ###
   # if the output directory does not exist for this layer, create it
   out_dir = file.path(path_out,"pigments")
@@ -316,7 +320,24 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
     data2$STNNBR = stri_replace_all_regex(data2$STNNBR, "\\b0*(\\d+)\\b", "$1")
     data2$CASTNO = gsub("[^[:alnum:]]","",data2$CASTNO)
     data2$CASTNO = stri_replace_all_regex(data2$CASTNO, "\\b0*(\\d+)\\b", "$1")
-
+    
+    # remove repeated character strings
+    # query STNNBR entries and find longest common (forward) substring. Taking the first and last means leading 0's in a count wont be removed
+    # This only deals with leading repitition. e.g TARA01, TARA02...TARA10 becomes 01,02,10
+    # Doesnt deal with internal or end repitition e.g PS01C2, PS02C1...PS10C1 becomes 01C2, 02C2, 10C1
+    sstr <- stri_sub(data2$STNNBR[1], 1, 1:nchar(data2$STNNBR[1]))
+    for(i in 2:nrow(data2)){
+      #iterively compare strings
+      sstr <- na.omit(stri_extract_all_coll(data2$STNNBR[i], sstr, simplify=TRUE)) 
+    }
+    if(length(sstr)>0){
+      ## match the longest one
+      lcs = sstr[which.max(nchar(sstr))]
+      # double check and remove common substring
+      if(all(grepl(lcs, data2$STNNBR))){data2$STNNBR = gsub(lcs, "", data2$STNNBR)}
+    }
+   
+    
     ### Underway data assignment ### This process seems round-about. Can Mike improve it?
     if(nchar(info$Underway_ID)>0){
       if(info$Underway_ID == "all"){data2$STNNBR = "U"}else{
@@ -486,9 +507,76 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
     # exact matches
     CTD_info_exact = CTD_info %>% filter(EXPOCODE == ex, STNCAST %in% data2_stncast)
     sdx = data2_stncast %in% CTD_info_exact$STNCAST
-    # asign CTD_IDs
-    data2$CTD_IDs[sdx] = paste(ex,"CTD",data2$STNNBR_analyser[sdx],data2$CASTNO_analyser[sdx],sep = "_")
-
+    
+    
+    ### check that the CTD matches match in date and position - if they don't different station numbers have been used for PIG and PROF
+    if(nrow(CTD_info_exact) > 0){
+      
+      for(idx in 1:nrow(CTD_info_exact)){
+        ctd_file = file.path(ctd_path,paste(CTD_info_exact$CTD_ID[idx],"_ctd1.csv",sep = ""))
+        sub_data2 = data2 %>% filter(data2$STNNBR_analyser == CTD_info_exact$STNNBR[idx],data2$CASTNO_analyser == CTD_info_exact$CASTNO[idx])
+        
+        # open file and read relevent lines
+        f <- file( ctd_file, open = "r" )
+        time_s = NA
+        time_b = NA
+        time_e = NA
+        while( TRUE ){
+          line <- readLines( f, 1L ,skipNul = T)
+          if( grepl( "DATE =", line ) ){
+            CTD_info_exact$DATE[idx] <- trimws(sub("DATE =", "", line ))
+            date = CTD_info_exact$DATE[idx]
+          }
+          if( grepl( "CTD_START_TIME =", line ) ){
+            t_line = line
+            time_s<- trimws(sub("UTC","",sub("CTD_START_TIME =", "", line )))
+            
+          }
+          if( grepl( "CTD_BOTTOM_TIME =", line ) ){
+            time_b <- trimws(sub("UTC","",sub( "CTD_BOTTOM_TIME =", "", line )))
+            
+          }
+          if( grepl( "CTD_END_TIME =", line ) ){
+            time_e <- trimws(sub("UTC","",sub( "CTD_END_TIME =", "", line )))
+            
+          }
+          if( grepl( "CTD_START_LATITUDE =", line ) ){
+            CTD_info_exact$LATITUDE[idx] <- as.numeric(sub("CTD_START_LATITUDE =", "", line ))
+          }
+          if( grepl( "CTD_START_LONGITUDE =", line ) ){
+            CTD_info_exact$LONGITUDE[idx] <- as.numeric(sub("CTD_START_LONGITUDE =", "", line ))
+          }
+          if(grepl("CTDPRS", line)){break}
+        }
+        close(f)
+        
+        # get closest time difference
+        times = as.POSIXct(c(paste(date,time_s), paste(date,time_b), paste(date,time_e)), format = "%Y-%m-%d %H:%M:%S", tz = "UTC")
+        CTD_info_exact$TIME_s[idx] = times[1]
+        CTD_info_exact$TIME_b[idx] = times[2]
+        CTD_info_exact$TIME_e[idx] = times[3]
+        times = times[!is.na(times)]
+        if(length(times) > 0){
+        t_diffs = abs(times - as.POSIXct(paste(sub_data2$DATE_analyser[1],sub_data2$TIME_analyser[1])))
+        CTD_info_exact$t_diff[idx] = t_diffs[which.min(t_diffs)]}else{
+        CTD_info_exact$t_diff[idx] = NA 
+        }
+        
+        # get position difference
+        CTD_info_exact$p_diff[idx] = distGeo(c(CTD_info_exact$LONGITUDE[idx], CTD_info_exact$LATITUDE[idx]), c(sub_data2$LON_analyser[1], sub_data2$LAT_analyser[1]))
+        
+        # identify if missmatch
+        if(!is.na(CTD_info_exact$t_diff[idx])){
+        if(CTD_info_exact$p_diff[idx] > 5000 | CTD_info_exact$t_diff[idx] > 1){CTD_info_exact$nomatch = T}else{CTD_info_exact$nomatch = F}}else{if(CTD_info_exact$p_diff[idx] > 5000){CTD_info_exact$nomatch = T}else{CTD_info_exact$nomatch = F}}
+        
+        }
+    
+     if(any(CTD_info_exact$nomatch)){print("PROF and PIG station mismatch detected. Moving to closest PROF detection method.")}else{
+    
+      # asign CTD_IDs
+      data2$CTD_IDs[sdx] = paste(ex,"CTD",data2$STNNBR_analyser[sdx],data2$CASTNO_analyser[sdx],sep = "_")  
+       }
+      }
 
     #was trying to find similar matches.... waste of time
     # CTD_info_notexact = CTD_info %>% filter(EXPOCODE == ex, !(STNCAST %in% data2_stncast), grepl(paste(unique(data2$STNNBR), collapse="|"),STNNBR), )
@@ -502,6 +590,7 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
     # CTD_info_f = rbind(CTD_info_exact, CTD_info_notexact)}
     # else{CTD_info_f = CTD_info_exact}
 
+  
     ### unmatched CTD casts ###
     un = is.na(data2$CTD_IDs)
     if(any(un)){
@@ -588,13 +677,11 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
           # find closest time
           unmatched_df_t = unmatched_df %>% filter(!is.na(Time), !is.empty(Time), !is.empty(Date)) %>%
                                             mutate(time_m = as.POSIXct(paste(Date,Time), format = "%Y-%m-%d %H:%M:%S", tz = "UTC"))
-          calc.time.min = function(x){which.min(abs(unlist(lapply(col_t, FUN = function(y){CTD_df[,y] - unmatched_df_t$time_m[x]}))))[1]}
-          calc.time.diff =  function(x){abs(unlist(lapply(col_t, FUN = function(y){CTD_df[,y] - unmatched_df_t$time_m[x]})))[unmatched_df_t$closest_t[x]]}
+
 
 
           unmatched_df_p = unmatched_df %>% filter(is.na(Time) | Time == "", !is.na(LAT), !is.na(LON))
-          calc.dist.min = function(x){which.min(distGeo(c(unmatched_df_p$LON[x], unmatched_df_p$LAT[x]), as.matrix(CTD_df[,c("LON","LAT")])))[1]}
-          calc.dist.diff = function(x){distGeo(c(unmatched_df_p$LON[x], unmatched_df_p$LAT[x]), as.matrix(CTD_df[unmatched_df_p$dist_min[x],c("LON","LAT")]))}
+
 
 
 
@@ -630,7 +717,7 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
           # match with closest lat/lon on same date
           unmatched_df_p$dist_min  = unlist(lapply(1:nrow(unmatched_df_p), calc.dist.min))
           unmatched_df_p$d_diff = unlist(lapply(1:nrow(unmatched_df_p), calc.dist.diff))
-          # check within 50 km
+          # check within 1 km
           unmatched_df_p  = unmatched_df_p %>% filter(d_diff < 1000)
 
 
