@@ -24,7 +24,7 @@
 #' @export
 
 
-PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,row_end = NA, t_thresh = 3, d_thresh = 1000){
+PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,row_end = NA, t_thresh = 6, d_thresh = 1000){
 
   # this small function prevents the drop of midnight 00:00:00
   print.POSIXct2 <- function(x){format(x,"%Y-%m-%d %H:%M:%S %Z")}
@@ -514,7 +514,7 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
       
       for(idx in 1:nrow(CTD_info_exact)){
         ctd_file = file.path(ctd_path,paste(CTD_info_exact$CTD_ID[idx],"_ctd1.csv",sep = ""))
-        sub_data2 = data2 %>% filter(data2$STNNBR_analyser == CTD_info_exact$STNNBR[idx],data2$CASTNO_analyser == CTD_info_exact$CASTNO[idx])
+        sub_data2 = data2 %>% filter(STNNBR_analyser == CTD_info_exact$STNNBR[idx],CASTNO_analyser == CTD_info_exact$CASTNO[idx])
         
         # open file and read relevent lines
         f <- file( ctd_file, open = "r" )
@@ -556,7 +556,8 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
         CTD_info_exact$TIME_b[idx] = times[2]
         CTD_info_exact$TIME_e[idx] = times[3]
         times = times[!is.na(times)]
-        if(length(times) > 0){
+        
+        if(length(times) > 0 & !is.na(sub_data2$DATE_analyser[1])){
         t_diffs = abs(times - as.POSIXct(paste(sub_data2$DATE_analyser[1],sub_data2$TIME_analyser[1])))
         CTD_info_exact$t_diff[idx] = t_diffs[which.min(t_diffs)]}else{
         CTD_info_exact$t_diff[idx] = NA 

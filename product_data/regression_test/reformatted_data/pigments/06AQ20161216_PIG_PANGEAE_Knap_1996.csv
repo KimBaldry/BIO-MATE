@@ -1,15 +1,16 @@
-20201117IMASUTASKB
+20210810IMASUTASKB
 #semi-manual exchange
 #SOURCED_FROM: PANGEAE
 #ANALYSIS_METHOD: Knap_1996
 #ORIGINAL_CHLFILE/S: E:/Data_downloads/PANGEAE/06AQ20161216/HPLC/Bracher_2019_PS103.tab
 #DOI: 10.1594/PANGAEA.898941
-#CHLFILE_MOD_DATE: 2020-11-17 14:15:34 AEST
+#CHLFILE_MOD_DATE: 2021-08-10 16:57:11 AEST
 #PI: Astrid Bracher
 #INSTITUTION: Alfred Wegener Institute
 #contact: Astrid.Bracher@awi.de
-NUMBER_HEADERS = 60
+NUMBER_HEADERS = 5
 EXPOCODE = 06AQ20161216
+SHIP = 
 TIMEZONE = UTC
 missing_value = -999
 CTD_IDs, DATE, TIME_s, TIME_b, TIME_e, LATITUDE, LONGITUDE, STNNBR, CASTNO, DATE_analyser, TIME_analyser, LAT_analyser, LON_analyser, STNNBR_analyser, CASTNO_analyser, Sample_ID, BOTTLE, DEPTH, FCHLORA, FPHEO, FPHYTIN, TCHLA, TACC, DVChla, Chla, Chla_ide, Chla_ allom, Chla_prime, Chlb, DVChlb, Chlc, Chlc1_Chlc2_Mg_3_8_divinyl_pheoporphyrin_a5, Chlc1, Chlc1_like, Chlc2, Chlc1_Chlc2, Chlc3, MgDVP, 19Hex, 19But, Fucox, Perid, Prasino, Allox, Lutein, Zeax, Zea_Lut, Violax, Alpha_car, Beta_car, Gamma_car, Epsilon_car, Alpha_Beta_car, Neox, DD, DT, Viol_Neox, Phaeopigments, Phide_a, Phytin_a

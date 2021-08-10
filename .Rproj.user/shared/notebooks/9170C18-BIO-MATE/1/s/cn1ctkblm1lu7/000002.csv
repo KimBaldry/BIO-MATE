@@ -1,5 +1,0 @@
-"0","path = ""C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE"""
-"0","PROF_to_WHPE(path_out = file.path(path,""BIO-MATE"",""product_data"",""regression_test"",""reformatted_data""), file_path = file.path(path,""BIO-MATE"",""product_data"",""processing_metadata"",""regression_test""),userID = ""IMASUTASKB"") "
-"2","Error in stri_sub(data2$STNNBR[1], 1, 1:nchar(data2$STNNBR[1])) : 
-  object 'data2' not found
-"

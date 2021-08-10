@@ -1,0 +1,380 @@
+# Title: create_layer_table.R
+# Author: K. Baldry - IMAS/UTAS
+# Created: 05/01/2020
+#
+# This script will bring data from all PIG WHP-Exchange files into a single data table.
+# The code also seaches for an existing file to append to if append is set to TRUE
+# This data table will have no headers
+# A check for duplicates will be performed
+# Quality assurance flags for locations and dates will be assigned
+# A README.txt file will aslo be created
+#
+# This will also produce a text file with a list of biological stations for which ctd data is not available, and if this represents all of the stn data or just some
+#
+# file_path - path to data layer containing BIO-MATE pigment files
+# ex.list - NULL or a list of EXPOCODES to grab data from
+# append - if set to TRUE will append to an existing layer table
+# rm.dup - FALSE, mean, meadian
+# calc.TCHLA - NULL,
+# insert.phys - TRUE inserts available physical data (both Uwy and CTD)
+# Sample.type - "all", "U" (underway only), "Prof" (rosette samples only) or "CTDmatch" (CTD matches only)
+# max.depth - FALSE or a number (e.g. 10 m)
+# CTD.n - the minimum number of vertical samples required
+# no time constraints as selecting CTD_start time or analysis time will depend on application
+path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0/reformatted_data"
+file_path = file.path(path,"pigments")
+ex.list = NULL
+rm.dup = "mean"
+sample.type = "all"
+n.prof = NULL
+max.depth = NULL
+insert.phys = T
+library(seacarb)
+
+library(data.table)
+library(dplyr)
+library(rapportools)
+
+
+
+mean_5m <- function(depths,x,depth_out){
+  ddx = which(depths < depth_out + 2.5 & depths > depth_out - 2.5)
+  sub_x = x[ddx]
+  sub_x = rm_out(sub_x)
+  m = mean(sub_x,na.rm = T)
+  if(is.nan(m)){m = NA}
+  m
+}
+
+
+QIM =function(l,m,u){
+  if(l %% 2 == 0){l = l-1}
+  idx1 = which(DEPTH_bins %in% seq(l,m,2))
+  idx2 = which(DEPTH_bins %in% seq(l,u,2))
+  1 - ( (sd(DENS_bins[idx1] - mean(DENS_bins[idx1], na.rm = T), na.rm = T)) / (sd(DENS_bins[idx2] - mean(DENS_bins[idx2], na.rm = T), na.rm = T)))}
+
+create_analysis_table = function(file_path, ex.list = NULL, rm.dup = FALSE, sample.type = "all", n.prof = NULL, max.depth = NULL, calc.TCHLA = NULL, insert.phys = TRUE,generate.stats = T){
+  ### Create combined data table
+  # set up an empty data frame
+  # headers = c("EXPOCODE","CTD_match","DATE","TIME_s","TIME_b","TIME_e","LATITUDE","LONGITUDE","STNNBR",	"CASTNO","PIG_SOURCE","PIG_METHOD",	"DATE_analyser",	"TIME_analyser", 	"LAT_analyser",	"LON_analyser", 	"Sample_ID",	"BOTTLE",	"DEPTH",	"CHLORA",	"TOT_CHL_A")
+  # data = data.frame(matrix(NA, nrow = 0, ncol = length(headers)))
+  # colnames(data) = headers
+  #
+  # append to existing data
+  if(append){
+    layer_file = list.files(path = file_path,pattern = "_layer.csv",full.names = T)
+    exist_data = as.data.frame(fread(layer_file,strip.white = T , stringsAsFactors = F, na.strings = "-999"))
+    data = rbind(data, exist_data)
+  }
+  # profiling sensor path
+  ctd_path =file.path(path,"profiling_sensors")
+  # read in files
+  files = list.files(path = file_path,pattern = ".csv",full.names = T)
+  #files = files[!grepl("_layer.csv",files)]
+  if(!is.null(ex.list)){
+    ex = sapply(unlist(strsplit(files, split = "_")), "[[", 1)
+    files = files[grepl(paste(ex,collapse = "|"),files)]
+  }
+
+  for(fl in files){
+
+  # grab header data
+    f <- file(fl, open = "r" )
+    n=0
+    while( TRUE ){
+      n = n+1
+      line <- readLines( f, 1L )
+      if( grepl( "EXPOCODE =", line ) ){
+        ex <- trimws(sub("EXPOCODE =", "", line ))
+      }
+      if( grepl( "#ANALYSIS_METHOD:", line ) ){
+        mt <- trimws(sub("#ANALYSIS_METHOD:", "", line ))
+      }
+      if( grepl( "#SOURCED_FROM:", line ) ){
+        sc <- trimws(sub("#SOURCED_FROM:", "", line ))
+      }
+      if(grepl("CTD_IDs | DATE | TIME_s | TIME_b| TIME_e | LATITUDE", line)){break}
+    }
+    close( f )
+
+    # load file data
+    file_data = as.data.frame(fread(fl,strip.white = T , stringsAsFactors = F, skip = n+1,na.strings =  "-999"))
+    f_headers = as.character(fread(fl,stringsAsFactors = F, skip = n-1, nrows = 1, header = F))
+    colnames(file_data) = f_headers
+    # add header data
+    file_data$PIG_SOURCE = sc
+    file_data$PIG_METHOD = mt
+    file_data$EXPOCODE = ex
+    if(!exists("data",inherits = F)){data = file_data}else{
+      # append file data
+      data = rbind(data,file_data)
+    }
+
+    rm(file_data)
+    print(paste(fl,"compiled"))
+  }
+
+  # All pigment names
+  pig_names = colnames(data)[-c(1:which(colnames(data) == "DEPTH"),which(colnames(data) == "PIG_SOURCE"):length(colnames(data)))]
+
+  ### Remove rows that have no depth info and haven't been flagged as Underway measurements ###
+  data = data %>% filter(!(data$CTD_IDs != "U" & is.na(as.numeric(DEPTH))))
+
+  ### Remove rows that have no pigment information ###
+  data = data[unlist(lapply(1:nrow(data), function(x){any(!is.na(data[x,pig_names]))})),]
+
+  ### set not detected to 0 - only for analysis
+  data[data == -888] = 0
+  
+  ### select subsets of available data here ###
+  # Underway only
+  if(sample.type == "U"){
+    data = data %>% filter(data$CTD_IDs == "U")
+  }
+  # CTD matches only
+  if(sample.type == "CTDmatch"){
+    data = data %>% filter(grepl("CTD",data$CTD_IDs))
+  }
+  # Rosette samples only
+  if(sample.type == "Prof"){
+    data = data %>% filter(STNNBR != "U")
+  }
+  # Depth requirement
+  if(!is.null(max.depth)){
+    data = data %>% filter(DEPTH <= max.depth)
+  }
+
+
+
+  ### Remove Duplicates ###
+  if(rm.dup != F){
+  # find hard duplicates and average (this will create an average of replicates, or just remove duplicates)
+  # combine information from duplicates (only )
+  dup_df = data[,c("EXPOCODE","DEPTH","PIG_METHOD","STNNBR","CASTNO","TIME_analyser","DATE_analyser","LAT_analyser","LON_analyser")]
+  dup_df$LAT_analyser = round(as.numeric(dup_df$LAT_analyser),digits = 2)
+  dup_df$LON_analyser = round(as.numeric(dup_df$LON_analyser),digits = 2)
+  dup_idx = which(duplicated(dup_df))
+  data_clean = data[-dup_idx,]
+  data_clean$LATITUDE = as.numeric(data_clean$LATITUDE)
+  data_clean$LONGITUDE = as.numeric(data_clean$LONGITUDE)
+  data_clean$DEPTH = as.numeric(data_clean$DEPTH)
+
+  data_clean$n_dups = 1
+  # average or median duplicates
+  for(dup in dup_idx)
+  {
+    # duplicated line
+    dup_line = data[dup,]
+    attach(data_clean, warn.conflicts = F)
+    idx_in_clean = which(EXPOCODE == dup_line$EXPOCODE & DEPTH == dup_line$DEPTH & PIG_METHOD == dup_line$PIG_METHOD & STNNBR == dup_line$STNNBR & CASTNO == dup_line$CASTNO)
+    detach(data_clean)
+    if(dup != dup_idx[1]){
+    if(any(dup_idx[1:(which(dup_idx == dup)-1)] %in% idx_in_clean)){next}}
+    # matching lines in clean data
+    data_match = data %>% dplyr::filter(EXPOCODE == dup_line$EXPOCODE,DEPTH == dup_line$DEPTH,PIG_METHOD == dup_line$PIG_METHOD,STNNBR == dup_line$STNNBR, CASTNO == dup_line$CASTNO)
+    if(dup>dup_idx[1]){data_match_all = rbind(data_match_all, data_match)}else{data_match_all = data_match}
+    # Average or median
+    for(pig in pig_names){
+      if(any(!is.na(data_match[,pig]))){
+        if(rm.dup == "mean"){data_clean[idx_in_clean,pig] = mean(as.numeric(data_match[,pig]), na.rm = T)}
+        if(rm.dup == "median"){data_clean[idx_in_clean,pig] = median(as.numeric(data_match[,pig]), na.rm = T)}
+      }
+      #print("dup averaged")
+    }
+    data_clean$PIG_SOURCE[idx_in_clean] = paste(data_match$PIG_SOURCE,collapse = "-")
+    data_clean$n_dups[idx_in_clean] = nrow(data_match)
+  }
+
+
+
+  ### Fuzzy duplicates are within 1 m of another measurement
+  # need to speed this up
+  data_clean$FM = NA
+  attach(data_clean, warn.conflicts = F)
+  for(rw in 1:(nrow(data_clean)-1)){
+    row_data = data_clean[rw,]
+    idx_in_clean = which(EXPOCODE == row_data$EXPOCODE & DEPTH > row_data$DEPTH - 1 & DEPTH < row_data$DEPTH - 1 & PIG_METHOD == row_data$PIG_METHOD & STNNBR == row_data$STNNBR & CASTNO == row_data$CASTNO)
+    fuzzy_match = data_clean[c((rw+1):nrow(data_clean)),] %>% dplyr::filter(EXPOCODE == row_data$EXPOCODE,DEPTH > row_data$DEPTH - 1 ,DEPTH < row_data$DEPTH - 1, PIG_METHOD == row_data$PIG_METHOD,STNNBR == row_data$STNNBR, CASTNO == row_data$CASTNO)
+    if(rw > 1){fuzzy_match_all = rbind(fuzzy_match_all, fuzzy_match)}else{fuzzy_match_all = fuzzy_match}
+    if(rw > 1){fuzzy_rows = c(fuzzy_rows,rw)}else{fuzzy_rows = rw}
+    # Average or median
+    for(pig in pig_names){
+      if(any(!is.na(fuzzy_match[,pig]))){
+        if(rm.dup == "mean"){data_clean[idx_in_clean,pig] = mean(fuzzy_match[,pig], na.rm = T)}
+        if(rm.dup == "median"){data_clean[idx_in_clean,pig] = median(fuzzy_match[,pig], na.rm = T)}
+      }}
+    data_clean$FM[idx_in_clean] = rw
+    data_clean$PIG_SOURCE[idx_in_clean] = paste(fuzzy_match$PIG_SOURCE,collapse = "-")
+    rm(row_data)
+  }
+  detach(data_clean)
+  }
+
+  # remove fuzzy duplicates
+  fdx = which(!is.na(data_clean$FM) & base::duplicated(data_clean$FM))
+  if(!is.empty(fdx)){data_clean = data_clean[-fdx,]}
+
+  n_dup = nrow(data) - nrow(data_clean)
+  print(paste("found and removed",n_dup,"duplicated rows"))
+
+
+  ### select only vertical profiles with a certain number of measurements
+  if(!is.null(n.prof)){
+
+  A = paste(data_clean$EXPOCODE, data_clean$STNNBR, data_clean$CASTNO, data_clean$PIG_METHOD)
+  n_obs = data.table(stats::aggregate(A, by = list(A), FUN = length))
+  profs = n_obs[x>n.prof]
+  idx = which(A %in%  profs$Group.1)
+  data_clean = data_clean[idx,]
+  print(paste(nrow(n_obs),"profiles found with more than", n.prof,"depth measurements"))
+  }
+
+  if(insert.phys){
+    data_clean$MLD = NA
+    data_clean$CHL50 = NA
+    data_clean$MLD_FLAG = NA
+    data_clean$CTDSAL = NA
+    data_clean$CTDTMP =
+    data_clean$CTDFLUOR = NA
+    # add TRANSMittance later - need path lengths for some conversions
+    data_clean$CTDBBP700 = NA
+  ### match profiling sensor data
+  for(pf in unique(data_clean$CTD_IDs[data_clean$CTD_IDs != "U" & !is.na(data_clean$CTD_IDs)])){
+      mdx = which(data_clean$CTD_IDs == pf)
+      ctd_file = file.path(ctd_path,paste(pf,"_ctd1.csv",sep = ""))
+
+      f <- file( ctd_file, open = "r" )
+      n=0
+      while( TRUE ){
+        line <- readLines( f, 1L)
+        n = n+1
+
+        if(grepl("CTDPRS", line)){break}
+      }
+      close(f)
+
+      prof_data = as.data.frame(fread(ctd_file,strip.white = T , stringsAsFactors = F, skip = n+1,na.strings =  "-999"))
+      f_headers = as.character(fread(ctd_file,stringsAsFactors = F, skip = n-1, nrows = 1, header = F))
+      colnames(prof_data) = f_headers
+      ### 5 m averages for TEMP, SAL, FLUOR, TRANS
+      # grab +/- 2.5 m around the Sample Depth
+      # remove any outliers > 3std of other measurments
+      # calculate the average
+      # insert into the table
+      # For underway this will be a 15 min average
+      prof_data$DEPTH = swDepth(prof_data$CTDPRS, latitude = data_clean$LATITUDE[mdx[1]])
+
+
+      if(any(grepl("CTDSAL",f_headers)) & any(!is.na(prof_data$CTDSAL))){
+        for(md in mdx){
+          data_clean$CTDSAL[md] = mean_5m(prof_data$DEPTH[which(is.finite(prof_data$CTDSAL))], prof_data$CTDSAL[which(is.finite(prof_data$CTDSAL))],data_clean$DEPTH[md])
+        }
+      }
+      if(any(grepl("CTDTMP",f_headers))& any(!is.na(prof_data$CTDTMP))){
+        for(md in mdx){
+          data_clean$CTDTMP[md] = mean_5m(prof_data$DEPTH[which(is.finite(prof_data$CTDTMP))], prof_data$CTDTMP[which(is.finite(prof_data$CTDTMP))],data_clean$DEPTH[md])
+        }
+      }
+      if(any(grepl("CTDFLUOR",f_headers)) & any(!is.na(prof_data$CTDFLUOR))){
+        for(md in mdx){
+          data_clean$CTDFLUOR[md] = mean_5m(prof_data$DEPTH[which(is.finite(prof_data$CTDFLUOR))], prof_data$CTDFLUOR[which(is.finite(prof_data$CTDFLUOR))],data_clean$DEPTH[md])
+          # note eco MLD doesnt work with the low quality data
+          data_clean$CHL50[mdx] = CHL_50(prof_data$CTDPRS[is.finite(prof_data$CTDFLUOR)],prof_data$CTDFLUOR[is.finite(prof_data$CTDFLUOR)])
+        }
+      }
+      if(any(grepl("CTDBBP700",f_headers))& any(!is.na(prof_data$CTDBBP700))){
+        for(md in mdx){
+          data_clean$CTDBBP700[md] = mean_5m(prof_data$DEPTH[which(is.finite(prof_data$CTDBBP700))], prof_data$CTDBBP700[which(is.finite(prof_data$CTDBBP700))],data_clean$DEPTH[md])
+        }
+      }
+
+      ### MLD calculation - 0.03 density threshold - this is a typical definition of MLD for the SO
+      if(all(any(grepl("CTDPRS",f_headers)), any(grepl("CTDSAL",f_headers)), any(grepl("CTDTMP",f_headers)),!is.na(data_clean$LATITUDE[mdx[1]]))){
+        MLD_calc = MLD(prof_data$CTDPRS,prof_data$CTDSAL, prof_data$CTDTMP,lat = data_clean$LATITUDE[mdx[1]],dens_thresh = 0.03)
+        data_clean$MLD[mdx] = MLD_calc$MLD
+        data_clean$MLD_FLAG[mdx] = MLD_calc$FLAG
+        
+
+      }
+
+
+
+    }
+    
+  }
+
+  
+  ### calculate TCHLA
+if(calc.TCHLA){
+  idx = which(is.na(data_clean$TCHLA))
+  data_clean$TCHLA[idx] = rowSums(data_clean[idx,c("Chla","DVChla","Chla_ide","Chla_ allom","Chla_prime")],na.rm = T)
+}
+
+  data_clean$TIME_QF= NA
+  data_clean$POS_QF = NA
+  ### Quality assurance
+  attach(data_clean, warn.conflicts = F)
+  # sample time is after profile start time, and within 2 hours
+  idx_na = which(!is.empty(TIME_s) & !is.empty(TIME_analyser))
+  data_clean$TIME_QF = 1 # good
+  data_clean$TIME_QF[-idx_na] = NA # missing
+  s_time = as.POSIXct(paste(DATE,TIME_s)[idx_na], format = "%Y-%m-%d %H:%M:%S")
+  a_time = as.POSIXct(paste(DATE_analyser,TIME_analyser)[idx_na], format = "%Y-%m-%d %H:%M:%S")
+  idx = which(s_time > a_time)
+  data_clean$TIME_QF[idx_na[idx]] = 2 # analysis time before start time
+  idx = which((s_time + 3*60*60)  < a_time)
+  data_clean$TIME_QF[idx_na[idx]] = 3 # analysis time not within 3 hours of start time
+  # sample time is between profile start and end time
+
+  idx_na = which(!is.empty(TIME_s) & !is.empty(TIME_analyser) & !is.empty(TIME_e) )
+  e_time = as.POSIXct(paste(DATE,TIME_e)[idx_na], format = "%Y-%m-%d %H:%M:%S")
+  s_time = as.POSIXct(paste(DATE,TIME_s)[idx_na], format = "%Y-%m-%d %H:%M:%S")
+  a_time = as.POSIXct(paste(DATE_analyser,TIME_analyser)[idx_na], format = "%Y-%m-%d %H:%M:%S")
+  idx = which(s_time > a_time | a_time > e_time)
+  data_clean$TIME_QF[idx_na[idx]] = 2 #analysis time not within profile time limits
+
+
+
+  # analyser location is more than 0.01 deg away from profile(or uwy)
+  idx_na = which(!is.empty(LAT_analyser) & !is.empty(LATITUDE))
+  lat_a = as.numeric( LAT_analyser[idx_na])
+  lon_a = as.numeric(LON_analyser[idx_na])
+  lat = as.numeric(LATITUDE[idx_na])
+  lon = as.numeric(LONGITUDE[idx_na])
+  idx = abs(lon_a -lon) > 0.01 | abs(lat_a - lat) > 0.01
+  data_clean$POS_QF = 1 # good
+  data_clean$POS_QF[idx_na[idx]] = 2 # bad
+  data_clean$POS_QF[-idx_na] = NA # missing
+
+  detach(data_clean)
+  # write the layer file
+  write.csv(data_clean,file.path(file_path,"PIG_data_layer.csv"),row.names = F)
+  if(exists("data_match_all")){
+  write.csv(data_match_all,file.path(file_path,"Duplicated_rows_removed.csv"),row.names = F)}
+  if(nrow(fuzzy_match_all)>1){
+    write.csv(fuzzy_match_all,file.path(file_path,"Fuzzy_rows_removed.csv"),row.names = F)}
+
+
+  if(generate.stats){
+
+    ## number of total obs
+    # no. records
+    n_rec = nrow(data_clean)
+    # no. sample points
+    n_sp = nrow(unique(data_clean$LAT_analyser,data_clean$LON_analyser,data_clean$DATE_analyser,data_clean$LON_analyser))
+    # % linked physical data/CTD of sample points
+    n_ctd = length(!is.na(data_clean$CTD_IDs))/n_rec
+    # HPLC, Fluor, POC, fluorescence, transmittance
+    HPLC_methods = c("Wright_etal_1991","VanHeukelem_Thomas_2001","JGOFS_HPLC_1994" )
+    Fluor_methods = c("JGOFS_1994","JGOFS_1994_2","Jeffrey_Humphrey_1975","Lorenzen_1967","PALMER_LTER" , "JGOFS",)
+
+    # Figure spatial + temporal hist layover: CTD profiles, surface for physical, biological, POC, HPLC
+
+
+    ## number of profiles < 4 depth meas
+
+    ## number of surface measurements
+
+
+  }
+  }
