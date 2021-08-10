@@ -312,21 +312,21 @@ PROF_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,
       ### reformat positions ###
       if(info$LATITUDE_s == info$LONGITUDE_s & !is.empty(info$LATITUDE_s)){
         lat_lon = strsplit(header_data$LATITUDE_s, split = " ")
-        idx = which(!is.empty(lat_lon[[1]]))
+        idx = which(!is.empty(lat_lon[[1]], first.only = F))
 
         header_data$LATITUDE_s = lat_lon[[1]][idx[1]]
         header_data$LONGITUDE_s = lat_lon[[1]][idx[2]]
       }
       if(info$LATITUDE_b == info$LONGITUDE_b & !is.empty(info$LATITUDE_b)){
         lat_lon = strsplit(header_data$LATITUDE_b, split = " ")
-        idx = which(!is.empty(lat_lon[[1]]))
+        idx = which(!is.empty(lat_lon[[1]], first.only = F))
 
         header_data$LATITUDE_b = lat_lon[[1]][idx[1]]
         header_data$LONGITUDE_b = lat_lon[[1]][idx[2]]
       }
       if(info$LATITUDE_e == info$LONGITUDE_e & !is.empty(info$LATITUDE_e)){
         lat_lon = strsplit(header_data$LATITUDE_e, split = " ")
-        idx = which(!is.empty(lat_lon[[1]]))
+        idx = which(!is.empty(lat_lon[[1]], first.only = F))
 
         header_data$LATITUDE_e = lat_lon[[1]][idx[1]]
         header_data$LONGITUDE_e = lat_lon[[1]][idx[2]]
@@ -341,10 +341,10 @@ PROF_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,
       # split based on delimiter
           lat = gsub("[[:alpha:]]","",header_data$LATITUDE_s)
           lat = strsplit(lat,split = delim)
-          lat = lat[[1]][which(!is.empty(lat[[1]]))]
+          lat = lat[[1]][which(!is.empty(lat[[1]],first.only = F))]
           lon = gsub("[[:alpha:]]","",header_data$LONGITUDE_s)
           lon = strsplit(lon,split = delim)
-          lon = lon[[1]][which(!is.empty(lon[[1]]))]
+          lon = lon[[1]][which(!is.empty(lon[[1]],first.only = F))]
       # turn to numeric
           if(length(lat) == 2){
             lat = as.numeric(lat[1]) + as.numeric(lat[2])/60
@@ -365,10 +365,10 @@ PROF_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,
       # split based on delimiter
           lat = gsub("[[:alpha:]]","",header_data$LATITUDE_b)
           lat = strsplit(lat,split = delim)
-          lat = lat[[1]][which(!is.empty(lat[[1]]))]
+          lat = lat[[1]][which(!is.empty(lat[[1]],first.only = F))]
           lon = gsub("[[:alpha:]]","",header_data$LONGITUDE_b)
           lon = strsplit(lon,split = delim)
-          lon = lon[[1]][which(!is.empty(lon[[1]]))]
+          lon = lon[[1]][which(!is.empty(lon[[1]],first.only = F))]
           # turn to numeric
           if(length(lat) == 2){
             lat = as.numeric(lat[1]) + as.numeric(lat[2])/60
@@ -390,10 +390,10 @@ PROF_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,
       # split based on delimiter
           lat = gsub("[[:alpha:]]","",header_data$LATITUDE_e)
           lat = strsplit(lat,split = delim)
-          lat = lat[[1]][which(!is.empty(lat[[1]]))]
+          lat = lat[[1]][which(!is.empty(lat[[1]],first.only = F))]
           lon = gsub("[[:alpha:]]","",header_data$LONGITUDE_e)
           lon = strsplit(lon,split = delim)
-          lon = lon[[1]][which(!is.empty(lon[[1]]))]
+          lon = lon[[1]][which(!is.empty(lon[[1]],first.only = F))]
           # turn to numeric
           if(length(lat) == 2){
             lat = as.numeric(lat[1]) + as.numeric(lat[2])/60

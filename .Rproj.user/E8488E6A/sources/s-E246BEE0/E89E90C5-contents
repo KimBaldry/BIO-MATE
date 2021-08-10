@@ -310,7 +310,7 @@ for(ch in chunks[2:5]){
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE"
-PROF_to_WHPE(path_out = file.path(path,"BIO-MATE","product_data","regression_test","reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","regression_test"),userID = "IMASUTASKB") 
+PROF_to_WHPE(path_out = file.path(path,"BIO-MATE","product_data","regression_test","reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","regression_test"),userID = "IMASUTASKB", row_start = 6) 
 ```
 
 ### reformat pigment files

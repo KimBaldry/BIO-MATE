@@ -13,3 +13,3253 @@ The variables found: CTDFLUOR
 The variables found: CTDBEAMCP
 All good?
  
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103101_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS10311_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103111_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103131_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103141_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103151_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103161_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103171_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103181_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103191_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103222_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103225_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103235_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS10324_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103272_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103293_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS10331_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103312_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103342_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103393_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103403_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS10341_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103434_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103441_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103453_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103462_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103471_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103481_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103511_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS10352_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103521_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103531_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103551_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103561_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103592_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103601_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS10361_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103611_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103621_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103651_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS10366_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103661_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103671_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103691_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103701_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103712_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103721_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS103731_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS10374_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS10383_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/PANGEAE/06AQ20161216/ctd/split/PS10391_from_PS103_phys_oce.csv
+The header line picked: "Event","Date","Latitude","Longitude","Elevation..m.","Depth","Press","Temp","Cond..mS.cm.","Sal","Tpot..Â.C.","Sigma.theta..kg.m..3.","O2","O2.sat....","Attenuation","Fluorometer","NOBS.."
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#10.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#11.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#12.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#13.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#14.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#15.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#16.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#17.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#18.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#19.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#2.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#20.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#21.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#22.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#23.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#24.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#25.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#26.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#27.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#28.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#29.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#3.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#30.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#32.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#33.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#4.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#5.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#6.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#7.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#8.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/SoFEX/33RR20020105/ctd/sta#9.tsv
+The header line picked: sta	ev_type	       event	    date	time	     lon	    lat	  press	  depth	   temp	    sal	sigma_0	potemp	oxygen_ctd	 fluor	  trans	       PAR	    V2	    V3
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+The variables found: CTDPAR
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00001_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00002_00003_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00003_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00004_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00005_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00006_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00007_00002_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00008_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00009_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00010_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00011_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00012_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00013_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00014_00003_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00015_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00016_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00017_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00018_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00019_00002_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00020_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00021_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00022_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00023_00002_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00024_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00025_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00026_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00027_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00028_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00029_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00030_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00031_00003_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00032_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00033_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00034_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00035_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00036_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00037_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00038_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00039_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00040_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00041_00002_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00042_00002_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00043_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00044_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00045_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00046_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00047_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00048_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00049_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00050_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00051_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00052_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00053_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00054_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00055_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00056_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00057_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00058_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00059_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00060_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00061_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00062_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00063_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00064_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00065_00002_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00066_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00067_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00068_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00069_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00070_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00071_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00072_00002_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00073_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00074_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00075_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00076_00002_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00077_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00078_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00079_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00080_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00081_00002_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00082_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/CCHDO/33RR20160208/exchange_ctd/33RR20160208_00083_00001_ct1.csv
+The header line picked: CTDPRS,CTDPRS_FLAG_W,CTDTMP,CTDTMP_FLAG_W,CTDSAL,CTDSAL_FLAG_W,CTDOXY,CTDOXY_FLAG_W,FLUOR,FLUOR_FLAG_W,CDOMF,CDOMF_FLAG_W,TRBDTY,TRBDTY_FLAG_W,RINKO,RINKO_FLAG_W,CTDNOBS,CTDETIME,CTDBEAMCP,CTDBEAMCP_FLAG_W
+The variables found: TIME_b
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#02261338.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#02261729.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#02280450.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03010305.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03031557.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03050052.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03091500.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03092015.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03100426.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03151539.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03172313.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03210743.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03221758.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03281350.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03290721.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/JGOFS/320619980225/all_ctd/event#03310615.csv
+The header line picked: "event","sta","cast","date","time_begin","time_end","lat_begin","lon_begin","lat_end","lon_end","depth","press","temp","cond","sal","potemp","sigma_t","sigma_0","beam_cp","fluor","light_bs","cast_type"
+The variables found: CASTNO
+The variables found: DATE
+The variables found: TIME_s
+The variables found: TIME_e
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: LATITUDE_e
+The variables found: LONGITUDE_e
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDBEAMCP
+The variables found: CTDBBP700
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_10_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_107_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_110_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_113_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_129_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_136_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_140_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_143_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_149_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_162_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_167_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_176_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_186_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_197_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_204_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_210_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_219_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_22_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_225_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_238_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_245_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_247_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_248_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_250_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_251_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_252_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_253_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_254_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_255_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_256_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_258_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_263_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_269_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_277_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_278_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_279_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_281_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_288_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_298_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_306_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_315_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_317_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_322_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_326_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_328_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_331_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_40_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_52_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_68_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_83_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_91_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_93_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_95_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/PAL-LTER/CTD/33LG20161230/33LG20161230_99_from_CTD Downcast Data (Cruise).csv
+The header line picked: "studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+The variables found: STNNBR
+The variables found: DATE
+The variables found: TIME_s
+The variables found: LATITUDE_s
+The variables found: LONGITUDE_s
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDFLUOR
+The variables found: CTDXMISS
+All good?
+ 
+E:/Data_downloads/Marlin/09SS19950114/09SS19950115_1_ctd1.tsv
+The header line picked:  PRESS  TEMP   SAL  SIGMA-T S.V.A.  G.A.      D.O.                                                       
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+All good?
+ 
+E:/Data_downloads/Marlin/09SS19950114/09SS19950115_1_ctd1.tsv
+The header line picked:  PRESS  TEMP   SAL  SIGMA-T S.V.A.  G.A.      D.O.                                                       
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+All good?
+ 
+E:/Data_downloads/Marlin/09SS19950114/09SS19950115_1_ctd1.tsv
+The header line picked:  PRESS  TEMP   SAL  SIGMA-T S.V.A.  G.A.      D.O.                                                       
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+All good?
+ 
+E:/Data_downloads/Marlin/09SS19950114/09SS19950115_1_ctd1.tsv
+The header line picked:  PRESS  TEMP   SAL  SIGMA-T S.V.A.  G.A.      D.O.                                                       
+The variables found: CTDPRS
+The variables found: CTDTMP
+The variables found: CTDSAL
+The variables found: CTDOXY
+All good?
+ 
