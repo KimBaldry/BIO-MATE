@@ -1,0 +1,69 @@
+/begin_header
+/identifier_product_doi=10.5067/SeaBASS/SOCCOM/DATA001
+/received=20180314
+/investigators=Emmanuel_Boss,Lynne_Talley
+/affiliations=UMaine,Scripps
+/contact=emmanuel.boss@maine.edu
+/experiment=SOCCOM
+/cruise=SOTS
+/station=NA
+/data_file_name=SOCCOM_SOTS_POC.sb
+/documents=SOCCOM_SOTS_POC_doc.pdf
+/calibration_files=SOCCOM_SOTS_POC_doc.pdf
+/data_type=bottle
+/data_status=preliminary
+/start_date=20150323
+/end_date=20150327
+/start_time=21:33:00[GMT]
+/end_time=00:31:00[GMT]
+/north_latitude=-46.6448[DEG]
+/south_latitude=-47.1255[DEG]
+/east_longitude=143.99[DEG]
+/west_longitude=141.5723[DEG]
+/water_depth=NA
+!
+! COMMENTS
+! Reference_file = SOCCOM_IN2015_POC.xlsx
+! Date_processed = March 26,2015
+! CCHDO_EXPO = 096U20150321
+! Quality codes (following CCHDO guidelines except flag 0):
+!     0. No quality check performed on measurement.
+!     1. Sample for this measurement was drawn from water bottle but analysis not received.
+!     2. Acceptable measurement.
+!     3. Questionable measurement.
+!     4. Bad measurement.
+!     5. Not reported.
+!     6. Mean of replicate measurements (Number of replicates is specified in column bincount).
+!     9. Sample not drawn for this measurement from this bottle.
+!
+! The POC and PON samples are acidified to get rid of inorganic carbon and nitrogen.
+! A DOC/DON adsorption blank,to account for contamination and dissolved organic carbon (DOC)
+! and nitrogen (DON),was taken during sampling by stacking two filters in the filtration funnels and
+! filtering the sample as normal. The upper filter will be the total (dissolved and particulate) organic
+! carbon and nitrogen sample and the bottom filter will be the DOC/DON adsorption blank. The
+! organic carbon and nitrogen from the DOC/DON adsorption blank was removed from the
+! concentration of the total filters to retrieve particulate organic carbon (POC) and nitrogen (PON).
+!
+! Blank:
+!     C = 23.36 micrograms
+!     N = 3.38 micrograms
+!
+/missing=-9999
+/delimiter=comma
+/fields=sample,station,bottle,year,month,day,sdy,time,lon,lat,depth,POC,PON,volfilt,bincount,quality
+/units=none,none,none,yyyy,mo,dd,ddd,hh:mm:ss,degrees,degrees,m,mg/m^3,mg/m^3,l,none,none
+/end_header
+st5-21,5,21,2015,3,23,82,23:00:00,142.1681,-46.6448,30.8,21.97,4.22,1.9,1,0
+st5-23,5,23,2015,3,23,82,23:00:00,142.1681,-46.6448,12.2,17.14,3.32,1.92,1,0
+st7-13,7,13,2015,3,25,84,22:12:00,143.99,-47.1255,150.9,2.00,0.22,1.95,1,0
+st7-15,7,15,2015,3,25,84,22:12:00,143.99,-47.1255,120.6,16.55,3.80,2,1,0
+st7-17,7,17,2015,3,25,84,22:12:00,143.99,-47.1255,93.6,17.72,3.89,1.9,1,0
+st7-19,7,19,2015,3,25,84,22:12:00,143.99,-47.1255,59.8,18.38,4.64,1.9,1,0
+st7-21,7,21,2015,3,25,84,22:12:00,143.99,-47.1255,30.4,26.08,5.35,2,1,0
+st7-23,7,23,2015,3,25,84,22:12:00,143.99,-47.1255,7.2,18.91,3.79,1.9,1,0
+st9-13,9,13,2015,3,27,86,05:44:00,141.5723,-46.8423,153.9,3.89,0.77,1.9,1,0
+st9-15,9,15,2015,3,27,86,05:44:00,141.5723,-46.8423,123.1,10.22,2.43,1.9,1,0
+st9-17,9,17,2015,3,27,86,05:44:00,141.5723,-46.8423,92.3,20.62,4.68,1.95,1,0
+st9-19,9,19,2015,3,27,86,05:44:00,141.5723,-46.8423,62.0,21.15,4.60,2,1,0
+st9-21,9,21,2015,3,27,86,05:44:00,141.5723,-46.8423,30.6,29.34,6.06,2,1,0
+st9-23,9,23,2015,3,27,86,05:44:00,141.5723,-46.8423,7.4,30.12,5.92,2,1,0

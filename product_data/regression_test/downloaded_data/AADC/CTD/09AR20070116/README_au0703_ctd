@@ -1,0 +1,306 @@
+
+SAZ-SENSE VOYAGE AU0703 CTD and BOTTLE DATA
+--------------------------------------------
+
+Here's the finalised CTD and Niskin bottle data for voyage au0703 (SAZ-SENSE), 
+Aurora Australis Voyage 3 2006/2007, 17th Jan 2007 to 20th Feb 2007.
+
+Note: please delete any previous versions you have of the data, and replace
+with this version.
+
+The data originators (ACE CRC, Australia) should be acknowledged in any publication, 
+including internal reports, published reports, journal articles, presentations etc.
+The following reference can be used for the data:
+
+Rosenberg, M (unpublished) SAZ-SENSE, Aurora Australis Marine Science Cruise AU0703 
+- oceanographic field measurements and analysis. ACECRC, Hobart, unpublished report.
+
+The above data report gives important details on data processing and data quality. It
+is included in the data set in the file a0703doc.pdf.
+
+Please include this README file if you pass the data on to anyone else.
+
+Thanks very much for your help.
+
+
+regards,
+         Mark Rosenberg
+         mark.rosenberg@utas.edu.au
+
+
+The CTD casts are as follows:
+
+CTD cast number        what
+   1                station 1 (transit) test cast
+   2                station 1 (transit)
+   3 to 5           station 2 (transit)
+   6                station 3 (transit)
+   7 to 34          station 4 (process station 1)
+   35 to 36         station 5 (transit)
+   37 to 59         station 6 (process station 2)
+   60               station 7 (transit)
+   61               station 8 (transit)
+   62 to 64         station 9 (transit)
+   65 to 67         station 10 (transit)
+   68               station 11 (transit)
+   69 to 71         station 12 (transit)
+   72               station 13 (transit)
+   73               station 14 (transit)
+   74               station 15 (transit)
+   75               station 16 (transit)
+   76 to 86         station 17 (process station 3)
+   87               station 18 (transit)
+   88               station 19 (transit)
+   89 to 90         station 20 (transit)          
+   91 to 93         station 21 (transit)
+   94 to 95         station 22 (transit)
+   96 to 104        station 17 (process station 3)
+   105 to 106       station 23 (transit)
+   107 to 109       station 24 (transit)
+
+
+
+
+CTD DATA
+--------
+* SeaBird CTD 704 was used for the whole cruise.
+
+* CTD data are in text files named *.all, containing 2-dbar data.
+An example of file naming convention:
+
+a07034020.all -  a = Aurora Australis
+                07 = year of first CTD
+                03 = cruise number
+                 4 = CTD instrument number
+               020 = CTD cast number
+
+* Post-processed bathymetry data for the cruise are not available, and
+all bottom depth values in the file headers are approximate only.
+
+* The CTD 2 dbar files consist of a 15 line header with station info,
+followed by the data in column format, as follows:
+
+column 1 - pressure (dbar) 
+column 2 - temperature (degrees C, T90 scale) 
+column 3 - conductivity (mS/cm) 
+column 4 - salinity (PSS78) 
+column 5 - dissolved oxygen (umol/l) 
+column 6 - fluorescence (manufacturer supplied calibration giving
+           units ug/l)
+column 7 - photosynthetically active radiation (PAR) (uncalibrated 
+           voltage data)
+column 8 - transmittance (manufacturer supplied calibration, dimensionless)
+column 9 - transmittance "spikiness" (dimensionless)
+column 10 - no. of data points used in the 2 dbar bin
+column 11 - fluorescence, upcast data
+column 12 - PAR, upcast data
+column 13 - transmittance, upcast data
+column 14 - transmittance "spikiness", upcast data
+column 15 - no. of data points used in the 2 dbar bin, upcast data
+
+* CTD temperature, conductivity, salinity, dissolved oxygen and PAR
+are all 2 dbar averaged values, for each even valued pressure bin.
+
+* Fluorescence data are the minimum value within each 2 dbar bin.
+Both downcast and upcast data are supplied for fluorescence, PAR and
+transmittance.
+
+* Transmittance data in columns 8 and 13 are the maximum value within each 2 dbar bin.
+Transmittance "spikiness" data in columns 9 and 14 are the standard deviation of 
+transmittance "spike size" within each 2 dbar bin, where "spike size" is the difference
+of each 24 Hz transmittance reading from the 2 dbar transmittance maximum envelope (see data 
+report for full definition of this parameter).
+
+* columns 2 to 10 are downcast data; columns 11 to 15 are upcast data
+
+* All files start at 2 dbar, and there is a line for each 2 dbar bin.
+Any missing data are filled by the null value -9.0
+
+* Temperature/conductivity/salinity data are from the primary temperature
+and conductivity sensor pair for all CTD casts, except for CTD 8 and
+30 (secondary sensor data used).
+
+* Station information contained in the headers is described below in the
+section on station data, with the addition of:
+lastbin = deepest 2 dbar pressure bin (dbar) for the cast; and
+pressure (dbar) at the minimum altimeter value
+
+* Note that all oxygen values are volumetric (i.e. umol/l).
+
+* Note that some deeper fluorescence data are slightly negative in value,
+due to the calibration coefficients supplied.
+
+
+
+BOTTLE DATA
+-----------
+* Note that all nutrient and oxygen values are volumetric (i.e. umol/l).
+
+* The bottle data (hydrochemistry) are contained in the a0703.bot text file, with the
+following columns:
+
+column 1 - cast number
+column 2 - ctd pressure (dbar)
+column 3 - ctd temperature (deg. C, T90 scale)
+column 4 - null data (i.e. -9.0)
+column 5 - ctd conductivity (mS/cm)
+column 6 - ctd salinity (PSS78)
+column 7 - bottle salinity (PSS78)
+column 8 - phosphate (umol/l) 
+column 9 - nitrate (umol/l) (i.e. total nitrate+nitrite)
+column 10 - silicate (umol/l)
+column 11 - bottle dissolved oxygen (umol/l)
+column 12 - bottle flag (1=good,0=suspicious,-1=bad, relevant to
+            salinity values for CTD calibration i.e. not applicable to other bottle data)
+column 13 - niskin bottle number
+column 14 - ctd fluorescence (units as per CTD note above)
+column 15 - ctd photosynthetically active radiation (PAR) (units as per CTD note above)
+column 16 - ctd transmittance (units as per CTD note above)
+column 17 - ammonia (umol/l)
+column 18 - nitrite (umol/l)
+
+* Columns 2, 3, 5, 6, 14, 15 and 16 are all the averages of CTD upcast burst data 
+(i.e. averages of the 10 seconds of CTD data prior to each bottle firing). Temperature,
+conductivity and salinity data are from the primary sensor pair (except for CTD cast 8 and 30).
+
+* Note that these burst averages of fluorescence and transmittance include all the data spikes
+within each 10 second averaging period. For fluorescence minimum values, refer to upcast 2dbar 
+values in the *.all files (similarly for transmittance maximum values).
+
+* Any missing data are filled by the null value -9.0
+
+* Please refer to the file sussnut.dat for suspicious nutrient values not deleted from the data.
+
+* Note that ammonia and nitrite are low level values. Low level readings from
+the Lachat autoanalyser, including low level near surface phosphate and nitrate+nitrite data, and
+all ammonia and nitrite data, should be used with caution - the accuracy for these
+low level readings is unknown.
+
+
+
+STATION INFORMATION
+-------------------
+A summary of the station information is contained in the a0703.sta file
+(this station information is also included in the matlab file a0703.mat).
+All times are UTC. The data columns for each cast are:
+
+CTD cast number
+date (dd Mmm yyyy), start of downcast
+time (hhmmss), start of downcast
+latitude (degrees and decimal minutes), start of downcast
+longitude (degrees and decimal minutes), start of downcast
+water depth (m), start of downcast
+time (hhmmss), bottom of cast
+latitude (degrees and decimal minutes), bottom of cast
+longitude (degrees and decimal minutes), bottom of cast
+water depth (m), bottom of cast
+time (hhmmss), end of cast
+latitude (degrees and decimal minutes), end of cast
+longitude (degrees and decimal minutes), end of cast
+water depth (m), end of cast
+altimeter (m) - minimum altimeter value
+maximum pressure (dbar) for the cast
+decimal time, start of downcast
+decimal time, bottom of downcast
+decimal time, end of downcast
+
+* All times are UTC
+
+* Decimal times are decimal days from 2400 on 31st Dec. 2006 (so, for example,
+midday on 2nd January 2007 = decimal time 1.5).
+
+* Any missing values are filled by a blank
+
+* Note - all sounder depths are approximate only (processed 12 kHz sounder data
+are not available).
+
+
+
+MATLAB FORMAT
+-------------
+
+* In the matlab files, column number for each array corresponds with CTD cast number.
+
+* In the matlab files, NaN is a null value.
+
+* In the matlab CTD file, profiles are padded down to 3000 dbar.
+
+* In the matlab bottle file, the rows 1 to 24 are the shallowest to deepest Niskins respectively.
+
+* CTD data are in matlab format in the file a0703.mat, which includes station info.
+The array names have the following meaning:
+all times are UTC
+"start" refers to start of cast
+"bottom" refers to bottom of cast
+"end" refers to end of cast
+"dectime" is decimal days from 2400 on 31st Dec. 2003 (so, for example,
+midday on 2nd January 2005 = decimal time 367.5, noting that 2004 is a leap year).
+"lat" is latitude (decimal degrees, where -ve = south)
+"lon" is longitude (decimal degrees, where +ve = east)
+"time" is hhmmss time
+"botd" is ocean depth (m)
+maxp = maximum pressure of the CTD cast (dbar)
+lastbin = deepest 2 dbar pressure bin (dbar) for the cast
+ctdunit = instrument serial number
+"ctd" is the CTD 2dbar averaged data, for the parameters:
+   cond=conductivity (mS/cm)
+   fluoro=fluorescence (i.e. minimum per 2 dbar bin) 
+   npts=number of data points used in the 2 dbar bin
+   ox=dissolved oxygen (umol/l)
+   par=photosynthetically active radiation 
+   press=pressure (dbar)
+   sal=salinity (PSS78)
+   temp=temperature (deg.C T90)
+   trans=transmittance (i.e. maximum per 2 dbar bin)
+   transspike=transmittance "spikiness" (as defined earlier)
+   fluoro_up=upcast fluorescence
+   par_up=upcast photosynthetically active radiation 
+   trans_up=upcast transmittance
+   transspike_up=upcast transmittance "spikiness"
+   npts_up=upcast version of npts
+date is ddmmyyyy date
+altimeter = minimum altimeter value (m)
+press_alt = pressure (dbar) at the minimum altimeter value
+
+
+* Bottle data are also in matlab format in the file called a0703bot.mat
+The array names have the following meaning:
+"ctdbot" refers to upcast CTD burst data, for the parameters:
+   cond=conductivity (mS/cm)
+   fluoro=fluorescence 
+   par=photosynthetically active radiation 
+   press=pressure (dbar) (also in array hyd_press)
+   sal=salinity (PSS78)
+   temp=temperature (deg.C T90)
+   trans=transmittance
+"hyd" refers to bottle data, for the parameters:
+   ox=dissolved oxygen (umol/l)
+   sal=salinity (PSS78)
+flag = the bottle flagged described under the bottle data section
+niskin = niskin bottle number
+nitrate (i.e. total nitrate+nitrite),phosphate,silicate,ammonia,nitrite = umol/l
+station = CTD cast number
+note that hyd_press is the same as ctd_press
+
+
+
+WOCE EXCHANGE FORMAT
+--------------------
+
+CTD and bottle data are also supplied in WOCE "Exchange" format, as follows:
+
+*.ctd = CTD data
+a0703.sea = bottle data
+
+* All oxygen and nutrient data in these files are in volumetric units (i.e. umol/l).
+
+* Any missing data are filled by the null value -999.0
+
+
+OTHER FILES/DATA AVAILABLE FOR THIS CRUISE
+------------------------------------------
+
+* All nutrient and oxygen data are also available in gravimetric units
+(i.e. umol/kg) on request, in WOCE "Exchange" format.
+
+

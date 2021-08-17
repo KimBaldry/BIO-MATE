@@ -1,0 +1,66 @@
+/begin_header
+/identifier_product_doi=10.5067/SeaBASS/SOCCOM/DATA001
+/received=20180314
+/investigators=Emmanuel_Boss,Lynne_Talley
+/affiliations=UMaine,Scripps
+/contact=emmanuel.boss@maine.edu
+/experiment=SOCCOM
+/cruise=SOTS
+/station=NA
+/data_file_name=SOCCOM_SOTS_HPLC.csv
+/documents=SOCCOM_SOTS_HPLC_doc.pdf
+!/documents=SOCCOM_SOTS_HPLC.pdf
+/calibration_files=SOCCOM_SOTS_HPLC_doc.pdf
+!/calibration_files=SOCCOM_SOTS_HPLC.pdf
+/data_type=pigment
+/data_status=preliminary
+/start_date=20150323
+/end_date=20150327
+/start_time=23:00:00[GMT]
+/end_time=05:44:00[GMT]
+/north_latitude=-46.6448[DEG]
+/south_latitude=-47.1255[DEG]
+/east_longitude=143.99[DEG]
+/west_longitude=141.5723[DEG]
+/water_depth=NA
+!
+! COMMENTS
+! Reference_file = IN2015_V01_SOTS_CTD_POCPONPigments_Di.xlsx
+! Date_processed = 9/29/15
+! Name_of_water_body = Southern Ocean
+! Water_type = Open Ocean
+! CCHDO_EXPO = 096U20150321
+! Quality codes (following CCHDO guidelines):
+!     0. No quality check performed on measurement.
+!     1. Sample for this measurement was drawn from water bottle but analysis not received.
+!     2. Acceptable measurement.
+!     3. Questionable measurement.
+!     4. Bad measurement.
+!     5. Not reported.
+!     6. Mean of replicate measurements (Number of replicates is specified in column bincount).
+!     9. Sample not drawn for this measurement from this bottle.
+!
+! MV_CHL_A includes allomers and epimers
+! No replicates available.
+! HPLC performed at CSIRO by Lesley Clementson.
+!
+/missing=-9999
+/below_detection_limit=-8888
+/delimiter=comma
+year,month,day,sdy,time,sample,water_depth,lon,lat,station,bottle,depth,Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,MV_Chl_a,DV_Chl_a,Chlide_a,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Pras,quality
+/units=yyyy,mo,dd,ddd,hh:mm:ss,none,m,degrees,degrees,none,none,m,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,none
+/end_header
+2015,3,23,82,23:00:00,5_13,4681,142.1681,-46.6448,5,13,148.6,0.010,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.010,-8888,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0
+2015,3,23,82,23:00:00,5_15,4681,142.1681,-46.6448,5,15,117.8,0.009,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.009,-8888,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0
+2015,3,23,82,23:00:00,5_17,4681,142.1681,-46.6448,5,17,91.4,0.185,0.045,0.050,0.012,0.065,0.004,0.006,0.000,0.013,0.000,0.021,0.185,-8888,0.000,0.027,0.023,0.000,0.004,0.002,0.007,0
+2015,3,23,82,23:00:00,5_19,4681,142.1681,-46.6448,5,19,60.7,0.156,0.045,0.030,0.010,0.058,0.002,0.006,0.000,0.013,0.000,0.016,0.156,-8888,0.000,0.022,0.009,0.000,0.002,0.002,0.005,0
+2015,3,23,82,23:00:00,5_21,4681,142.1681,-46.6448,5,21,30.2,0.098,0.023,0.024,0.006,0.036,0.002,0.005,0.000,0.008,0.000,0.009,0.098,-8888,0.000,0.013,0.011,0.000,0.003,0.001,0.003,0
+2015,3,23,82,23:00:00,5_23,4681,142.1681,-46.6448,5,23,12,0.115,0.023,0.024,0.008,0.040,0.002,0.008,0.000,0.009,0.000,0.008,0.115,-8888,0.000,0.014,0.010,0.000,0.003,0.002,0.004,0
+2015,3,25,84,22:12:00,7_17,4182,143.99,-47.1255,7,17,91.8,0.283,0.055,0.041,0.020,0.046,0.011,0.008,0.000,0.033,0.005,0.009,0.283,-8888,0.000,0.029,0.012,0.000,0.007,0.003,0.013,0
+2015,3,25,84,22:12:00,7_19,4182,143.99,-47.1255,7,19,58.6,0.462,0.111,0.069,0.028,0.075,0.015,0.011,0.000,0.051,0.009,0.019,0.462,-8888,0.000,0.054,0.016,0.000,0.010,0.005,0.019,0
+2015,3,25,84,22:12:00,7_21,4182,143.99,-47.1255,7,21,29.8,0.522,0.126,0.092,0.032,0.087,0.021,0.016,0.000,0.057,0.008,0.018,0.522,-8888,0.000,0.068,0.025,0.000,0.011,0.006,0.020,0
+2015,3,25,84,22:12:00,7_23,4182,143.99,-47.1255,7,23,7.1,0.532,0.111,0.100,0.032,0.087,0.021,0.020,0.000,0.058,0.008,0.016,0.532,-8888,0.000,0.068,0.032,0.000,0.008,0.006,0.021,0
+2015,3,27,86,05:44:00,9_17,4607,141.5723,-46.8423,9,17,90.5,0.379,0.094,0.089,0.022,0.120,0.008,0.016,0.000,0.024,0.007,0.020,0.369,-8888,0.011,0.051,0.037,0.000,0.010,0.004,0.014,0
+2015,3,27,86,05:44:00,9_19,4607,141.5723,-46.8423,9,19,60.8,0.382,0.099,0.085,0.028,0.132,0.007,0.014,0.000,0.030,0.027,0.028,0.367,-8888,0.015,0.052,0.033,0.000,0.010,0.004,0.013,0
+2015,3,27,86,05:44:00,9_21,4607,141.5723,-46.8423,9,21,30,0.123,0.030,0.028,0.008,0.040,0.003,0.009,0.000,0.010,0.000,0.014,0.123,-8888,0.000,0.017,0.011,0.000,0.003,0.002,0.004,0
+2015,3,27,86,05:44:00,9_23,4607,141.5723,-46.8423,9,23,7.3,0.367,0.086,0.080,0.023,0.116,0.006,0.024,0.000,0.024,0.009,0.031,0.345,-8888,0.022,0.050,0.031,0.000,0.010,0.007,0.014,0

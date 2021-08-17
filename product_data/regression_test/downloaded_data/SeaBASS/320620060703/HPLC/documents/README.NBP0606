@@ -1,0 +1,32 @@
+by hlwang@ucsd.edu, 10/12/2007 1:06PM
+
+With general questions please contact PI Greg Mitchell (gmitchell@ucsd.edu);
+with specific questions about this dataset please contact Haili Wang
+(hlwang@ucsd.edu).
+
+cruise name = $CRUISE = NBP0606
+
+Files in this set:
+
+README.$CRUISE - this file
+
+$CRUISE_HPLC.txt - HPLC pigments data
+
+$CRUISE_apad.tar.bz2 - a zipped tarball with absorption scans of ap, ad
+  includes files like $CRUISE_apad_NNNN.txt
+  where NNNN = sequence number of the sample
+  has the absorption the particulates (ap) and detritus (ad)
+  for 300-750 nm with a step of 1 nm.
+  The methods are described in
+	ap: Mitchell, B.G., Ocean Optics X, p.137-148, 1990;
+	ad: Kishino et al., 1985.
+
+$CRUISE_ag.tar.bz2 - a zipped tarball with absorption scans of ag
+  includes files like $CRUISE_ag_NNNN.txt
+  where NNNN = sequence number of the sample
+  has the absorption the Gelbstoff (ag)
+  for 250-750 nm with a step of 1 nm.
+  The methods are described in
+  Mitchell et al. 2000. NASA/TM-2000-209966, p.125-153.
+
+Other variables will be added later (as soon as they become available).

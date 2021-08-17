@@ -1,0 +1,61 @@
+,Description,WaterSample_ID,Unit,Notes
+Cruise,Cruise name,,,
+CastID,identification of CTD/TMC cast,,,
+Latitude_decimal,Latitude in decimal format,,,
+Longitude_decimal,Longitude in decimal format,,,
+Rosette_Bottle_ID,Rosette bottle number,,,
+GMT_DateTime,Data and Time in GMT,,,
+Depth_m,Depth where sample taken,,m,
+Chlorophyll_a_Fluor,Chlorophyll a by fluorometric analysis,Pigments_Fluor,mg m-3,
+Nitrate,Nitrate,Macro-nutrients,umol/l,
+Nitrite,Nitrite,Macro-nutrients,umol/l,
+Ammonium,Ammonium,Macro-nutrients,umol/l,
+Phosphate,Phosphate,Macro-nutrients,umol/l,
+Silicate,Silicate,Macro-nutrients,umol/l,
+Chlorophyll_c3,Chlorophyll c3,Pigments_HPLC,mg m-3,
+Chlorophyll_c2,Chlorophyll c2,Pigments_HPLC,mg m-3,
+Chlorophyll_c1,Chlorophyll c1,Pigments_HPLC,mg m-3
+Chlorophyllide_a,Chlorophyllide a,Pigments_HPLC,mg m-3
+Pheophorbide_a,Pheophorbide a,Pigments_HPLC,mg m-3
+Peridinin,Peridinin,Pigments_HPLC,mg m-3
+Butanoyloxyfucoxanthin,Butanoyloxyfucoxanthin,Pigments_HPLC,mg m-3
+Fucoxanthin,Fucoxanthin,Pigments_HPLC,mg m-3
+Neoxanthin,Neoxanthin,Pigments_HPLC,mg m-3
+Prasinoxanthin,Prasinoxanthin,Pigments_HPLC,mg m-3
+Violaxanthin,Violaxanthin,Pigments_HPLC,mg m-3
+Hexanoyloxyfucoxanthin,Hexanoyloxyfucoxanthin,Pigments_HPLC,mg m-3
+Diadinoxanthin,Diadinoxanthin,Pigments_HPLC,mg m-3
+Alloxanthin,Alloxanthin,Pigments_HPLC,mg m-3
+Diatoxanthin,Diatoxanthin,Pigments_HPLC,mg m-3
+Zeaxanthin,Zeaxanthin,Pigments_HPLC,mg m-3
+Lutein,Lutein,Pigments_HPLC,mg m-3
+Gyroxanthin_diester,Gyroxanthin diester,Pigments_HPLC,mg m-3
+Chlorophyll_b,Chlorophyll b,Pigments_HPLC,mg m-3,a
+Divinyl_Chlorophyll_b,Divinyl Chlorophyll b,Pigments_HPLC,mg m-3,b
+Monovinyl_Chlorophyll_b,Monovinyl Chlorophyll b,Pigments_HPLC,mg m-3,c
+Chlorophyll_a_Allomer,Chlorophyll a Allomer,Pigments_HPLC,mg m-3,d
+Divinyl_Chlorophyll_a,Divinyl Chlorophyll a,Pigments_HPLC,mg m-3,
+Monovinyl_Chlorophyll_a,Monovinyl Chlorophyll a,Pigments_HPLC,mg m-3,
+Chlorophyll_a_epimer,Chlorophyll a epimer,Pigments_HPLC,mg m-3,e
+Pheophytin,Pheophytin,Pigments_HPLC,mg m-3,
+alpha_Carotene,alpha-Carotene,Pigments_HPLC,mg m-3,f
+beta_Carotene,beta-Carotene,Pigments_HPLC,mg m-3,g
+alpha_beta_Carotene,the sum of alpha and beta carotene,Pigments_HPLC,mg m-3,
+Total_Chlorophyll_a,Total Chlorophyll a,Pigments_HPLC,mg m-3,
+POC,Particulate organic carbon,CHN,mg m-3,
+PON,Particulate organic nitrogen,CHN,mg m-3,
+Bact_abund,Abundance of bacteria,Bacteria,per ml,
+Bact_prod,productivity of bacteria,Bacteria,mgC l-1 d-1,
+PP_SPGANT,primary productivity,Primary production,mgC m-2 d-1
+
+Notes,,,
+"1. HPLC pigments samples were analyzed by CHORS/SDSU for LMG0402 and by HPL for NBP0606, respectively;",,,
+2.Pigments not found by CHORS were given a concentration of 0; pigments not found by HPL were given a concentration of 0.0001.,,,
+a.,CHORS did not report this pigment;,,
+b.,HPL included this pigments into Chlorophyll b;,,
+c.,HPL did not report this pigment;,,
+d.,HPL did not report this pigment;,,
+e.,HPL did not report this pigment;,,
+f.,HPL did not report this pigment;,,
+g.,HPL did not report this pigment;,,
+3. -999 is used for data not avaialble.,,,

@@ -1,6 +1,0 @@
-"0","file_path = file.path(path,""BIO-MATE"",""product_data"",""processing_metadata"",""regression_test"")
-"
-"2","Error: unexpected symbol in:
-""(path_out = file.path(path,""BIO-MATE"",""product_data"",""regression_test"",""reformatted_data"")
-file_path""
-"

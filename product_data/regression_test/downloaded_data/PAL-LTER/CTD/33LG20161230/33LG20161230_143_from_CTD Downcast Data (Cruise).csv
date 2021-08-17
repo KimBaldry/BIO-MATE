@@ -1,0 +1,3 @@
+"studyName","Datetime.UTC","Event.Number","Line","Station","Latitude","Longitude","Pressure","Temperature","Salinity","Sigma.Theta","Depth","Fluorescence","Beam.Transmission"
+"LMG17-01","2017-01-11 15:09:00",143,398.59,39.35,-66.267,-67.348,24,0.231,-999,-999,-23.76,1.092,94.1
+"LMG17-01","2017-01-11 15:09:00",143,398.59,39.35,-66.267,-67.348,25,0.235,-999,-999,-24.75,1.175,94.34

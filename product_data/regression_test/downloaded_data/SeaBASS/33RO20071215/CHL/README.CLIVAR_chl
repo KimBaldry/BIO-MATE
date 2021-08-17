@@ -1,0 +1,20 @@
+UCSB NAAMES CHLOROPHYLL bottle sample analysis
+
+Sampling
+
+We collected 500ml samples from the top 8 depths on the Deep CTD Rosette cast for each station. Samples were collected into brown HDPE bottles after rinsing three times. 
+
+
+Filtering
+
+Samples were subsequently filtered onto 25mm 0.45um pore nitrocellulose filters using an aspirator pump set at 0.02MPa pressure. The filters were placed in aluminum foil wrapped polypropylene Falcon tubes, sealed with Parafilm,  and extracted for 48 hours at 0C temperature in 10ml 90% acetone (Fisher Optima and MilliQ prepared water) in a dark cooler, and were shaken after 24 hours to ensure complete filter dissolution.
+
+
+Analysis
+
+The acetone extracts were analyzed using the acidification technique (Mueller et al., 2003) on a Turner Designs AU-10 fluorometer with the standard chlorophyll fluorescence set. The fluorescence (in relative units) was measured before (Rb) and after (Ra) acidification with two drops of 10% HCl. Chlorophyll a was computed according to the standard formula:Chl a (ug/l) = (tau/tau-1) Fd(Rb-Ra)Where tau is the fluorescence ratio of pure chlorophyll a to pure phaeophytin a and Fd is the calibration coefficient (ug/l). Instrument performance was tracked daily with a Turner Designs solid fluorescence standard. 
+
+
+References
+
+Mueller, J.L., G.S Fargion, and C.R. McClain (eds), 2003. Ocean Optics Protocols For Satellite Ocean Color Sensor Validation, Revision 4. Greenbelt, MD, NASA Goddard Spaceflight Center, NASA/TM-2003-211621/Rev4.

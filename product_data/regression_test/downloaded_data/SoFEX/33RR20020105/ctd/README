@@ -1,0 +1,134 @@
+README file for requested data object: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO 
+Wed Apr 29 22:12:42 2020
+ 
+Locating data files.  Report any errors here:  
+
+OK ... START MAKING DATA FILES ...  
+... creating: sta#2.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=2) 
+... 403 lines of data in sta#2.tsv. 
+ 
+... creating: sta#3.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=3) 
+... 402 lines of data in sta#3.tsv. 
+ 
+... creating: sta#4.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=4) 
+... 402 lines of data in sta#4.tsv. 
+ 
+... creating: sta#5.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=5) 
+... 404 lines of data in sta#5.tsv. 
+ 
+... creating: sta#6.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=6) 
+... 404 lines of data in sta#6.tsv. 
+ 
+... creating: sta#7.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=7) 
+... 202 lines of data in sta#7.tsv. 
+ 
+... creating: sta#8.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=8) 
+... 203 lines of data in sta#8.tsv. 
+ 
+... creating: sta#9.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=9) 
+... 203 lines of data in sta#9.tsv. 
+ 
+... creating: sta#10.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=10) 
+... 203 lines of data in sta#10.tsv. 
+ 
+... creating: sta#11.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=11) 
+... 182 lines of data in sta#11.tsv. 
+ 
+... creating: sta#12.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=12) 
+... 287 lines of data in sta#12.tsv. 
+ 
+... creating: sta#13.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=13) 
+... 206 lines of data in sta#13.tsv. 
+ 
+... creating: sta#14.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=14) 
+... 206 lines of data in sta#14.tsv. 
+ 
+... creating: sta#15.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=15) 
+... 204 lines of data in sta#15.tsv. 
+ 
+... creating: sta#16.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=16) 
+... 205 lines of data in sta#16.tsv. 
+ 
+... creating: sta#17.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=17) 
+... 205 lines of data in sta#17.tsv. 
+ 
+... creating: sta#18.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=18) 
+... 205 lines of data in sta#18.tsv. 
+ 
+... creating: sta#19.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=19) 
+... 205 lines of data in sta#19.tsv. 
+ 
+... creating: sta#20.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=20) 
+... 205 lines of data in sta#20.tsv. 
+ 
+... creating: sta#21.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=21) 
+... 206 lines of data in sta#21.tsv. 
+ 
+... creating: sta#22.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=22) 
+... 105 lines of data in sta#22.tsv. 
+ 
+... creating: sta#23.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=23) 
+... 156 lines of data in sta#23.tsv. 
+ 
+... creating: sta#24.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=24) 
+... 204 lines of data in sta#24.tsv. 
+ 
+... creating: sta#25.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=25) 
+... 207 lines of data in sta#25.tsv. 
+ 
+... creating: sta#26.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=26) 
+... 210 lines of data in sta#26.tsv. 
+ 
+... creating: sta#27.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=27) 
+... 205 lines of data in sta#27.tsv. 
+ 
+... creating: sta#28.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=28) 
+... 205 lines of data in sta#28.tsv. 
+ 
+... creating: sta#29.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=29) 
+... 210 lines of data in sta#29.tsv. 
+ 
+... creating: sta#30.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=30) 
+... 204 lines of data in sta#30.tsv. 
+ 
+... creating: sta#32.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=32) 
+... 207 lines of data in sta#32.tsv. 
+ 
+... creating: sta#33.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO(sta=33) 
+... 205 lines of data in sta#33.tsv. 
+ 
+  
+Documentation info file written. 
+//ocb.whoi.edu:80/OCB/SOFeX/Revelle/ctd-SIO data download request completed: 
+Wed Apr 29 22:13:17 2020 

@@ -1,0 +1,29 @@
+Summary of submitted cruises and expected documentation:
+
+CREATED 16 January 2008
+
+EXPERIMENTS
+-----------
+nsf-bwz
+
+CRUISES
+-------
+nbp0606
+
+DATES
+-----
+05 Jul 2006 through 08 Aug 2006
+
+LOCATION
+--------
+North: -56.92	South: -64.67
+West: -64.99	East: -52.87
+
+DOCUMENTS
+---------
+readme.nbp0606
+
+CALIBRATION FILES
+-----------------
+060609_prr8000900111v10.mdb
+no_calibration.txt

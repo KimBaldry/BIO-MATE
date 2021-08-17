@@ -1,0 +1,74 @@
+README file for requested data object: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd 
+Mon Feb  1 23:49:10 2021
+ 
+Locating data files.  Report any errors here:  
+
+OK ... START MAKING DATA FILES ...  
+... creating: event#02261338.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=02261338) 
+... 281 lines of data in event#02261338.csv. 
+ 
+... creating: event#02261729.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=02261729) 
+... 200 lines of data in event#02261729.csv. 
+ 
+... creating: event#02280450.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=02280450) 
+... 282 lines of data in event#02280450.csv. 
+ 
+... creating: event#03010305.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03010305) 
+... 200 lines of data in event#03010305.csv. 
+ 
+... creating: event#03031557.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03031557) 
+... 1640 lines of data in event#03031557.csv. 
+ 
+... creating: event#03050052.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03050052) 
+... 199 lines of data in event#03050052.csv. 
+ 
+... creating: event#03091500.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03091500) 
+... 1451 lines of data in event#03091500.csv. 
+ 
+... creating: event#03092015.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03092015) 
+... 993 lines of data in event#03092015.csv. 
+ 
+... creating: event#03100426.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03100426) 
+... 200 lines of data in event#03100426.csv. 
+ 
+... creating: event#03151539.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03151539) 
+... 200 lines of data in event#03151539.csv. 
+ 
+... creating: event#03172313.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03172313) 
+... 2013 lines of data in event#03172313.csv. 
+ 
+... creating: event#03210743.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03210743) 
+... 2517 lines of data in event#03210743.csv. 
+ 
+... creating: event#03221758.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03221758) 
+... 198 lines of data in event#03221758.csv. 
+ 
+... creating: event#03281350.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03281350) 
+... 2784 lines of data in event#03281350.csv. 
+ 
+... creating: event#03290721.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03290721) 
+... 199 lines of data in event#03290721.csv. 
+ 
+... creating: event#03310615.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd(event=03310615) 
+... 1001 lines of data in event#03310615.csv. 
+ 
+  
+Documentation info file written. 
+//usjgofs.whoi.edu/jgofs/southern/nbp98_2/ctd data download request completed: 
+Mon Feb  1 23:49:10 2021 

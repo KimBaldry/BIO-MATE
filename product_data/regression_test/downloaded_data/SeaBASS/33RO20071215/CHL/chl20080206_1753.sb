@@ -1,0 +1,48 @@
+/begin_header
+/identifier_product_doi=10.5067/SeaBASS/CLIVAR/DATA001
+/received=20090321
+/affiliations=UCSB
+/investigators=Norm_Nelson,Dave_Siegel,Craig_Carlson
+/contact=norm@icess.ucsb.edu
+/experiment=CLIVAR
+/cruise=P18
+/data_file_name=chl20080206_1753.sb
+/data_type=cast
+/documents=README.clivarchl
+/data_status=preliminary
+/west_longitude=-102.999[DEG]
+/east_longitude=-102.999[DEG]
+/north_latitude=-56.6668[DEG]
+/south_latitude=-56.6668[DEG]
+/water_depth=4131.00
+/start_time=17:53:00[GMT]
+/end_time=17:53:00[GMT]
+/start_date=20080206
+/end_date=20080206
+/calibration_files=UCSB_10AU_May2006
+/station=147.001
+/cloud_percent=-999
+/wave_height=-999
+/wind_speed=-999
+/secchi_depth=NA
+!
+! Comments for this station:
+!
+! file_creation_date=27-Jan-2009
+!
+/missing=-999
+/delimiter=space
+/fields=depth,CHL,PHAEO,Tpg
+/units=m,mg/m^3,mg/m^3,mg/m^3
+/end_header
+232.40 0.0049 0.0179 0.0228
+191.70 0.0118 0.0188 0.0305
+167.40 0.0283 0.0243 0.0525
+142.20 0.0779 0.0395 0.1173
+118.20 0.1557 0.0777 0.2335
+91.50 0.2753 0.0795 0.3548
+66.40 0.2809 0.0303 0.3112
+42.20 0.2512 0.0224 0.2736
+20.30 0.2178 0.0261 0.2439
+10.10 0.2012 0.0166 0.2177
+5.00 0.2253 0.0187 0.2439

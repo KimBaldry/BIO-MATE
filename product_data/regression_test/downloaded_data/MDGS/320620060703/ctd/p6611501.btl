@@ -1,0 +1,39 @@
+* Sea-Bird SBE 9 Data File:
+* FileName = D:\Data\Raw\p6611501.dat
+* Software Version Seasave Win32 V 5.32
+* Temperature SN = 1649
+* Conductivity SN = 1431
+* Number of Bytes Per Scan = 37
+* Number of Voltage Words = 5
+* Number of Scans Averaged by the Deck Unit = 1
+* Append System Time to Every Scan
+* System UpLoad Time = Jul 14 2006 10:29:31
+* NMEA Latitude = 61 33.00 S
+* NMEA Longitude = 054 52.51 W
+* NMEA UTC (Time) = 10:29:23
+* Store Lat/Lon Data = Add to Header Only
+** Ship:   Nathaniel B. Palmer 
+** Cruise:    NBP0606 
+# interval = seconds: 0.0416667                   
+# start_time = Jul 14 2006 10:29:31
+# sensor 0 = Frequency  0  temperature, primary, 1649, 27-Jan-2006
+# sensor 1 = Frequency  1  conductivity, primary, 1431, 24-Jan-06, cpcor = -9.5700e-08
+# sensor 2 = Frequency  2  pressure, 0328, 18-Apr-05
+# sensor 3 = Frequency  3  temperature, secondary, 1541, 27-Jan-06
+# sensor 4 = Frequency  4  conductivity, secondary, 2067, 23-Nov-05, cpcor = -9.5700e-08
+# sensor 5 = Extrnl Volt  0  altimeter
+# sensor 6 = Extrnl Volt  2  Oxygen, SBE, primary, 0158, 29-Nov-05
+# sensor 7 = Extrnl Volt  3  transmissometer, primary
+# sensor 8 = Extrnl Volt  4  WET Labs, ECO_AFL
+# sensor 9 = Extrnl Volt  5  transmissometer, secondary, CST-892, 12-Oct-05
+# sensor 10 = Extrnl Volt  6  irradiance (PAR), primary, 4721, 16-Sep-05
+# sensor 11 = Extrnl Volt  9  surface irradiance (SPAR), degrees = 0.0
+# datcnv_date = Jul 16 2006 11:20:56, 5.32a
+# datcnv_in = d:\data\raw\p6611501.dat d:\data\raw\p6611501.CON 
+# datcnv_bottle_scan_range_source = scans marked with bottle confirm bit, 0, 2
+# bottlesum_date = Jul 16 2006 11:27:57, 5.32a
+# bottlesum_in = d:\data\process\p6611501.ros d:\data\raw\p6611501.con
+    Bottle        Date      Sal00      Sal11  Sigma-é00       PrDM      T090C      C0S/m      T190C      C1S/m Sbeox0ML/L  FlECO-AFL        Bat       Spar   Latitude  Longitude      TimeY      TimeJ
+  Position        Time                                                                                                                                                                                
+      1    Jul 14 2006    34.1694    34.1765    27.4974     10.502    -1.5070   2.715600    -1.5077   2.716059    7.90641     0.0623    13.8155 0.0000e+00  -61.55000  -54.87517 1152875768 195.469562 (avg)
+              11:16:11                                       0.108     0.0023   0.000165     0.0024   0.000197    0.00116     0.0358     0.0000 0.0000e+00    0.00000    0.00000          0   0.000008 (sdev)

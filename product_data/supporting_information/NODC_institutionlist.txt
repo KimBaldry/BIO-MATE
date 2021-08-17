@@ -1,0 +1,1572 @@
+NODC Institution Code List
+
+This file contains a list of institute names and the associated codes that are
+used by various data formats. The list is sorted by NODC Code (using the
+country value stored in the table), and contains a column for the NODC Code
+and the World Ocean Database (WOD) code.
+
+This list was generated from the NODC Authority Tables.
+
+NODC   WOD    Acronym                           Name
+Code   Code
+
+  - ALGERIA -
+AL01      3                                     Castiglione Agriculture and Fishery Experimental Station
+AL02      4                                     Oceanographic Institute of Algeria
+AL00                                            Unknown - Algeria
+
+  - ANGOLA -
+6805    757                                     Council for Overseas Investigation; Center for Fisheries Biology - Baio Farta
+
+  - ANTIGUA -
+AG00                                            Unknown - Antigua
+
+  - ARGENTINA -
+0801     94                                     Argentina Antarctic Institute
+0806     99   SHN                               Argentine Naval Hydrographic Service
+0807    995                                     Argentine Oceanographic Data Center
+0808   1362   INIDEP                            Instituto Nacional de Investigacion y Desarrollo Pesquero
+0802     95                                     Mar Del Plata Marine Biological Institute
+0803     96                                     Mar Del Plata Station of Marine Biology and Fishery Technology
+0805     98                                     National Institute for Natural Sciences Research; Hydrobiological Station
+0804     97                                     Puerto Deseado Marine Biological Station
+0800                                            Unknown - Argentina
+
+  - AUSTRALIA -
+0917    117   ACE CRC                           Antarctic Climate & Ecosystems Cooperative Research Centre
+0919   1198                                     Australian Antarctic Division, Department of Sustainability, Environment, Water, Population and Communities
+0916   1217   ABOM                              Australian Bureau of Meteorology
+0915    115                                     Australian Defence Scientific Service; Weapons Research Establishment
+0902    102                                     Australian Museum
+0910    110                                     Australian Oceanographic Data Center
+0912    112                                     Bureau of Mineral Resources
+0903    103   CSIRO                             Commonwealth Scientific and Industrial Research Organization
+0913    113                                     Flinders University of South Australia; Horace Lamb Centre for Oceanographic Research
+0911    111                                     Geological Survey of Western Australia
+                                                Great Barrier Reef Marine Park Authority
+0904    104                                     Heron Island Research Station
+0905    105                                     Marine Biological Station
+0901    101   RAN                               Royal Australian Navy
+                                                The Nature Conservancy; Indo-Pacific Resource Center
+0906    106                                     University of Adelaide; Zoology Department
+0907    107                                     University of New England; Zoology Department; Marine Laboratory
+0914    114                                     University of Sydney
+0918   1197   UTAS                              University of Tasmania
+0900                                            Unknown - Australia
+0908    108                                     Victoria Department of Fisheries and Wildlife; Marine and Freshwater Laboratory
+0909    109                                     Western Australia Fisheries Department
+
+  - AUSTRIA -
+1000                                            Unknown - Austria
+
+  - BELGIUM -
+1104    122                                     Belgian Navy
+1101    119                                     Belgium Royal Institution for Natural Sciences
+1103    121                                     Institute for Scientific Research In Central Africa
+1102    120                                     National Station for Marine Fisheries
+1105    996                                     University of Liege
+1100                                            Unknown - Belgium
+
+  - BERMUDA -
+3143    456   BIOS                              Bermuda Institute of Ocean Sciences
+
+  - BONAIRE -
+BN01      6                                     National Park Foundation
+
+  - BRAZIL -
+1408   1368                                     Banco Nacional de Dados Oceanograficos
+1407   1229   CPTEC                             Centro de Previsao de Tempo E Estudos Climaticos
+1405    128   DHN                               Directoria de Hidrografia E Navagacao
+       1235                                     Federal University of Rio Grande
+1406   1228   INPE                              Instituto Nacional de Pesquisas Espaciais
+1401    124                                     Oswaldo Cruz Institute; Hydrobiological Laboratory
+1402    125                                     San Sebastian Marine Biological Laboratory
+1403    126                                     University of Recife; Institute of Oceanography
+1404    127                                     University of Sao Paulo; Oceanographic Institute
+1400                                            Unknown - Brazil
+
+  - BULGARIA -
+1501    130                                     Institute of Fishery Research
+1500                                            Unknown - Bulgaria
+
+  - CANADA -
+1828    159                                     Arctic Biological Station
+1832    164                                     Atlantic Oceanographic Laboratory
+1818    149   BIO                               Bedford Institute of Oceanography
+1801    132                                     Bowdoin Scientific Station
+1831    163                                     Canadian Centre for Inland Waters
+1840    172                                     Canadian Centre for Inland Waters; Bayfield Laboratory
+1820    151                                     Canadian Coast Guard
+1835    167                                     Canadian Forces Maritime Command - East
+1836    168                                     Canadian Forces Maritime Command - West
+              CMC                               Canadian Meteorological Centre
+1826    157                                     Canadian Navy
+1819    150                                     Dalhousie University; Institute of Oceanography
+1829    160                                     Department of Fisheries and Oceans; Institute of Ocean Sciences - Victoria
+1830    162                                     Department of Mines and Technical Surveys; Division of Oceanographic Research
+1837    169   DREO                              Department of National Defence; Defence Research Establishment - Ottawa
+1827    158                                     Department of the Environment; Marine Sciences Branch - Pacific Region
+       1492                                     Environment Canada
+1838    170   DFO                               Fisheries and Oceans Canada
+1839    171                                     Fisheries and Oceans Canada; Fisheries Management Resources Branch
+1823    154                                     Fisheries and Oceans Canada; Institute of Ocean Sciences
+1821    152   MEDS                              Fisheries and Oceans Canada; Marine Environmental Data Section
+1802    133                                     Fisheries Research Board of Canada; Arctic Unit
+1811    142                                     Fisheries Research Board of Canada; Atlantic Oceanographic Group
+1804    135                                     Fisheries Research Board of Canada; Biological Station - London
+1807    138                                     Fisheries Research Board of Canada; Biological Station - Nanaimo
+1816    147                                     Fisheries Research Board of Canada; Pacific Environment Institute
+1810    141                                     Fisheries Research Board of Canada; Pacific Oceanographic Group
+183G    161                                     LGL Ltd.
+1833    165                                     Marine Ecology Laboratory
+1841   1149   IML                               Maurice Lamontagne Institute - Marine Science Research Center
+1825    156                                     McGill University
+BA01      5                                     McGill University; Bellairs Research Institute
+1842   1046   MUN                               Memorial University of Newfoundland
+              MSC                               Meteorological Service of Canada
+1809    140                                     National Research Council of Canada; Atlantic Regional Laboratory
+1806    137                                     Northwest Atlantic Fisheries Centre
+1803    134                                     Nova Scotia Research Foundation
+1808    139                                     Quebec Department of Fisheries; Biological Center
+1812    143                                     Quebec Department of Fisheries; Laboratory of Biology
+1813    144                                     Quebec Department of Fisheries; la Tabatiere Experimental Fishing Station
+1814    145                                     Quebec Ministry of Fisheries and Game; Nabisipi Station
+1805    136   SABS                              St. Andrews Biological Station
+1834    166                                     Station de Biologie Marine
+       1448                                     Universite Laval
+1822    153   UA                                University of Alberta
+1815    146                                     University of British Columbia
+1824    155                                     University of Toronto
+1800                                            Unknown - Canada
+1817    148                                     Vancouver Public Aquarium Association; Laboratory
+
+  - CAYMAN ISLANDS -
+CI01      8                                     Mosquito Control Research Unit
+
+  - CHILE -
+2010    184                                     Catholic University of Valparaiso
+       1237   COPAS                             Center for Oceanographic Research in the Eastern South Pacific
+2001    175                                     Chilean Navy
+2011   1026                                     Instituto de Fomento Pesquero
+2002    176                                     Ministry of Agriculture; Department Fish and Game; Fisheries Laboratory
+       1183   CONA                              National Oceanographic Committee
+2003    177                                     San Antonio Fishery Biology Station
+2009    183   SHOA                              Servicio Hidrografico Y Oceanografico de la Armada de Chile
+2008    182                                     Southern University of Chile; Zoological Institute
+2004    178                                     University of Chile; Center for Zoological Investigations; Department of Hydrobiology
+2005    179                                     University of Chile; Marine Biological Station
+2006    180                                     University of Chile of the North Zone; Department Scientific Investigation; Marine Biology Station
+2007    181                                     University of Concepcion; Central Institute of Biology
+2000                                            Unknown - Chile
+
+  - CHINA -
+7604    803   IAP                               Chinese Academy of Sciences; Institute of Atmospheric Physics
+7607   1005                                     Chinese Academy of Sciences; Institute of Oceanology
+7609   1415                                     Chinese Academy of Sciences; South China Sea Institute of Oceanology
+       1444   CN-AADC                           Chinese National Arctic and Antarctic Data Center
+       1224   IAP                               Institute of Atmospheric Physics
+7602    801                                     National Bureau of Oceanography
+7601    800   CNODC                             National Oceanographic Data Center of the Peoples Republic of China
+7603    802                                     State Oceanic Administration; First Institute of Oceanography
+7608   1006                                     State Oceanic Administration; Second Institute of Oceanography
+7605    804                                     State Oceanic Administration; South China Sea Branch
+7610   1429                                     State Oceanic Administration; World Data Center for Oceanography
+7600                                            Unknown - Peoples Republic of China
+7606    805   WDC-D, Tianjin                    World Data Center-D, Oceanography - Tianjin
+
+  - COLOMBIA -
+2203    193                                     Centro de Investigaciones Oceanograficas e Hidrograficas del Caribe
+2201    191                                     Colombian Navy
+2202    192                                     Columbia Ministry of National Defense; Navy
+2200                                            Unknown - Colombia
+
+  - CONGO -
+RC02    994                                     Center of Fisheries Oceanography
+RC01     44                                     Centre ORSTOM; Oceanographic and Fisheries Center - Brazzaville
+RC00                                            Unknown - Congo
+
+  - COSTA RICA -
+CR01     10                                     University of Costa Rica
+CR00                                            Unknown - Costa Rica
+
+  - CUBA -
+CU05     16                                     Academy of Sciences of Cuba
+CU01     12                                     Cuban Institute of Technological Investigations
+CU02     13                                     Fish Research Center - Havana
+CU06     17   IDO                               Instituto de Oceanologia de Cuba
+CU03     14                                     University of Oriente; Laboratory of Marine Biology
+CU04     15                                     University of Villanueva; Department Marine Research
+CU00                                            Unknown - Cuba
+
+  - DENMARK -
+2602    206                                     Carlsberg Foundation
+2601    205                                     Carlsberg Foundation Marine Laboratory
+2605    209                                     Danish Institute for Fishery and Marine Research
+2609    213   DMI                               Danish Meteorological Institute
+2606    210                                     Denmark Aquarium; Physiological Laboratory
+2607    211                                     Fish Research Laboratory - Faeroes
+2612    216   ICES                              International Council for Exploration of the Sea
+2608    212                                     Isejord Laboratory
+2611    215                                     Ministry for Greenland; Greenland Fish Organization; Fisheries Laboratory
+       1230                                     Niels Bohr Institute for Astronomy
+2614   1223                                     Niels Bohr Institute for Astronomy, Physics and Geophysics
+       1340                                     University of Copenhagen
+2610    214                                     University of Copenhagen; Arctic Station
+2613    907                                     University of Copenhagen; Institute of Physical Oceanography
+2603    207                                     University of Copenhagen; Marine Biological Laboratory
+2604    208                                     University of Copenhagen; Zoological Museum
+2600                                            Unknown - Denmark
+
+  - EAST GERMANY -
+0716     91                                     Deutsche Akademe Der Wissenschaften Zu Berlin
+0777   1054                                     GDR Institute of Oceanography
+0776     92   IfH                               Institute for Deep Sea Fishery and Fish Processing
+0700                                            Unknown - Germany (Limited To Pre-Reunification German Democratic Republic)
+
+  - ECUADOR -
+2802    226                                     Hydrographic Oceanographic Service
+2801    225                                     Instituto Nacional de Pesca
+2800                                            Unknown - Ecuador
+
+  - EGYPT -
+2701    218                                     Alexandria Institute of Hydrobiology
+2706    223                                     Ministry of Scientific Research; Oceanographic and Fisheries Research Center
+2702    219                                     University of Alexandria; Department of Oceanography
+2703    220                                     University of Cairo; Hydrobiological Institute
+2704    221                                     University of Cairo; Institute of Oceanography
+2705    222                                     University of Cairo; Marine Biological Station
+2700                                            Unknown - Egypt
+
+  - FAROE ISLANDS -
+26FF   1374                                     Faroese Fisheries Laboratory
+
+  - FINLAND -
+       1196   FIMR                              Finnish Institute of Marine Research
+3402    481                                     Finnish Ministry of Agriculture and Fish; Bureau for Fisheries Research
+3405    484                                     Finnish Scientific Society
+3401    480                                     Institute of Marine Research; Biological Laboratory
+3404    483                                     University of Helsinki; Tvaerminne Zoological Station
+3403    482                                     University of Turku; Marine Biological Station
+3400                                            Unknown - Finland
+
+  - FRANCE -
+       1263   DMPA                              Aquatic Environments and Populations
+3502    488                                     Arago Laboratory
+3501    487                                     Arcachon Biological Station
+3503    489                                     Biarritz Station of Applied Hydrobiology
+3504    490                                     Catholic University of Lille; Charles Maurice Laboratory; Biological Station
+       1254                                     CEA; Laboratoire des Sciences du Climat et de L' Environnement
+3506    492                                     Center for Terrestrial and Limnetic Ecology
+3532   1255   COM                               Center of Oceanography of Marseilles
+3505    491                                     Center of Scientific Studies and Research of Biarritz
+3544    529                                     Central Hydrographique Service
+       1319   CEFREM                            Centre de Formation et de Recherche Sur L'Environnement Marin
+       1281                                     Centre de Nantes
+3565   1252   CETP                              Centre de Recherches En Physique de L'Environnement Terrestre et Planetaire
+       1258   CEREGE                            Centre for Research and Environmental Geosciences Education
+       1256                                     Centre Manche - Mer du Nord
+3567   1322   CNRS                              Centre National de la Recherche Scientifique
+3534    519   CNEXO                             Centre National Pour L'Exploitation Des Oceans
+       1283   COP                               Centre Oceanologique du Pacifique
+3547    532                                     Centre ORSTOM - Abidjan
+3551    536                                     Centre ORSTOM - Brest
+       1262   CRO                               Centre Recherches Oceanolgiques Abidjan - Cote D'Ivoire
+3566   1321                                     Chizé Centre for Biological Studies
+3507    493                                     College de France; Marine Biological Laboratory
+       1260                                     COM; Laboratoire D'Oceanographie et de Biogeochimie - Endoume
+       1261                                     COM; Laboratoire D'Oceanographie et de Biogeochimie - Luminy
+3537    522                                     Compagnite Francaise Des Petroles - Paris
+       1266                                     Deep Lep-Laboratoire Environnement Profond
+       1265   DYNECO                            Departement Dynamiques de L'Environnement Cotier
+       1267   EMH                               Departement Ecologie et Modeles Pour L'Halieutique
+       1272   HMMN                              Departement Halieutique de Manche - Mer du Nord
+       1314   STH                               Department of Fisheries Science and Technology
+       1264                                     Dyneco Pelagos; Laboratoire D'Ecologie Pelagique
+3546    531                                     Ecole National de la Meteorologie
+3535    520                                     Ecole Nationale D'Agriculture
+3557   1211   ESA                               European Space Agency
+3552    486                                     Faculte Des Sciences de Luminy; Centre D Oceanologie
+3560   1246   IRD                               French National Research Institute for Sustainable Development
+3538    523                                     French Navy
+3539    524                                     Geological Institute of Aquitaine Basin
+       1269                                     Geosciences Azur - Site de Villefranche
+       1271   GM                                Geosciences Marines
+3508    494                                     Group D'Etudes et de Recherches Sous-Marines
+3548    533   IFREMER                           IFREMER
+       1276                                     IFREMER Antenne St Pierre et Miquelon
+       1282                                     IFREMER Centre de Toulon
+       1253                                     IFREMER; Department of Biological Resources and Environment; Biogeochemistry and Ecotoxicology Research Unit
+       1277                                     IFREMER Station de la Rochelle - L'Houmeau
+       1285                                     IFREMER Station de la Tremblade
+       1278                                     IFREMER Station de Lorient
+       1286                                     IFREMER Station de Sete
+       1288                                     Institut de Radioprotection et de Surete Nucleaire
+3531    517                                     Institute of Applied Geology
+3541    526                                     Institute of French Oceania; Oceanic Laboratory
+3530    516   IMR                               Institute of Marine Research - Norway
+       1289                                     Institut Pierre Simon Laplace
+       1291                                     IRD Antenne Institut Oceanographique
+       1292                                     IRD Centre D'Abidjan
+       1293                                     IRD Centre de Bretagne
+       1294                                     IRD Centre de Cayenne - Guyane
+       1290                                     IRD Centre de Montpellier
+       1296                                     IRD Centre de Papeete
+       1297                                     Laboratoire Biologie Des Invertebres Marins et Malacologie
+       1280   STH LBP                           Laboratoire Biologie Des Pecheries
+       1301   BDSI                              Laboratoire de Biophysique et Dynamique Des Systemes Integres
+       1303                                     Laboratoire de Microbiologie Marine
+       1310   OPS LPO                           Laboratoire de Physique des Océans
+       1305                                     Laboratoire de Radioecologie Marine Cea
+       1306   LEMAR                             Laboratoire Des Sciences de L'Environnement Marin
+3555   1181   LEGOS                             Laboratoire D'Etudes En Geophysique et Oceanographie Spatiales
+       1300                                     Laboratoire D'Etudes Radioecologiques de la Facade Atlantique
+       1302                                     Laboratoire D'Oceanographie Physique
+       1275   HGS LRHLR                         Laboratoire Ressources Halieutiques de la Rochelle
+3509    495                                     Laboratory of Bacterial Chemistry and Biological Corrosion
+3564   1251   LBCM                              Laboratory of Biogeochimie and Chimi Navy
+       1284   CREMA                             Le Centre de Recherche sur les Ecosystèmes Marins et Aquacoles de l'Houmeau
+3556   1213   MERSEA                            Marine Environment and Security for the European Area
+3510    496                                     Marine Laboratory of Luc-Sur-Mer
+3511    497                                     Marine Station of Endoume
+       1549   CNES                              National Centre for Space Studies
+3512    498   MNHN                              National Museum of Natural History
+35SA    485                                     NATO SACLANT Anti-Submarine Warfare Research Center - France
+3540    525                                     NATO Sub-Committee On Oceanography
+3545    530                                     Nereides Oceanographic/Hydrographic
+3542    527                                     Noumea Aquarium; Biological Marine Station
+3559   1216   OSI SAF                           Ocean and Sea Ice Satellite Application Facility
+3568   1317   LOV                               Oceanographic Laboratory of Villefranche-sur-Mer
+3514    500                                     Oceanographic Research Center
+3536    521   ORSTOM                            Office de la Recherche Scientifique et Technique Outre Mer - (Pre-Independence) New Caledonia
+3515    501                                     Roscoff Biological Station
+3516    502                                     Scientific and Technical Institute of Marine Fisheries - Arcachon France
+3517    503                                     Scientific and Technical Institute of Marine Fisheries - Auray France
+3518    504                                     Scientific and Technical Institute of Marine Fisheries - Biarritz France
+3519    505                                     Scientific and Technical Institute of Marine Fisheries - Boulogne-Sur-Mer France
+3520    506                                     Scientific and Technical Institute of Marine Fisheries - la Rochelle France
+3521    507                                     Scientific and Technical Institute of Marine Fisheries - la Tremblade France
+3528    514                                     Scientific and Technical Institute of Marine Fisheries - Paris France
+3522    508                                     Scientific and Technical Institute of Marine Fisheries - Roscoff France
+3523    509                                     Scientific and Technical Institute of Marine Fisheries - Sete France
+35SI   1188   SISMER                            Scientific Information Systems for the Sea
+3543    528   SHOM                              Service Hydrographique de la Marine
+       1313                                     Station de la Trinite
+3562   1248                                     Station Marine de Wimereux
+3533    518                                     Strasbourg University
+3513    499                                     The Oceanographic Institute, Foundation Albert I, Prince of Monaco
+3549    534   IUEM                              UBO; European Institute for Marine Studies
+       1315                                     Universite de Bordeaux I - Departement de Geologie et Oceanographie
+       1287                                     Universite de Bordeaux I; Institut de Biologie Marine
+       1316   IGBA                              Universite de Bordeaux I; Institut de Geologie du Bassin D'Aquitaine - Talence
+       1304   UBO                               Université de Bretagne Occidentale
+       1318                                     Universite de Paris VI; Observatoire Oceanologique de Banyuls
+       1299                                     Universite de Toulon; Laboratoire de Sondages Electromagnetiques Lseet
+3563   1249   UPS                               Universite Paul Sabatier
+3550    535   UPMC                              Universite Pierre et Marie Curie
+3529    515                                     University of Burgundy
+3524    510                                     University of Lille; Institute of Regional Marine Biology
+3561   1247                                     University of Lille; Sciences and Technologies
+3525    511                                     University of Paris; Laboratory of Marine Botany
+3553   1053                                     University of Paris VI
+       1298   LBDV                              University of Paris VI; Developmental Biology Research Unit
+       1268   UPVD                              University of Perpignan Via Domita
+3526    512                                     University of Rennes; Laboratory of Marine Biology
+3500                                            Unknown - France
+3554   1308   LOCEAN                            UPMC; Oceanographic & Climate Laboratory: experiments and digital approaches
+3527    513                                     Zoological Station of Villefranche
+
+  - GERMANY -
+0626    892   AWI                               Alfred Wegener Institute for Polar and Marine Research
+0644   1074   AWI BAH                           Alfred Wegener Institute for Polar and Marine Research; Biological Institute Helgoland
+0630   1045                                     Carl von Ossietzky University of Oldenburg
+0614     79                                     Columbus Line
+0601     66                                     Council for the Development of Bremen Lands; Institute for Marine Research
+0612     77                                     Deutsches Hydrographische Institut
+0650   1215   EUMETSAT                          European Organisation for the Exploitation of Meteorological Satellites
+0632   1047   BGR                               Federal Institute for Geosciences and Natural Resources
+0613     78                                     Federal Institute of Soil Research
+0625     89   BSH                               Federal Maritime Agency - Hamburg
+0618     82   BFA-FISH                          German Federal Research Center for Fisheries
+0649   1078   IOR                               German Federal Research Center for Fisheries; Institute for Baltic Sea Fisheries
+              BFA - IfS                         German Federal Research Center for Fisheries; Institute for Sea Fisheries
+0603     68                                     German Institute for Coastal and Inland Fisheries
+0604     69                                     German Institute for Nets and Gear Investigation
+0622     86                                     German Merchant Navy
+0620     84   DOD                               German Oceanographic Data Center
+0617     81                                     German Research Association
+0634   1064                                     Hamburgische Schiffbauversuchsanstalt GmbH
+0602     67                                     Helgoland Biological Stations
+0628   1043                                     Institute for Baltic Research
+0645   1075   BFAFi                             Institute of Fisheries Ecology; German Federal Research Centre for Fisheries
+0646   1076                                     Jülich Research Center; Applied Physical Chemistry
+0638   1068                                     Jülich Research Center; Atmospheric Chemistry Division
+0651   1193   IFM-GEOMAR                        Leibniz Institute of Marine Sciences
+0639   1069                                     Marineamt; Abteilung Geophysik - Wilhelmshaven
+0641   1071   MPI                               Max Planck Institute for Chemistry - Mainz
+0606     71   MPI                               Max Planck Institute for Marine Biology - Bppt
+0616   1343   MPI                               Max Planck Institute for Marine Microbiology
+0642   1072   MPI                               Max Planck Institute for Meteorology - Hamburg
+0607     72                                     Norderney Research Station
+0619     83                                     Ozeanographische Forschungsanstalt Der Bundeswehr
+0629   1044   GEOMAR                            Research Center for Marine Geosciences
+0608     73                                     Senckenberg Institute for Marine Geology and Biology
+0631   1048                                     University of Bremen
+0621     85   UHH                               University of Hamburg
+0647   1049   IfBM                              University of Hamburg; Center for Marine and Climate Research; Institute for Biogeochemistry and Marine Chemistry
+0609     74                                     University of Hamburg; Institute for Hydrobiological and Fishery Sciences
+0627   1028   IfM                               University of Hamburg; Institute of Oceanography
+0640   1070                                     University of Hamburg; Meteorologisches Institut
+0610     75                                     University of Hamburg; Zoological Institute and Museum; Division of Hydrography
+0611     76   CAU                               University of Kiel
+0648   1077   IFOKI                             University of Kiel; Institute for Polar Ecology
+0635   1065                                     University of Kiel; Institute of Experimental and Applied Physics
+0633   1063                                     University of Kiel; Institute of Geology and Paleontology
+0636   1066                                     University of Munich; Institute of Geology
+0637   1067                                     University of Münster; Institute of Geology
+0615     80                                     University of Tuebingen
+0600                                            Unknown - Germany (Includes Pre-Reunification Federal Republic Germany)
+0624     88                                     Wasser und Schiffahrtsamt
+
+  - GHANA -
+GH01     19                                     Fisheries Institute
+GH02     20                                     University of Ghana; Department of Physics
+GH00                                            Unknown - Ghana
+
+  - GREECE -
+3603    540                                     Atlantic Marine, Ltd.
+       1445   HCMR                              Hellenic Centre for Marine Research
+3602    539                                     Institute of Oceanographic and Fisheries Research
+3601    538                                     Marine Biochemistry Laboratory
+3604    541                                     University of Thessaloniki
+3600                                            Unknown - Greece
+
+  - GRENADA -
+GR01     21                                     Department of Science and Technology
+
+  - HONG KONG -
+                                                Hong Kong University of Science and Technology
+       1244                                     Marine and Coastal Environment Program
+
+  - ICELAND -
+4601    570                                     Fish Research Institute
+4603    572                                     Hafrannsoknastofnunin Reykjavik Oceanographic Institute
+4602    571   MRI                               Icelandic Marine Research Institute
+4600                                            Unknown - Iceland
+
+  - INDIA -
+4102    544                                     Andhra University; Department of Zoology; Field Marine Laboratory
+4103    545                                     Annamalai University; Marine Biological Station
+4104    546                                     Central Inland Fisheries Research Institute
+4105    547                                     Central Marine Fisheries Research Station
+4113    555   FAO/UNDP                          Fisheries and Aquaculture Organization; UN Developmental Project; Pelagic Fishery Project
+       1160   INCOIS                            Indian National Centre for Ocean Information Services
+4117    997                                     Indian Ocean Biological Center - Cochin
+4108    550                                     Institute of Science; Department of Zoology
+4106    548                                     Madras State Department of Fisheries
+4107    549                                     Maharashtra State Department of Fisheries; Marine Biology Research Station
+4109    551                                     Marine Biology Stations - West Hill
+4112    554                                     National Institute of Oceanography - India
+4116    558                                     Naval Hydrographic Office
+4114    556                                     Scindia Steam Navigation Co. Ltd.
+4110    552                                     Taraporevala Aquarium and Marine Biological Research Station
+4115    557                                     The Shipping Corporation of India
+4111    553                                     University of Kerala; Department of Marine Biology and Fisheries
+4101    543                                     University of Madras
+4100                                            Unknown - India
+
+  - INDONESIA -
+4206   1081                                     Agency for the Assessment and Application of Technology
+4202    561                                     Central Research Institute for Hydrobiology and Fisheries
+4203    562                                     Indonesian Institute for Coastal and Inland Fisheries
+4204    563                                     Indonesian Institute for Nets and Gear Investigation
+4201    560                                     Institute for Marine Research
+4205    564                                     Institute for Sea Fisheries
+4200                                            Unknown - Indonesia
+
+  - IRELAND -
+4503    568                                     Irish Shipping Ltd.
+              MI                                Marine Institute of Ireland
+4502    567                                     University College
+4501    566                                     University College; Cork Biology Station
+4500                                            Unknown - Ireland
+
+  - ISRAEL -
+4704    577                                     Geological Survey of Israel
+4705    578                                     Haifa Lab
+4701    574                                     Hebrew University of Jerusalem
+4706    579                                     Israel Oceanographic and Limnological Research Ltd.
+4703    576                                     Sea Fisheries Research Station
+4700                                            Unknown - Israel
+4702    575                                     Weizmann Institute of Science
+
+  - ITALY -
+4801    582                                     Central Hydrobiological Laboratory
+4802    583                                     Diacinto Cestoni Aquarium and Marine Biological Laboratory
+              ESACCI                            ESA Climate Change Initiative
+       1238   CNR-ISAC                          Institute of Atmospheric Sciences and Climate
+4820   1416                                     Istituto per la Ricerche sulla Pesca Marittima
+4803    584                                     Italian Center for Thalassographic Studies
+4804                                            Italian Institute for Thalassographic Studies
+4816    597   OGS                               Italian National Institute of Oceanography and Experimental Geophysics
+4822   1324   SINCEM                            Laboratory for Numerical Simulations of Climate and Marine Ecosystems
+4805    586                                     Laboratory for the Study of Radioactive Contamination of the Sea
+4806    587                                     Marine Biological Institute of the Adriatic
+4818    599                                     Marine Hydrographic Institute
+4807    588                                     Messina Institute of Experimental Thalassography
+4808    589                                     Naples Zoological Station
+4823   1391   ENEA                              National Agencies for New Technologies; Energy and the Environment
+4810    591   OGS                               National Institute of Oceanography and Applied Geophysics
+4815    596   CNR                               National Research Council
+48SA    580   NATO STO-CMRE                     NATO Science and Technology Organization Centre for Maritime Research and Experimentation
+4809    590                                     Taranto Institute of Experimental Thalassography
+4817    598                                     The Parthenope University of Naples
+4811    592                                     Tyrrhenian Center for Thalassographic Studies
+4821   1325                                     University of Bologna
+4812    593                                     University of Bologna; Fano Marine Biological Laboratory
+4813    594                                     University of Messina; Hydrobiological Institute
+4814    595                                     University of Padua; Chioggia Hydrographic Station
+4800                                            Unknown - Italy
+
+  - IVORY COAST -
+IC03     25                                     Centre ORSTOM - Ivory Coast
+IC02     24   FAO/UNDP                          Fisheries and Aquaculture Organization; UN Developmental Project; Regional Fisheries Survey In West Africa
+IC01     23                                     Ministry of Animal Production Center for Oceanographic Research
+IC00                                            Unknown - Ivory Coast
+
+  - JAMAICA -
+JA02     27                                     Natural Resources Conservation Division
+JA01     26                                     University of the West Indes
+
+  - JAPAN -
+49AK    981                                     Aichi Prefectural Fisheries Experimental Station
+4994    925                                     Akita Prefectural Fisheries Experimental Station
+49A4   1140                                     Aomori Fisheries Academy
+49A3   1136                                     Aomori Prefectural Aquaculture Research Center
+49AH    980                                     Aomori Prefectural Fisheries Experimental Station
+49A2   1099                                     Awa Fisheries High School
+4903    604                                     Central Meteorological Observatory
+4964    664                                     Chiba Prefectural Fisheries Experimental Station
+49AE    959                                     Chiba University
+49AD    956   MITI                              Cyugoku Industrial Technology Laboratory
+49AO    958                                     District Port Construction; Ministry of Transport
+49AM    984                                     Ehime Prefectural Fisheries Experimental Station
+4995    954                                     Far Sea Fisheries Research Laboratory
+4939    640   JFA                               Fisheries Agency of Japan - Tokyo
+4989    920                                     Fukui Prefectural Fisheries Experimental Station
+49FK   1124                                     Fukuoka Fisheries School
+4983    914                                     Fukuoka Prefectural Fisheries Experimental Station
+49AV   1021                                     Fukushima Prefectural Fisheries Experiment Station
+49FU   1090                                     Funagawa Fisheries High School
+4961    661                                     Geological Survey of Japan
+4948    649                                     Gunma University; Kiru College of Technology
+49HA   1095                                     Hachinohe Fisheries High School
+4904    605                                     Hakodate Marine Observatory
+4965    665                                     Hiroshima Prefectural Fisheries Experimental Station
+4913    614                                     Hiroshima University; Faculty of Fish and Animal Husbandry
+4922    623                                     Hiroshima University; Mukaishima Marine Biological Station
+49HC   1138                                     Hokkaido Fisheries Bureau
+4943    644                                     Hokkaido Gakugei University; Shirikishinai Marine Station for Biological Investigation
+49AQ   1016                                     Hokkaido National Fisheries Research Institute
+49HK   1102                                     Hokkaido Prefectural Board of Education High School
+49HO   1135                                     Hokkaido Prefectural Central Fisheries Experimental Station
+49AT   1019                                     Hokkaido Prefectural Fisheries Experiment Station
+49HH   1131                                     Hokkaido Prefectural Hakodote Fisheries Experimental Station
+49HB   1137                                     Hokkaido Prefectural Kushiro Fisheries Experimental Station
+4935    636                                     Hokkaido Regional Fisheries Research Laboratory
+4908    609                                     Hokkaido University; Akkeshi Marine Biological Station
+4957    657                                     Hokkaido University; Faculty of Fisheries
+4909    610                                     Hokkaido University; Faculty of Fisheries; Oshoro Marine Biological Station
+4910    611                                     Hokkaido University; Faculty of Science; Institute of Algological Research
+       1341   JHOD                              Hydrographic and Oceanographic Department
+4987    918                                     Hyogo Prefectural Fisheries Experimental Station
+49AW   1022                                     Ibaraki Prefectural Fisheries Experiment Station
+49IJ   1142                                     Imperial Japanese Navy (To End of WW II)
+4975   1414                                     Institute of Low Temperature Science
+49IS   1125                                     Ishikawa Fisheries High School
+4990    921                                     Ishikawa Prefectural Fisheries Experimental Station
+4966    666                                     Iwate Prefectural Fisheries Experimental Station
+       1488   JAXA                              Japan Aerospace Exploration Agency
+4974    999   JAMSTEC                           Japan Agency for Marine-Earth Science and Technology
+       1332                                     Japan Coast Guard
+4972    672   MSA                               Japan Coast Guard; Eighth Regional Maritime Safety Headquarters
+49AB    945                                     Japan Coast Guard; Eleventh Regional Maritime Safety Headquarters
+4968    668                                     Japan Coast Guard; Fifth Regional Maritime Safety Headquarters
+4996    940                                     Japan Coast Guard; First Regional Maritime Safety Headquarters
+4998    942                                     Japan Coast Guard; Fourth Regional Maritime Safety Headquarters
+49CG   1186                                     Japan Coast Guard; Hydrographic and Oceanographic Department
+4953    653   MSA                               Japan Coast Guard; Hydrographic Division
+4969    669                                     Japan Coast Guard; Ninth Regional Maritime Safety Headquarters
+4967    667                                     Japan Coast Guard; Second Regional Maritime Safety Headquarters
+49AA    944   MSA                               Japan Coast Guard; Seventh Regional Maritime Safety Headquarters
+4999    943                                     Japan Coast Guard; Sixth Regional Matitime Safety Headquarters
+4970    670                                     Japan Coast Guard; Tenth Regional Maritime Safety Headquarters
+4997    941                                     Japan Coast Guard; Third Regional Maritime Safety Headquarters
+4901    602                                     Japanese Hydrographic Office
+49AC    946   JMA                               Japanese Marine Administration; Maizuru Marine Observatory
+4954    654                                     Japanese Maritime Self Defense Force
+49AZ   1086                                     Japan Hydrographic Association; Marine Information Research Center
+4973    998   JMA                               Japan Meteorological Agency
+4920    621                                     Japan Meteorological Agency; Marine Division
+                                                Japan Ministry of Agriculture and Forestry
+        906   JODC                              Japan Oceanographic Data Center
+49JS   1112                                     Japan Sea National Research Institute
+4911    612                                     Japan Sea Regional Fisheries Research Laboratory
+4912    613                                     Japan University; Marine Biological Station
+4914    615                                     Kagawa Prefectual Fisheries Experimental Station
+49KG   1123                                     Kagoshima Fisheries Senior High School
+4979    910                                     Kagoshima Prefectural Fisheries Experimental Station
+4915    616                                     Kagoshima University; Faculty of Fisheries
+49KA   1111                                     Kamo Fisheries High School
+49AX   1023                                     Kanagawa Prefectural Fisheries Experiment Station
+49KS   1128                                     Kasumi High School
+4906    607                                     Kobe Marine Observatory
+49KB   1190                                     Kobe University
+49KO   1120                                     Kochi Prefectural Fisheries Experimental Station
+4916    617                                     Kochi University
+4980    911                                     Kumamoto Prefectural Fisheries Experimental Station
+49KU   1100                                     Kumamoto Reiyo Fisheries High School
+49KT   1132                                     Kyoto Institute of Oceanic and Fisheries Science
+4988    919                                     Kyoto Prefectural Fisheries Experimental Station
+49KY   1118                                     Kyoto Prefectural Kaiyo High School
+4955    655                                     Kyoto University
+4917    618                                     Kyoto University; Department of Fisheries; Misaki Marine Biological Institute
+4918    619                                     Kyoto University; Seto Marine Biological Laboratory
+4919    620                                     Kyushu University; Institute of Fisheries; Fisheries Research Laboratory
+4952    652   MMO                               Maizuru Marine Observatory
+4959    659                                     Meteorological College - Kashiwa
+49MR   1082                                     Meteorological Research Institute
+4947    648                                     Meteorological Society of Japan
+49ME   1129                                     Mie Fisheries High School
+4921    622                                     Mie Prefectural Fisheries Experimental Station
+49AN    957                                     Ministry of Construction; Geographic Survey Institute
+49MS   1098                                     Misaki Fisheries High School
+49MI   1092                                     Miya Fisheries High School
+49AU   1020                                     Miyagi Prefectural Fisheries Experiment Station
+49MY   1104                                     Miyako Fisheries High School
+49MZ   1097                                     Miyazaki Fisheries High School
+4978    909                                     Miyazaki Prefectural Fisheries Experimental Station
+49MU   1127                                     Murotomisaki Fisheries High School
+49NG   1101                                     Nagasaki Fisheries High School
+4905    606                                     Nagasaki Marine Observatory
+4981    912                                     Nagasaki Prefectural Fisheries Experimental Station
+4923    624                                     Nagasaki University Fisheries Institute
+4924    625                                     Nagoya University
+4945    646                                     Nagoya University; Fisheries Laboratory
+4925    626                                     Nagoya University; Sugashima Marine Biological Station
+4926    627                                     Naikai Regional Fisheries Research Laboratory
+49NA   1094                                     Nakaminato Fisheries High School
+4963    663                                     Nankai Regional Fisheries Research Laboratory
+4971    671                                     Nansei Regional Fisheries Research Laboratory
+49AS   1018                                     National Fisheries University
+4976    926   NIES                              National Institute for Environmental Studies
+49AG   1057   NIPR AERC                         National Institute of Polar Research; Arctic Environment Research Centre
+49AR   1017                                     National Research Institute of Far Sea Fisheries
+49NT   1141                                     National Research Institute of Fisheries Science
+4927    628                                     Niagata University; Sado Marine Biological Station
+4992    923                                     Niigata Prefectural Fisheries Experimental Station
+4928    629                                     Nonkai Regional Fisheries Research Laboratory
+49NO   1096                                     Nou Fisheries High School
+49OM   1126                                     Ohama Fisheries High School
+49OB   1139                                     Oita Fisheries High School
+4977    908                                     Oita Prefectural Fisheries Experimental Station
+49OA   1134                                     Okayama Prefectural Fisheries Experimental Station
+4929    630                                     Okayama University Tamano Marine Laboratory
+49OI   1130                                     Oki Fisheries High School
+49OH   1122                                     Okinawa Fisheries High School
+49OK   1116                                     Okinawa Prefectural Fisheries Experiment Station
+49ON   1108                                     Onahama Fisheries High School
+49AJ    982                                     Osaka Prefectural Fisheries Experimental Station
+49OS   1121                                     Oshima-Minami High School
+4930    631                                     Prefectural University of Mie; Faculty of Fisheries
+49AF    960                                     Ryukyu University
+49SG   1133                                     Sagami Bay Experimental Station
+4982    913                                     Saga Prefectural Fisheries Experimental Station
+49SA   1093                                     Sakai Fisheries High School
+4931    632                                     Seikai Regional Fisheries Research Laboratory
+49SH   1109                                     Shimane Prefectural Board of Education
+4985    916                                     Shimane Prefectural Fisheries Experimental Station
+4944    645                                     Shimonoseki University of Fisheries
+4962    662                                     Shizuoka Fishery Laboratory
+49AY   1024                                     Shizuoka Prefectural Fisheries Experiment Station
+4958    658                                     Society for the Promotion of Science; Deep Sea Research Committee
+49TA   1091                                     Tadotsu Fisheries High School
+49TN   1105                                     Tohoku National Fisheries Research Institution - Hachinohe
+49AP   1015                                     Tohoku National Fisheries Research Institution - Sendai
+4932    633                                     Tohoku Regional Fisheries Research Laboratory
+4933    634                                     Tohoku University; Faculty of Agriculture; Department of Fisheries; Onagawa Fisheries Laboratory
+4934    635                                     Tohoku University; Marine Biological Station
+4907    608                                     Tokai Regional Fisheries Research Laboratory
+4946    647                                     Tokai University; College of Marine Science and Technology
+49TO   1089                                     Tokushima Fisheries High School
+49AL    983                                     Tokushima Pefectural Fisheries Experimental Station
+4936    637                                     Tokyo Kyoidu University; Shimoda Marine Biological Station
+       1453                                     Tokyo Metropolitan Fisheries Experiment Station
+       1454                                     Tokyo Metropolitan Ogasawara Fisheries Center
+4950    650                                     Tokyo Metropolitan University
+4951    651                                     Tokyo University
+4960    660                                     Tokyo University; Earthquake Research Institute
+4937    638                                     Tokyo University; Faculty of Agriculture; Fisheries Laboratory
+4938    639                                     Tokyo University; Faculty of Science; Misaki Marine Biological Station
+4956    656                                     Tokyo University; Ocean Research Institute
+4902    603                                     Tokyo University of Fisheries
+4940    641                                     Tokyo University of Fisheries; Kominato Marine Biological Laboratory
+4986    917                                     Tottori Prefectural Fisheries Experimental Station
+4991    922                                     Toyama Prefectural Fisheries Experimental Station
+4900                                            Unknown - Japan
+49UW   1103                                     Uwajima Fisheries High School
+49WK   1110                                     Wakayama Prefectural Fisheries Experimental Station
+49WA   1115                                     Wakkanai Fisheries Experimental Station
+4941    642                                     Whales Research Institute
+49YA   1106                                     Yaizu Fisheries High School
+4993    924                                     Yamagata Prefectural Fisheries Experimental Station
+4984    915                                     Yamaguchi Prefectural Fisheries Experimental Station
+4942    643                                     Yokohama National University; Manazuru Marine Laboratory for Scientific Education
+
+  - KOREA -
+2405    200                                     Fisheries Research and Development Agency
+2404    199                                     Hydrographic Office
+2401    196                                     Korea Central Fisheries Experimental Station
+2409   1226   METRI-KMA                         Korea Meteorological Administration; Meteorological Research Institute
+              NFRDI                             Korea; MIFAFF; National Fisheries Research and Development Institute
+2407    202   KORDI                             Korean Ocean Research and Development Institute
+2408    203   KODC                              Korea Oceanographic Data Center
+2402    197                                     Marine Products Experimental Station
+2403    198                                     Pusan Fisheries College; Department of Sea Produce
+2406    201                                     Republic of Korea (South Korean) Navy
+2400                                            Unknown - Republic of Korea (South Korea)
+
+  - LIBERIA -
+5400                                            Unknown - Liberia
+
+  - MALAGASY REPUBLIC -
+5502    676                                     Centre ORSTOM - Nossi Be
+5501    675                                     Madagascar Institute of Scientific Research; Oceanographic and Fishery Station
+5503    677                                     Marine Nationale
+5500                                            Unknown - Malagasy Republic
+
+  - MALAYSIA -
+MS03     36                                     Department of Fisheries
+MS01     34                                     Fish Research Laboratory - Malaya
+MS02     35                                     Tropical Fish Culture Research Institute
+MS00                                            Unknown - Malaysia
+
+  - MAURITIUS -
+MA00                                            Unknown - Mauritius
+
+  - MEXICO -
+5701    682                                     Autonomous University of Baja California
+5706    687                                     Centro de Ciencias Del Mar Y Limnologia
+5708    979                                     Direccion General de Pesca and Industrias Conexas
+5710   1164   CICESE                            Ensenada Center for Scientific Investigation and Higher Education
+5702    683                                     Fisheries Department and Allied Industries Marine and Fresh-Water Biology Laboratory
+5707    688                                     Mexican Navy
+5705    686                                     National Institute of Fisheries
+5703    684                                     Technologic Institute of Veracruz; Marine Biological Station
+5704    685                                     Universidad Nacional de Mexico; Instituto de Geofisica
+5700                                            Unknown - Mexico
+
+  - MONACO -
+MO03     32                                     Institute Oceanographique
+MO02     31                                     International Hydrographic Bureau
+MO01     30                                     Oceanographic Museum of Monaco
+MO00                                            Unknown - Monaco
+
+  - MOROCCO -
+5601    679                                     Cherifiem Scientific Institution
+5602    680                                     Marine Fisheries Institute of Morocco
+5600                                            Unknown - Morocco
+
+  - MOZAMBIQUE -
+6806    758                                     Maritime Department; Marine Biological Station
+
+  - N/A -
+3558   1210                                     Medspiration
+
+  - NETHERLANDS -
+6413    732                                     Caribbean Marine Biological Institute
+                                                Cesar Environmental Economics Consulting
+6407    726                                     Groningen University
+       1236   KNMI                              Klimaat En Klimaatverandering
+6401    720                                     Laboratory for Anti-Fouling Research
+6411    730                                     National Institute for Water Research
+6408    727                                     Netherlands Geological Institute
+CA01      7                                     Public Health Service
+6410    729                                     Rotterdam Engineering Institute
+6404    723                                     Royal Netherlands Academy of Sciences; Hydrobiology Institute; Department for Estuarine Research
+6402    721   NIOZ                              Royal Netherlands Institute for Sea Research
+6405    724                                     Royal Netherlands Meteorlogical Institute
+6406    725                                     Royal Netherlands Navy
+6409    728                                     University of Utrecht
+6400                                            Unknown - Netherlands
+6412    731                                     Vening Meinesz Laboratory
+
+  - NEW CALEDONIA -
+       1245                                     Centre IRD de Noumea
+5901    703                                     Centre ORSTOM - Noumea
+5999                                            Unknown - New Caledonia
+
+  - NEW ZEALAND -
+6107    712                                     Defence Scientific Establishment - Auckland
+       1469                                     GNS Science
+6109   1000                                     National Institute of Water and Atmosphere - Lower Hutt
+       1184                                     National Institute of Water and Atmospheric Research; Centre for Chemical and Physical Oceanography
+6110   1344   NIWA                              National Institute of Water and Atmospheric Research Limited
+6106    711                                     New Zealand Geological Survey
+6102    707                                     New Zealand Marine Department; Fisheries Laboratory
+6103    708                                     New Zealand Oceanographic Institute
+6108    713                                     New Zealand Royal Navy
+6104    709                                     Portobello Marine Biological Station
+6101    706                                     University of Auckland; Institute of Marine Sciences; Leigh Marine Laboratory
+6100                                            Unknown - New Zealand
+
+  - NIGERIA -
+NI01     38                                     Commission for Technical Cooperation In Africa
+NI00                                            Unknown - Nigeria
+
+  - NORWAY -
+5801    692                                     Directorate of Fisheries Institute of Marine Research
+5803    694                                     Floedevigen Biological Station
+58SA   1421                                     NATO SACLANT Anti-Submarine Research Center - Norway
+5809    700                                     Norwegian Defense Research Establishment
+5811    702                                     Norwegian Hydrodynamic Laboratory
+5802    693                                     Norwegian Institute of Seaweed Research
+5812    972                                     Norwegian Polar Institute
+5804    695                                     Tromsoe Museum; Marine Biological Station
+5805    696                                     Trondheim Biological Station
+5813   1419                                     University of Bergen
+5806    697                                     University of Bergen; Biological Station
+5810    701   GFI                               University of Bergen; Geophysical Institute
+5808    699                                     University of Oslo
+5807    698                                     University of Oslo; Biological Station
+5800                                            Unknown - Norway
+
+  - OMAN -
+OM00                                            Unknown - Oman
+
+  - PAKISTAN -
+6203    717                                     Fisheries Department of Pakistan
+6204    718                                     Pakistan Meteorological Department
+6201    715                                     Pakistan Ministry of Food and Agriculture; Marine Fish Department
+6200                                            Unknown - Pakistan
+6202    716                                     Zoological Survey Department; Marine Biological Research Laboratory
+
+  - PANAMA -
+PA01   1413                                     Inter-American Tropical Tuna Commission - Balboa Panama
+31PA   1056                                     Panama Canal Comission
+PA00                                            Unknown - Panama
+
+  - PERU -
+6507   1200   DHN                               Direccion de Hidrografia y Navegacion
+6503    736                                     Guano Company
+6506    739   IMARPE                            Instituto Del Mar Del Peru - Callao
+6504    737                                     Marine Resources Research Institute - Callao
+6505    738                                     Ministry of Agriculture; Department of Fish and Game; Division of Fish Research Hydrobiology Laboratory
+6501    734                                     Peruvian Government
+6502    735                                     Peruvian Navy
+6500                                            Unknown - Peru
+
+  - PHILIPPINES -
+6601    741                                     Dagat-Dagatan Salt-Water Fishery Experimental Station
+6605    745                                     Philippine Navy
+6606    905                                     Philippines Fisheries Commission, DANR
+6603    743                                     University of the Philippines - Manila
+6604    744                                     University of the Philippines - Oriental Mindoro
+6602    742                                     University of the Philippines - Quezon City
+6600                                            Unknown - Philippines
+
+  - POLAND -
+6701    747                                     Biological Station - Gorki Wschodnie
+6705   1002                                     Polish Academy of Science; Institute of Oceanology
+6703    749   PIHM                              Polish Institute of Hydro-Meteorology; Department of Oceanography
+6704    750                                     Sea Fisheries Institute
+6702    748                                     Sea Fisheries Institute- Swinoujscie Station
+6700                                            Unknown - Poland
+
+  - PORTUGAL -
+6804    756                                     Commission for the Study of Biological Oceanography and Fgola
+6801    753                                     Council for Overseas Investigation; Center for Fisheries Biology - Lisbon
+6803    755                                     Institute of Marine Zoology; Marine Zoology Station Dr. Augusto Nobre
+6809    230                                     Instituto Investigaciones Pesqueras
+6807    759                                     Ministry of the Navy; Instituto Hidrografico
+6802    754                                     Ministry of the Navy; Marine Biological Institute
+68SA    751                                     NATO SACLANT Anti-Submarine Research Center - Portugal
+6808    760                                     University of Lisbon
+6800                                            Unknown - Portugal
+
+  - ROMANIA -
+7301   1397   NIMRD                             National Institute for Marine Research and Development - Grigore Antipa
+
+  - RUSSIA -
+9018    847   AARI                              Arctic and Antarctic Research Institute
+       1432   FEFU                              Far Eastern Federal University
+       1433   IMB                               Institute of Marine Biology; Far East Branch Russian Academy of Sciences
+       1442   MSU                               Lomonosov Moscow State University
+RU03   1377                                     Marine Hydrometeorological Station
+RU02   1376                                     Marine Hydrometeorological Station - Tuapse
+RU01   1014                                     Murmansk Observation Center for Environmental Pollution
+9074   1369                                     Regional Department of the Russian Public Navigation Institute
+9005    834                                     Russian Academy of Sciences; P.P. Shirshov Institute of Oceanology
+RU04   1378                                     Sea Observatory of the Black and Azov Seas
+RU07   1381   SSC                               Southern Scientific Center
+RU05   1379                                     State Azov-Don Basin Administration of Waterway and Navigation
+RU06   1380                                     State Oceanographic Institution
+              WDC-B, Obninsk                    World Data Center-B, Oceanography - Obninsk
+
+  - SAUDI ARABIA -
+SA00                                            Unknown - Saudi Arabia
+
+  - SENEGAL -
+SE01     47                                     Fish Research Center - Joal
+SE02     48                                     French African Institute; Marine Biology Department
+SE03     49                                     Oceanographic Laboratory of Tiaroye/Mer
+SE00                                            Unknown - Senegal
+
+  - SIERRA LEONE -
+SL01     52                                     Ministry of Natural Resources; Fisheries Division
+SL00                                            Unknown - Sierra Leone
+
+  - SINGAPORE -
+SI01    903                                     Singapore University; Fisheries Biology Unit
+SI02    967                                     University of Singapore; Regional Marine Biological Centre
+SI00                                            Unknown - Singapore
+
+  - SOUTH AFRICA -
+9107    876   CSIR                              Council for Scientific and Industrial Research
+9102    871                                     Department of Commerce and Industries; Division of Sea Fisheries
+9108    877                                     National Research Institute for Oceanology
+9105    874                                     Oceanographic Research Institute
+9103    872                                     Rhodes University; Department of Ichthyology
+9110   1167   SFRI                              Sea Fisheries Research Institute
+9109    902                                     South African Data Centre for Oceanography
+9104    873                                     University of Cape Town
+9101    870                                     University of Natal; Oceanographic Research Institute
+9106    875                                     University of the Witwatersrand
+9100                                            Unknown - South Africa
+
+  - SPAIN -
+2901    229                                     Canary Island Oceanographic Laboratory
+2914   1174   CEAB                              Centro de Estudios Avanzados de Blanes
+2911    239                                     Hydrographic Institute of the Spanish Navy
+2902    752                                     Institute for Fishery Research
+2913   1173                                     Instituto de Ciencias Del Mar - Barcelona
+2912    240   ICM                               Instituto de Ciencias Del Mar - Madrid
+2908    236                                     Instituto de Ciencias Del Mar - Madrid; Institute Edafologia
+2903    231                                     Malaga Laboratory
+2904    232                                     Palma de Mallorca Oceanographic Laboratory
+2905    233                                     Santander Oceanographic Centre
+2906    234   IEO                               Spanish Institute of Oceanography
+       1443   ULPGC                             Universidad de Las Palmas de Gran Canaria
+2916   1178                                     Universidad de Oviedo
+2915   1175   UPC                               Universidad Polytecnica de Catalunya
+2917   1179                                     Universitat de Les Illes Balears
+2910    238                                     University of Barcelona
+2909    237                                     University of Cordova
+2900                                            Unknown - Spain
+2907    235                                     Vigo Oceanographic Laboratory
+
+  - SWEDEN -
+7708    814                                     Geological Institute - Kungstensgaten
+7706    812                                     Geological Survey of Sweden
+7709    815                                     Kungliga Fisheristyrelsen
+7703    809                                     Marine Zoological Station At Kristineberg
+7702    808                                     Royal Board of Fisheries
+7707    813                                     Stockholm University
+7711    817                                     Swedish Coast Guard
+7712    818   SMHI                              Swedish Meteorological and Hydrological Institute
+7710    816                                     Swedish Natural Science Research Counsel
+7713   1177   GU                                University of Gothenburg
+7701    807                                     University of Gothenburg; Marine Botanical Institute
+7700                                            Unknown - Sweden
+7704    810                                     Uppsala University; Institute for Physiological Botany
+7705    811                                     Uppsala University; Klubbans Biological Station
+
+  - TAIWAN -
+2104   1208   NCOR                              National Center for Ocean Research
+2103    189   NTU                               National Taiwan University
+2101    187                                     National Taiwan University; Institute of Fishery Biology
+2102    188                                     Taiwan Fisheries Research Institute
+2100                                            Unknown - Taiwan
+
+  - THAILAND -
+8603    904                                     Department of Fisheries; Marine Fisheries Laboratory
+8602    821                                     Ministry of Agriculture; Department of Fisheries
+8601    820                                     Thai Navy Hydrographic Office
+8600                                            Unknown - Thailand
+
+  - TRINIDAD AND TOBAGO -
+TT02     55   CARIRI                            Caribbean Industrial Research Institute
+TT01     54                                     Institute of Marine Affairs
+TT00                                            Unknown - Trinidad and Tobago
+
+  - TUNISIA -
+8802    824   FAO/UNDP                          Fisheries and Aquaculture Organization; UN Developmental Project; Fishery Survey and Developmental Project
+8801    823                                     Salammbo Oceanographic Station
+8800                                            Unknown - Tunisia
+
+  - TURKEY -
+8901    826                                     Fisheries Directorate of the Meat and Fish Office
+8902    827                                     Hydrobiological Research Institute
+8904   1367                                     Middle East Technical University; Institute of Marine Sciences
+8903    828                                     Turkish Navy Hydrographic Office
+8900                                            Unknown - Turkey
+
+  - UKRAINE -
+90IB    864   IBSS                              Institute of Biology of the Southern Seas - National Academy of Sciences of Ukraine
+9021    850   MHI                               Marine Hydrophysical Institute
+
+  - UNION OF SOVIET SOCIALIST REPUBLICS -
+9001    830                                     Academy of Science - Estonian SSR
+9002    831                                     Academy of Science - Ukrainian SSR
+9038    867   WDC-B                             All-Russian Research Institute of Hydrometeorological Information - World Data Centre B
+9033    862                                     All-Union Scientific Research Institute of Marine Geology - Gelendzhik
+9062   1012                                     Arhangelsk Scientific Research Observatory
+9024    853                                     Atlantic Institute for Fishery and Oceanography
+9019    848   AtlantNIRO                        Atlantic Research Institute of Fishing Economy and Oceanography
+9010    839   ASERNIRL                          Azerbaijan Fisheries Research Laboratory
+9011    840                                     Azov and Black Sea Research Institution of Marine Fisheries and Oceanology
+9012    841   BALTNIRO                          Baltic Research Institution of Marine Fisheries and Oceanology
+9013    842   CASPNIRO                          Caspian Research Institute of Marine Fisheries and Oceanology
+9036    865                                     Department of the State Oceanographic Institute - Odessa
+9042    928                                     Department of the State Oceanographic Institute - Sevastopol
+9023    852                                     Directorate of the Hydrometservice - Murmansk
+9022    851                                     Directorate of the Hydrometservice - St. Petersburg
+9027    856   AS                                Directorate of the Hydrometservice - Tallinn
+9028    857   AS                                Directorate of the Hydrometservice - Vilnius
+9059    901                                     Echoshelf
+9048    937   ESTONGIDROMET                     Estonian Regional Administration of Hydrometeorology
+9030    859   FERHRI                            Far Eastern Hydrometeorological Institute of Scientific Research
+9020    849                                     Hydrographical Service
+9031    860                                     Hydrographic Office of the USSR Navy
+9058                                            Hydrometeorology Service of the Russian Navy
+9060    929                                     Hydrometeorology Service of the Russian Navy (GSVMF)
+9068   1055   IEM                               Institute Experimental of Meteorology
+9035   1345                                     Institute of Biology of the Southern Seas; Odessa Branch - National Academy of Sciences of Ukraine
+9049    938                                     Institute of Oceanology; Southern Branch (UO IOAN)
+9037    866                                     Institute of Thermophysics and Electrophysics
+9071   1363   KHS                               Kamchatsky Hydrometeorological Service
+9016    845   PINRO                             Knipovich Polar Research Institute of Marine Fisheries and Oceanography
+9072   1365                                     Kolymsky Territorial Office On Hydrometeorology and Environmental Monitoring
+9014    843                                     Latvian Fish Research Institute; Baltic Institute for Fisheries
+9061    964   LGMI                              Leningrad Hydrometeorological Institute
+9043    931                                     Litovgidromet Hydrometeorological Service
+9034    863                                     Main Administration for Navigation and Oceanography
+9041    898   MMBI                              Murmansk Marine Biological Institute
+9052    966   ROSGIDROMET                       North-Caucasus Regional Administration of Hydrometeorology, Rosgidromet (Sevkavgidromet)
+9063   1013                                     North Department of the Hydrometeorological Service
+9053    971                                     Northern Directorate of Fisheries (SRPR)
+9045    933                                     Pacific Administration of Fisheries Oceanography Research
+9015    844                                     Pacific Research Institute of Fisheries and Oceanography
+9064   1030   PMGRE                             Polar Marine Geological Prospective Expedition
+9050    939                                     PPO Yugrybpoisk
+9073   1366                                     Primorsky Territorial Office On Hydrometeorology and Environmental Monitoring
+9066   1156                                     Research Institute for Nature Conservation of the Arctic and North
+9032    861                                     Russian Academy of Science; Institute of Acoustics
+9054    974                                     Russian Academy of Sciences
+9067   1037                                     Russian Academy of Sciences; Zoological Institute
+9009    838   VNIRO                             Russian Federal Research Institute of Marine Fisheries and Oceanology - Arkhangelsk
+9069   1061   VNIRO                             Russian Federal Research Institute of Marine Fisheries and Oceanology - Azerbajdian
+9055    975   VNIRO                             Russian Federal Research Institute of Marine Fisheries and Oceanology - Moscow
+9047    936   ROSGIDROMET                       Sakhalin Regional Admin of Hydrometeorology
+90II   1166                                     Scientific Ichthyological Institute of Leningrad
+9070    896   YugNIRO                           Southern Scientific Research Institute of Marine Fisheries and Oceanography
+9046    934   SKB Sami                          Special Design Bureau of Sami
+9051    965   UKRGIDROMET                       Ukrainian Regional Administration of Hydrometeorology
+9065   1032   UkrSCES                           Ukrainian Scientific Centre of the Ecology of Sea
+9000                                            Unknown - USSR, Russia
+9003    832                                     USSR Academy of Science; Institute of Hydrobiology
+9004    833                                     USSR Academy of Science; Institute of Microbiology
+9006    835                                     USSR Academy of Science; Institute of Zoology
+9007    836                                     USSR Academy of Science; Kola Branch
+9026    855                                     USSR Academy of Sciences; Laboratory of the Lake Authority
+9008    837                                     USSR Academy of Sciences; Sevastopol Biological Research Station
+9017    846                                     USSR Academy of Science; Yakutsk Branch
+90HY   1088                                     USSR Hydrometeorological Service - Azerbaijan
+9029    858                                     USSR Hydrometeorological Service - Moscow
+9025    854                                     USSR Institute of Oceanography
+9039    868                                     USSR Ministry of Fisheries
+9056    897                                     USSR Navy
+9057    829                                     V.I. Ilyichov Pacific Oceanological Institute
+9044    932                                     Zaprybpromrazvedka Western Administration of Fisheries Oceanography Research
+
+  - UNITED KINGDOM -
+7408    770                                     Atomic Energy Authority; Radiobiological Group; Health and Safety Branch
+7423    785                                     Atomic Energy Research Establishment
+7430    792   BBSR                              Bermuda Biological Station for Research
+7440    893   BAS                               British Antarctic Survey
+7416    778                                     British Ministry of Agriculture; Fisheries and Food; Fisheries Experimental Station
+7429    791                                     British Museum
+7436    762   BODC                              British Oceanographic Data Centre
+7433    795   BP                                British Petroleum
+7431    793                                     British Post Office Corporation; Marine Branch
+7428    790                                     Cable and Wireless Limited
+7437   1004                                     Coral Cay Conservation
+7439    986                                     Department of Marine Science and Coastal Management
+74DM   1372                                     Dunstaffnage Marine Laboratory
+7417    779                                     Federated University of Wales; Marine Biological Station
+7402    764                                     Fisheries Laboratory - Burnham-on-Crouch
+7403    765                                     Fisheries Laboratory - Lowestoft
+7424    786                                     Furebrook Research Station
+7411    773                                     Gatty Marine Laboratory and Wellcome Lab of Comparative Pharmacology
+7422    784                                     Hong Kong Fisheries Research Station
+7421    783                                     Hydro Department
+7412    774                                     Institute of Seaweed Research
+7425    787                                     Macaulay Institute for Soil Research
+7413    775                                     Marine Laboratory
+74DR   1375                                     Ministry of Defence; Defence Research Agency
+7448   1359                                     Ministry of Defense; Admiralty Research Laboratory
+7449   1360                                     Ministry of Defense; Admiralty Underwater Weapons Establishment
+7445   1218   NCOF                              National Centre for Ocean Forecasting
+7432    794                                     National Environment Research Council; Institute of Oceanographic Sciences
+7444   1146   NOCS                              National Oceanography Centre, Southampton
+74SA    761                                     NATO SACLANT Anti-Submarine Research Center - Great Britian
+       1601   NERC                              Natural Environment Research Council
+              NEODAAS                           NERC Earth Observation Data Acquisition and Analysis Service
+7414    776                                     Oceanographic Laboratory
+7435    797                                     Ocean Transport and Trading Ltd.
+7434    796                                     Ocean Weather Service
+74PO   1373   POL                               Proudman Oceanographic Laboratory
+7404    766                                     Radiobiological Laboratory
+7415    777                                     Scottish Marine Biological Association; Marine Station
+7441   1423                                     Scottish Office Agriculture and Fisheries Department
+74AH   1027   SAHFOS                            Sir Alister Hardy Foundation for Ocean Science
+7426    788                                     Standard Telephone and Cables, Ltd.
+74MO   1182   UKMO                              UK Meteorological Office
+7406    768                                     UK National Institute of Oceanography
+7401    763   UKHO                              United Kingdom Hydrographic Office
+7407    769                                     United Kingdom Marine Biology Association; Plymouth Laboratory
+              UK-MM-PAF                         United Kingdom Multi-Mission Processing and Archiving Facility
+7420    782                                     University College of Wales
+7418    780                                     University of Cambridge
+7405    767                                     University of Durham; Kings College
+7438   1161                                     University of East Anglia; School of Environmental Sciences
+7419    781                                     University of Liverpool - Liverpool
+7409    771                                     University of Liverpool - Port Erin
+7410    772                                     University of London; Queen Mary College
+7427    789                                     University of Southampton; Department of Oceanography
+       1330   SMRU                              University of St Andrews; School of Biology; Sea Mammal Research Unit
+7443   1165   N/A                               University of Wales
+7400                                            Unknown - United Kingdom
+       1507   WOCE IPO                          World Ocean Circulation Experiment International Project Office
+
+  - UNITED STATES -
+31H3    294   AMRL                              Alabama State Department of Conservation and Natural Resources; Alabama Marine Resources Laboratory
+       1468   AOOS                              Alaska Ocean Observing System
+31W6    374                                     Alaska State Department of Fish and Game - Anchorage
+31W5    373                                     Alaska State Department of Fish and Game - Fairbanks
+3134    451                                     Alaska State Department of Fish and Game - Kodiak
+31I4    296                                     Alpine Geophysical Associates Inc
+31U2    355                                     American Export Lines
+31V8    367                                     American President Lines
+                                                American Samoa Department of Marine and Wildlife Resources
+31U6    359                                     American Tuna Boat Association
+31AA    241                                     Applied Science Associates, Inc.
+31AL    247                                     Arthur D. Little, Inc.
+3139    452                                     Atlantic Refining Co.
+31BV   1220                                     Barry A. Vittor and Associates, Inc.
+31BD    256                                     Battelle Memorial Institute; Pacific Northwest National Laboratory
+31BA    254                                     Battelle Memorial Institute - Ventura County
+31BE    257                                     Battelle Ocean Sciences Laboratory - New England
+31BM   1039                                     Bernice Pauahi Bishop Museum
+31Z6    390                                     Bigelow Laboratory for Ocean Sciences
+              BCO-DMO                           Biological and Chemical Oceanography Data Management Office
+31Z3    388   BNL                               Brookhaven National Laboratory
+31BR   1426                                     Broward County Department of Planning and Environmental Protection
+31BC    255                                     Brown and Caldwell
+3113    415   CMA                               California Maritime Academy - Vallejo
+3117    419                                     California State Department of Fish and Game
+3148    457                                     California State Department of Fish and Game - Pacific Grove
+              CSUN                              California State University - Northridge
+31CD    895   CDIAC                             Carbon Dioxide Information Analysis Center
+311C    402                                     Chevron Research Corporation
+31C6                                            City and County of Honolulu
+31CL   1034                                     City of Los Angeles Department of Public Works
+31U8    361   CUNY                              City University of New York
+       1371   CCHDO                             CLIVAR and Carbon Hydrographic Data Office
+314E    454                                     Coastal Ecosystems Management, Inc.
+31X5    381                                     College of the Atlantic - Bar Harbor
+31I5    297                                     Columbia University
+3112    414   LDEO                              Columbia University; Lamont-Doherty Earth Observatory
+31NM   1153                                     Commonwealth of the Northern Mariana Islands Division of Environmental Quality
+31CA    263                                     Continental Shelf Associates, Inc
+       1480                                     Continental Shelf Associates, Inc.; CSA International, Inc.
+31I6    298   CU                                Cornell University
+31AD    244                                     Dade County School System
+31X4    380                                     Dames and Moore, Inc. - Anchorage
+312K    427                                     Dames and Moore, Inc. - Bethesda
+       1481   DISL                              Dauphin Island Sea Lab
+31DT    989                                     Deep Oil Technology, Inc. - Long Beach
+314D    453                                     Delta Steamship Co.
+3155    460                                     Duke University
+31DN    270   DU/UNC                            Duke University/University of North Carolina Oceanographic Consortium
+       1449                                     Dynalysis of Princeton
+31ES   1420   ESR                               Earth and Space Research
+31EE    277                                     Ebasco Environmental
+31F4    284   EG&G                              Edgerton, Germeshausen and Grier, Inc.
+31EN    990                                     Edward K. Noda and Associates
+31X9    385                                     E. I. Dupont de Nemours, Inc.
+31X7    383                                     Energy Resources Co. Inc.
+31EB    276                                     Environmental Sciences and Engineering, Inc. - Gainesville
+31EA    275                                     Envirosphere Co.
+       1242   FMSA                              Farallones Marine Sanctuary Association
+31U3    356                                     Farrell Lines
+3123    437                                     Fish Commission Research Laboratory
+       1450   FAU                               Florida Atlantic University
+31HB   1409   HBOI                              Florida Atlantic University; Harbor Branch Oceanographic Institute
+31F5    285   FIO                               Florida Institute of Oceanography
+31FT   1402   FIT                               Florida Institute of Technology
+       1491   FIU                               Florida International University
+31FR   1399   FMRI                              Florida Marine Research Institute
+31FP   1428   FLADEP                            Florida State Department of Environmental Protection
+3158    461   FSU                               Florida State University
+       1500   COAPS                             Florida State University; Center for Ocean-Atmospheric Prediction Studies
+31FA    279                                     Flow Research Co.
+31FL   1405                                     Flow Science, Inc.
+3172    468   FU                                Fordham University
+31W2    370   GWU                               George Washington University
+       1483                                     Georgia Tech; School of Biology
+311G    406                                     Grace Prudential Lines
+31T4    351                                     Grays Harbor College
+31U7    360                                     Grumman Aerospace Corporation
+       1348   GoMOOS                            Gulf of Maine Ocean Observing System
+       1434   GSMFC                             Gulf States Marine Fisheries Commission
+3163    464   HU                                Harvard University
+31R6   1417                                     Hawaiian Electric Company
+                                                Hawaii Natural Heritage Program
+31R5   1326                                     Hawaii State Department of Health
+       1354   DLNR                              Hawaii State Department of Land and Natural Resources
+3126    440                                     Hudson Laboratory
+31M9    318   HSU                               Humboldt State University
+31KE   1422                                     ICF Kaiser Engineers Group, Inc.
+31V3    362                                     Ichthyological Associates Inc.
+       1466   IFE                               Institute for Exploration
+3168    466   IATTC                             Inter-American Tropical Tuna Commission - La Jolla
+3169    467   IPHC                              International Pacific Halibut Commission
+31H6    295   JHU                               Johns Hopkins University
+       1353   APL                               Johns Hopkins University; Applied Physics Laboratory
+3121    436                                     Johns Hopkins University; Chesapeake Bay Institute
+       1509                                     Kachemak Bay National Estuarine Research Reserve
+       1347                                     Kinnetic Laboratories, Inc.
+31LW   1400                                     Leeward Community College
+313G    447                                     LGL Ltd.; Alaska Research Associates, Inc.
+3174    469                                     Lockheed Aircraft Corporation
+31S4    345                                     Lockheed Aircraft Corporation; California County Oceanics Division
+       1436   LDWF                              Louisiana State Department of Wildlife and Fisheries
+3175    470   LSU                               Louisiana State University
+       1352   LUMCON                            Louisiana Universities Marine Consortium
+31L8    308                                     Lykes Brothers Lines
+31MO    314                                     Marathon Oil Company
+31U4    357                                     Marcona Corporation
+31S7    347                                     Marine Acoustical Services, Inc.
+31V4    363   MRRI                              Marine Resources Research Institute
+31Y3    993                                     Martin Marietta Energy Systems
+31MA    310   MIT                               Massachusetts Institute of Technology
+3182    471                                     Massachusetts Institute of Technology; Department of Geology and Geophysics
+31MN    313                                     McNeese State University
+       1486   MTU                               Michigan Technological University
+31MB    311   MBARI                             Monterey Bay Aquarium Research Institute
+312F    424                                     Moody College
+31M2    316                                     Moore-McCormack Lines Inc.
+316C    462   CALSTATE-MLML                     Moss Landing Marine Laboratories
+31V6    365   MML                               Mote Marine Laboratory
+312N    429                                     Nassau County Department of Health; Bureau of Water Surveillance
+       1349   NERRS CDMO                        National Estuarine Research Reserve System Centralized Data Management Office
+31B5    261   NMNH                              National Museum of Natural History
+3129    442   NSF                               National Science Foundation
+       1350   NELHA                             Natural Energy Laboratory of Hawaii Authority
+31I9    300                                     New York City Board of Water Supply
+31ND    321                                     New York City Department of Environmental Protection
+3188    473   NYU                               New York University
+31NC    320   NCSU                              North Carolina State University
+       1339   PICES                             North Pacific Marine Science Organization
+311N    409                                     Nova Southeastern University; Physical Oceanography Laboratory
+31OI   1040   OI                                Oceanic Institute
+31OT   1401                                     Oceanit Laboratories, Inc.
+31N5    325                                     Ocean Science Laboratory
+31AE    245                                     Oceanweather, Inc.
+       1467   OSRI                              Oil Spill Recovery Institute
+31DM    269   ODU                               Old Dominion University
+31J8    305                                     Orange County Department of Education
+31OR   1042   OGIST                             Oregon Graduate Institute of Science and Technology
+3103    395   OSU-CEOAS                         Oregon State University; College of Earth, Ocean, and Atmospheric Sciences
+31PC   1033   PITCHR                            Pacific International Center for High Technology Research
+312P    430                                     Pacific Oceanography Laboratory
+311X    411                                     Palisades Geophysical Institute for Acoustical Research
+       1336   PISCO                             Partnership for Interdisciplinary Studies of Coastal Oceans
+       1451   PSU                               Penn State University
+311K    407   PRBO                              Point Reyes Bird Observatory
+       1495   PSU                               Portland State University
+31PW   1152                                     Prince William Aquaculture Corporation
+       1227                                     Providence College
+31P1    327                                     Prudential Lines Inc.
+31QA    331                                     Quantus, Inc.
+312A    422   RTN                               Raytheon Company
+              RPSC                              Raytheon Polar Services Company
+3135   1207   REMSS                             Remote Sensing Systems
+31X6    382                                     Research Triangle Institute
+3125    439   RSMAS                             Rosenstiel School of Marine and Atmospheric Science
+31P7    329                                     Rutgers, The State University of New Jersey
+3186    472                                     Rutgers University; Oyster Research Laboratory
+31SD    343                                     San Diego State University
+        985   CHORS                             San Diego State University; Center for Hydro-Optics and Remote Sensing
+31SF   1025                                     San Francisco State University
+313D    444                                     San Juan Department of Public Works
+3136   1214   SOS                               Save Our Seas
+31SX   1158                                     Science Applications International Corporation - Bay St. Louis, Ms
+31SA    340                                     Science Applications International Corporation - Bellevue, WA
+31X8    384                                     Science Applications International Corporation - La Jolla, CA
+31SC    342                                     Science Applications International Corporation; Maritime Services - San Diego, CA
+31Y2    387                                     Science Applications International Corporation - Oak Ridge, TN
+312H    426                                     Science Applications International Corporation - Raleigh, NC
+31AN   1203                                     Sea Education Association
+31L9    309                                     Sea Land Service Inc.
+31SW    344   SWRI                              Sea World Research Institute
+31K5    307                                     Shell Development Co.
+312S    432   SkIO                              Skidaway Institute of Oceanography
+31G2    289   SOSC                              Smithsonian Oceanographic Sorting Center
+31ST    991                                     Smithsonian Tropical Research Institute
+31AF    246                                     South Carolina State Wildlife and Marine Resources Department
+31Y4   1431   SCCWRPA                           Southern California Coastal Water Research Project Authority
+31SI   1393   SCMI                              Southern California Marine Institute
+31S5    346   SMVTI                             Southern Maine Vocational Technical Institute
+312L    428   SwRI                              Southwest Research Institute
+312G    425                                     Southwest Research Institute - Houston
+3116    418                                     Stanford University; Hopkins Marine Station
+31P8    330   SBU                               State University of New York at Stony Brook
+31TE    348                                     Tereco - College Station TX
+31TT    349                                     Tetra Tech, Inc.
+3124    438   TAMU                              Texas A&M University
+31TG   1406   TAMU - Galveston                  Texas A&M University; Texas A&M University - Galveston
+31W8    375   TCU                               Texas Christian University
+       1335                                     Texas State Department of Health
+       1435   TPWD                              Texas State Parks and Wildlife Department
+3106    398   USCG                              United States Coast Guard
+31Q2    332   UA                                University of Alabama
+31AK    987   UA                                University of Alaska - Anchorage
+31C1    264   UAF                               University of Alaska - Fairbanks
+31I7    299   IMS/UAF                           University of Alaska - Fairbanks; Institute of Marine Science
+              UA                                University of Arizona
+31C2    265                                     University of California - Berkeley
+       1485                                     University of California - Davis
+311F    405   BML                               University of California - Davis; Bodega Marine Laboratory
+31W9    376                                     University of California - Irvine
+31E3    278   UCLA                              University of California - Los Angeles
+31R9    339   UCSD                              University of California - San Diego
+31SG   1157                                     University of California - San Diego; California Sea Grant College Program
+3101    393   SIO                               University of California - San Diego; Scripps Institution of Oceanography
+3178          CRSEO                             University of California - Santa Barbara; Center for Remote Sensing and Environmental Optics
+31HR   1084   ICESS                             University of California - Santa Barbara; Institute for Computational Earth System Science
+31V7    366   UCSC                              University of California - Santa Cruz
+31U1    354                                     University of California - Santa Cruz; Institute of Marine Sciences
+31UC   1083                                     University of Chicago
+       1510   CU-B                              University of Colorado - Boulder
+31CC   1407   CCAR                              University of Colorado - Boulder; Colorado Center for Astrodynamics Research
+31X3    379   NSIDC                             University of Colorado - Boulder; National Snow and Ice Data Center
+31C4    266   UC                                University of Connecticut; Marine Research Laboratory
+31C5    267                                     University of Delaware; College of Earth, Ocean, and Environment; School of Marine Science and Policy
+       1479                                     University of Delaware; Department of Biological Sciences
+31GA   1204                                     University of Georgia; School of Marine Programs
+31GU   1418                                     University of Guam
+       1333   UHH                               University of Hawai'i at Hilo
+31R2    336   UHM                               University of Hawai'i at Mānoa
+3165    465                                     University of Hawaii; Marine Laboratory
+31Z9    391   UH                                University of Houston
+31UM   1036   UMO                               University of Maine
+311M    408   DMC                               University of Maine; Darling Marine Center
+31Q9    335   UMD                               University of Maryland
+3152    458   UMCES CBL                         University of Maryland; Center for Environmental Science; Chesapeake Biological Laboratory
+31MP    315   UMCES HPL                         University of Maryland; Center for Environmental Science; Horn Point Laboratory
+31MS   1051                                     University of Massachusetts
+31C9    268                                     University of Michigan
+31Z4   1408   LLO                               University of Minnesota - Duluth; Large Lakes Observatory
+31DR   1403   DRI                               University of Nevada; University of Nevada - Reno; Desert Research Institute
+31NH    322   UNH                               University of New Hampshire
+31V9    368   UNC                               University of North Carolina - Chapel Hill
+31D1    271   UNC                               University of North Carolina - Chapel Hill; Institute of Fish Research
+       1494   UNCW                              University of North Carolina - Wilmington
+31GN   1410                                     University of Oregon; Biology Department
+31P4    328                                     University of Puerto Rico; Department of Marine Sciences - Mayaguez
+3130    449   GSO                               University of Rhode Island; Graduate School of Oceanography
+313E    445                                     University of Rochester
+31SB    341                                     University of South Alabama
+       1493   USC                               University of South Carolina
+31F3    283   USC                               University of Southern California
+3119    421                                     University of Southern California; Hancock Foundation
+31SM    392   GCRL                              University of Southern Mississippi; Gulf Coast Research Laboratory
+31T1    350   USF                               University of South Florida - St. Petersburg
+31KM   1411                                     University of South Florida - St. Petersburg; Florida Institute of Oceanography; Keys Marine Laboratory
+31TN    992                                     University of Tennessee
+31Q7    334   UT - Austin                       University of Texas; University of Texas - Austin
+31D3    272                                     University of Texas; University of Texas - Austin; Marine Science Institute
+3114    416                                     University of the Pacific; Pacific Marine Station - Dillon Beach
+3109    400   UW                                University of Washington
+       1221   APL                               University of Washington; Applied Physics Laboratory
+31WB   1202   UWPSC                             University of Washington; Applied Physics Laboratory; Polar Science Center
+       1357   UW-FRI                            University of Washington; Fisheries Research Institute
+3160    463                                     University of Washington; Friday Harbor Laboratories
+31D5    273                                     University of Wisconsin - Madison
+                                                University of Wisconsin - Milwaukee
+3100                                            Unknown - USA
+       1320   URS                               URS Corporation
+311D    403   USACE                             US Army; Corps of Engineers
+31F8    287   USACE CERC                        US Army; Corps of Engineers; Coastal Engineering Research Center
+31Q4    333   USACE NRPAC                       US Army; Corps of Engineers; Engineering Division; NRPAC
+31AG    927   ARS                               US Department of Agriculture; Agriculture Research Service
+312E    423   NOAA EDIS CEAS                    US DOC; NOAA; Environmental Data and Information Service Center for Environmental Assessment Services
+31W3    371                                     US DOC; NOAA; Marine Resources
+312R    431   NESDIS                            US DOC; NOAA; National Environmental Satellite, Data, and Information Service
+3111    413   NMFS                              US DOC; NOAA; National Marine Fisheries Service
+31G8    293   NOS                               US DOC; NOAA; National Ocean Service
+       1476   STAR                              US DOC; NOAA; NESDIS; Center for Satellite Applications and Research
+       1358   NCDC                              US DOC; NOAA; NESDIS; National Climatic Data Center
+314F    455   NODC                              US DOC; NOAA; NESDIS; National Oceanographic Data Center
+31AM    894   OCL                               US DOC; NOAA; NESDIS; National Oceanographic Data Center; Ocean Climate Laboratory
+       1477   OSDPD                             US DOC; NOAA; NESDIS; Office of Satellite Data Processing and Distribution
+       1351   NMFS/AFSC                         US DOC; NOAA; NMFS; Alaska Fisheries Science Center
+3194    474   AFSC/ABL                          US DOC; NOAA; NMFS; Alaska Fisheries Science Center; Auke Bay Laboratories
+31AH   1191   NMFS/AFSC/RACE                    US DOC; NOAA; NMFS; Alaska Fisheries Science Center; Resource Assessment and Conservation Engineering Division
+31T5    352   NMFS/ARO                          US DOC; NOAA; NMFS; Alaska Regional Office
+31G7    292                                     US DOC; NOAA; NMFS - Ashland, WI
+3196    476                                     US DOC; NOAA; NMFS; Boothbay Harbor Laboratory
+3197    890                                     US DOC; NOAA; NMFS - Brunswick, GA
+31A6    251                                     US DOC; NOAA; NMFS; Cooperative Oxford Laboratory
+31G1    288   NMFS/NEFSC                        US DOC; NOAA; NMFS; Northeast Fisheries Science Center
+31U5    358                                     US DOC; NOAA; NMFS; Northeast Fisheries Science Center; Narragansett Laboratory
+31B4    891                                     US DOC; NOAA; NMFS; Northeast Fisheries Science Center - Sandy Hook, NJ; J.J. Howard Laboratory
+31B2    258                                     US DOC; NOAA; NMFS; Northeast Fisheries Science Center; Woods Hole Laboratory
+              NMFS/NWFSC                        US DOC; NOAA; NMFS; Northwest Fisheries Science Center
+31NP   1195                                     US DOC; NOAA; NMFS; Northwest Fisheries Science Center; Newport Research Station; Hatfield Marine Science Center
+31A8    252   NMFS/NWRO                         US DOC; NOAA; NMFS; Northwest Regional Office
+       1342   NMFS/PIFSC                        US DOC; NOAA; NMFS; Pacific Islands Fisheries Science Center
+       1241   CREP                              US DOC; NOAA; NMFS; Pacific Islands Fisheries Science Center; Ecosystem Sciences Division; Coral Reef Ecosystem Program
+              NMFS/PIFSC/FBSAD                  US DOC; NOAA; NMFS; Pacific Islands Fisheries Science Center; Fishery Biology and Stock Assessment Division
+31A1    248   PIFSC                             US DOC; NOAA; NMFS; Pacific Islands Fisheries Science Center; Honolulu Laboratory
+       1240   NMFS/SEFSC                        US DOC; NOAA; NMFS; Southeast Fisheries Science Center
+31J9    306                                     US DOC; NOAA; NMFS; Southeast Fisheries Science Center; Bay St. Louis, MS Laboratory
+3195    475   NMFS                              US DOC; NOAA; NMFS; Southeast Fisheries Science Center; Beaufort, NC Laboratory
+3198    477                                     US DOC; NOAA; NMFS; Southeast Fisheries Science Center; Galveston, TX Laboratory
+31A4    250                                     US DOC; NOAA; NMFS; Southeast Fisheries Science Center; Miami, FL Laboratory
+31N7    326                                     US DOC; NOAA; NMFS; Southeast Fisheries Science Center; Panama City, FL Laboratory
+31G6    291                                     US DOC; NOAA; NMFS; Southeast Fisheries Science Center; Pascagoula/Stennis, MS Laboratory
+              NMFS/SERO                         US DOC; NOAA; NMFS; Southeast Regional Office
+31J5    304                                     US DOC; NOAA; NMFS; Southeast Regional Office; Habitat Conservation Division; Atlantic Branch
+                                                US DOC; NOAA; NMFS; Southeast Regional Office; Habitat Conservation Division; Atlantic Branch; West Palm Beach, FL Field Office
+31A2    249   NMFS/SWFSC                        US DOC; NOAA; NMFS; Southwest Fisheries Science Center
+311E    404                                     US DOC; NOAA; NMFS; Southwest Fisheries Science Center; Pacific Fisheries Environmental Laboratory - Monterey, CA
+31A7   1155                                     US DOC; NOAA; NMFS; Southwest Fisheries Science Center; Pacific Fisheries Environmental Laboratory - Pacific Grove, CA
+3131    450                                     US DOC; NOAA; NMFS; Southwest Fisheries Science Center; Tiburon, CA Laboratory
+31A9    253                                     US DOC; NOAA; NMFS - Stanford, CA Laboratory
+31G5    290                                     US DOC; NOAA; NMFS - St. Petersburg, FL
+31G9   1412                                     US DOC; NOAA; NOAA Commissioned Officer Corps
+31CS   1038   CSC                               US DOC; NOAA; NOS; Coastal Services Center
+       1473   IOOS                              US DOC; NOAA; NOS; Integrated Ocean Observing System Program
+31AC    243                                     US DOC; NOAA; NOS - La Jolla, CA
+3110    412                                     US DOC; NOAA; NOS - Miami, FL
+       1334   NCCOS/CCFHR                       US DOC; NOAA; NOS; National Centers for Coastal Ocean Science; Center for Coastal Fisheries and Habitat Research
+       1471   NCCOS/CCMA                        US DOC; NOAA; NOS; National Centers for Coastal Ocean Science; Center for Coastal Monitoring and Assessment
+       1452   NCCOS/CSCOR                       US DOC; NOAA; NOS; National Centers for Coastal Ocean Science; Center for Sponsored Coastal Ocean Research
+31N3    324                                     US DOC; NOAA; NOS - Norfolk, VA
+31CO   1404                                     US DOC; NOAA; NOS; Office of Coast Survey
+       1472   ONMS                              US DOC; NOAA; NOS; Office of National Marine Sanctuaries
+       1457   OR&R                              US DOC; NOAA; NOS; Office of Response and Restoration
+              FKNMS                             US DOC; NOAA; NOS; ONMS; Florida Keys National Marine Sanctuary
+       1243   GFNMS                             US DOC; NOAA; NOS; ONMS; Greater Farallones National Marine Sanctuary
+       1356   MBNMS                             US DOC; NOAA; NOS; ONMS; Monterey Bay National Marine Sanctuary
+31J4    303                                     US DOC; NOAA; NOS - Rockville, MD
+31T8    353                                     US DOC; NOAA; NOS - Seattle, WA
+       1337   NCEP                              US DOC; NOAA; NWS; National Centers for Environmental Prediction
+31Y1    386   NCEP/CPC                          US DOC; NOAA; NWS; National Centers for Environmental Prediction; Climate Prediction Center
+313B    443   NDBC                              US DOC; NOAA; NWS; National Data Buoy Center
+311A    401   AOML                              US DOC; NOAA; OAR; Atlantic Oceanographic and Meteorological Laboratory
+31CM   1080   CMDL                              US DOC; NOAA; OAR; Climate Monitoring and Diagnostics Laboratory
+3137   1396   CPO                               US DOC; NOAA; OAR; Climate Program Office
+313H    448   GFDL                              US DOC; NOAA; OAR; Geophysical Fluid Dynamics Laboratory
+       1338   OER                               US DOC; NOAA; OAR; Office of Ocean Exploration and Research
+313F    446   PMEL                              US DOC; NOAA; OAR; Pacific Marine Environmental Laboratory
+31AB    242   OPC                               US DOC; NOAA; Ocean Products Center
+       1474   OMAO                              US DOC; NOAA; Office of Marine and Aviation Operations
+31B3    259   FWS                               US DOI; Fish and Wildlife Service
+31V5    364                                     US DOI; Fish and Wildlife Service - Anchorage
+3199    478                                     US DOI; Fish and Wildlife Service - Eastern Pennsylvania Region
+31FW                                            US DOI; Fish and Wildlife Service - Honolulu
+31FS   1209                                     US DOI; Fish and Wildlife Service; Pacific Islands Ecoregion
+                                                US DOI; Fish and Wildlife Service - San Francisco Bay
+31MK    312   MMS                               US DOI; Minerals Management Service - Anchorage
+31F1    281   USGS                              US DOI; US Geological Survey
+                                                US DOI; US Geological Survey - Honolulu
+31F6    286                                     US DOI; US Geological Survey; Marine Division - Corpus Christi
+31N1    323                                     US DOI; US Geological Survey; Western Region
+31W4    372                                     US DOI; US Geological Survey; Woods Hole Science Center
+       1462   US EPA                            US Environmental Protection Agency
+31R3    337   EPA - Triangle Park, NC           US EPA; Meteorology and Assessment Division - Triangle Park, NC
+              US EPA; WED                       US EPA; Western Ecology Division - Newport OR
+31X1    377                                     US Merchant Ships of Opportunity
+31J6   1424   GSFC                              US NASA; Goddard Space Flight Center
+31JP    301   JPL                               US NASA; Jet Propulsion Laboratory
+3133   1212   PO.DAAC                           US NASA; Jet Propulsion Laboratory; Physical Oceanography Distributed Active Archive Center
+31J3    302   NASA                              US National Aeronautic and Space Administration
+31NV   1113                                     US Navy
+31AS   1087   ASL                               US Navy; Arctic Submarine Laboratory
+31QQ    978                                     US Navy; Electronics Laboratory
+31FN    280   FNOC                              US Navy; Fleet Numerical Oceanography Center
+31M6    317                                     US Navy; Missile Center
+31Z5    389                                     US Navy; Naval Academy; Environmental Science Department
+3107    399   NAVOCEANO                         US Navy; Naval Oceanographic Office
+31NA    319   NORDA                             US Navy; Naval Oceanographic Research and Development Activity
+312X    434                                     US Navy; Naval Ocean Systems Command
+31B7    262                                     US Navy; Naval Postgraduate School
+3132   1219   NRL-MRY                           US Navy; Naval Research Laboratory - Monterey, CA
+31NR   1394                                     US Navy; Naval Research Laboratory - Stennis MS
+31F2    282   NRL                               US Navy; Naval Research Laboratory - Washington DC
+3120    435   NUWC                              US Navy; Naval Undersea Warfare Center
+3104    396   ONR                               US Navy; Office of Naval Research
+3105    397                                     US Navy; Ships of Opportunity
+31X2    378                                     US Navy; Sonar School
+3115    417                                     US Navy; Underwater Ordnance Station
+31R4    338                                     US Navy; Underwater Sound Laboratory
+                                                Vantuna Research Group
+3128    441   VIMS                              Virginia Institute of Marine Science
+31D6    274                                     Walla Walla College
+31WE   1206   WADOE                             Washington State Department of Ecology
+31WF   1041                                     Washington State Department of Fish and Wildlife
+31WD   1425                                     Washington State Department of Fish and Wildlife; Shellfish Laboratory
+313W   1392                                     Washington State Department of Health
+31ZZ   1151                                     Washington State Department of Natural Resources
+31WS   1427   WSU                               Washington State University
+311W    410   WWSC                              Western Washington State College
+312W    433   WWU                               Western Washington University
+3153    459                                     William F. Clapp Laboratory, Inc.
+31WC   1187                                     Windward Community College
+3102    394   WHOI                              Woods Hole Oceanographic Institution
+31WA    369                                     Woodward-Clyde Consultants
+314G   1010   WDC-A, WASHINGTON                 World Data Center-A, Oceanography - Washington DC
+3118    420                                     Yale University
+
+  - URUGUAY -
+9200                                            Unknown - Uruguay
+
+  - USA -
+       1464                                     Alaska State Department of Fish and Game - Juneau
+       1482   EHI                               Evans-Hamilton, Inc
+              NWRA                              Northwest Research Associates
+                                                Tulane University
+       1465                                     Tulane University; Department of Ecology and Evolutionary Biology
+              NOAA                              US DOC; National Oceanic and Atmospheric Administration
+
+  - VENEZUELA -
+9305    884                                     Bureau of Mines and Hydrocarbons
+9302    881   EDIMAR                            Estacion de Investigaciones Marinas de Margarita
+9306    879   FLASA                             Fundacion la Salle de Ciencias Naturales
+9301    880                                     Ministry of Agriculture and Livestock; Division of Fish and Game; Fish Biology Laboratory
+9304    883                                     Simon Bolivar University
+9303    882                                     University of Oriente; Oceanographic Institute
+9300                                            Unknown - Venezuela
+
+  - VIETNAM -
+9401    886                                     Oceanographic Institute of Nhatrang
+9400                                            Unknown - Viet-Nam
+
+  - YUGOSLAVIA -
+9501    888                                     Biological Institute - Dubrovnik
+9502    889                                     Biological Institute - Rovinj/Istra
+9503   1008                                     Institute of Oceanography and Fisheries
+9500                                            Unknown - Yugoslavia

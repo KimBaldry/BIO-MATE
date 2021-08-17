@@ -1,0 +1,219 @@
+EXPOCODE,Institute,END,chief_investigator,ship_records,,cruise_report_citation,EXPOCODE_synonyms,profile_citation,underway_citation,pigment_citation,POC_citation
+06AQ19850103,Alfred Wegener Institute,19850305,Gotthilf Hempel,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ19850103_report,ANT-III/3; PS06,06AQ19850103_prof,,06AQ19850103_pig,06AQ19850103_pig
+06AQ19860627,Alfred Wegener Institute,19860917,"Augstein, E",https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ19860627_report,ANT-V/2,06AQ19860627_prof,,06AQ19860627_pig,
+06AQ19881122,Alfred Wegener Institute,19880109,Victor Smetacek,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ19881122_report,ANT-VII/3,06AQ19881122_prof,,06AQ19881122_pig,
+06AQ19920929,Alfred Wegener Institute,19921129,Victor Smetacek,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ19920929_report,ANT-X/6,06AQ19920929_prof,,06AQ19920929_pig1; 06AQ19920929_pig2,06AQ19920929_pig2
+06AQ20011024,Alfred Wegener Institute,20011203,Victor Smetacek,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ20011024_report,ANTXVIII-2 - ANT-XVIII/2,06AQ20011024_prof,,06AQ20011024_pig1; 06AQ20011024_pig2; 06AQ20011024_pig3; 06AQ20011024_pig4; 06AQ20011024_pig5; 06AQ20011024_pig6; 06AQ20011024_pig7; 06AQ20011024_pig8; 06AQ20011024_pig9,06AQ20011024_poc
+06AQ20040121,Alfred Wegener Institute,20040325,Victor Smetacek,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ20040121_report,ANT-XXI/3,06AQ20040121_prof,06AQ20040121_uwy,06AQ20040121_pig1; 06AQ20040121_pig2,
+06AQ20071128,Alfred Wegener Institute,20080204, Ulrich Bathmann,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ20071128_report,ANT-XXIV/2,06AQ20071128_prof,06AQ20071128_uwy,06AQ20071128_pig,
+06AQ20080418,Alfred Wegener Institute,20080520,Andreas Macke,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ20080418_report,ANT-XXIV/4,06AQ20080418_prof,06AQ20080418_uwy,06AQ20080418_pig,
+06AQ20100129,Alfred Wegener Institute,20100405,Karsten Gohl,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ20100129_report,ANT-XXVI/3; 06AQ20100130,06AQ20100129_prof,06AQ20100129_uwy,06AQ20100129_pig1; 06AQ20100129_pig2,
+06AQ20100407,Alfred Wegener Institute,20100517,Arne Körtzinger,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ20100407_report,ANT-XXVI/4,06AQ20100407_prof,06AQ20100407_uwy,06AQ20100407_pig,
+06AQ20120107,Alfred Wegener Institute,20120311,Dieter Wolf-Gladrow,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ20120107_report,ANT-XXVIII/3,06AQ20120107_prof,06AQ20120107_uwy,06AQ20120107_pig,06AQ20120107_poc
+06AQ20130814,Alfred Wegener Institute,20131016,Bettina Meyer,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ20130814_report,ANT-XXIX/7,06AQ20130814_prof,06AQ20130814_uwy,06AQ20130814_pig,06AQ20130814_pig
+06AQ20161216,Alfred Wegener Institute,20170203,Olaf Boebel,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ20161216_report,ANT-XXXII/2; PS103,06AQ20161216_prof,06AQ20161216_uwy,06AQ20161216_pig,
+06AQ20181215,Alfred Wegener Institute,20190207,Olaf Boebel,https://www.pangaea.de/expeditions/bybasis/Polarstern,,06AQ20181215_report,PS117,06AQ20181215_prof,06AQ20181215_uwy,SOCCOM_pig,SOCCOM_pig
+096U20150320,CSIRO,20150329,Tom trull,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=309,,096U20150320_report,IN2015_V01,096U20150320_prof,096U20150320_uwy,SOCCOM_pig,SOCCOM_pig
+096U20160107,IMAS/University of Tasmania,20160227,Mike Coffin,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=309,,096U20160107_report,IN2016_v01,096U20160107_prof,096U20160107_uwy,SOCCOM_pig; 096U20160107_pig,SOCCOM_pig
+096U20160314,CSIRO,20160416,Tom Trull,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=309,,096U20160314_report,IN2016_V02,096U20160314_prof,096U20160314_uwy, 096U20160314_pig; GLODAPv2.2020_pig1; GLODAPv2.2020_pig2,SOCCOM_pig
+096U20160426,CSIRO,20160729,Bernadette Sloyan,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=309,,096U20160426_report,IN2016_v03,096U20160426_prof,096U20160426_uwy,SOCCOM_pig; 096U20160426_pig,
+096U20180110,CSIRO,20180221,Steve Rintoul,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=309,,096U20180110_report,IN2018_V01,096U20180110_prof,096U20180110_uwy,SOCCOM_pig,SOCCOM_pig
+09AR19910103,Australian Antarctic Division,19910319,Richard Williams,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,NA,au9006; AAMBER2; 09AR9006_1,09AR19910103_prof,09AR19910103_uwy,09AR19910103_pig,
+09AR19910925,Australian Antarctic Division,19911027,Steve Rintoul,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,09AR19910925_report,au9101; WOCE,09AR19910925_prof,09AR19910925_uwy,09AR19910925_pig,
+09AR19911201,Australian Antarctic Division,19920103,Simon Wright,https://secure3.aad.gov.au/public/schedules/voyage.cfm?season=9192,,,,,09AR19911201_uwy,09AR19911201_pig,
+09AR19930105,Australian Antarctic Division,19930309,UF,https://secure3.aad.gov.au/public/schedules/voyage.cfm?season=9293,,,au9207; KROCK; 09AR9207_1,09AR19930105_prof,09AR19930105_uwy,09AR19930105_pig,
+09AR19930311,Australian Antarctic Division,19930509,Steve Rintoul,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,09AR19930311_report,au9309; au9391; WOES,09AR19930311_prof,09AR19930311_uwy,09AR19930311_pig,
+09AR19931119,Australian Antarctic Division,19931228,UF,https://secure3.aad.gov.au/public/schedules/voyage.cfm?season=9394,,,"au9304, WOCET, ",,09AR19931119_uwy,09AR19931119_pig,
+09AR19940101,Australian Antarctic Division,19940301,Bronte Tilbrook; Nathan Bindoff,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,09AR19940101_report,au9407; SHAM,09AR19940101_prof,09AR19940101_uwy,09AR19940101_pig,
+09AR19941213,Australian Antarctic Division,19950202,Bronte Tilbrook; Nathan Bindoff,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,09AR19941213_report,au9404,09AR19941213_prof,09AR19941213_uwy,09AR19931119_pig,
+09AR19950717,Australian Antarctic Division,19950902,Nathan Bindoff; Ian Allison,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,09AR19950717_report,au9501; HIHOHIHO,09AR19950717_prof,09AR19950717_uwy,09AR19950717_pig,
+09AR19960119,Australian Antarctic Division,19960331,Steve Nicole; Simon Wright,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,09AR19960119_report,au9604; BROKE MARGINEX,09AR19960119_prof,09AR19960119_uwy,09AR19960119_pig,
+09AR19980228,Australian Antarctic Division,19980401,S. Saltman; Tom Trull,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,,au9706; SNARK SAZ,09AR19980228_prof,09AR19980228_uwy,09AR19980228_pig,
+09AR19990713,Australian Antarctic Division,19990907,Nathan Bindoff; Ian Allison,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,09AR19990713_report,au9901; IDIOTS; 09AR9901_1,09AR19990713_prof,09AR19990713_uwy,09AR19990713_pig,
+09AR20010101,Australian Antarctic Division,20010309,UF,https://secure3.aad.gov.au/public/schedules/voyage.cfm?season=0001,,,au0106; KACTAS,09AR20010101_prof,09AR20010101_uwy,09AR20010101_pig,
+09AR20011029,Australian Antarctic Division,20011213,UF,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=8,,09AR20011029_report,au0103; CLIVAR,09AR20011029_prof,09AR20011029_uwy,09AR20011029_pig,
+09AR20020126,Australian Antarctic Division,20020308,UF,https://secure3.aad.gov.au/public/schedules/voyage.cfm?season=0102,,,au0207,,,,
+09AR20030103,Australian Antarctic Division,20030317,Yasu FUFamachi; Steve Rintoul; John Church,,,09AR20030103_report,au0304; KAOS,09AR20030103_prof,09AR20030103_uwy,09AR20030103_pig,
+09AR20031208,Australian Antarctic Division,20040213,Richard Williams,https://secure3.aad.gov.au/public/schedules/voyage.cfm?season=0304,,09AR20031208_report,au0404; HIPPIES; 09AR0404_1,AADC_prof,09AR20031208_uwy,09AR20031208_pig,
+09AR20041001,Australian Antarctic Division,20041114,Vicki Lyttle,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,,AA0405V1,,09AR20041001_uwy,09AR20041001_pig,
+09AR20041223,Australian Antarctic Division,20050217,Steve Rintoul,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,,au0403,,,,
+09AR20060102,Australian Antarctic Division,20060312,UF,,,09AR20060102_report,au0603; BROKE-West,09AR20060102_prof,09AR20060102_uwy,09AR20060102_pig,
+09AR20070116,Australian Antarctic Division,20070220,UF,,,09AR20070116_report,au0703; SAZSense,09AR20070116_prof,09AR20070116_uwy,09AR20070116_pig,
+09AR20071216,Australian Antarctic Division,20080127,Martin Riddle,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,,AA0708V3; au0803,,,,
+09AR20080323,Australian Antarctic Division,20080420,Steve Rintoul,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,09AR20080323_report,au0806; CASO,09AR20080323_prof,09AR20080323_uwy,09AR20080323_pig,
+09AR20110104,Australian Antarctic Division,20110206,Steve Rintoul,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,,au1121,,,,
+09AR20120105,Australian Antarctic Division,20120212,Steve Rintoul,https://www.cmar.csiro.au/data/trawler/source_details.cfm?source_id=1,,,au1203,,,,
+09AR20160111,Australian Antarctic Division,20160312,Andrew Constable,https://data.aad.gov.au/aadc/voyages/display_voyage.cfm?voyage_id=604,,09AR20160111_report,K-AXIS; au1603,09AR20160111_prof,09AR20160111_uwy,SOCCOM_pig,
+09FA19971125,CSIRO,19971209,George  Cresswell,,,NA,09FA1097_1,09FA19971125_prof,,09FA19971125_pig,
+09SS19950114,CSIRO,19950202,John Parslow,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS199501,,09SS19950114_report,SS0195,09SS19950114_prof,,09SS19950114_pig,
+09SS19951115,CSIRO,19951207,Bronte Tilbrook; Brian Griffiths; Clive Liron,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS199511,,09SS19951115_report,SS1195,09SS19951115_prof,09SS19951115_uwy,09SS19951115_pig,
+09SS19960416,CSIRO,19960512,Alan Williams; Clive Liron,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS199602,,09SS19960416_report,SS0296,09SS19960416_prof,09SS19960416_uwy,09SS19960416_pig,
+09SS19960513,CSIRO,19960527,Jock Young; Clive Liron,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS199603,,09SS19960513_report,SS0396,09SS19960513_prof,09SS19960513_uwy,09SS19960513_pig,
+09SS19961120,CSIRO,19961219,Allan Williams; Nic Bax,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS199606,,09SS19961120_report,SS0696,09SS19961120_prof,09SS19961120_uwy,09SS19961120_pig,
+09SS19990110,CSIRO,19990204,Tony Koslow; Rudy Kloser,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS199901,,09SS19990110_report,SS0199,,,09SS19990110_pig,
+09SS19990206,CSIRO,19990214,Bronte Tibrook,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS199902,,,SS0299,09SS19990206_prof,09SS19990206_uwy,09SS19990206_pig,
+09SS20030822,CSIRO,20030830,Tony Koslow,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS200307,,09SS20030822_report,SS 07/2003,,09SS20030822_uwy,09SS20030822_pig,
+09SS20040120,CSIRO,20040128,Tony Koslow,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS200401,,09SS20040120_report,SS012004,09SS20040120_prof,09SS20040120_uwy,09SS20040120_pig,
+09SS20040723,CSIRO,20040806,Rudy Kloser,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS200407,,09SS20040723_report,SS072004,09SS20040723_prof,09SS20040723_uwy,09SS20040723_pig,
+09SS20050721,CSIRO,20050817,Alan Williams; Rudy Kloser,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS200507,,09SS20050721_report,SS07-2005,09SS20050721_prof,09SS20050721_uwy,09SS20050721_pig,
+09SS20051118,CSIRO,20051214,Alan Williams; Rudy Kloser,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS200510,,09SS20051118_report,SS10-2005; SS102005,09SS20051118_prof,09SS20051118_uwy,09SS20051118_pig,
+09SS20060328,CSIRO,20060409,Tom Trull,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS200603,,09SS19950114_report,SS032006,09SS20060328_prof,09SS20060328_uwy,09SS20060328_pig,
+09SS20100730,CSIRO,20100809,Charitha Pattiaratchi,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS2010_V06,,09SS20100730_report,SS2010_v06,09SS20100730_prof,09SS20100730_uwy,09SS20100730_pig,
+09SS20101015,CSIRO,20101031,Martina Doblin,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS2010_V09,,09SS20101015_report,SS201009,09SS20101015_prof,09SS20101015_uwy,09SS20101015_pig,
+09SS20120811,CSIRO,20120905,Helen Phillips,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS2012_V04,,09SS20120811_report,SS2012_v04,09SS20120811_prof,09SS20120811_uwy,09SS20120811_pig,
+09SS20120907,CSIRO,20120916,Chris Wilcox,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS2012_T06,,09SS20120907_report,SS2012_t06,09SS20120907_prof,09SS20120907_uwy,09SS20120907_pig,
+09SS20130704,CSIRO,20130726,Eric Schulz,https://www.cmar.csiro.au/data/trawler/survey_details.cfm?survey=SS2013_V04,,09SS20130704_report,SS2013_v04,09SS20130704_prof,09SS20130704_uwy,09SS20130704_pig,
+320619930325,Palmer LTER - NSF,19930515,Robin M. Ross,https://www.usap.gov/usapgov/vesselscienceandoperations/,,NBP_report,NBP93-02; hplc_mar_93,PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,
+320619961002    ,Woods Hole Oceanographic Instritution,19961108,Walker Smith,https://www.usap.gov/usapgov/vesselscienceandoperations/,,320619961002_report; NBP_report,nbp96_4A,320619961002_prof,320619961002_uwy,320619961002_fluor; 320619961002_pig,320619961002_poc
+320619970113    ,Woods Hole Oceanographic Instritution,19970211,John Marra,https://www.usap.gov/usapgov/vesselscienceandoperations/,,320619970113_report; NBP_report,nbp97_1,320619970113_prof,320619970113_uwy,320619970113_fluor; 320619970113_pig,320619970113_poc
+320619970404,Woods Hole Oceanographic Instritution,19970511,Hugh Ducklow,https://www.usap.gov/usapgov/vesselscienceandoperations/,,320619970404_report; NBP_report,nbp97_3,320619970404_prof,320619970404_uwy,320619970404_fluor; 320619970404_pig,320619970404_poc
+320619971105,Woods Hole Oceanographic Instritution,19971214,Walker Smith,https://www.usap.gov/usapgov/vesselscienceandoperations/,,320619971105_report; NBP_report,nbp97_8,320619971105_prof,320619971105_uwy,320619971105_fluor; 320619971105_pig,320619971105_poc
+320619980225,Woods Hole Oceanographic Instritution,199980403,Susumu Honjo,https://www.usap.gov/usapgov/vesselscienceandoperations/,,320619980225_report; NBP_report,nbp98_2; NBP98-2,320619980225_prof,320619980225_uwy,320619980225_pig,
+320619990611,Palmer LTER - NSF,19990716,Raymond C. Smith,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,NBP99-06,Iannuzzi 2018,,,
+320620010907,Palmer LTER - NSF,20011026,Raymond C. Smith,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,NBP01-05,Iannuzzi 2018,,,
+320620060703,Scripps Institute of Oceanography,20060815,Greg B. Mitchell,https://www.usap.gov/usapgov/vesselscienceandoperations/,,NBP_report,nbp0606; NBP06-06,320620060703_prof,,320620060703_pig; 320620060703_poc,320620060703_poc
+320620030220,Verginia Institute of Marine Science,20030222,Walker Smith; Vern Asper,https://www.usap.gov/usapgov/vesselscienceandoperations/,,"320620030220_report, MGDS",IVARS; NBP03-1b,,,MAREDAT_1; MAREDAT_2,IVARS_poc
+320620031218,Verginia Institute of Marine Science,20040101,Walker Smith,https://www.usap.gov/usapgov/vesselscienceandoperations/,,320620031218_report,IVARS; NBP03-5A,,320620031218_uwy,MAREDAT_1; MAREDAT_2,IVARS_poc
+320620050128,Lamont-Doherty Earth Observatory,20050215,Arnold Gordon,https://www.usap.gov/usapgov/vesselscienceandoperations/,,320620050128_report,IVARS; NBP05-01,,320620050128_uwy,MAREDAT_1; MAREDAT_2,IVARS_poc
+320620060131,Verginia Institute of Marine Science,20060202,Walker Smith,https://www.usap.gov/usapgov/vesselscienceandoperations/,,320620060131_report,IVARS; NPB06-01A,320620060131_prof,320620060131_uwy,MAREDAT_1; MAREDAT_2,IVARS_poc
+320620161224,University of Rhode Island,20170120,Tatiana Rynearson,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,NBP17-01,,,,
+320620151207,Woods Hole Oceanographic Instritution,20160104,Kelly Michael,https://www.usap.gov/usapgov/vesselscienceandoperations/,,?,NBP15-11,,,,
+320620170410,The University of Texas at San Antonio,20170614,Stephen Ackley; Christopher Zappa; Peter Sedwick,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,NBP17-04,,,,
+320620170703,,20170817,Mecking Sabine,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,NBP17-06,,,,
+320620180309,Woods Hole Oceanographic Instritution,20180514,Alison Macdonald,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,NBP18-02,,,,
+320620140320,Scripps Institute of Oceanography,20140505,Talley Lynne,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,NBP14-03,,,,
+320620110219,Scripps Institute of Oceanography,20110423,Jim Swift,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,NBP11-02,,,,
+320619961211,Stanford University,19960108,Robert Dunbar,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,ROAVERS 96; NBP96-6,,,,
+320619971220,Stanford University,19980110,Robert Dunbar,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,ROAVERS 97; NBP97-9 ,,,,
+33LG19980122,Palmer LTER - NSF,19980220,David Karl,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,LMG98-01,PAL-LTER_prof,, PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG19990102,Palmer LTER - NSF,19990212,Robin M. Ross,https://www.usap.gov/usapgov/vesselscienceandoperations/,,33LG19990102_report_a; 33LG19990102_report_b; 33LG19990102_report_c; 33LG19990102_report_d; 33LG19990102_report_e,LMG99-01,PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG19991217,Palmer LTER - NSF,20000201,Maria Vernet,https://www.usap.gov/usapgov/vesselscienceandoperations/,,33LG19991217_report_a; 33LG19991217_report_b; 33LG19991217_report_c,"LMG00-01, lmg001",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20010104,Palmer LTER - NSF,20010131,Robin M. Ross,https://www.usap.gov/usapgov/vesselscienceandoperations/,,33LG20010104_report_a; 33LG20010104_report_b; 33LG20010104_report_c,"LMG01-01, lmg101",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20020102,Palmer LTER - NSF,20020201,Robin M. Ross,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"LMG02-01, lmg301",PAL-LTER_prof,,PAL-LTER_pig_chl,PAL-LTER_poc
+33LG20021231,Palmer LTER - NSF,20030208,Hugh Ducklow,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"LMG03-01, lmg401",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20040101,Palmer LTER - NSF,20040207,Hugh Ducklow,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"LMG04-01, lmg601",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20040212,Palmer LTER - NSF,20040324,Christopher Measures,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,LMG04-2,,,Greg Mitchell,Greg Mitchell
+33LG20041229,Palmer LTER - NSF,20050206,Hugh Ducklow,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"LMG05-01, lmg9801",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20060101,Palmer LTER - NSF,20060209,Langdon Quetin,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"LMG06-01, lmg9901",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20070101,Palmer LTER - NSF,20070211,Hugh Ducklow,https://www.usap.gov/usapgov/vesselscienceandoperations/,,33LG20070101_report_a; 33LG20070101_report_b; 33LG20070101_report_c; LMG_report,LMG07-01,PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20071230,Palmer LTER - NSF,20080209,Langdon Quetin,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,LMG08-01,PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20081230,Palmer LTER - NSF,20090206,Douglas Martinson,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,LMG09-01,PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20091230,Palmer LTER - NSF,20100207,Douglas Martinson,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,LMG10-01,PAL-LTER_prof,,PAL-LTER_pig_chl,PAL-LTER_poc
+33LG20110101,Palmer LTER - NSF,20110107,Douglas Martinson,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,LMG11-01,PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20111229,Palmer LTER - NSF,20120207,Douglas Martinson,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,LMG12-01,PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20121230,Palmer LTER - NSF,20130207,Douglas Martinson,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,LMG13-01,PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20131229,Palmer LTER - NSF,20140209,Douglas Martinson,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,LMG14-01,PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20141227,Palmer LTER - NSF,20150208,"Deborah Steinberg,",https://www.usap.gov/usapgov/vesselscienceandoperations/,,,LMG15-01,PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20160103,Palmer LTER - NSF,20160217,Hugh Ducklow,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,LMG16-01,PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33LG20161230,Palmer LTER - NSF,20170210,Hugh Ducklow,https://www.usap.gov/usapgov/vesselscienceandoperations/,,33LG20161230_report_a; 33LG20161230_report_b; 33LG20161230_report_c; LMG_report,LMG17-01,PAL-LTER_prof,33LG20161230_uwy,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33PD19911107,Palmer LTER - NSF,19911121,Langdon Quetin,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"PD91-09, pd9109",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33PD19930829,Palmer LTER - NSF,19930208,Langdon Quetin,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"PD93-01, pd9301",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33PD19931008,Palmer LTER - NSF,19930924,Langdon Quetin,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"PD93-07, pd9307",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33PD19940111,Palmer LTER - NSF,19940207,Robin M. Ross,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"PD94-01, pd9401",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33PD19950107,Palmer LTER - NSF,19950208,Raymond C. Smith,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"PD95-01, pd9501",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33PD19960108,Palmer LTER - NSF,19960210,Maria Vernet,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"PD96-01, pd9601",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33PD19970111,Palmer LTER - NSF,19970213,Robin M. Ross,https://www.usap.gov/usapgov/vesselscienceandoperations/,,,"PD97-01, pd9701",PAL-LTER_prof,,PAL-LTER_pig_chl; PAL-LTER_pig_hplc,PAL-LTER_poc
+33RR19971020,Woods Hole Oceanographic Instritution,19971124,Timothy Cowles,JGOFS,,NA,rr_6; KIWI06,33RR19971020_prof,,33RR19971020_pig_hplc; 33RR19971020_pig_fluor,33RR19971020_poc
+33RR19971202,Woods Hole Oceanographic Instritution,19980103,Richard Barber,JGOFS,,,rr_7; KIWI07,Morrison 2001,,Smith 2001 ; Goericke 2001,Smith 2001
+33RR19980108,Woods Hole Oceanographic Instritution,19980208,Kenneth Coale,JGOFS,,,rr_8; KIWI08,Morrison 2001,,Smith 2001 ; Goericke 2001,Smith 2001
+33RR19980213,Woods Hole Oceanographic Instritution,19980319,Wilford Gardner,JGOFS,,,rr_9; KIWI09,Morrison 2001,,Smith 2001 ; Goericke 2001,Smith 2001
+33RR20020105,MBARI,20020214,Kenneth Johnson,SOFeX,,NA,DRFT08RR,33RR20020105_prof,,33RR20020105_pig; 33RR20020105_fluor,33RR20020105_poc
+33RR20050120, Woods Hole Oceanographic Instituion,20050219,Bernadette M. Sloyan; Jim Swift,CCHDO,,,ZHNG02RR; 33RR200501,,,,
+33RR20070204,Scripps Institute of Oceanography,20070317,Jim Swift; Annie Wong,CCHDO,,,KNOX03RR,,,,
+33RR20080204,Florida State University,20080317,Kevin G. Speer; Thomas Dittmar,CCHDO,,33RR20080204_report,KNOX14RR,33RR20080204_prof,33RR20080204_uwy,CLIVAR,CLIVAR
+33RR20160208,Scripps Institute of Oceanography,20160306,Alison Macdonald,CCHDO,,33RR20160208_report,,33RR20160208_prof,33RR20160208_uwy,SOCCOM_pig; CLIVAR,
+353L20021015,Australian Antarctic Division,20021104,Simon Wright,https://secure3.aad.gov.au/public/schedules/voyage.cfm?season=0203,,,AS0203R0,,McMinn 2011,Wright 2013,
+353L20021217,Australian Antarctic Division,20030127,Simon Wright,https://secure3.aad.gov.au/public/schedules/voyage.cfm?season=0203,,,AS0203R2,,McMinn 2011,Wright 2013,
+353L20030219,Australian Antarctic Division,20030304,Simon Wright,underway records,,,AS0203R4,,McMinn 2011,Wright 2013,
+353L20031021,Australian Antarctic Division,20031111,Simon Wright,underway records,,,AS0304R0,,McMinn 2011,Wright 2013,
+353L20031205,Australian Antarctic Division,20040101,Simon Wright,underway records,,,AS0304R1,,McMinn 2011,Wright 2013,
+353L20040106,Australian Antarctic Division,20040215,Simon Wright,underway records,,,AS0304R2,,McMinn 2011,Wright 2013,
+353L20040218,Australian Antarctic Division,20040304,Simon Wright,underway records,,,AS0304R3,,McMinn 2011,Wright 2013,
+353L20041019,Australian Antarctic Division,20041109,Simon Wright,underway records,,,AS0405R0,,McMinn 2011,Wright 2013,
+353L20051018,Australian Antarctic Division,20051108,Simon Wright,underway records,,,AS0506R0,,McMinn 2011,Wright 2013,
+353L20051229,Australian Antarctic Division,20060126,Simon Wright,underway records,,,AS0506R2,,McMinn 2011,Wright 2013,
+353L20060217,Australian Antarctic Division,20060302,Simon Wright,underway records,,,AS0506R4,,McMinn 2011,Wright 2013,
+353L20061020,Australian Antarctic Division,20061112,Simon Wright,underway records,,,AS0607R0,,McMinn 2011,Wright 2013,
+353L20070114,Australian Antarctic Division,20070215,Simon Wright,underway records,,,AS0607R2,,McMinn 2011,Wright 2013,
+353L20071028,Australian Antarctic Division,20071120,Simon Wright,underway records,,,AS0708R0,,McMinn 2011,Wright 2013,
+353L20071231,Australian Antarctic Division,20070126,Simon Wright,underway records,,,AS0708R2,,McMinn 2011,Wright 2013,
+353L20080217,Australian Antarctic Division,20080302,Simon Wright,underway records,,,AS0708R4,,McMinn 2011,Wright 2013,
+353L20081022,Australian Antarctic Division,20081111,Simon Wright,underway records,,,AS0809R0,,McMinn 2011,Wright 2013,
+353L20090101,Australian Antarctic Division,20090127,Simon Wright,underway records,,,AS0809R2,,McMinn 2011,Wright 2013,
+353L20090219,Australian Antarctic Division,20090304,Simon Wright,underway records,,,AS0809R4,,McMinn 2011,Wright 2013,
+353L20091021,Australian Antarctic Division,20091115,Simon Wright,underway records,,,AS0910R0,,McMinn 2011,Wright 2013,
+353L20100219,Australian Antarctic Division,20100305,Simon Wright,underway records,,,AS0910R4,,McMinn 2011,Wright 2013,
+49NZ20031209,JAMSTEC,20040124,Masao FUFasawa,DARWIN,,,MR03-K04 Leg5,,,,
+49NZ20031106,JAMSTEC,20031205,Yasushi Yoshikawa,DARWIN,,,MR03-K04 Leg4,,,,
+49NZ20030803,JAMSTEC,20030905,Masao FUFasawa,DARWIN,,,MR03-K04 Leg1,,,,
+49NZ20030909,JAMSTEC,20031016,Shuichi Watanabe,DARWIN,,,MR03-K04 Leg2,,,,
+49NZ20170208,JAMSTEC,20170304,Akihiko Murata,DARWIN,,,MR16-09 Leg3,,,,
+49NZ20031019,JAMSTEC,20031102,Naomi Harada,DARWIN,,,MR03-K04 Leg3,,,,
+49NZ20040127,JAMSTEC,20040219,Masao FUFasawa,DARWIN,,,MR03-K04 Leg6,,,,
+49NZ20121127,JAMSTEC,20130104,Katsuro Katsumata,DARWIN,,,MR12-05 Leg2,,,,
+49NZ20130105,JAMSTEC,20130215,Hiroshi Uchida,DARWIN,,,MR12-05 Leg3,,,,
+33RO20161119,,20170203,,,,,,,,,
+33RO20071215,,20080223,John L Bullister; Gregory C. Johnson,CCHDO,,33RO20071215_report,RB0711,33RO20071215_prof,33RO20071215_uwy,CLIVAR,
+74JC20151217,,20151229,,,,,,,,,
+74JC19921026,,19921218,,,,,,,,,
+74JC20190221,,,,,,,,,,,
+91AA20171209,,,,,,,,,,,
+91AH20170907,,20171011,,,,,,,,,
+91AH20140402,,20150506,,,,,,,,,
+35XI20090905,,,,,,,,,,,
+325020190403,Texas A&M University,20190514,Alejandro Orsi,CCHDO,,,SOCCOM-25; YR5-5,,,,
+35MF19940126,,,,,,,,,,,
+35MF19980121,,,,,,,,,,,
+35MF19980818,,,,,,,,,,,
+35MF19981205,,,,,,,,,,,
+35MF20000117,,,,,,,,,,,
+35MF20000719,,,,,,,,,,,
+35MF20010103,,,,,,,,,,,
+35MF20020104,,,,,,,,,,,
+35MF20040103,,,,,,,,,,,
+35MF20070104,,,,,,,,,,,
+35MF19990104,,,,,,,,,,,
+35MF19950927,,,,,,,,,,,
+RUB320161220,,,,,,,,,,,
+RU6B20000108,,,,,,,,,,,
+RU6B20010111,,,,,,,,,,,
+RU6B20020111,,,,,,,,,,,
+RU6B20040111,,,,,,,,,,,
+RU6B20080111,,,,,,,,,,,
+RU6B20070106,,,,,,,,,,,
+32PZ20020121,,,,,,,,,,,
+74JD19921111,,,,,,,,,,,
+74DI213_1,,,,,,,,,,,
+74DI198_1,,,,,,,,,,,
+31DSCG94_1,,,,,,,,,,,
+318M20110220,,,,,,,,,,,
+318M20020119,,,,,,,,,,,
+61TG20030217,,,,,,,,,,,
+61TG19990131,,,,,,,,,,,
+49HH20011127,,,,,,,,,,,
+49ZS19921203,,,,,,,,,,,
+490S20181205,,,,,,,,,,,
+14BS20020714,,,,,,,,,,,
+14AL20020522,,,,,,,,,,,
+14AL20020215,,,,,,,,,,,
+08PD20030820,,,,,,,,,,,
+740H20090203,,,,,,,,,,,
+90KD20011006 ,,,,,,,,,,,
+90KD20020315,,,,,,,,,,,
+32EV20180506,,,,,,,,,,,
+35NC19971127,,,,,,,,,,,
+149919980804,,,,,,,,,,,
+149920000423,,,,,,,,,,,
+14AR20010122,,,,,,,,,,,
+14AR20061028,,,,,,,,,,,
+14AR20070325,,,,,,,,,,,
+14AR20071016,,,,,,,,,,,
+14AR20080104,,,,,,,,,,,
+14AR19951114,,,,,,,,,,,
+14AR19950318,,,,,,,,,,,
+14AL19971017,,,,,,,,,,,
+14AR20040115,,,,,,,,,,,
+14AR20021113,,,,,,,,,,,
+14AR20030123,,,,,,,,,,,
+29HE19951203,,,,,,,,,,,
+29HE19960117,,,,,,,,,,,

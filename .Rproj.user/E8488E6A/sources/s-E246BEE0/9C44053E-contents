@@ -567,10 +567,12 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
         CTD_info_exact$p_diff[idx] = distGeo(c(CTD_info_exact$LONGITUDE[idx], CTD_info_exact$LATITUDE[idx]), c(sub_data2$LON_analyser[1], sub_data2$LAT_analyser[1]))
         
         # identify if missmatch
+        if(!is.na(CTD_info_exact$p_diff[idx])){
         if(!is.na(CTD_info_exact$t_diff[idx])){
           #note here t_diff is in days
           # use Johnson 2017 suggestion
         if(CTD_info_exact$p_diff[idx] > 8000 | CTD_info_exact$t_diff[idx] > 1){CTD_info_exact$nomatch = T}else{CTD_info_exact$nomatch = F}}else{if(CTD_info_exact$p_diff[idx] > 5000){CTD_info_exact$nomatch = T}else{CTD_info_exact$nomatch = F}}
+        }else{CTD_info_exact$nomatch = T}
         
         }
     

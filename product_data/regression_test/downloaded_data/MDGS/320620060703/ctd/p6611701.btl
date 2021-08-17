@@ -1,0 +1,47 @@
+* Sea-Bird SBE 9 Data File:
+* FileName = D:\Data\Raw\p6611701.dat
+* Software Version Seasave Win32 V 5.32
+* Temperature SN = 1649
+* Conductivity SN = 1431
+* Number of Bytes Per Scan = 37
+* Number of Voltage Words = 5
+* Number of Scans Averaged by the Deck Unit = 1
+* Append System Time to Every Scan
+* System UpLoad Time = Jul 14 2006 18:41:23
+* NMEA Latitude = 61 16.10 S
+* NMEA Longitude = 054 17.11 W
+* NMEA UTC (Time) = 18:41:16
+* Store Lat/Lon Data = Add to Header Only
+** Ship:   Nathaniel B. Palmer 
+** Cruise:    NBP0606 
+# interval = seconds: 0.0416667                   
+# start_time = Jul 14 2006 18:41:23
+# sensor 0 = Frequency  0  temperature, primary, 1649, 27-Jan-2006
+# sensor 1 = Frequency  1  conductivity, primary, 1431, 24-Jan-06, cpcor = -9.5700e-08
+# sensor 2 = Frequency  2  pressure, 0328, 18-Apr-05
+# sensor 3 = Frequency  3  temperature, secondary, 1541, 27-Jan-06
+# sensor 4 = Frequency  4  conductivity, secondary, 2067, 23-Nov-05, cpcor = -9.5700e-08
+# sensor 5 = Extrnl Volt  0  altimeter
+# sensor 6 = Extrnl Volt  2  Oxygen, SBE, primary, 0158, 29-Nov-05
+# sensor 7 = Extrnl Volt  3  transmissometer, primary
+# sensor 8 = Extrnl Volt  4  WET Labs, ECO_AFL
+# sensor 9 = Extrnl Volt  5  transmissometer, secondary, CST-892, 12-Oct-05
+# sensor 10 = Extrnl Volt  6  irradiance (PAR), primary, 4721, 16-Sep-05
+# sensor 11 = Extrnl Volt  9  surface irradiance (SPAR), degrees = 0.0
+# datcnv_date = Jul 16 2006 11:38:41, 5.32a
+# datcnv_in = d:\data\raw\p6611701.dat d:\data\raw\p6611701.CON 
+# datcnv_bottle_scan_range_source = scans marked with bottle confirm bit, 0, 2
+# bottlesum_date = Jul 16 2006 11:40:39, 5.32a
+# bottlesum_in = d:\data\process\p6611701.ros d:\data\raw\p6611701.con
+    Bottle        Date      Sal00      Sal11  Sigma-é00       PrDM      T090C      C0S/m      T190C      C1S/m Sbeox0ML/L  FlECO-AFL        Bat       Spar   Latitude  Longitude      TimeY      TimeJ
+  Position        Time                                                                                                                                                                                
+      1    Jul 14 2006    34.3538    34.3606    27.6241     49.879    -0.8559   2.785147    -0.8553   2.785692    6.97799     0.1467    13.8155 1.1769e+01  -61.26833  -54.28517 1152902657 195.780770 (avg)
+              18:44:19                                       0.112     0.0019   0.000246     0.0020   0.000237    0.00132     0.0235     0.0000 5.5659e-01    0.00000    0.00000         18   0.000008 (sdev)
+      2    Jul 14 2006    34.3409    34.3472    27.6147     40.365    -0.8816   2.781604    -0.8801   2.782192    7.05771     0.1190    13.8155 9.5817e+00  -61.26833  -54.28517 1152902745 195.781789 (avg)
+              18:45:47                                       0.217     0.0017   0.000141     0.0012   0.000106    0.00225     0.0262     0.0000 5.3893e-01    0.00000    0.00000         23   0.000006 (sdev)
+      3    Jul 14 2006    34.3466    34.3516    27.6180     29.678    -0.8501   2.784166    -0.8469   2.784807    7.01104     0.1021    13.8155 9.3034e+00  -61.26833  -54.28517 1152902805 195.782481 (avg)
+              18:46:47                                       0.225     0.0015   0.000138     0.0011   0.000098    0.00211     0.0311     0.0000 8.2126e-01    0.00000    0.00000         26   0.000007 (sdev)
+      4    Jul 14 2006    34.3414    34.3462    27.6149     20.409    -0.8791   2.780926    -0.8754   2.781599    7.05043     0.0904    13.8155 7.5540e+00  -61.26833  -54.28517 1152902859 195.783101 (avg)
+              18:47:40                                       0.081     0.0013   0.000108     0.0014   0.000128    0.00226     0.0328     0.0000 6.4525e-01    0.00000    0.00000          0   0.000008 (sdev)
+      5    Jul 14 2006    34.3409    34.3456    27.6144     11.015    -0.8749   2.780812    -0.8741   2.781224    7.03897     0.0898    13.8155 7.1167e+00  -61.26833  -54.28517 1152902913 195.783736 (avg)
+              18:48:35                                       0.081     0.0005   0.000054     0.0004   0.000037    0.00128     0.0300     0.0000 9.3695e-01    0.00000    0.00000         26   0.000008 (sdev)

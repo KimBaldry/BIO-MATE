@@ -1,0 +1,102 @@
+* Sea-Bird SBE 9 Data File:
+* FileName = D:\Data\Raw\p6621201.dat
+* Software Version Seasave Win32 V 5.32
+* Temperature SN = 1649
+* Conductivity SN = 1431
+* Number of Bytes Per Scan = 37
+* Number of Voltage Words = 5
+* Number of Scans Averaged by the Deck Unit = 1
+* Append System Time to Every Scan
+* System UpLoad Time = Jul 31 2006 19:52:33
+* NMEA Latitude = 63 34.70 S
+* NMEA Longitude = 060 34.75 W
+* NMEA UTC (Time) = 19:52:24
+* Store Lat/Lon Data = Add to Header Only
+** Ship:   Nathaniel B. Palmer 
+** Cruise:    NBP0606 
+# nquan = 15
+# nvalues = 800                         
+# units = specified
+# name 0 = prDM: Pressure, Digiquartz [db]
+# name 1 = t090C: Temperature [ITS-90, deg C]
+# name 2 = c0S/m: Conductivity [S/m]
+# name 3 = t190C: Temperature, 2 [ITS-90, deg C]
+# name 4 = c1S/m: Conductivity, 2 [S/m]
+# name 5 = sbeox0ML/L: Oxygen, SBE 43 [ml/l]
+# name 6 = flECO-AFL: Fluorescence, Wetlab ECO-AFL/FL [mg/m^3]
+# name 7 = bat: Beam Attenuation, Chelsea/Seatech/Wetlab CStar [1/m]
+# name 8 = spar: SPAR/Surface Irradiance
+# name 9 = latitude: Latitude [deg]
+# name 10 = longitude: Longitude [deg]
+# name 11 = timeY: Time, System [seconds]
+# name 12 = timeJ: Julian Days
+# name 13 = sal00: Salinity [PSU]
+# name 14 = flag: flag
+# span 0 =      3.000,    802.000       
+# span 1 =    -1.6339,    -0.8377       
+# span 2 =   2.720190,   2.831628       
+# span 3 =    -1.6328,    -0.8377       
+# span 4 =   2.720911,   2.831881       
+# span 5 =    6.57279,    7.55365       
+# span 6 =    -0.1198,     0.0440       
+# span 7 =    13.8155,    13.8155       
+# span 8 = -1.646e-01, 7.4802e+00       
+# span 9 =  -63.57833,  -63.57833       
+# span 10 =  -60.57917,  -60.57917      
+# span 11 = 1154375554, 1154376829      
+# span 12 = 212.828192, 212.842936      
+# span 13 =    34.2641,    34.5117      
+# span 14 = 0.0000e+00, 0.0000e+00      
+# interval = decibars: 1                
+# start_time = Jul 31 2006 19:52:33
+# bad_flag = -9.990e-29
+# sensor 0 = Frequency  0  temperature, primary, 1649, 27-Jan-2006
+# sensor 1 = Frequency  1  conductivity, primary, 1431, 24-Jan-06, cpcor = -9.5700e-08
+# sensor 2 = Frequency  2  pressure, 0328, 18-Apr-05
+# sensor 3 = Frequency  3  temperature, secondary, 1541, 27-Jan-06
+# sensor 4 = Frequency  4  conductivity, secondary, 2067, 23-Nov-05, cpcor = -9.5700e-08
+# sensor 5 = Extrnl Volt  0  altimeter
+# sensor 6 = Extrnl Volt  2  Oxygen, SBE, primary, 0158, 29-Nov-05
+# sensor 7 = Extrnl Volt  3  transmissometer, primary, CST421DB
+# sensor 8 = Extrnl Volt  4  WET Labs, ECO_AFL
+# sensor 9 = Extrnl Volt  5  transmissometer, secondary, CST892DR, 12-Oct-05
+# sensor 10 = Extrnl Volt  6  irradiance (PAR), primary, 4721, 16-Sep-05
+# sensor 11 = Extrnl Volt  9  surface irradiance (SPAR), degrees = 0.0
+# datcnv_date = Jul 31 2006 20:44:27, 5.32a
+# datcnv_in = d:\data\raw\p6621201.dat d:\data\raw\p6621201.CON
+# datcnv_skipover = 0
+# alignctd_date = Jul 31 2006 20:44:48, 5.32a
+# alignctd_in = d:\data\process\p6621201.cnv
+# alignctd_adv = c0S/m -0.013, c1S/m -0.013, sbeox0ML/L 4.500                                                                                                                                                                        
+# wildedit_date = Jul 31 2006 20:45:21, 5.32a
+# wildedit_in = d:\data\process\p6621201.cnv
+# wildedit_pass1_nstd = 2.0
+# wildedit_pass2_nstd = 5.0
+# wildedit_pass2_mindelta = 0.000e+000
+# wildedit_npoint = 100
+# wildedit_vars = prDM t090C c0S/m t190C c1S/m sbeox0ML/L flECO-AFL bat spar latitude longitude sal00
+# wildedit_excl_bad_scans = yes
+# celltm_date = Jul 31 2006 20:45:53, 5.32a
+# celltm_in = d:\data\process\p6621201.cnv
+# celltm_alpha = 0.0300, 0.0300
+# celltm_tau = 7.0000, 7.0000
+# celltm_temp_sensor_use_for_cond = primary, secondary
+# filter_date = Jul 31 2006 20:46:25, 5.32a
+# filter_in = d:\data\process\p6621201.cnv
+# filter_low_pass_tc_A = 0.030
+# filter_low_pass_tc_B = 0.150
+# filter_low_pass_A_vars = prDM t090C c0S/m t190C c1S/m sbeox0ML/L flECO-AFL bat spar latitude longitude sal00
+# filter_low_pass_B_vars =
+# loopedit_date = Jul 31 2006 20:47:29, 5.32a
+# loopedit_in = d:\data\process\p6621201.cnv
+# loopedit_minVelocity = 0.010                                                         
+# loopedit_excl_bad_scans = yes
+# binavg_date = Jul 31 2006 20:48:16, 5.32a
+# binavg_in = d:\data\process\p6621201.cnv
+# binavg_bintype = decibars
+# binavg_binsize = 1
+# binavg_excl_bad_scans = yes
+# binavg_skipover = 0
+# binavg_surface_bin = yes, min = 0.000, max = 0.000, value = 0.000
+# file_type = ascii
+*END*

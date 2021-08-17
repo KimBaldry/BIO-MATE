@@ -1,0 +1,15 @@
+README file for requested data object: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/chl_profile 
+Wed Apr 29 22:23:55 2020
+ 
+Locating data files.  Report any errors here:  
+
+OK ... START MAKING DATA FILES ...  
+... creating: chl_profile.tsv 
+... for: //ocb.whoi.edu:80/OCB/SOFeX/Revelle/chl_profile 
+... counting records in /data302/wsass/port80/production-Apr17/htdocs/jgofsopt/80/131.217.255.240/download/chl_profile/chl_profile.tsv 
+... 352 lines of data in /data302/wsass/port80/production-Apr17/htdocs/jgofsopt/80/131.217.255.240/download/chl_profile/chl_profile.tsv. 
+ 
+  
+Documentation info file written. 
+//ocb.whoi.edu:80/OCB/SOFeX/Revelle/chl_profile data download request completed: 
+Wed Apr 29 22:24:30 2020 

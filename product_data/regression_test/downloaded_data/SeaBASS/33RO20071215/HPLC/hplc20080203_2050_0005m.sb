@@ -1,0 +1,41 @@
+/begin_header
+/identifier_product_doi=10.5067/SeaBASS/CLIVAR/DATA001
+/received=20090828
+/affiliations=UCSB
+/investigators=Norm_Nelson,Dave_Siegel,Craig_Carlson
+/contact=norm@icess.ucsb.edu
+/experiment=CLIVAR
+/cruise=P18
+/data_file_name=hplc20080203_2050_0005m.sb
+/data_type=pigment
+/documents=README.HPL_HPLC
+/data_status=preliminary
+/west_longitude=-102.998[DEG]
+/east_longitude=-102.998[DEG]
+/north_latitude=-51.4158[DEG]
+/south_latitude=-51.4158[DEG]
+/water_depth=4031.00
+/start_time=20:50:00[GMT]
+/end_time=20:50:00[GMT]
+/start_date=20080203
+/end_date=20080203
+/calibration_files=HPL_HPLC
+/station=138
+/cloud_percent=-9999
+/wave_height=-9999
+/wind_speed=-9999
+/secchi_depth=NA
+/measurement_depth=5.0
+!
+! Comments for this station:
+!
+! file_creation_date=28-Aug-2009
+! Samples listed as 5m depth are from uncontaminated s/w supply
+! Values set to 0.0001 mg/m^3 are below detection limit by definition
+!
+/missing=-9999
+/delimiter=space
+/fields=Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,alpha-beta-Car,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,MV_Chl_a,DV_Chl_a,Chlide_a,MV_Chl_b,DV_Chl_b,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Phytin_a,Phide_a,Pras,Gyro
+/units=mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3,mg/m^3
+/end_header
+0.061 0.004 0.026 0.001 0.004 0.04 0.001 0.004 0.002 0.006 0.002 0.002 0.059 0.001 0.003 0.004 0.001 0.013 0.013 0.001 0.001 0.001 0.001 0.001 0.001 0.001

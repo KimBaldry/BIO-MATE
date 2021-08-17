@@ -1,0 +1,199 @@
+
+"HIPPIES" CTD AND HYDROLOGY DATA
+---------------------------------
+
+Here's the final CTD/bottle data for voyage au0404 ("HIPPIES"),
+Aurora Australis Voyage 4, 6th Dec 2003 to 1st Mar 2004 
+(V4 2003/2004).
+
+Please delete any previous versions you have of the data, and replace with
+these final versions.
+
+All data are the property of the Australian Antarctic Division.
+The principal investigators are Andrew Constable (Antarctic Division)
+                                Esmee van Wijk (formerly Antarctic Division,
+                                                now ACE CRC)
+                                Guy Williams (ACE CRC)
+
+
+regards,
+         Mark Rosenberg
+         mark.rosenberg@utas.edu.au
+
+
+CTD DATA
+--------
+* SeaBird CTD 703 was used for the entire cruise.
+
+* CTD data are in text files named *.all, containing 2-dbar
+averaged data. An example of file naming convention:
+
+a04043020.all -  a = Aurora Australis
+                04 = year
+                04 = cruise number
+                 3 = CTD instrument number
+               020 = CTD station number
+
+
+* The files consist of a 15 line header with station info,
+followed by the data in column format, as follows:
+
+column 1 - pressure (dbar)
+column 2 - temperature (degrees C, T90 scale)
+column 3 - conductivity (mS/cm)
+column 4 - salinity (PSS78)
+column 5 - dissolved oxygen (umol/l)
+column 6 - fluorescence (manufacturer specifies units mg/m3, but safer
+                         to assume uncalibrated units)
+column 7 - no. of data points used in the 2 dbar bin
+
+
+* All files start at 2 dbar, and there is a line for each 2 dbar value.
+Any missing data are filled by the null value -9.0
+
+* All CTD data are downcast data.
+
+* Temperature/conductivity/salinity data are from the primary temperature
+and conductivity sensor pair.
+
+* There are no calibrated oxygen data for this cruise.
+
+
+
+
+BOTTLE DATA
+-----------
+* The bottle data (hydrology) are contained in the a0404.bot text file, with the
+following columns:
+
+column 1 - station number
+column 2 - ctd pressure (dbar)
+column 3 - ctd temperature (deg. C, T90 scale)
+column 4 - digital reversing thermometer temperature (deg. C)
+column 5 - ctd conductivity (mS/cm)
+column 6 - ctd salinity (PSS78)
+column 7 - bottle salinity (PSS78)
+column 8 - phosphate (umol/l)
+column 9 - nitrate (umol/l) (i.e. total nitrate+nitrite)
+column 10 - silicate (umol/l)
+column 11 - bottle dissolved oxygen (umol/l)
+column 12 - bottle flag (1=good,0=suspicious,-1=bad,mainly relevant
+                     to bottle salinity values for CTD calibration, but not necessarily)
+column 13 - niskin bottle number
+
+* Columns 2, 3, 5 and 6 are all the averages of CTD upcast burst data (i.e. averages of the
+10 seconds of CTD data prior to each bottle firing). Data from CTD primary temperature
+and conductivity sensor pair.
+
+* Any missing data are filled by the null value -9.0
+
+* Nutrient samples were collected, but not analysed.
+
+* Bottle oxygen samples were not collected on this cruise.
+
+* There are no reversing thermometer data in the file.
+
+
+
+
+STATION INFORMATION
+-------------------
+A summary of the station information is contained in the a0404.sta file
+(this station information is also included in the matlab file a0404.mat).
+All times are UTC. The data columns for each station are:
+
+station
+date (dd Mmm yyyy), start of downcast
+time (hhmmss), start of downcast
+latitude (degrees and decimal minutes), start of downcast
+longitude (degrees and decimal minutes), start of downcast
+water depth (m), start of downcast
+time (hhmmss), bottom of cast
+latitude (degrees and decimal minutes), bottom of cast
+longitude (degrees and decimal minutes), bottom of cast
+water depth (m), bottom of cast
+time (hhmmss), end of cast
+latitude (degrees and decimal minutes), end of cast
+longitude (degrees and decimal minutes), end of cast
+water depth (m), end of cast
+altimeter (m) - minimum altimeter value
+maximum pressure (dbar) for the cast
+decimal time, start of downcast
+decimal time, bottom of downcast
+decimal time, end of downcast
+
+* All times are UTC
+
+* Decimal times are decimal days from 2400 on 31st Dec. 2002 (so, for example,
+midday on 2nd January 2003 = decimal time 1.5).
+
+
+
+
+MATLAB FORMAT
+-------------
+* In the matlab files, column number for each array corresponds with CTD station number.
+
+* In the matlab files, NaN is a null value.
+
+* In the bottle file, the rows 1 to 24 are the shallowest to deepest Niskins respectively.
+
+* CTD data are in matlab format in the file a0404.mat, which includes station info.
+The array names have the following meaning:
+all times are UTC
+"start" refers to start of cast
+"bottom" refers to bottom of cast
+"end" refers to end of cast
+"decimal time" is decimal days from 2400 on 31st Dec. 2002 (so, for example,
+midday on 2nd January 2003 = decimal time 1.5).
+"lat" is latitude (decimal degrees, where -ve = south)
+"lon" is longitude (decimal degrees, where +ve = east)
+"time" is hhmmss time
+"botd" is ocean depth (m)
+maxp = maximum pressure of the CTD cast (dbar)
+ctdunit = instrument serial number
+"ctd" is the upcast CTD burst data, for the parameters:
+   cond=conductivity (mS/cm)
+   fluoro=fluorescence
+   npts=number of data points used in the 2 dbar bin
+   ox=dissolved oxygen (umol/l)
+   press=pressure (dbar)
+   sal=salinity (PSS78)
+   temp=temperature (deg.C T90)
+date is ddmmyyyy date
+altimeter = minimum altimeter value (m)
+press_alt = pressure (dbar) at the minimum altimeter value
+
+
+* Bottle data are also in matlab format in the file called a0404bot.mat
+The array names have the following meaning:
+"ctd" refers to upcast CTD burst data, for the parameters:
+   cond=conductivity (mS/cm)
+   press=pressure (dbar) (also in array hyd_press)
+   sal=salinity 9PSS78)
+   temp=temperature (deg.C T90)
+"hyd" refers to bottle data, for the parameters:
+   ox=dissolved oxygen (umol/l)
+   sal=salinity (PSS78)
+flag = the bottle flagged described under the bottle data section
+niskin = niskin bottle number
+nitrate,phosphate,silicate = umol/l
+station = station number
+therm = digital reversing thermometer temperature
+
+
+
+OTHER FILES/DATA AVAILABLE FOR THIS CRUISE
+------------------------------------------
+* The data report a0404doc.doc (MS WORD 2000 document), also available in the
+pdf file a0404doc.pdf, contains important data quality information for the 
+cruise, and describes the data calibration methodology.
+
+* Ship's underway data (including bathymetry, sea surface parameters
+and meteorological data) are available in the file hippies.ora (1 minute
+averaged data), on request. 
+
+* Ship's underway ADCP data are available for this cruise.
+
+
+

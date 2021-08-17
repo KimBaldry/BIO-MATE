@@ -1,0 +1,2 @@
+The following files were created from High Performance Liquid Chromatography Pigments.csv using the function split_compiled_delim_file() from split_by_EXPOCODE_delim.R:
+- 33LG20070101_from_High Performance Liquid Chromatography Pigments.csv

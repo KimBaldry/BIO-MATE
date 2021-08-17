@@ -1,0 +1,4 @@
+"0","library(BIOMATE)"
+"0","library(seacarb)"
+"0","source(""./src/compile_pigment_data.R"")"
+"0","imported_meta = read.csv(""./product_data/supporting_information/Metadata/EXPOCODE_metadata.csv"")"

@@ -1,0 +1,146 @@
+README file for requested data object: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd 
+Tue Feb  2 00:03:32 2021
+ 
+Locating data files.  Report any errors here:  
+
+OK ... START MAKING DATA FILES ...  
+... creating: event#10231613.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=10231613) 
+... 125 lines of data in event#10231613.csv. 
+ 
+... creating: event#10250504.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=10250504) 
+... 1010 lines of data in event#10250504.csv. 
+ 
+... creating: event#10251542.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=10251542) 
+... 1008 lines of data in event#10251542.csv. 
+ 
+... creating: event#10272206.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=10272206) 
+... 1014 lines of data in event#10272206.csv. 
+ 
+... creating: event#10290141.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=10290141) 
+... 1009 lines of data in event#10290141.csv. 
+ 
+... creating: event#10291354.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=10291354) 
+... 1670 lines of data in event#10291354.csv. 
+ 
+... creating: event#10300414.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=10300414) 
+... 1760 lines of data in event#10300414.csv. 
+ 
+... creating: event#10301632.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=10301632) 
+... 2028 lines of data in event#10301632.csv. 
+ 
+... creating: event#10310501.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=10310501) 
+... 1937 lines of data in event#10310501.csv. 
+ 
+... creating: event#10311830.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=10311830) 
+... 252 lines of data in event#10311830.csv. 
+ 
+... creating: event#11011756.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11011756) 
+... 2016 lines of data in event#11011756.csv. 
+ 
+... creating: event#11020539.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11020539) 
+... 1787 lines of data in event#11020539.csv. 
+ 
+... creating: event#11030359.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11030359) 
+... 2282 lines of data in event#11030359.csv. 
+ 
+... creating: event#11040340.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11040340) 
+... 251 lines of data in event#11040340.csv. 
+ 
+... creating: event#11051555.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11051555) 
+... 2188 lines of data in event#11051555.csv. 
+ 
+... creating: event#11060349.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11060349) 
+... 2021 lines of data in event#11060349.csv. 
+ 
+... creating: event#11071026.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11071026) 
+... 249 lines of data in event#11071026.csv. 
+ 
+... creating: event#11121731.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11121731) 
+... 253 lines of data in event#11121731.csv. 
+ 
+... creating: event#11130107.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11130107) 
+... 1948 lines of data in event#11130107.csv. 
+ 
+... creating: event#11131949.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11131949) 
+... 105 lines of data in event#11131949.csv. 
+ 
+... creating: event#11132255.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11132255) 
+... 128 lines of data in event#11132255.csv. 
+ 
+... creating: event#11140056.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11140056) 
+... 53 lines of data in event#11140056.csv. 
+ 
+... creating: event#11140310.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11140310) 
+... 51 lines of data in event#11140310.csv. 
+ 
+... creating: event#11140612.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11140612) 
+... 252 lines of data in event#11140612.csv. 
+ 
+... creating: event#11141406.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11141406) 
+... 1812 lines of data in event#11141406.csv. 
+ 
+... creating: event#11142317.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11142317) 
+... 1849 lines of data in event#11142317.csv. 
+ 
+... creating: event#11150939.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11150939) 
+... 250 lines of data in event#11150939.csv. 
+ 
+... creating: event#11171814.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11171814) 
+... 253 lines of data in event#11171814.csv. 
+ 
+... creating: event#11172037.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11172037) 
+... 254 lines of data in event#11172037.csv. 
+ 
+... creating: event#11180007.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11180007) 
+... 128 lines of data in event#11180007.csv. 
+ 
+... creating: event#11180307.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11180307) 
+... 51 lines of data in event#11180307.csv. 
+ 
+... creating: event#11180349.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11180349) 
+... 97 lines of data in event#11180349.csv. 
+ 
+... creating: event#11181312.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11181312) 
+... 127 lines of data in event#11181312.csv. 
+ 
+... creating: event#11181510.csv 
+... for: //usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd(event=11181510) 
+... 1015 lines of data in event#11181510.csv. 
+ 
+  
+Documentation info file written. 
+//usjgofs.whoi.edu/jgofs/southern/rr-kiwi_6/ctd data download request completed: 
+Tue Feb  2 00:03:33 2021 
