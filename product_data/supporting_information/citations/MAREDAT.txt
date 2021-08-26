@@ -1,0 +1,22 @@
+
+@misc{MAREDAT_1,
+ author={Jill M {Peloquin} and Chantal {Swan} and Nicolas {Gruber} and Meike {Vogt} and Herv\'{e} {Claustre} and Josephine {Ras} and Julia {Uitz} and Raymond G {Barlow} and Michael J {Behrenfeld} and Robert R {Bidigare} and Heidi {Dierssen} and Giacomo {Ditullio} and Emilio {Fern\'{a}ndez} and Chris {Gallienne} and Stuart {Gibb} and Ralf {Goericke} and Lawrence {Harding} and Erica J H {Head} and Patrick M {Holligan} and Stanford B {Hooker} and David {Karl} and Michael R {Landry} and R {Letelier} and Carol {Llewellyn} and Michael W {Lomas} and Michael {Lucas} and Antonio {Mannino} and Jean-Claude {Marty} and Greg {Mitchell} and Frank E {Muller-Karger} and Norman {Nelson} and Colleen J {O{\textquotesingle}Brien} and B {Prezelin} and Daniel J {Repeta} and Walker O Jr {Smith} and Denise {Smythe-Wright} and Richard {Stumpf} and Ajit {Subramaniam} and Koji {Suzuki} and Charles {Trees} and Maria {Vernet} and Norbert {Wasmund} and Simon {Wright}},
+ title={{The MAREDAT global database of high performance liquid chromatography marine pigment measurements - Gridded data product (NetCDF) - Contribution to the MAREDAT World Ocean Atlas of Plankton Functional Types}},
+ year={2013},
+ doi={10.1594/PANGAEA.793246},
+ url={https://doi.org/10.1594/PANGAEA.793246},
+ type={data set},
+ publisher={PANGAEA}
+}
+
+@article{MAREDAT_2,
+author = {Jill M {Peloquin} and Chantal {Swan} and Nicolas {Gruber} and Meike {Vogt} and Herv\'{e} {Claustre} and Josephine {Ras} and Julia {Uitz} and Raymond G {Barlow} and Michael J {Behrenfeld} and Robert R {Bidigare} and Heidi {Dierssen} and Giacomo {Ditullio} and Emilio {Fern\'{a}ndez} and Chris {Gallienne} and Stuart {Gibb} and Ralf {Goericke} and Lawrence {Harding} and Erica J H {Head} and Patrick M {Holligan} and Stanford B {Hooker} and David {Karl} and Michael R {Landry} and R {Letelier} and Carol {Llewellyn} and Michael W {Lomas} and Michael {Lucas} and Antonio {Mannino} and Jean-Claude {Marty} and Greg {Mitchell} and Frank E {Muller-Karger} and Norman {Nelson} and Colleen J {O{\textquotesingle}Brien} and B {Prezelin} and Daniel J {Repeta} and Walker O Jr {Smith} and Denise {Smythe-Wright} and Richard {Stumpf} and Ajit {Subramaniam} and Koji {Suzuki} and Charles {Trees} and Maria {Vernet} and Norbert {Wasmund} and Simon {Wright}},
+title = {The MAREDAT global database of high performance liquid chromatography marine pigment measurements},
+journal = {Earth System Science Data},
+volume = {5},
+year = {2013},
+number = {1},
+pages = {109--123},
+url = {https://essd.copernicus.org/articles/5/109/2013/},
+doi = {10.5194/essd-5-109-2013}
+}

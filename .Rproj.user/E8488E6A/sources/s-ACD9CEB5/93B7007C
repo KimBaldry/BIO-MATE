@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1629410061133.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2016760786",
+    "id" : "93B7007C",
+    "lastKnownWriteTime" : 1629411562,
+    "last_content_update" : 1629411562484,
+    "path" : "~/Projects/BIO-MATE/BIO-MATE/src/create_package_data.R",
+    "project_path" : "src/create_package_data.R",
+    "properties" : {
+        "cursorPosition" : "21,16",
+        "scrollLine" : "5"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
