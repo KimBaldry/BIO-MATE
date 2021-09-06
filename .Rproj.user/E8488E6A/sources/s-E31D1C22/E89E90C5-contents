@@ -15,7 +15,7 @@ library(geosphere)
 library(stringi)
 library(tidyr)
 library(devtools)
-#devtools::install_github("KimBaldry/BIO-MATE", subdir = "Rpackage")
+#devtools::install_github("KimBaldry/BIO-MATE/Rpackage")
 library(BIOMATE)
 BIOMATE::add_bibstyle()
 ```
