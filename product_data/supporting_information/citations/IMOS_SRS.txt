@@ -1,9 +1,0 @@
-@misc{IMOS_biooptic,
- author={Integrated Marine Observing System},
- title={IMOS - SRS - Ocean Colour - Bio Optical Database of Australian Waters},
- year={2011},
- url={https://catalogue-imos.aodn.org.au/geonetwork/srv/en/metadata.show?uuid=97b9fe73-ee44-437f-b2ae-5b8613f81042},
- organization={CSIRO},
- type={data set},
- publisher={IMOS}
-}
