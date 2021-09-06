@@ -1,0 +1,13 @@
+"0","devtools::install_github(""KimBaldry/BIO-MATE"", subdir = ""Rpackage"")
+"
+"2","Downloading GitHub repo KimBaldry/BIO-MATE@HEAD
+"
+"1","KimBaldry-BIO-MATE-e321d34/product_data/supporting_information/cruise_reports/06AQ20100407.pdf: truncated gzip input
+"
+"1","tar.exe: Error exit delayed from previous errors.
+"
+"2","‘tar.exe -xf ""E:/Temp\RtmpKsjCmW\file460437a97dc9.tar.gz"" -C ""E:/Temp/RtmpKsjCmW/remotes460459be210e""’ returned error code 1"
+"2","running command 'tar.exe -tf ""E:/Temp\RtmpKsjCmW\file460437a97dc9.tar.gz""' had status 1"
+"2","Error: Failed to install 'BIOMATE' from GitHub:
+  Does not appear to be an R package (no DESCRIPTION)
+"

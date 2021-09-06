@@ -30,7 +30,7 @@ cat(combined_bib, file=file.path("./Rpackage/inst","BIO-MATE_references.bib"), "
 # create bib object and save in R package
 bib = read.bib(file.path("./Rpackage/inst","BIO-MATE_references.bib"))
 #save data
-save(bib,file =file.path("./Rpackage/data","BIOMATE.RData"))
+save(bib,file =file.path("./Rpackage/data","BIOMATE.rda"))
 
 ### BIO-MATE metadata 
 
