@@ -1,3 +1,0 @@
-"0","```r
-split_compiled_delim_file(path = \"E:/Data_downloads/PAL-LTER/CTD\", file_name = \"CTD Downcast Data (Cruise).csv\", delim = \",\",synonym_var_name = \"studyName\",station_split = T, station_var_name = \"Event.Number\")
-```"

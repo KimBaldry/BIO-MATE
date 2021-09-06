@@ -9,7 +9,9 @@ PIG_to_WHPE(
   path_out,
   userID = "IMASUTASKB",
   row_start = 1,
-  row_end = NA
+  row_end = NA,
+  t_thresh = 6,
+  d_thresh = 1000
 )
 }
 \arguments{

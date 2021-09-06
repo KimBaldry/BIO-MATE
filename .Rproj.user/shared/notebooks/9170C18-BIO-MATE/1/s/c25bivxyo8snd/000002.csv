@@ -1,8 +1,0 @@
-"0","dir = ""E:/Data_downloads/PANGEAE/06AQ19881122/ctd/split"""
-"0","for(sp in c(""PS141712_from_ANT-VII_3_phys_oce.csv"",""PS141521_from_ANT-VII_3_phys_oce.csv"")){"
-"0","  data = read.csv(file.path(dir,sp), stringsAsFactors = F,header = T)"
-"0","  data2 = aggregate(data[,6:10],by = list(data$Depth),FUN = function(x){mean(x,na.rm =T)})"
-"0","  data3 = data[unique(data$Depth),]"
-"0","  data3[,6:10] = data2[2:6]"
-"0","  write.csv(data3,file.path(dir,sp),row.names = F)"
-"0","}"

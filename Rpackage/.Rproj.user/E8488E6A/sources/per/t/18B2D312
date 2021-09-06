@@ -9,11 +9,11 @@
     "id" : "18B2D312",
     "lastKnownWriteTime" : 1626764530,
     "last_content_update" : 1626764530875,
-    "path" : "~/Projects/BIO-MATE/BIO-MATE.v0/Rpackage/R/export_ref.R",
+    "path" : "~/Projects/BIO-MATE/BIO-MATE/Rpackage/R/export_ref.R",
     "project_path" : "R/export_ref.R",
     "properties" : {
         "cursorPosition" : "22,30",
-        "scrollLine" : "10"
+        "scrollLine" : "12"
     },
     "relative_order" : 2,
     "source_on_save" : false,

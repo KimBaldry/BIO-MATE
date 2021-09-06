@@ -242,67 +242,20 @@ summary {
 <h3>load required functions</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmBgYCJ9 -->
-<pre class="r"><code>library(dplyr)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKFwiS2ltQmFsZHJ5L0JJTy1NQVRFXCIsIHN1YmRpciA9IFwiUnBhY2thZ2VcIilcblxuYGBgIn0= -->
+<pre class="r"><code>devtools::install_github(&quot;KimBaldry/BIO-MATE&quot;, subdir = &quot;Rpackage&quot;)
+</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog46S847ixZHBseXLjpLzjuLJcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g46S847ixcGFja2FnZTpzdGV2ZW1pc2PjpLzjuLI6XG5cbiAgICB0YmxfZGZcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDjpLzjuLFwYWNrYWdlOnN0YXRz46S847iyOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDjpLzjuLFwYWNrYWdlOmJhc2XjpLzjuLI6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuIn0= -->
-<pre><code>
-Attaching package: 㤼㸱dplyr㤼㸲
-
-The following object is masked from 㤼㸱package:stevemisc㤼㸲:
-
-    tbl_df
-
-The following objects are masked from 㤼㸱package:stats㤼㸲:
-
-    filter, lag
-
-The following objects are masked from 㤼㸱package:base㤼㸲:
-
-    intersect, setdiff, setequal, union</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiRG93bmxvYWRpbmcgR2l0SHViIHJlcG8gS2ltQmFsZHJ5L0JJTy1NQVRFQEhFQURcbiJ9 -->
+<pre><code>Downloading GitHub repo KimBaldry/BIO-MATE@HEAD</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0b29scylcbmxpYnJhcnkoZGF0YS50YWJsZSlcbmBgYCJ9 -->
-<pre class="r"><code>library(tools)
-library(data.table)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiZGF0YS50YWJsZSAxLjE0LjAgdXNpbmcgMiB0aHJlYWRzIChzZWUgP2dldERUdGhyZWFkcykuICBMYXRlc3QgbmV3czogci1kYXRhdGFibGUuY29tXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDjpLzjuLFkYXRhLnRhYmxl46S847iyXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g46S847ixcGFja2FnZTpkcGx5cuOkvOO4sjpcblxuICAgIGJldHdlZW4sIGZpcnN0LCBsYXN0XG4ifQ== -->
-<pre><code>data.table 1.14.0 using 2 threads (see ?getDTthreads).  Latest news: r-datatable.com
-
-Attaching package: 㤼㸱data.table㤼㸲
-
-The following objects are masked from 㤼㸱package:dplyr㤼㸲:
-
-    between, first, last</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiS2ltQmFsZHJ5LUJJTy1NQVRFLTAzMDMzMjcvcHJvZHVjdF9kYXRhL3N1cHBvcnRpbmdfaW5mb3JtYXRpb24vY3J1aXNlX3JlcG9ydHMvMDZBUTIwMDQwMTIxLnBkZjogdHJ1bmNhdGVkIGd6aXAgaW5wdXRcbnRhci5leGU6IEVycm9yIGV4aXQgZGVsYXllZCBmcm9tIHByZXZpb3VzIGVycm9ycy5cbiJ9 -->
+<pre><code>KimBaldry-BIO-MATE-0303327/product_data/supporting_information/cruise_reports/06AQ20040121.pdf: truncated gzip input
+tar.exe: Error exit delayed from previous errors.</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShuY2RmNClcbmxpYnJhcnkocmVhZHIpXG5saWJyYXJ5KGdlb3NwaGVyZSlcbmxpYnJhcnkoc3RyaW5naSlcbmxpYnJhcnkodGlkeXIpXG5saWJyYXJ5KGRldnRvb2xzKVxuYGBgIn0= -->
-<pre class="r"><code>library(ncdf4)
-library(readr)
-library(geosphere)
-library(stringi)
-library(tidyr)
-library(devtools)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiB1c2V0aGlzXG4ifQ== -->
-<pre><code>Loading required package: usethis</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2RldnRvb2xzOjppbnN0YWxsX2dpdGh1YihcIktpbUJhbGRyeS9CSU8tTUFURVwiLCBzdWJkaXIgPSBcIlJwYWNrYWdlXCIpXG5saWJyYXJ5KEJJT01BVEUpXG5gYGAifQ== -->
-<pre class="r"><code>#devtools::install_github(&quot;KimBaldry/BIO-MATE&quot;, subdir = &quot;Rpackage&quot;)
-library(BIOMATE)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBwdXJyclxuXG5BdHRhY2hpbmcgcGFja2FnZTog46S847ixcHVycnLjpLzjuLJcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g46S847ixcGFja2FnZTpkYXRhLnRhYmxl46S847iyOlxuXG4gICAgdHJhbnNwb3NlXG4ifQ== -->
-<pre><code>Loading required package: purrr
-
-Attaching package: 㤼㸱purrr㤼㸲
-
-The following object is masked from 㤼㸱package:data.table㤼㸲:
-
-    transpose</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQklPTUFURTo6YWRkX2JpYnN0eWxlKClcbmBgYCJ9 -->
-<pre class="r"><code>BIOMATE::add_bibstyle()</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3I6ICdhZGRfYmlic3R5bGUnIGlzIG5vdCBhbiBleHBvcnRlZCBvYmplY3QgZnJvbSAnbmFtZXNwYWNlOkJJT01BVEUnXG4ifQ== -->
-<pre><code>Error: 'add_bibstyle' is not an exported object from 'namespace:BIOMATE'</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoikXRhci5leGUgLXhmIFwiRTovVGVtcFxcUnRtcEtzakNtV1xcZmlsZTQ2MDQ3MTFkMjNjMC50YXIuZ3pcIiAtQyBcIkU6L1RlbXAvUnRtcEtzakNtVy9yZW1vdGVzNDYwNDEzMzU3YzZkXCKSIHJldHVybmVkIGVycm9yIGNvZGUgMXJ1bm5pbmcgY29tbWFuZCAndGFyLmV4ZSAtdGYgXCJFOi9UZW1wXFxSdG1wS3NqQ21XXFxmaWxlNDYwNDcxMWQyM2MwLnRhci5nelwiJyBoYWQgc3RhdHVzIDFFcnJvcjogRmFpbGVkIHRvIGluc3RhbGwgJ0JJT01BVEUnIGZyb20gR2l0SHViOlxuICBEb2VzIG5vdCBhcHBlYXIgdG8gYmUgYW4gUiBwYWNrYWdlIChubyBERVNDUklQVElPTilcbiJ9 -->
+<pre><code>㤼㸱tar.exe -xf &quot;E:/Temp\RtmpKsjCmW\file4604711d23c0.tar.gz&quot; -C &quot;E:/Temp/RtmpKsjCmW/remotes460413357c6d&quot;㤼㸲 returned error code 1running command 'tar.exe -tf &quot;E:/Temp\RtmpKsjCmW\file4604711d23c0.tar.gz&quot;' had status 1Error: Failed to install 'BIOMATE' from GitHub:
+  Does not appear to be an R package (no DESCRIPTION)</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -314,9 +267,8 @@ The following object is masked from 㤼㸱package:data.table㤼㸲:
 <p>split some old Marlin Southern Surveyor files and record data amendment</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuU1NfQ1REc3BsaXQoXFxFOi9EYXRhX2Rvd25sb2Fkcy9NYXJsaW5cXClcbmBgYFxuYGBgIn0= -->
-<p><code>r</code>r SS_CTDsplit(:/Data_downloads/Marlin)</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU1NfQ1REc3BsaXQoXCJFOi9EYXRhX2Rvd25sb2Fkcy9NYXJsaW5cIilcbmBgYCJ9 -->
+<pre class="r"><code>SS_CTDsplit(&quot;E:/Data_downloads/Marlin&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -354,27 +306,35 @@ for(ex in 1:length(expos)){
 <p>CTD files</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuc3BsaXRfY29tcGlsZWRfZGVsaW1fZmlsZShwYXRoID0gXFxFOi9EYXRhX2Rvd25sb2Fkcy9QQUwtTFRFUi9DVERcXCwgZmlsZV9uYW1lID0gXFxDVEQgRG93bmNhc3QgRGF0YSAoQ3J1aXNlKS5jc3ZcXCwgZGVsaW0gPSBcXFxuYGBgIn0= -->
-<p><code>r</code>r split_compiled_delim_file(path = :/Data_downloads/PAL-LTER/CTD, file_name = Downcast Data (Cruise).csv, delim =<br />
-```</p>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BsaXRfY29tcGlsZWRfZGVsaW1fZmlsZShwYXRoID0gXCJFOi9EYXRhX2Rvd25sb2Fkcy9QQUwtTFRFUi9DVERcIiwgZmlsZV9uYW1lID0gXCJDVEQgRG93bmNhc3QgRGF0YSAoQ3J1aXNlKS5jc3ZcIiwgZGVsaW0gPSBcIixcIixzeW5vbnltX3Zhcl9uYW1lID0gXCJzdHVkeU5hbWVcIixzdGF0aW9uX3NwbGl0ID0gVCwgc3RhdGlvbl92YXJfbmFtZSA9IFwiRXZlbnQuTnVtYmVyXCIpXG5gYGAifQ== -->
+<pre class="r"><code>split_compiled_delim_file(path = &quot;E:/Data_downloads/PAL-LTER/CTD&quot;, file_name = &quot;CTD Downcast Data (Cruise).csv&quot;, delim = &quot;,&quot;,synonym_var_name = &quot;studyName&quot;,station_split = T, station_var_name = &quot;Event.Number&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>CHL and HPLC files</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuc3BsaXRfY29tcGlsZWRfZGVsaW1fZmlsZShwYXRoID0gXFxFOi9EYXRhX2Rvd25sb2Fkcy9QQUwtTFRFUi9waWdtZW50cy9DSExcXCwgZmlsZV9uYW1lID0gXFxDaGxvcm9waHlsbCAoQ3J1aXNlKS5jc3ZcXCwgZGVsaW0gPSBcXFxuYGBgIn0= -->
-<p><code>r</code>r split_compiled_delim_file(path = :/Data_downloads/PAL-LTER/pigments/CHL, file_name = (Cruise).csv, delim =<br />
-```</p>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BsaXRfY29tcGlsZWRfZGVsaW1fZmlsZShwYXRoID0gXCJFOi9EYXRhX2Rvd25sb2Fkcy9QQUwtTFRFUi9waWdtZW50cy9DSExcIiwgZmlsZV9uYW1lID0gXCJDaGxvcm9waHlsbCAoQ3J1aXNlKS5jc3ZcIiwgZGVsaW0gPSBcIixcIixzeW5vbnltX3Zhcl9uYW1lID0gXCJzdHVkeU5hbWVcIixzdGF0aW9uX3NwbGl0ID0gRiwgZmlsbGNlbGwgPSBUKVxuXG5zcGxpdF9jb21waWxlZF9kZWxpbV9maWxlKHBhdGggPSBcIkU6L0RhdGFfZG93bmxvYWRzL1BBTC1MVEVSL3BpZ21lbnRzL0hQTENcIiwgZmlsZV9uYW1lID0gXCJIaWdoIFBlcmZvcm1hbmNlIExpcXVpZCBDaHJvbWF0b2dyYXBoeSBQaWdtZW50cy5jc3ZcIiwgZGVsaW0gPSBcIixcIixzeW5vbnltX3Zhcl9uYW1lID0gXCJzdHVkeU5hbWVcIixzdGF0aW9uX3NwbGl0ID0gRilcbmBgYCJ9 -->
+<pre class="r"><code>split_compiled_delim_file(path = &quot;E:/Data_downloads/PAL-LTER/pigments/CHL&quot;, file_name = &quot;Chlorophyll (Cruise).csv&quot;, delim = &quot;,&quot;,synonym_var_name = &quot;studyName&quot;,station_split = F, fillcell = T)
+
+split_compiled_delim_file(path = &quot;E:/Data_downloads/PAL-LTER/pigments/HPLC&quot;, file_name = &quot;High Performance Liquid Chromatography Pigments.csv&quot;, delim = &quot;,&quot;,synonym_var_name = &quot;studyName&quot;,station_split = F)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Fix 33LG20070101 HPLC depths by inserting from phaeopigment file</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyByZWFkIGluIHBoYWVvIGZpbGVcbmNobCA9IHJlYWQuY3N2KFxcRTovRGF0YV9kb3dubG9hZHMvUEFMLUxURVIvcGlnbWVudHMvQ0hMLzMzTEcyMDA3MDEwMS8zM0xHMjAwNzAxMDFfZnJvbV9DaGxvcm9waHlsbCAoQ3J1aXNlKS5jc3ZcXCAsIHN0cmluZ3NBc0ZhY3RvcnMgPSBGLCBoZWFkZXIgPSBUKVxuIyByZWFkIGluIEhQTEMgZmlsZVxuaHBsYyA9IHJlYWQuY3N2KFxcRTovRGF0YV9kb3dubG9hZHMvUEFMLUxURVIvcGlnbWVudHMvSFBMQy8zM0xHMjAwNzAxMDEvMzNMRzIwMDcwMTAxX2Zyb21fSGlnaCBQZXJmb3JtYW5jZSBMaXF1aWQgQ2hyb21hdG9ncmFwaHkgUGlnbWVudHMuY3N2XFwsIHN0cmluZ3NBc0ZhY3RvcnMgPSBGLCBoZWFkZXIgPSBUKVxuaHBsYyA9IGhwbGNbLC13aGljaChjb2xuYW1lcyhocGxjKSA9PSBcXERlcHRoXFwpXVxuI21hdGNoIGFuZCBmaWxsXG5jaGwgPSBjaGxbLGMoXFxFdmVudFxcLFxcQm90dGxlXFwsXFxEZXB0aFxcKV1cbmhwbGMgPSBsZWZ0X2pvaW4oaHBsYyxjaGwsYnkgPSBjKFxcRXZlbnRcXCxcXEJvdHRsZVxcKSlcbiMgcmV3cmlydGUgSFBMQyBmaWxlXG53cml0ZS5jc3YoeCA9IGhwbGMsZmlsZSA9IFxcRTovRGF0YV9kb3dubG9hZHMvUEFMLUxURVIvcGlnbWVudHMvSFBMQy8zM0xHMjAwNzAxMDEvMzNMRzIwMDcwMTAxX2Zyb21fSGlnaCBQZXJmb3JtYW5jZSBMaXF1aWQgQ2hyb21hdG9ncmFwaHkgUGlnbWVudHMuY3N2XFwscm93Lm5hbWVzID0gRilcbmBgYFxuYGBgIn0= -->
-<p><code>r</code>r # read in phaeo file chl = read.csv(:/Data_downloads/PAL-LTER/pigments/CHL/33LG20070101/33LG20070101_from_Chlorophyll (Cruise).csv , stringsAsFactors = F, header = T) # read in HPLC file hplc = read.csv(:/Data_downloads/PAL-LTER/pigments/HPLC/33LG20070101/33LG20070101_from_High Performance Liquid Chromatography Pigments.csv, stringsAsFactors = F, header = T) hplc = hplc[,-which(colnames(hplc) == )] #match and fill chl = chl[,c(,,)] hplc = left_join(hplc,chl,by = c(,)) # rewrirte HPLC file write.csv(x = hplc,file = :/Data_downloads/PAL-LTER/pigments/HPLC/33LG20070101/33LG20070101_from_High Performance Liquid Chromatography Pigments.csv,row.names = F)</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyByZWFkIGluIHBoYWVvIGZpbGVcbmNobCA9IHJlYWQuY3N2KFwiRTovRGF0YV9kb3dubG9hZHMvUEFMLUxURVIvcGlnbWVudHMvQ0hMLzMzTEcyMDA3MDEwMS8zM0xHMjAwNzAxMDFfZnJvbV9DaGxvcm9waHlsbCAoQ3J1aXNlKS5jc3ZcIiAsIHN0cmluZ3NBc0ZhY3RvcnMgPSBGLCBoZWFkZXIgPSBUKVxuIyByZWFkIGluIEhQTEMgZmlsZVxuaHBsYyA9IHJlYWQuY3N2KFwiRTovRGF0YV9kb3dubG9hZHMvUEFMLUxURVIvcGlnbWVudHMvSFBMQy8zM0xHMjAwNzAxMDEvMzNMRzIwMDcwMTAxX2Zyb21fSGlnaCBQZXJmb3JtYW5jZSBMaXF1aWQgQ2hyb21hdG9ncmFwaHkgUGlnbWVudHMuY3N2XCIsIHN0cmluZ3NBc0ZhY3RvcnMgPSBGLCBoZWFkZXIgPSBUKVxuaHBsYyA9IGhwbGNbLC13aGljaChjb2xuYW1lcyhocGxjKSA9PSBcIkRlcHRoXCIpXVxuI21hdGNoIGFuZCBmaWxsXG5jaGwgPSBjaGxbLGMoXCJFdmVudFwiLFwiQm90dGxlXCIsXCJEZXB0aFwiKV1cbmhwbGMgPSBsZWZ0X2pvaW4oaHBsYyxjaGwsYnkgPSBjKFwiRXZlbnRcIixcIkJvdHRsZVwiKSlcbiMgcmV3cmlydGUgSFBMQyBmaWxlXG53cml0ZS5jc3YoeCA9IGhwbGMsZmlsZSA9IFwiRTovRGF0YV9kb3dubG9hZHMvUEFMLUxURVIvcGlnbWVudHMvSFBMQy8zM0xHMjAwNzAxMDEvMzNMRzIwMDcwMTAxX2Zyb21fSGlnaCBQZXJmb3JtYW5jZSBMaXF1aWQgQ2hyb21hdG9ncmFwaHkgUGlnbWVudHMuY3N2XCIscm93Lm5hbWVzID0gRilcbmBgYCJ9 -->
+<pre class="r"><code># read in phaeo file
+chl = read.csv(&quot;E:/Data_downloads/PAL-LTER/pigments/CHL/33LG20070101/33LG20070101_from_Chlorophyll (Cruise).csv&quot; , stringsAsFactors = F, header = T)
+# read in HPLC file
+hplc = read.csv(&quot;E:/Data_downloads/PAL-LTER/pigments/HPLC/33LG20070101/33LG20070101_from_High Performance Liquid Chromatography Pigments.csv&quot;, stringsAsFactors = F, header = T)
+hplc = hplc[,-which(colnames(hplc) == &quot;Depth&quot;)]
+#match and fill
+chl = chl[,c(&quot;Event&quot;,&quot;Bottle&quot;,&quot;Depth&quot;)]
+hplc = left_join(hplc,chl,by = c(&quot;Event&quot;,&quot;Bottle&quot;))
+# rewrirte HPLC file
+write.csv(x = hplc,file = &quot;E:/Data_downloads/PAL-LTER/pigments/HPLC/33LG20070101/33LG20070101_from_High Performance Liquid Chromatography Pigments.csv&quot;,row.names = F)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -384,7 +344,7 @@ for(ex in 1:length(expos)){
 <p>split into station files</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGlycyA9IGxpc3QuZGlycyhcIkU6L0RhdGFfZG93bmxvYWRzL1BBTkdFQUVcIixmdWxsLm5hbWVzID0gVCwgcmVjdXJzaXZlID0gRilcbmZvcihkciBpbiBkaXJzKXtcbiAgaWYoYWxsKCFncmVwbChmaWxlLnBhdGgoZHIsXCJjdGRcIiksIGxpc3QuZGlycyhmaWxlLnBhdGgoZHIpKSkpKXtuZXh0fVxuICBpZihkciA9PSBcIjM1WEkyMDA5MDkwNVwiKXtuZXh0fVxuICBmbmFtZSA9IGxpc3QuZmlsZXMoZmlsZS5wYXRoKGRyLFwiY3RkXCIpLHBhdHRlcm4gPSBcIi50YWJcIiwgZnVsbC5uYW1lcyA9IFQpXG4gICMgZmluZCB0aGUgbGluZSB3aGVyZSB0aGUgZGF0YSB0YWJsZSBzdGFydHNcbiAgZiA8LSBmaWxlKCBmbmFtZSwgb3BlbiA9IFwiclwiIClcbiAgbj0wXG4gIHdoaWxlKCBUUlVFICl7XG4gICAgbGluZSA8LSByZWFkTGluZXMoIGYsIDFMIClcbiAgICBuID0gbisxXG4gICAgaWYoZ3JlcGwocGF0dGVybiA9IFwiXFxcXCpcXFxcL1wiICx4ID0gbGluZSkpe1xuICAgICAgbHMgPSBuICsxXG4gICAgICBicmVha1xuICAgIH1cbiAgfVxuICBjbG9zZSggZiApXG5zcGxpdF9kZWxpbV9maWxlKHBhdGggPSBmaWxlLnBhdGgoZHIsXCJjdGRcIiksIGZpbGVfbmFtZSA9IGJhc2VuYW1lKGZuYW1lKSwgZGVsaW0gPSBcIlxcdFwiICwgZXhwb19zcGxpdCA9IEYsIHN0YXRpb25fdmFyX25hbWUgPSBcIkV2ZW50XCIsc3RhdGlvbl9zcGxpdCA9IFQsIGZpbGxjZWxsID0gVCwgbGluZV9zdGFydCA9IGxzKSAgXG5wcmludChkcilcbn1cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGlycyA9IGxpc3QuZGlycyhcIkU6L0RhdGFfZG93bmxvYWRzL1BBTkdFQUVcIixmdWxsLm5hbWVzID0gVCwgcmVjdXJzaXZlID0gRilcbmZvcihkciBpbiBkaXJzKXtcbiAgaWYoYWxsKCFncmVwbChmaWxlLnBhdGgoZHIsXCJjdGRcIiksIGxpc3QuZGlycyhmaWxlLnBhdGgoZHIpKSkpKXtuZXh0fVxuICBpZihkciA9PSBcIjM1WEkyMDA5MDkwNVwiKXtuZXh0fVxuICBmbmFtZSA9IGxpc3QuZmlsZXMoZmlsZS5wYXRoKGRyLFwiY3RkXCIpLHBhdHRlcm4gPSBcIi50YWJcIiwgZnVsbC5uYW1lcyA9IFQpXG4gICMgZmluZCB0aGUgbGluZSB3aGVyZSB0aGUgZGF0YSB0YWJsZSBzdGFydHNcbiAgZiA8LSBmaWxlKCBmbmFtZSwgb3BlbiA9IFwiclwiIClcbiAgbj0wXG4gIHdoaWxlKCBUUlVFICl7XG4gICAgbGluZSA8LSByZWFkTGluZXMoIGYsIDFMIClcbiAgICBuID0gbisxXG4gICAgaWYoZ3JlcGwocGF0dGVybiA9IFwiXFxcXCpcXFxcL1wiICx4ID0gbGluZSkpe1xuICAgICAgbHMgPSBuICsxXG4gICAgICBicmVha1xuICAgIH1cbiAgfVxuICBjbG9zZSggZiApXG5cbnNwbGl0X2RlbGltX2ZpbGUocGF0aCA9IGZpbGUucGF0aChkcixcImN0ZFwiKSwgZmlsZV9uYW1lID0gYmFzZW5hbWUoZm5hbWUpLCBkZWxpbSA9IFwiXFx0XCIgLCBleHBvX3NwbGl0ID0gRiwgc3RhdGlvbl92YXJfbmFtZSA9IFwiRXZlbnRcIixzdGF0aW9uX3NwbGl0ID0gVCwgZmlsbGNlbGwgPSBULCBsaW5lX3N0YXJ0ID0gbHMpICBcbnByaW50KGRyKVxuXG59XG5gYGAifQ== -->
 <pre class="r"><code>dirs = list.dirs(&quot;E:/Data_downloads/PANGEAE&quot;,full.names = T, recursive = F)
 for(dr in dirs){
   if(all(!grepl(file.path(dr,&quot;ctd&quot;), list.dirs(file.path(dr))))){next}
@@ -402,45 +362,30 @@ for(dr in dirs){
     }
   }
   close( f )
+
 split_delim_file(path = file.path(dr,&quot;ctd&quot;), file_name = basename(fname), delim = &quot;\t&quot; , expo_split = F, station_var_name = &quot;Event&quot;,station_split = T, fillcell = T, line_start = ls)  
 print(dr)
+
 }</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMTk4NTAxMDNcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMTk4NjA2MjdcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMTk4ODExMjJcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMTk5MjA5MjlcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMjAwMTEwMjRcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMjAwNDAxMjFcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMjAwNzExMjhcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMjAwODA0MThcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMjAxMDAxMjlcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMjAxMDA0MDdcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMjAxMjAxMDdcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMjAxMzA4MTRcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMjAxNjEyMTZcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMjAxODEyMTZcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8yOUhFMTk5NTEyMDNcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8yOUhFMTk5NjAxMTdcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS83NERJMTk5NTAxMDZcIlxuWzFdIFwiRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS85MUFIMjAxNDA0MDJcIlxuIn0= -->
-<pre><code>[1] &quot;E:/Data_downloads/PANGEAE/06AQ19850103&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ19860627&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ19881122&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ19920929&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ20011024&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ20040121&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ20071128&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ20080418&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ20100129&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ20100407&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ20120107&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ20130814&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ20161216&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/06AQ20181216&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/29HE19951203&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/29HE19960117&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/74DI19950106&quot;
-[1] &quot;E:/Data_downloads/PANGEAE/91AH20140402&quot;</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>filter and split TARA oceans ctd</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmlsZV9uYW1lID0gXCJUQVJBX3BoeXNpY2FsLnRhYlwiXG5wYXRoID0gXCJFOi9EYXRhX2Rvd25sb2Fkcy9QQU5HRUFFLzM1WEkyMDA5MDkwNS9jdGRcIlxuZGVsaW0gPSBcIlxcdFwiXG5kYXRhID0gcmVhZC50YWJsZShmaWxlID0gZmlsZS5wYXRoKHBhdGgsZmlsZV9uYW1lKSwgaGVhZGVyID0gVCwgc2VwID0gZGVsaW0sIHNraXAgPSAwLCBzdHJpbmdzQXNGYWN0b3JzID0gRiwgc3RyaXAud2hpdGUgPSBULGZpbGwgPSBUKVxuZGF0YSA9IGRhdGEgJT4lIGZpbHRlcihTdGF0aW9uICE9IFwiXCIpXG5mb3Ioc24gaW4gdW5pcXVlKGRhdGEkU3RhdGlvbikpe1xuICBzdWJfZGF0YSA9IGRhdGEgJT4lIGRwbHlyOjpmaWx0ZXIoZGF0YVssXCJTdGF0aW9uXCJdID09IHNuKVxuICB3cml0ZS5jc3Yoc3ViX2RhdGEsIGZpbGUgPSBmaWxlLnBhdGgocGF0aCxcInNwbGl0XCIscGFzdGUoXCIzNVhJMjAwOTA5MDVcIixcIl9cIixzbixcIl9mcm9tX1wiLCBcIlRBUkFfcGh5c2ljYWxcIixcIi5jc3ZcIiwgc2VwID0gXCJcIikpLCByb3cubmFtZXMgPSBGKVxufVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmlsZV9uYW1lID0gXCJUQVJBX3BoeXNpY2FsLnRhYlwiXG5wYXRoID0gXCJFOi9EYXRhX2Rvd25sb2Fkcy9UQVJBX1BBTkdFQUUvMzVYSTIwMDkwOTA1L2N0ZFwiXG5kZWxpbSA9IFwiXFx0XCJcblxuZGF0YSA9IHJlYWQudGFibGUoZmlsZSA9IGZpbGUucGF0aChwYXRoLGZpbGVfbmFtZSksIGhlYWRlciA9IFQsIHNlcCA9IGRlbGltLCBza2lwID0gMCwgc3RyaW5nc0FzRmFjdG9ycyA9IEYsIHN0cmlwLndoaXRlID0gVCxmaWxsID0gVClcblxuZGF0YSA9IGRhdGEgJT4lIGZpbHRlcihTdGF0aW9uICE9IFwiXCIpXG5mb3Ioc24gaW4gdW5pcXVlKGRhdGEkU3RhdGlvbikpe1xuICBzdWJfZGF0YSA9IGRhdGEgJT4lIGRwbHlyOjpmaWx0ZXIoZGF0YVssXCJTdGF0aW9uXCJdID09IHNuKVxuICB3cml0ZS5jc3Yoc3ViX2RhdGEsIGZpbGUgPSBmaWxlLnBhdGgocGF0aCxcInNwbGl0XCIscGFzdGUoXCIzNVhJMjAwOTA5MDVcIixcIl9cIixzbixcIl9mcm9tX1wiLCBcIlRBUkFfcGh5c2ljYWxcIixcIi5jc3ZcIiwgc2VwID0gXCJcIikpLCByb3cubmFtZXMgPSBGKVxufVxuXG5cbmBgYCJ9 -->
 <pre class="r"><code>file_name = &quot;TARA_physical.tab&quot;
-path = &quot;E:/Data_downloads/PANGEAE/35XI20090905/ctd&quot;
+path = &quot;E:/Data_downloads/TARA_PANGEAE/35XI20090905/ctd&quot;
 delim = &quot;\t&quot;
+
 data = read.table(file = file.path(path,file_name), header = T, sep = delim, skip = 0, stringsAsFactors = F, strip.white = T,fill = T)
+
 data = data %&gt;% filter(Station != &quot;&quot;)
 for(sn in unique(data$Station)){
   sub_data = data %&gt;% dplyr::filter(data[,&quot;Station&quot;] == sn)
   write.csv(sub_data, file = file.path(path,&quot;split&quot;,paste(&quot;35XI20090905&quot;,&quot;_&quot;,sn,&quot;_from_&quot;, &quot;TARA_physical&quot;,&quot;.csv&quot;, sep = &quot;&quot;)), row.names = F)
-}</code></pre>
+}
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -450,8 +395,9 @@ for(sn in unique(data$Station)){
 <h1>Something is wrong with a couple of profiles</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGlyID0gXCJFOi9EYXRhX2Rvd25sb2Fkcy9QQU5HRUFFLzA2QVExOTg4MTEyMi9jdGQvc3BsaXRcIlxuZm9yKHNwIGluIGMoXCJQUzE0MTcxMl9mcm9tX0FOVC1WSUlfM19waHlzX29jZS5jc3ZcIixcIlBTMTQxNTIxX2Zyb21fQU5ULVZJSV8zX3BoeXNfb2NlLmNzdlwiKSl7XG4gIGRhdGEgPSByZWFkLmNzdihmaWxlLnBhdGgoZGlyLHNwKSwgc3RyaW5nc0FzRmFjdG9ycyA9IEYsaGVhZGVyID0gVClcbiAgZGF0YTIgPSBhZ2dyZWdhdGUoZGF0YVssNjoxMF0sYnkgPSBsaXN0KGRhdGEkRGVwdGgpLEZVTiA9IGZ1bmN0aW9uKHgpe21lYW4oeCxuYS5ybSA9VCl9KVxuICBkYXRhMyA9IGRhdGFbdW5pcXVlKGRhdGEkRGVwdGgpLF1cbiAgZGF0YTNbLDY6MTBdID0gZGF0YTJbMjo2XVxuICB3cml0ZS5jc3YoZGF0YTMsZmlsZS5wYXRoKGRpcixzcCkscm93Lm5hbWVzID0gRilcbn1cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGlyID0gXCJFOi9EYXRhX2Rvd25sb2Fkcy9QQU5HRUFFLzA2QVExOTg4MTEyMi9jdGQvc3BsaXRcIlxuXG5mb3Ioc3AgaW4gYyhcIlBTMTQxNzEyX2Zyb21fQU5ULVZJSV8zX3BoeXNfb2NlLmNzdlwiLFwiUFMxNDE1MjFfZnJvbV9BTlQtVklJXzNfcGh5c19vY2UuY3N2XCIpKXtcbiAgZGF0YSA9IHJlYWQuY3N2KGZpbGUucGF0aChkaXIsc3ApLCBzdHJpbmdzQXNGYWN0b3JzID0gRixoZWFkZXIgPSBUKVxuICBkYXRhMiA9IGFnZ3JlZ2F0ZShkYXRhWyw2OjEwXSxieSA9IGxpc3QoZGF0YSREZXB0aCksRlVOID0gZnVuY3Rpb24oeCl7bWVhbih4LG5hLnJtID1UKX0pXG4gIGRhdGEzID0gZGF0YVt1bmlxdWUoZGF0YSREZXB0aCksXVxuICBkYXRhM1ssNjoxMF0gPSBkYXRhMlsyOjZdXG4gIHdyaXRlLmNzdihkYXRhMyxmaWxlLnBhdGgoZGlyLHNwKSxyb3cubmFtZXMgPSBGKVxufVxuYGBgIn0= -->
 <pre class="r"><code>dir = &quot;E:/Data_downloads/PANGEAE/06AQ19881122/ctd/split&quot;
+
 for(sp in c(&quot;PS141712_from_ANT-VII_3_phys_oce.csv&quot;,&quot;PS141521_from_ANT-VII_3_phys_oce.csv&quot;)){
   data = read.csv(file.path(dir,sp), stringsAsFactors = F,header = T)
   data2 = aggregate(data[,6:10],by = list(data$Depth),FUN = function(x){mean(x,na.rm =T)})
@@ -468,9 +414,8 @@ for(sp in c(&quot;PS141712_from_ANT-VII_3_phys_oce.csv&quot;,&quot;PS141521_from
 <p>Split by EXPOCODE synonyms</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuc3BsaXRfY29tcGlsZWRfZGVsaW1fZmlsZShwYXRoID0gXFxFOi9EYXRhX2Rvd25sb2Fkcy9JTU9TL0wnQXN0cm9sYWJlL3VuZGVyd2F5XFwsIGZpbGVfbmFtZSA9IFxcRmFzdF9SZXBldGl0aW9uX1JhdGVfRmx1b3JvbWV0cnlfKEZSUkYpX2RhdGFfY29sbGVjdGVkX29uX3RoZV9SVl9MJ0FzdHJvbGFiZS5jc3ZcXCwgZGVsaW0gPSBcXFxuYGBgIn0= -->
-<p><code>r</code>r split_compiled_delim_file(path = :/Data_downloads/IMOS/L'Astrolabe/underway, file_name = <em>Repetition_Rate_Fluorometry</em>(FRRF)_data_collected_on_the_RV_L'Astrolabe.csv, delim =<br />
-```</p>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BsaXRfY29tcGlsZWRfZGVsaW1fZmlsZShwYXRoID0gXCJFOi9EYXRhX2Rvd25sb2Fkcy9JTU9TL0wnQXN0cm9sYWJlL3VuZGVyd2F5XCIsIGZpbGVfbmFtZSA9IFwiRmFzdF9SZXBldGl0aW9uX1JhdGVfRmx1b3JvbWV0cnlfKEZSUkYpX2RhdGFfY29sbGVjdGVkX29uX3RoZV9SVl9MJ0FzdHJvbGFiZS5jc3ZcIiwgZGVsaW0gPSBcIixcIiAsIGV4cG9fc3BsaXQgPSBULCBzeW5vbnltX3Zhcl9uYW1lID0gXCJmaWxlX2lkXCIsc3RhdGlvbl9zcGxpdCA9IEYsIGZpbGxjZWxsID0gVClcbmBgYCJ9 -->
+<pre class="r"><code>split_compiled_delim_file(path = &quot;E:/Data_downloads/IMOS/L'Astrolabe/underway&quot;, file_name = &quot;Fast_Repetition_Rate_Fluorometry_(FRRF)_data_collected_on_the_RV_L'Astrolabe.csv&quot;, delim = &quot;,&quot; , expo_split = T, synonym_var_name = &quot;file_id&quot;,station_split = F, fillcell = T)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -480,14 +425,43 @@ for(sp in c(&quot;PS141712_from_ANT-VII_3_phys_oce.csv&quot;,&quot;PS141521_from
 <p>These files do not have a header line. Insert a header line above the data frame</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuaGVhZHMgPSBmcmVhZChcXEU6L0RhdGFfZG93bmxvYWRzL01HRFMvTWlzc2luZ19oZWFkZXJzLmNzdlxcLCBoZWFkZXIgPSBUKVxuZm9yKHNwIGluIDE6bGVuZ3RoKGhlYWRzJEVYUE9DT0RFKSlcbntcbiAgZmlsZXMgPSBsaXN0LmZpbGVzKGhlYWRzJHBhdGhbc3BdLCBwYXR0ZXJuID0gXFwuY252XFwsIGZ1bGwubmFtZXMgPSBUKVxuICBmb3IoZm5hbWUgaW4gZmlsZXMpe1xuICBuZXdfZmlsZV9wYXRoID0gICBmaWxlLnBhdGgoaGVhZHMkcGF0aFtzcF0sXFxhZGFwdGVkXFwscGFzdGUoXFxoZWFkc19pbnNlcnRfXFwsYmFzZW5hbWUoZm5hbWUpLCBzZXAgPSBcXFxcKSlcbiAgaWYoIWZpbGUuZXhpc3RzKGZpbGUucGF0aChoZWFkcyRwYXRoW3NwXSxcXGFkYXB0ZWRcXCkpKXtkaXIuY3JlYXRlKGZpbGUucGF0aChoZWFkcyRwYXRoW3NwXSxcXGFkYXB0ZWRcXCkpfVxuICBcbiAgZiA8LSBmaWxlKCBmbmFtZSwgb3BlbiA9IFxcclxcIClcbiAgbj0wXG4gIHdoaWxlKCBUUlVFICl7XG4gICAgbGluZSA8LSByZWFkTGluZXMoIGYsIDFMIClcbiAgICBuID0gbisxXG4gICAgaWYoZ3JlcGwocGF0dGVybiA9IFxcXFxcXCpFTkRcXFxcKlxcICx4ID0gbGluZSkpe1xuICAgIFxuICAgIGJyZWFrXG4gICAgfVxuICB9XG4gIGNsb3NlKCBmIClcbiAgXG4gIGYgPC0gZmlsZSggZm5hbWUsIG9wZW4gPSBcXHJcXCApXG4gIGZkIDwtIGZpbGUobmV3X2ZpbGVfcGF0aCwgb3BlbiA9IFxcd3RcXClcbiAgd3JpdGVMaW5lcyhyZWFkTGluZXMoZixuKSxmZClcbiAgaCA9IGhlYWRzW3NwLDM6MjRdXG4gIGwgPSAhdW5saXN0KGxhcHBseShoLCBGVU4gPSBpcy5lbXB0eSkpXG4gIGggPSBhcy5jaGFyYWN0ZXIoaClbbF1cbiAgd3JpdGVMaW5lcyhwYXN0ZShoLCBjb2xsYXBzZSA9IFxcXFx0XFwsIHNlcCA9IFxcXFwpLGZkKVxuICB3cml0ZUxpbmVzKHJlYWRMaW5lcyhmLC0xTCksZmQpXG4gIGNsb3NlKCBmIClcbiAgY2xvc2UoZmQpXG4gIHRmID0gZmlsZShmaWxlLnBhdGgoaGVhZHMkcGF0aFtzcF0sXFxhZGFwdGVkXFwscGFzdGUoXFxEYXRhX2FtZW5kbWVudHNcXCxTeXMuRGF0ZSgpLFxcLnR4dFxcLCBzZXAgPSBcXFxcKSksb3BlbiA9IFxcd3RcXClcbiAgICAgIHdyaXRlTGluZXMocGFzdGUoXFxBIGhlYWRlciBsaW5lIHdhcyBpbnNlcnRlZCBpbnRvXFwsZm5hbWUpLHRmKVxuY2xvc2UodGYpXG4gIH1cbn1cbmBgYFxuYGBgIn0= -->
-<p><code>r</code>r heads = fread(:/Data_downloads/MGDS/Missing_headers.csv, header = T) for(sp in 1:length(heads<span class="math inline">\(EXPOCODE)) {  files = list.files(heads\)</span>path[sp], pattern = .cnv, full.names = T) for(fname in files){ new_file_path = file.path(heads<span class="math inline">\(path[sp],\adapted\,paste(\heads_insert_\,basename(fname), sep = \\))  if(!file.exists(file.path(heads\)</span>path[sp],))){dir.create(file.path(heads$path[sp],))}</p>
-<p>f &lt;- file( fname, open =  ) n=0 while( TRUE ){ line &lt;- readLines( f, 1L ) n = n+1 if(grepl(pattern = \*END\* ,x = line)){</p>
-<pre><code>break
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZHMgPSBmcmVhZChcIkU6L0RhdGFfZG93bmxvYWRzL01HRFMvTWlzc2luZ19oZWFkZXJzLmNzdlwiLCBoZWFkZXIgPSBUKVxuXG5mb3Ioc3AgaW4gMTpsZW5ndGgoaGVhZHMkRVhQT0NPREUpKVxue1xuICBmaWxlcyA9IGxpc3QuZmlsZXMoaGVhZHMkcGF0aFtzcF0sIHBhdHRlcm4gPSBcIi5jbnZcIiwgZnVsbC5uYW1lcyA9IFQpXG4gIGZvcihmbmFtZSBpbiBmaWxlcyl7XG4gIG5ld19maWxlX3BhdGggPSAgIGZpbGUucGF0aChoZWFkcyRwYXRoW3NwXSxcImFkYXB0ZWRcIixwYXN0ZShcImhlYWRzX2luc2VydF9cIixiYXNlbmFtZShmbmFtZSksIHNlcCA9IFwiXCIpKVxuICBpZighZmlsZS5leGlzdHMoZmlsZS5wYXRoKGhlYWRzJHBhdGhbc3BdLFwiYWRhcHRlZFwiKSkpe2Rpci5jcmVhdGUoZmlsZS5wYXRoKGhlYWRzJHBhdGhbc3BdLFwiYWRhcHRlZFwiKSl9XG4gIFxuICBmIDwtIGZpbGUoIGZuYW1lLCBvcGVuID0gXCJyXCIgKVxuICBuPTBcbiAgd2hpbGUoIFRSVUUgKXtcbiAgICBsaW5lIDwtIHJlYWRMaW5lcyggZiwgMUwgKVxuICAgIG4gPSBuKzFcbiAgICBpZihncmVwbChwYXR0ZXJuID0gXCJcXFxcKkVORFxcXFwqXCIgLHggPSBsaW5lKSl7XG4gICAgXG4gICAgYnJlYWtcbiAgICB9XG4gIH1cbiAgY2xvc2UoIGYgKVxuICBcbiAgZiA8LSBmaWxlKCBmbmFtZSwgb3BlbiA9IFwiclwiIClcbiAgZmQgPC0gZmlsZShuZXdfZmlsZV9wYXRoLCBvcGVuID0gXCJ3dFwiKVxuICB3cml0ZUxpbmVzKHJlYWRMaW5lcyhmLG4pLGZkKVxuICBoID0gaGVhZHNbc3AsMzoyNF1cbiAgbCA9ICF1bmxpc3QobGFwcGx5KGgsIEZVTiA9IGlzLmVtcHR5KSlcbiAgaCA9IGFzLmNoYXJhY3RlcihoKVtsXVxuICB3cml0ZUxpbmVzKHBhc3RlKGgsIGNvbGxhcHNlID0gXCJcXHRcIiwgc2VwID0gXCJcIiksZmQpXG4gIHdyaXRlTGluZXMocmVhZExpbmVzKGYsLTFMKSxmZClcbiAgY2xvc2UoIGYgKVxuICBjbG9zZShmZClcbiAgdGYgPSBmaWxlKGZpbGUucGF0aChoZWFkcyRwYXRoW3NwXSxcImFkYXB0ZWRcIixwYXN0ZShcIkRhdGFfYW1lbmRtZW50c1wiLFN5cy5EYXRlKCksXCIudHh0XCIsIHNlcCA9IFwiXCIpKSxvcGVuID0gXCJ3dFwiKVxuICAgICAgd3JpdGVMaW5lcyhwYXN0ZShcIkEgaGVhZGVyIGxpbmUgd2FzIGluc2VydGVkIGludG9cIixmbmFtZSksdGYpXG5jbG9zZSh0ZilcbiAgfVxufVxuYGBgIn0= -->
+<pre class="r"><code>heads = fread(&quot;E:/Data_downloads/MGDS/Missing_headers.csv&quot;, header = T)
+
+for(sp in 1:length(heads$EXPOCODE))
+{
+  files = list.files(heads$path[sp], pattern = &quot;.cnv&quot;, full.names = T)
+  for(fname in files){
+  new_file_path =   file.path(heads$path[sp],&quot;adapted&quot;,paste(&quot;heads_insert_&quot;,basename(fname), sep = &quot;&quot;))
+  if(!file.exists(file.path(heads$path[sp],&quot;adapted&quot;))){dir.create(file.path(heads$path[sp],&quot;adapted&quot;))}
+  
+  f &lt;- file( fname, open = &quot;r&quot; )
+  n=0
+  while( TRUE ){
+    line &lt;- readLines( f, 1L )
+    n = n+1
+    if(grepl(pattern = &quot;\\*END\\*&quot; ,x = line)){
+    
+    break
+    }
+  }
+  close( f )
+  
+  f &lt;- file( fname, open = &quot;r&quot; )
+  fd &lt;- file(new_file_path, open = &quot;wt&quot;)
+  writeLines(readLines(f,n),fd)
+  h = heads[sp,3:24]
+  l = !unlist(lapply(h, FUN = is.empty))
+  h = as.character(h)[l]
+  writeLines(paste(h, collapse = &quot;\t&quot;, sep = &quot;&quot;),fd)
+  writeLines(readLines(f,-1L),fd)
+  close( f )
+  close(fd)
+  tf = file(file.path(heads$path[sp],&quot;adapted&quot;,paste(&quot;Data_amendments&quot;,Sys.Date(),&quot;.txt&quot;, sep = &quot;&quot;)),open = &quot;wt&quot;)
+      writeLines(paste(&quot;A header line was inserted into&quot;,fname),tf)
+close(tf)
+  }
 }</code></pre>
-<p>} close( f )</p>
-<p>f &lt;- file( fname, open =  ) fd &lt;- file(new_file_path, open = ) writeLines(readLines(f,n),fd) h = heads[sp,3:24] l = !unlist(lapply(h, FUN = is.empty)) h = as.character(h)[l] writeLines(paste(h, collapse = \t, sep = \),fd) writeLines(readLines(f,-1L),fd) close( f ) close(fd) tf = file(file.path(heads$path[sp],,paste(_amendments,Sys.Date(),.txt, sep = \)),open = ) writeLines(paste(header line was inserted into,fname),tf) close(tf) } }</p>
-<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -497,19 +471,19 @@ for(sp in c(&quot;PS141712_from_ANT-VII_3_phys_oce.csv&quot;,&quot;PS141521_from
 <p>Split GLODAPv2.2020 by cruise IDs</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuR0xPREFQX2RmID0gZnJlYWQoXFxFOi9EYXRhX2Rvd25sb2Fkcy9HTE9EQVAvR0xPREFQdjIuMjAyMF9NZXJnZWRfTWFzdGVyX0ZpbGUuY3N2XFwpXG5gYGBcbmBgYCJ9 -->
-<p><code>r</code>r GLODAP_df = fread(:/Data_downloads/GLODAP/GLODAPv2.2020_Merged_Master_File.csv)</p>
-<pre><code></code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoifC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tfFxufD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09fFxufC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tfFxufD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09fFxuIn0= -->
-<pre><code>|--------------------------------------------------|
-|==================================================|
-|--------------------------------------------------|
-|==================================================|</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuY29sbmFtZXMoR0xPREFQX2RmKSA9IHN1YiggXFxHMlxcLCBcXFxcLGNvbG5hbWVzKEdMT0RBUF9kZikpXG5mb3IoZXggaW4gdW5pcXVlKEdMT0RBUF9kZiRjcnVpc2UpKVxue1xuICBleF9kZiA9IEdMT0RBUF9kZiAlPiUgZmlsdGVyKGNydWlzZSA9PSBleClcbiAgZXhfZGlyID0gZmlsZS5wYXRoKFxcRTovRGF0YV9kb3dubG9hZHMvR0xPREFQXFwsIGV4KVxuICBpZighZmlsZS5leGlzdHMoZXhfZGlyKSlcbiAgICB7ZGlyLmNyZWF0ZShleF9kaXIpfVxuICB3cml0ZS5jc3YoZXhfZGYsIHBhc3RlKGV4X2RpciwgXFwvR0xPREFQdjIuMjAyMF9zcGxpdF9cXCxleCxcXC5jc3ZcXCwgc2VwID0gXFxcXCksIHJvdy5uYW1lcyA9IEYpXG59XG5gYGBcbmBgYCJ9 -->
-<p><code>r</code>r colnames(GLODAP_df) = sub( 2, \,colnames(GLODAP_df)) for(ex in unique(GLODAP_df$cruise)) { ex_df = GLODAP_df %&gt;% filter(cruise == ex) ex_dir = file.path(:/Data_downloads/GLODAP, ex) if(!file.exists(ex_dir)) {dir.create(ex_dir)} write.csv(ex_df, paste(ex_dir, /GLODAPv2.2020_split_,ex,.csv, sep = \), row.names = F) }</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuR0xPREFQX2RmID0gZnJlYWQoXCJFOi9EYXRhX2Rvd25sb2Fkcy9HTE9EQVAvR0xPREFQdjIuMjAyMF9NZXJnZWRfTWFzdGVyX0ZpbGUuY3N2XCIpXG5jb2xuYW1lcyhHTE9EQVBfZGYpID0gc3ViKCBcIkcyXCIsIFwiXCIsY29sbmFtZXMoR0xPREFQX2RmKSlcbmZvcihleCBpbiB1bmlxdWUoR0xPREFQX2RmJGNydWlzZSkpXG57XG4gIGV4X2RmID0gR0xPREFQX2RmICU+JSBmaWx0ZXIoY3J1aXNlID09IGV4KVxuICBleF9kaXIgPSBmaWxlLnBhdGgoXCJFOi9EYXRhX2Rvd25sb2Fkcy9HTE9EQVBcIiwgZXgpXG4gIGlmKCFmaWxlLmV4aXN0cyhleF9kaXIpKVxuICAgIHtkaXIuY3JlYXRlKGV4X2Rpcil9XG5cbiAgd3JpdGUuY3N2KGV4X2RmLCBwYXN0ZShleF9kaXIsIFwiL0dMT0RBUHYyLjIwMjBfc3BsaXRfXCIsZXgsXCIuY3N2XCIsIHNlcCA9IFwiXCIpLCByb3cubmFtZXMgPSBGKVxufVxuXG5gYGAifQ== -->
+<pre class="r"><code>GLODAP_df = fread(&quot;E:/Data_downloads/GLODAP/GLODAPv2.2020_Merged_Master_File.csv&quot;)
+colnames(GLODAP_df) = sub( &quot;G2&quot;, &quot;&quot;,colnames(GLODAP_df))
+for(ex in unique(GLODAP_df$cruise))
+{
+  ex_df = GLODAP_df %&gt;% filter(cruise == ex)
+  ex_dir = file.path(&quot;E:/Data_downloads/GLODAP&quot;, ex)
+  if(!file.exists(ex_dir))
+    {dir.create(ex_dir)}
+
+  write.csv(ex_df, paste(ex_dir, &quot;/GLODAPv2.2020_split_&quot;,ex,&quot;.csv&quot;, sep = &quot;&quot;), row.names = F)
+}
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -519,7 +493,7 @@ for(sp in c(&quot;PS141712_from_ANT-VII_3_phys_oce.csv&quot;,&quot;PS141521_from
 <p>Split MAREDAT by cruise IDs</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUFSRURBVF9kZiA9IGZyZWFkKFwiRTovRGF0YV9kb3dubG9hZHMvTUFSRURBVC9NQVJFREFUX3BpZ21lbnRzX21hc3Rlcl9maWxlX1VwZGF0ZWQyMTAzMTMuY3N2XCIpXG5NQVJFREFUX2RmID0gTUFSRURBVF9kZiAlPiUgZmlsdGVyKENydWlzZV9kZXMgJWluJSBjKDE4LDQ3LDExOToxMjIpKVxuZm9yKGV4IGluIHVuaXF1ZShNQVJFREFUX2RmJENydWlzZV9kZXMpKVxue1xuICBleF9kZiA9IE1BUkVEQVRfZGYgJT4lIGZpbHRlcihDcnVpc2VfZGVzID09IGV4KVxuICBleF9kaXIgPSBmaWxlLnBhdGgoXCJFOi9EYXRhX2Rvd25sb2Fkcy9NQVJFREFUXCIsIGV4KVxuICBpZighZmlsZS5leGlzdHMoZXhfZGlyKSlcbiAgICB7ZGlyLmNyZWF0ZShleF9kaXIpfVxuICB3cml0ZS5jc3YoZXhfZGYsIHBhc3RlKGV4X2RpciwgXCIvTUFSRURBVC4yMDE5X3NwbGl0X1wiLGV4LFwiLmNzdlwiLCBzZXAgPSBcIlwiKSwgcm93Lm5hbWVzID0gRilcbn1cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUFSRURBVF9kZiA9IGZyZWFkKFwiRTovRGF0YV9kb3dubG9hZHMvTUFSRURBVC9NQVJFREFUX3BpZ21lbnRzX21hc3Rlcl9maWxlX1VwZGF0ZWQyMTAzMTMuY3N2XCIpXG5NQVJFREFUX2RmID0gTUFSRURBVF9kZiAlPiUgZmlsdGVyKENydWlzZV9kZXMgJWluJSBjKDE4LDQ3LDExOToxMjIpKVxuZm9yKGV4IGluIHVuaXF1ZShNQVJFREFUX2RmJENydWlzZV9kZXMpKVxue1xuICBleF9kZiA9IE1BUkVEQVRfZGYgJT4lIGZpbHRlcihDcnVpc2VfZGVzID09IGV4KVxuICBleF9kaXIgPSBmaWxlLnBhdGgoXCJFOi9EYXRhX2Rvd25sb2Fkcy9NQVJFREFUXCIsIGV4KVxuICBpZighZmlsZS5leGlzdHMoZXhfZGlyKSlcbiAgICB7ZGlyLmNyZWF0ZShleF9kaXIpfVxuXG4gIHdyaXRlLmNzdihleF9kZiwgcGFzdGUoZXhfZGlyLCBcIi9NQVJFREFULjIwMTlfc3BsaXRfXCIsZXgsXCIuY3N2XCIsIHNlcCA9IFwiXCIpLCByb3cubmFtZXMgPSBGKVxufVxuXG5gYGAifQ== -->
 <pre class="r"><code>MAREDAT_df = fread(&quot;E:/Data_downloads/MAREDAT/MAREDAT_pigments_master_file_Updated210313.csv&quot;)
 MAREDAT_df = MAREDAT_df %&gt;% filter(Cruise_des %in% c(18,47,119:122))
 for(ex in unique(MAREDAT_df$Cruise_des))
@@ -528,8 +502,10 @@ for(ex in unique(MAREDAT_df$Cruise_des))
   ex_dir = file.path(&quot;E:/Data_downloads/MAREDAT&quot;, ex)
   if(!file.exists(ex_dir))
     {dir.create(ex_dir)}
+
   write.csv(ex_df, paste(ex_dir, &quot;/MAREDAT.2019_split_&quot;,ex,&quot;.csv&quot;, sep = &quot;&quot;), row.names = F)
-}</code></pre>
+}
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -539,11 +515,28 @@ for(ex in unique(MAREDAT_df$Cruise_des))
 <p>Insert cast_type into ctd data so that match ups can be performed on pigment data</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuZm9yKGRpciBpbiBsaXN0LmRpcnMoXFxFOi9EYXRhX2Rvd25sb2Fkcy9KR09GU1xcLCByZWN1cnNpdmUgPSBGKSl7XG4gIHN1YmRpcnMgPSBsaXN0LmRpcnMoZGlyLCByZWN1cnNpdmUgPSBGKVxuICAjIGNyZWF0ZSBuZXcgZGlyZWN0b3J5IGZvciBlZGl0ZWQgZmlsZXNcbiAgaWYoIWRpci5leGlzdHMoZmlsZS5wYXRoKGRpciwgXFxhbGxfY3RkXFwpKSlcbiAgICB7ZGlyLmNyZWF0ZShmaWxlLnBhdGgoZGlyLCBcXGFsbF9jdGRcXCkpfVxuICAjIGVkaXQgZmlsZXMgYW5kIHNhdmUgdG8gbmV3IGRpcmVjdG9yeVxuICBpZihmaWxlLnBhdGgoZGlyLCBcXFRNY3RkXFwpICVpbiUgc3ViZGlycyl7XG4gICAgIyBhZGQgQ1REIHRvIG5ldyB2YXJpYWJsZSBjYXN0X3R5cGUgaW4gQ1REIGZpbGVzXG4gICAgZm9yKGZsIGluIGxpc3QuZmlsZXMoZmlsZS5wYXRoKGRpciwgXFxjdGRcXCksIHBhdHRlcm4gPSBcXC5jc3ZcXCkpe1xuICAgICAgZGF0YSA9IGFzLmRhdGEuZnJhbWUoZnJlYWQoZmlsZS5wYXRoKGRpciwgXFxjdGRcXCxmbCksc3RyaW5nc0FzRmFjdG9ycyA9IEYsc3RyaXAud2hpdGUgPSBULCBoZWFkZXIgPSBULCBrZWVwTGVhZGluZ1plcm9zID0gVCkpXG4gICAgICBkYXRhJGNhc3RfdHlwZSA9IFxcQ1REXFxcbiAgICAgIHdyaXRlLmNzdihkYXRhLGZpbGUucGF0aChkaXIsIFxcYWxsX2N0ZFxcLGZsKSwgcm93Lm5hbWVzID0gRilcbiAgICB9XG4gICAgIyBhZGQgVE0gdG8gbmV3IHZhcmlhYmxlIGNhc3RfdHlwZSBpbiBUTWN0ZCBmaWxlc1xuICAgIGZvcihmbF90bSBpbiBsaXN0LmZpbGVzKGZpbGUucGF0aChkaXIsIFxcVE1jdGRcXCksIHBhdHRlcm4gPSBcXC5jc3ZcXCkpe1xuICAgICAgZGF0YSA9IGFzLmRhdGEuZnJhbWUoZnJlYWQoZmlsZS5wYXRoKGRpciwgXFxUTWN0ZFxcLGZsX3RtKSxzdHJpbmdzQXNGYWN0b3JzID0gRixzdHJpcC53aGl0ZSA9IFQsIGhlYWRlciA9IFQsIGtlZXBMZWFkaW5nWmVyb3MgPSBUKSlcbiAgICAgIGRhdGEkY2FzdF90eXBlID0gXFxUTVxcXG4gICAgICB3cml0ZS5jc3YoZGF0YSxmaWxlLnBhdGgoZGlyLCBcXGFsbF9jdGRcXCxwYXN0ZShcXFRNXFwsZmxfdG0pKSwgcm93Lm5hbWVzID0gRilcbiAgICB9XG4gIH1cbn1cbmBgYFxuYGBgIn0= -->
-<p><code>r</code>r for(dir in list.dirs(:/Data_downloads/JGOFS, recursive = F)){ subdirs = list.dirs(dir, recursive = F) # create new directory for edited files if(!dir.exists(file.path(dir, _ctd))) {dir.create(file.path(dir, _ctd))} # edit files and save to new directory if(file.path(dir, ) %in% subdirs){ # add CTD to new variable cast_type in CTD files for(fl in list.files(file.path(dir, ), pattern = .csv)){ data = as.data.frame(fread(file.path(dir, ,fl),stringsAsFactors = F,strip.white = T, header = T, keepLeadingZeros = T)) data<span class="math inline">\(cast_type = \CTD\
- write.csv(data,file.path(dir, \all_ctd\,fl), row.names = F)  }  # add TM to new variable cast_type in TMctd files  for(fl_tm in list.files(file.path(dir, \TMctd\), pattern = \.csv\)){  data = as.data.frame(fread(file.path(dir, \TMctd\,fl_tm),stringsAsFactors = F,strip.white = T, header = T, keepLeadingZeros = T))  data\)</span>cast_type = <br />
-write.csv(data,file.path(dir, _ctd,paste(,fl_tm)), row.names = F) } } }</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yKGRpciBpbiBsaXN0LmRpcnMoXCJFOi9EYXRhX2Rvd25sb2Fkcy9KR09GU1wiLCByZWN1cnNpdmUgPSBGKSl7XG4gIHN1YmRpcnMgPSBsaXN0LmRpcnMoZGlyLCByZWN1cnNpdmUgPSBGKVxuICAjIGNyZWF0ZSBuZXcgZGlyZWN0b3J5IGZvciBlZGl0ZWQgZmlsZXNcbiAgaWYoIWRpci5leGlzdHMoZmlsZS5wYXRoKGRpciwgXCJhbGxfY3RkXCIpKSlcbiAgICB7ZGlyLmNyZWF0ZShmaWxlLnBhdGgoZGlyLCBcImFsbF9jdGRcIikpfVxuICAjIGVkaXQgZmlsZXMgYW5kIHNhdmUgdG8gbmV3IGRpcmVjdG9yeVxuICBpZihmaWxlLnBhdGgoZGlyLCBcIlRNY3RkXCIpICVpbiUgc3ViZGlycyl7XG4gICAgIyBhZGQgQ1REIHRvIG5ldyB2YXJpYWJsZSBjYXN0X3R5cGUgaW4gQ1REIGZpbGVzXG4gICAgZm9yKGZsIGluIGxpc3QuZmlsZXMoZmlsZS5wYXRoKGRpciwgXCJjdGRcIiksIHBhdHRlcm4gPSBcIi5jc3ZcIikpe1xuICAgICAgZGF0YSA9IGFzLmRhdGEuZnJhbWUoZnJlYWQoZmlsZS5wYXRoKGRpciwgXCJjdGRcIixmbCksc3RyaW5nc0FzRmFjdG9ycyA9IEYsc3RyaXAud2hpdGUgPSBULCBoZWFkZXIgPSBULCBrZWVwTGVhZGluZ1plcm9zID0gVCkpXG4gICAgICBkYXRhJGNhc3RfdHlwZSA9IFwiQ1REXCJcbiAgICAgIHdyaXRlLmNzdihkYXRhLGZpbGUucGF0aChkaXIsIFwiYWxsX2N0ZFwiLGZsKSwgcm93Lm5hbWVzID0gRilcbiAgICB9XG4gICAgIyBhZGQgVE0gdG8gbmV3IHZhcmlhYmxlIGNhc3RfdHlwZSBpbiBUTWN0ZCBmaWxlc1xuICAgIGZvcihmbF90bSBpbiBsaXN0LmZpbGVzKGZpbGUucGF0aChkaXIsIFwiVE1jdGRcIiksIHBhdHRlcm4gPSBcIi5jc3ZcIikpe1xuICAgICAgZGF0YSA9IGFzLmRhdGEuZnJhbWUoZnJlYWQoZmlsZS5wYXRoKGRpciwgXCJUTWN0ZFwiLGZsX3RtKSxzdHJpbmdzQXNGYWN0b3JzID0gRixzdHJpcC53aGl0ZSA9IFQsIGhlYWRlciA9IFQsIGtlZXBMZWFkaW5nWmVyb3MgPSBUKSlcbiAgICAgIGRhdGEkY2FzdF90eXBlID0gXCJUTVwiXG4gICAgICB3cml0ZS5jc3YoZGF0YSxmaWxlLnBhdGgoZGlyLCBcImFsbF9jdGRcIixwYXN0ZShcIlRNXCIsZmxfdG0pKSwgcm93Lm5hbWVzID0gRilcbiAgICB9XG4gIH1cbn1cbmBgYCJ9 -->
+<pre class="r"><code>for(dir in list.dirs(&quot;E:/Data_downloads/JGOFS&quot;, recursive = F)){
+  subdirs = list.dirs(dir, recursive = F)
+  # create new directory for edited files
+  if(!dir.exists(file.path(dir, &quot;all_ctd&quot;)))
+    {dir.create(file.path(dir, &quot;all_ctd&quot;))}
+  # edit files and save to new directory
+  if(file.path(dir, &quot;TMctd&quot;) %in% subdirs){
+    # add CTD to new variable cast_type in CTD files
+    for(fl in list.files(file.path(dir, &quot;ctd&quot;), pattern = &quot;.csv&quot;)){
+      data = as.data.frame(fread(file.path(dir, &quot;ctd&quot;,fl),stringsAsFactors = F,strip.white = T, header = T, keepLeadingZeros = T))
+      data$cast_type = &quot;CTD&quot;
+      write.csv(data,file.path(dir, &quot;all_ctd&quot;,fl), row.names = F)
+    }
+    # add TM to new variable cast_type in TMctd files
+    for(fl_tm in list.files(file.path(dir, &quot;TMctd&quot;), pattern = &quot;.csv&quot;)){
+      data = as.data.frame(fread(file.path(dir, &quot;TMctd&quot;,fl_tm),stringsAsFactors = F,strip.white = T, header = T, keepLeadingZeros = T))
+      data$cast_type = &quot;TM&quot;
+      write.csv(data,file.path(dir, &quot;all_ctd&quot;,paste(&quot;TM&quot;,fl_tm)), row.names = F)
+    }
+  }
+}</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -552,7 +545,7 @@ write.csv(data,file.path(dir, _ctd,paste(,fl_tm)), row.names = F) } } }</p>
 <h1>SISMER data</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhwb3MgPSBjKFwiMzVNRjE5OTQwMTI2XCIsIFwiMzVNRjE5OTUwOTI3XCIsIFwiMzVNRjE5OTgwMTIxXCIsIFwiMzVNRjIwMDQwMTAzXCIpXG5mb3IoZXggaW4gZXhwb3Mpe1xuICBwYXRoID0gcGFzdGUoXCJFOi9EYXRhX2Rvd25sb2Fkcy9TSVNNRVJcIiwgZXgsIFwiY3RkXCIsIHNlcCA9IFwiL1wiKVxuICBmbmFtZSA9IGxpc3QuZmlsZXMocGF0aCwgcGF0dGVybiA9IFwiKi50eHRcIilcbiAgZmwgPSBmaWxlLnBhdGgocGF0aCxmbmFtZSlcbiBcbiAgZiA8LSBmaWxlKCBmbCwgb3BlbiA9IFwiclwiIClcbiAgICAgIG4gPSAwXG4gICAgICB3aGlsZSggVFJVRSApe1xuICAgICAgICBsaW5lIDwtIHJlYWRMaW5lcyggZiwgMUwgKVxuICAgICAgICBuID0gbisxXG4gICAgICAgIGlmKEJJT01BVEU6OmlzLmVtcHR5KGxpbmUpKXtuZXh0fVxuICAgICAgICBpZihzdWJzdHIobGluZSwxLDIpICE9IFwiLy9cIil7YnJlYWt9XG4gICAgICB9XG4gICAgICBjbG9zZShmKVxuICBkYXRhID0gcmVhZC50YWJsZShmaWxlID0gZmwsIGhlYWRlciA9IFQsIHNlcCA9IFwiXFx0XCIsIHN0cmluZ3NBc0ZhY3RvcnMgPSBGLCBzdHJpcC53aGl0ZSA9IFQsZmlsbCA9IFQsIHNraXAgPSBuLTEpXG4gIFxuICAjIGNoYW5nZSBoZWFkZXIgbmFtZXMgXG4gIGlmKGV4ID09IFwiMzVNRjE5OTQwMTI2XCIgfCBleCA9PSBcIjM1TUYxOTk1MDkyN1wiKXtcbiAgY29sbmFtZXMoZGF0YSlbYyg0LDUsNiwxMCwxMiwxNCwxNildID0gYyhcIlRJTUVcIixcIkxBVElUVURFXCIsIFwiTE9OR0lUVURFXCIsXCJQUkVTXCIsIFwiVEVNUFwiLCBcIlBTQUxcIiwgXCJET1hZXCIpfVxuICBpZihleCA9PSBcIjM1TUYxOTk4MDEyMVwiKXtjb2xuYW1lcyhkYXRhKVtjKDQsNSw2LDEwLDE0LDE2KV0gPSBjKFwiVElNRVwiLFwiTEFUSVRVREVcIiwgXCJMT05HSVRVREVcIixcIlBSRVNcIiwgXCJURU1QXCIsIFwiUFNBTFwiKX1cbiAgaWYoZXggPT0gXCIzNU1GMjAwNDAxMDNcIil7Y29sbmFtZXMoZGF0YSlbYyg0LDUsNiwxMCwxNCwxNiwxOCldID0gYyhcIlRJTUVcIixcIkxBVElUVURFXCIsIFwiTE9OR0lUVURFXCIsXCJQUkVTXCIsIFwiVEVNUFwiLCBcIlBTQUxcIixcIkZMVU9SXCIpfVxuICBcbiAgIyBzcGxpdCBhY2NvcmRpbmcgdG8gZmluaXRlIHN0YXRpb24gdHlwZVxuICBpZHggPSB3aGljaChpcy5maW5pdGUoZGF0YSRTdGF0aW9uKSlcbiAgZm9yKHN0IGluIDE6bGVuZ3RoKGlkeCkpe1xuICAgIGlmKHN0ID09IGxlbmd0aChpZHgpKXtzdWJfZGF0YSA9IGRhdGFbaWR4W3N0XTpsZW5ndGgoZGF0YSksXX1lbHNle3N1Yl9kYXRhID0gZGF0YVtpZHhbc3RdOihpZHhbc3QrMV0tMSksXX1cbiAgICBcbiAgXG4gICAgIyBmaWxsIGluIG1pc3NpbmcgdmFsdWVzXG4gICAgc3ViX2RhdGFbLGMoXCJDcnVpc2VcIixcIlN0YXRpb25cIiwgXCJUSU1FXCIsIFwiTEFUSVRVREVcIiwgXCJMT05HSVRVREVcIildID0gc3ViX2RhdGFbMSxjKFwiQ3J1aXNlXCIsXCJTdGF0aW9uXCIsIFwiVElNRVwiLCBcIkxBVElUVURFXCIsIFwiTE9OR0lUVURFXCIpXVxuICAgIFxuICAgICMgc2F2ZSBmaWxlIGluIG5ldyBzcGxpdCBkaXJlY3RvcnlcbiAgICB3cml0ZS5jc3Yoc3ViX2RhdGEsIGZpbGUucGF0aChwYXN0ZShcIkU6L0RhdGFfZG93bmxvYWRzL1NJU01FUlwiLCBleCwgXCJjdGRcIixcInNwbGl0XCIsIHNlcCA9IFwiL1wiKSwgcGFzdGUoZXgsXCJjdGRfXCIsIHN1Yl9kYXRhJFN0YXRpb25bMV0sXCIuY3N2XCIsIHNlcCA9IFwiXCIpKSwgcm93Lm5hbWVzID0gRiApXG4gIH1cbiAgXG59XG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhwb3MgPSBjKFwiMzVNRjE5OTQwMTI2XCIsIFwiMzVNRjE5OTUwOTI3XCIsIFwiMzVNRjE5OTgwMTIxXCIsIFwiMzVNRjIwMDQwMTAzXCIpXG5mb3IoZXggaW4gZXhwb3Mpe1xuICBwYXRoID0gcGFzdGUoXCJFOi9EYXRhX2Rvd25sb2Fkcy9TSVNNRVJcIiwgZXgsIFwiY3RkXCIsIHNlcCA9IFwiL1wiKVxuICBmbmFtZSA9IGxpc3QuZmlsZXMocGF0aCwgcGF0dGVybiA9IFwiKi50eHRcIilcbiAgZmwgPSBmaWxlLnBhdGgocGF0aCxmbmFtZSlcbiBcbiAgZiA8LSBmaWxlKCBmbCwgb3BlbiA9IFwiclwiIClcbiAgICAgIG4gPSAwXG4gICAgICB3aGlsZSggVFJVRSApe1xuICAgICAgICBsaW5lIDwtIHJlYWRMaW5lcyggZiwgMUwgKVxuICAgICAgICBuID0gbisxXG4gICAgICAgIGlmKEJJT01BVEU6OmlzLmVtcHR5KGxpbmUpKXtuZXh0fVxuICAgICAgICBpZihzdWJzdHIobGluZSwxLDIpICE9IFwiLy9cIil7YnJlYWt9XG4gICAgICB9XG4gICAgICBjbG9zZShmKVxuXG4gIGRhdGEgPSByZWFkLnRhYmxlKGZpbGUgPSBmbCwgaGVhZGVyID0gVCwgc2VwID0gXCJcXHRcIiwgc3RyaW5nc0FzRmFjdG9ycyA9IEYsIHN0cmlwLndoaXRlID0gVCxmaWxsID0gVCwgc2tpcCA9IG4tMSlcbiAgXG4gICMgY2hhbmdlIGhlYWRlciBuYW1lcyBcbiAgaWYoZXggPT0gXCIzNU1GMTk5NDAxMjZcIiB8IGV4ID09IFwiMzVNRjE5OTUwOTI3XCIpe1xuICBjb2xuYW1lcyhkYXRhKVtjKDQsNSw2LDEwLDEyLDE0LDE2KV0gPSBjKFwiVElNRVwiLFwiTEFUSVRVREVcIiwgXCJMT05HSVRVREVcIixcIlBSRVNcIiwgXCJURU1QXCIsIFwiUFNBTFwiLCBcIkRPWFlcIil9XG4gIGlmKGV4ID09IFwiMzVNRjE5OTgwMTIxXCIpe2NvbG5hbWVzKGRhdGEpW2MoNCw1LDYsMTAsMTQsMTYpXSA9IGMoXCJUSU1FXCIsXCJMQVRJVFVERVwiLCBcIkxPTkdJVFVERVwiLFwiUFJFU1wiLCBcIlRFTVBcIiwgXCJQU0FMXCIpfVxuICBpZihleCA9PSBcIjM1TUYyMDA0MDEwM1wiKXtjb2xuYW1lcyhkYXRhKVtjKDQsNSw2LDEwLDE0LDE2LDE4KV0gPSBjKFwiVElNRVwiLFwiTEFUSVRVREVcIiwgXCJMT05HSVRVREVcIixcIlBSRVNcIiwgXCJURU1QXCIsIFwiUFNBTFwiLFwiRkxVT1JcIil9XG4gIFxuICAjIHNwbGl0IGFjY29yZGluZyB0byBmaW5pdGUgc3RhdGlvbiB0eXBlXG4gIGlkeCA9IHdoaWNoKGlzLmZpbml0ZShkYXRhJFN0YXRpb24pKVxuICBmb3Ioc3QgaW4gMTpsZW5ndGgoaWR4KSl7XG4gICAgaWYoc3QgPT0gbGVuZ3RoKGlkeCkpe3N1Yl9kYXRhID0gZGF0YVtpZHhbc3RdOmxlbmd0aChkYXRhKSxdfWVsc2V7c3ViX2RhdGEgPSBkYXRhW2lkeFtzdF06KGlkeFtzdCsxXS0xKSxdfVxuICAgIFxuICBcbiAgICAjIGZpbGwgaW4gbWlzc2luZyB2YWx1ZXNcbiAgICBzdWJfZGF0YVssYyhcIkNydWlzZVwiLFwiU3RhdGlvblwiLCBcIlRJTUVcIiwgXCJMQVRJVFVERVwiLCBcIkxPTkdJVFVERVwiKV0gPSBzdWJfZGF0YVsxLGMoXCJDcnVpc2VcIixcIlN0YXRpb25cIiwgXCJUSU1FXCIsIFwiTEFUSVRVREVcIiwgXCJMT05HSVRVREVcIildXG4gICAgXG4gICAgIyBzYXZlIGZpbGUgaW4gbmV3IHNwbGl0IGRpcmVjdG9yeVxuICAgIHdyaXRlLmNzdihzdWJfZGF0YSwgZmlsZS5wYXRoKHBhc3RlKFwiRTovRGF0YV9kb3dubG9hZHMvU0lTTUVSXCIsIGV4LCBcImN0ZFwiLFwic3BsaXRcIiwgc2VwID0gXCIvXCIpLCBwYXN0ZShleCxcImN0ZF9cIiwgc3ViX2RhdGEkU3RhdGlvblsxXSxcIi5jc3ZcIiwgc2VwID0gXCJcIikpLCByb3cubmFtZXMgPSBGIClcbiAgfVxuICBcbn1cbmBgYCJ9 -->
 <pre class="r"><code>expos = c(&quot;35MF19940126&quot;, &quot;35MF19950927&quot;, &quot;35MF19980121&quot;, &quot;35MF20040103&quot;)
 for(ex in expos){
   path = paste(&quot;E:/Data_downloads/SISMER&quot;, ex, &quot;ctd&quot;, sep = &quot;/&quot;)
@@ -568,6 +561,7 @@ for(ex in expos){
         if(substr(line,1,2) != &quot;//&quot;){break}
       }
       close(f)
+
   data = read.table(file = fl, header = T, sep = &quot;\t&quot;, stringsAsFactors = F, strip.white = T,fill = T, skip = n-1)
   
   # change header names 
@@ -599,12 +593,16 @@ for(ex in expos){
 <p>Bulk run</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucGF0aCA9IFxcQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9CSU8tTUFURS52MFxcXG5jaHVua3MgPSBjKFxccmVncmVzc2lvbl90ZXN0XFwsIFxcQzFcXCwgXFxDMlxcLCBcXEMzXFwsIFxcQzRcXClcblxuZm9yKGNoIGluIGNodW5rc1syOjVdKXtcbiAgUFJPRl90b19XSFBFKHBhdGhfb3V0ID0gZmlsZS5wYXRoKHBhdGgsXFxyZWZvcm1hdHRlZF9kYXRhXFwpLCBmaWxlX3BhdGggPSBmaWxlLnBhdGgocGF0aCxcXHByb2Nlc3NpbmdfbWV0YWRhdGFcXCxjaCksdXNlcklEID0gXFxJTUFTVVRBU0tCXFwpXG5cbiAgUElHX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcXHJlZm9ybWF0dGVkX2RhdGFcXCksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFxccHJvY2Vzc2luZ19tZXRhZGF0YVxcLGNoKSx1c2VySUQgPSBcXElNQVNVVEFTS0JcXClcbn1cblxuYGBgXG5gYGAifQ== -->
-<p><code>r</code>r path = :/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0<br />
-chunks = c(_test, 1, 2, 3, 4)</p>
-<p>for(ch in chunks[2:5]){ PROF_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metadata,ch),userID = )</p>
-<p>PIG_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metadata,ch),userID = ) }</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9cIlxuY2h1bmtzID0gYyhcInJlZ3Jlc3Npb25fdGVzdFwiLCBcIkMxXCIsIFwiQzJcIiwgXCJDM1wiLCBcIkM0XCIpXG5cbmZvcihjaCBpbiBjaHVua3NbMjo1XSl7XG4gIFBST0ZfdG9fV0hQRShwYXRoX291dCA9IGZpbGUucGF0aChwYXRoLFwicmVmb3JtYXR0ZWRfZGF0YVwiKSwgZmlsZV9wYXRoID0gZmlsZS5wYXRoKHBhdGgsXCJwcm9jZXNzaW5nX21ldGFkYXRhXCIsY2gpLHVzZXJJRCA9IFwiSU1BU1VUQVNLQlwiKVxuXG4gIFBJR190b19XSFBFKHBhdGhfb3V0ID0gZmlsZS5wYXRoKHBhdGgsXCJyZWZvcm1hdHRlZF9kYXRhXCIpLCBmaWxlX3BhdGggPSBmaWxlLnBhdGgocGF0aCxcInByb2Nlc3NpbmdfbWV0YWRhdGFcIixjaCksdXNlcklEID0gXCJJTUFTVVRBU0tCXCIpXG59XG5cbmBgYCJ9 -->
+<pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
+chunks = c(&quot;regression_test&quot;, &quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;, &quot;C4&quot;)
+
+for(ch in chunks[2:5]){
+  PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;processing_metadata&quot;,ch),userID = &quot;IMASUTASKB&quot;)
+
+  PIG_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;processing_metadata&quot;,ch),userID = &quot;IMASUTASKB&quot;)
+}
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -625,15 +623,10 @@ PROF_to_WHPE(path_out = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&q
 <h3>reformat pigment files</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucGF0aCA9IFxcQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9CSU8tTUFURS52MFxcXG5QSUdfdG9fV0hQRShwYXRoX291dCA9IGZpbGUucGF0aChwYXRoLFxccmVncmVzc2lvbl90ZXN0XFwsXFxyZWZvcm1hdHRlZF9kYXRhXFwpLCBmaWxlX3BhdGggPSBmaWxlLnBhdGgocGF0aCxcXHByb2Nlc3NpbmdfbWV0YWRhdGFcXCxcXHJlZ3Jlc3Npb25fdGVzdFxcKSx1c2VySUQgPSBcXElNQVNVVEFTS0JcXClcbmBgYFxuYGBgIn0= -->
-<p><code>r</code>r path = :/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0<br />
-PIG_to_WHPE(path_out = file.path(path,_test,_data), file_path = file.path(path,_metadata,_test),userID = )</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURVwiXG5QSUdfdG9fV0hQRShwYXRoX291dCA9IGZpbGUucGF0aChwYXRoLFwiQklPLU1BVEVcIixcInByb2R1Y3RfZGF0YVwiLFwicmVncmVzc2lvbl90ZXN0XCIsXCJyZWZvcm1hdHRlZF9kYXRhXCIpLCBmaWxlX3BhdGggPSBmaWxlLnBhdGgocGF0aCxcIkJJTy1NQVRFXCIsXCJwcm9kdWN0X2RhdGFcIixcInByb2Nlc3NpbmdfbWV0YWRhdGFcIixcInJlZ3Jlc3Npb25fdGVzdFwiKSx1c2VySUQgPSBcIklNQVNVVEFTS0JcIilcbmBgYCJ9 -->
+<pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE&quot;
+PIG_to_WHPE(path_out = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;regression_test&quot;,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;regression_test&quot;),userID = &quot;IMASUTASKB&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gUElHX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCwgXFxyZWdyZXNzaW9uX3Rlc3RcXCwgXFxyZWZvcm1hdHRlZF9kYXRhXFwpLCAgOiBcbiAgZmlsZV9wYXRoIGluIFBJR19tZXRhLmNzdiBpcyB3cm9uZzogRTovRGF0YV9kb3dubG9hZHMvUEFOR0VBRS8wNkFRMjAxNjEyMTYvSFBMQyBJdCBkb2VzIG5vdCBleGlzdCBvciB0aGUgZmlsZSBpcyBub3QgaGVyZVxuIn0= -->
-<pre><code>Error in PIG_to_WHPE(path_out = file.path(path, \regression_test\, \reformatted_data\),  : 
-  file_path in PIG_meta.csv is wrong: E:/Data_downloads/PANGEAE/06AQ20161216/HPLC It does not exist or the file is not here</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -648,30 +641,6 @@ PIG_to_WHPE(path_out = file.path(path,_test,_data), file_path = file.path(path,_
 <pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
 BIOMATE::PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;regression_test&quot;),userID = &quot;IMASUTASKB&quot;) </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwicm93IDEgRVhQT0NPREUgMDZBUTIwMTYxMjE2IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDIgRVhQT0NPREUgMzNSUjIwMDIwMTA1IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDMgRVhQT0NPREUgMzNSUjIwMTYwMjA4IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDQgRVhQT0NPREUgMzIwNjE5OTgwMjI1IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDUgRVhQT0NPREUgMzNMRzIwMTYxMjMwIHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDYgRVhQT0NPREUgMDlTUzE5OTUwMTE0IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDcgRVhQT0NPREUgMDlTUzIwMDYwMzI4IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDggRVhQT0NPREUgMDlBUjIwMDMxMjA4IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDkgRVhQT0NPREUgMDlGQTE5OTcxMTI1IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDEwIEVYUE9DT0RFIDA5U1MyMDEzMDcwNCBzdWNjZXNzZnVsbHkgcnVuXCJcblsxXSBcInJvdyAxMSBFWFBPQ09ERSAzM1JSMjAwODAyMDQgc3VjY2Vzc2Z1bGx5IHJ1blwiXG5bMV0gXCJyb3cgMTIgRVhQT0NPREUgMzIwNjIwMDYwNzAzIHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDEzIEVYUE9DT0RFIDA5QVIyMDA3MDExNiBzdWNjZXNzZnVsbHkgcnVuXCJcbiJ9 -->
-<pre><code>[1] &quot;row 1 EXPOCODE 06AQ20161216 successfully run&quot;
-[1] &quot;row 2 EXPOCODE 33RR20020105 successfully run&quot;
-[1] &quot;row 3 EXPOCODE 33RR20160208 successfully run&quot;
-[1] &quot;row 4 EXPOCODE 320619980225 successfully run&quot;
-[1] &quot;row 5 EXPOCODE 33LG20161230 successfully run&quot;
-[1] &quot;row 6 EXPOCODE 09SS19950114 successfully run&quot;
-[1] &quot;row 7 EXPOCODE 09SS20060328 successfully run&quot;
-[1] &quot;row 8 EXPOCODE 09AR20031208 successfully run&quot;
-[1] &quot;row 9 EXPOCODE 09FA19971125 successfully run&quot;
-[1] &quot;row 10 EXPOCODE 09SS20130704 successfully run&quot;
-[1] &quot;row 11 EXPOCODE 33RR20080204 successfully run&quot;
-[1] &quot;row 12 EXPOCODE 320620060703 successfully run&quot;
-[1] &quot;row 13 EXPOCODE 09AR20070116 successfully run&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiaW5jb21wbGV0ZSBmaW5hbCBsaW5lIGZvdW5kIG9uICcuL3Byb2R1Y3RfZGF0YS9yZWdyZXNzaW9uX3Rlc3QvZG93bmxvYWRlZF9kYXRhL01hcmxpbi8wOTZVMjAxNTAzMjAvY3RkL0lOMjAxNV9WMDEtMDA1LmNzdidpbmNvbXBsZXRlIGZpbmFsIGxpbmUgZm91bmQgb24gJy4vcHJvZHVjdF9kYXRhL3JlZ3Jlc3Npb25fdGVzdC9kb3dubG9hZGVkX2RhdGEvTWFybGluLzA5NlUyMDE1MDMyMC9jdGQvSU4yMDE1X1YwMS0wMDcuY3N2J2luY29tcGxldGUgZmluYWwgbGluZSBmb3VuZCBvbiAnLi9wcm9kdWN0X2RhdGEvcmVncmVzc2lvbl90ZXN0L2Rvd25sb2FkZWRfZGF0YS9NYXJsaW4vMDk2VTIwMTUwMzIwL2N0ZC9JTjIwMTVfVjAxLTAwOS5jc3YnXG4ifQ== -->
-<pre><code>incomplete final line found on './product_data/regression_test/downloaded_data/Marlin/096U20150320/ctd/IN2015_V01-005.csv'incomplete final line found on './product_data/regression_test/downloaded_data/Marlin/096U20150320/ctd/IN2015_V01-007.csv'incomplete final line found on './product_data/regression_test/downloaded_data/Marlin/096U20150320/ctd/IN2015_V01-009.csv'</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwicm93IDE0IEVYUE9DT0RFIDA5NlUyMDE1MDMyMCBzdWNjZXNzZnVsbHkgcnVuXCJcblsxXSBcInJvdyAxNSBFWFBPQ09ERSAzM1JPMjAwNzEyMTUgc3VjY2Vzc2Z1bGx5IHJ1blwiXG5bMV0gXCJyb3cgMTYgRVhQT0NPREUgMzNSUjE5OTcxMDIwIHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDE3IEVYUE9DT0RFIDMzTEcyMDA3MDEwMSBzdWNjZXNzZnVsbHkgcnVuXCJcbiJ9 -->
-<pre><code>[1] &quot;row 14 EXPOCODE 096U20150320 successfully run&quot;
-[1] &quot;row 15 EXPOCODE 33RO20071215 successfully run&quot;
-[1] &quot;row 16 EXPOCODE 33RR19971020 successfully run&quot;
-[1] &quot;row 17 EXPOCODE 33LG20070101 successfully run&quot;</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -679,10 +648,9 @@ BIOMATE::PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), f
 <h3>reformat pigment files</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucGF0aCA9IFxcQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9CSU8tTUFURS52MFxcXG5QSUdfdG9fV0hQRShwYXRoX291dCA9IGZpbGUucGF0aChwYXRoLFxccmVmb3JtYXR0ZWRfZGF0YVxcKSwgZmlsZV9wYXRoID0gZmlsZS5wYXRoKHBhdGgsXFxwcm9jZXNzaW5nX21ldGFkYXRhXFwsXFxyZWdyZXNzaW9uX3Rlc3RcXCksdXNlcklEID0gXFxJTUFTVVRBU0tCXFwpXG5gYGBcbmBgYCJ9 -->
-<p><code>r</code>r path = :/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0<br />
-PIG_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metadata,_test),userID = )</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9cIlxuUElHX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcInJlZm9ybWF0dGVkX2RhdGFcIiksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFwiQklPLU1BVEVcIixcInByb2R1Y3RfZGF0YVwiLFwicHJvY2Vzc2luZ19tZXRhZGF0YVwiLFwicmVncmVzc2lvbl90ZXN0XCIpLHVzZXJJRCA9IFwiSU1BU1VUQVNLQlwiKVxuYGBgIn0= -->
+<pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
+PIG_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;regression_test&quot;),userID = &quot;IMASUTASKB&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -698,40 +666,6 @@ PIG_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metada
 <pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
 PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C1&quot;),userID = &quot;IMASUTASKB&quot;) </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwicm93IDEgRVhQT0NPREUgMDZBUTE5ODUwMTAzIHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDIgRVhQT0NPREUgMDZBUTE5ODYwNjI3IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDMgRVhQT0NPREUgMDZBUTE5ODgxMTIyIHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDQgRVhQT0NPREUgMDZBUTE5OTIwOTI5IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDUgRVhQT0NPREUgMDZBUTIwMDExMDI0IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDYgRVhQT0NPREUgMDZBUTIwMDQwMTIxIHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDcgRVhQT0NPREUgMDZBUTIwMDcxMTI4IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDggRVhQT0NPREUgMDZBUTIwMDgwNDE4IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDkgRVhQT0NPREUgMDZBUTIwMTAwMTI5IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDEwIEVYUE9DT0RFIDA2QVEyMDEwMDQwNyBzdWNjZXNzZnVsbHkgcnVuXCJcblsxXSBcInJvdyAxMSBFWFBPQ09ERSAwNkFRMjAxMjAxMDcgc3VjY2Vzc2Z1bGx5IHJ1blwiXG5bMV0gXCJyb3cgMTIgRVhQT0NPREUgMDZBUTIwMTMwODE0IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDEzIEVYUE9DT0RFIDA2QVEyMDE4MTIxNSBzdWNjZXNzZnVsbHkgcnVuXCJcblsxXSBcInJvdyAxNCBFWFBPQ09ERSAwOTZVMjAxNjAxMDcgc3VjY2Vzc2Z1bGx5IHJ1blwiXG5bMV0gXCJyb3cgMTUgRVhQT0NPREUgMDk2VTIwMTYwMzE0IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDE2IEVYUE9DT0RFIDA5NlUyMDE2MDQyNiBzdWNjZXNzZnVsbHkgcnVuXCJcblsxXSBcInJvdyAxNyBFWFBPQ09ERSAwOTZVMjAxODAxMTAgc3VjY2Vzc2Z1bGx5IHJ1blwiXG5bMV0gXCJyb3cgMTggRVhQT0NPREUgMDlBUjE5OTEwMTAzIHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDE5IEVYUE9DT0RFIDA5QVIxOTkxMDkyNSBzdWNjZXNzZnVsbHkgcnVuXCJcblsxXSBcInJvdyAyMCBFWFBPQ09ERSAwOUFSMTk5MzAxMDUgc3VjY2Vzc2Z1bGx5IHJ1blwiXG4ifQ== -->
-<pre><code>[1] &quot;row 1 EXPOCODE 06AQ19850103 successfully run&quot;
-[1] &quot;row 2 EXPOCODE 06AQ19860627 successfully run&quot;
-[1] &quot;row 3 EXPOCODE 06AQ19881122 successfully run&quot;
-[1] &quot;row 4 EXPOCODE 06AQ19920929 successfully run&quot;
-[1] &quot;row 5 EXPOCODE 06AQ20011024 successfully run&quot;
-[1] &quot;row 6 EXPOCODE 06AQ20040121 successfully run&quot;
-[1] &quot;row 7 EXPOCODE 06AQ20071128 successfully run&quot;
-[1] &quot;row 8 EXPOCODE 06AQ20080418 successfully run&quot;
-[1] &quot;row 9 EXPOCODE 06AQ20100129 successfully run&quot;
-[1] &quot;row 10 EXPOCODE 06AQ20100407 successfully run&quot;
-[1] &quot;row 11 EXPOCODE 06AQ20120107 successfully run&quot;
-[1] &quot;row 12 EXPOCODE 06AQ20130814 successfully run&quot;
-[1] &quot;row 13 EXPOCODE 06AQ20181215 successfully run&quot;
-[1] &quot;row 14 EXPOCODE 096U20160107 successfully run&quot;
-[1] &quot;row 15 EXPOCODE 096U20160314 successfully run&quot;
-[1] &quot;row 16 EXPOCODE 096U20160426 successfully run&quot;
-[1] &quot;row 17 EXPOCODE 096U20180110 successfully run&quot;
-[1] &quot;row 18 EXPOCODE 09AR19910103 successfully run&quot;
-[1] &quot;row 19 EXPOCODE 09AR19910925 successfully run&quot;
-[1] &quot;row 20 EXPOCODE 09AR19930105 successfully run&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiaW5jb21wbGV0ZSBmaW5hbCBsaW5lIGZvdW5kIG9uICdFOi9EYXRhX2Rvd25sb2Fkcy9BQURDL0NURC8wOUFSMTk5MzAzMTEvYTkzMDk0MDEzLmFsbCdcbiJ9 -->
-<pre><code>incomplete final line found on 'E:/Data_downloads/AADC/CTD/09AR19930311/a93094013.all'</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwicm93IDIxIEVYUE9DT0RFIDA5QVIxOTkzMDMxMSBzdWNjZXNzZnVsbHkgcnVuXCJcblsxXSBcInJvdyAyMiBFWFBPQ09ERSAwOUFSMTk5NDAxMDEgc3VjY2Vzc2Z1bGx5IHJ1blwiXG5bMV0gXCJyb3cgMjMgRVhQT0NPREUgMDlBUjE5OTQxMjEzIHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDI0IEVYUE9DT0RFIDA5QVIxOTk1MDcxNyBzdWNjZXNzZnVsbHkgcnVuXCJcblsxXSBcInJvdyAyNSBFWFBPQ09ERSAwOUFSMTk5NjAxMTkgc3VjY2Vzc2Z1bGx5IHJ1blwiXG5bMV0gXCJyb3cgMjYgRVhQT0NPREUgMDlBUjE5OTgwMjI4IHN1Y2Nlc3NmdWxseSBydW5cIlxuWzFdIFwicm93IDI3IEVYUE9DT0RFIDA5QVIxOTk5MDcxMyBzdWNjZXNzZnVsbHkgcnVuXCJcbiJ9 -->
-<pre><code>[1] &quot;row 21 EXPOCODE 09AR19930311 successfully run&quot;
-[1] &quot;row 22 EXPOCODE 09AR19940101 successfully run&quot;
-[1] &quot;row 23 EXPOCODE 09AR19941213 successfully run&quot;
-[1] &quot;row 24 EXPOCODE 09AR19950717 successfully run&quot;
-[1] &quot;row 25 EXPOCODE 09AR19960119 successfully run&quot;
-[1] &quot;row 26 EXPOCODE 09AR19980228 successfully run&quot;
-[1] &quot;row 27 EXPOCODE 09AR19990713 successfully run&quot;</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -739,10 +673,9 @@ PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path 
 <h3>reformat pigment files</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucGF0aCA9IFxcQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9CSU8tTUFURS52MFxcXG5QSUdfdG9fV0hQRShwYXRoX291dCA9IGZpbGUucGF0aChwYXRoLFxccmVmb3JtYXR0ZWRfZGF0YVxcKSwgZmlsZV9wYXRoID0gZmlsZS5wYXRoKHBhdGgsXFxwcm9jZXNzaW5nX21ldGFkYXRhXFwsXFxDMVxcKSx1c2VySUQgPSBcXElNQVNVVEFTS0JcXClcbmBgYFxuYGBgIn0= -->
-<p><code>r</code>r path = :/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0<br />
-PIG_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metadata,1),userID = )</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9cIlxuUElHX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcInJlZm9ybWF0dGVkX2RhdGFcIiksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFwiQklPLU1BVEVcIixcInByb2R1Y3RfZGF0YVwiLFwicHJvY2Vzc2luZ19tZXRhZGF0YVwiLFwiQzFcIiksdXNlcklEID0gXCJJTUFTVVRBU0tCXCIpXG5gYGAifQ== -->
+<pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
+PIG_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C1&quot;),userID = &quot;IMASUTASKB&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -754,10 +687,9 @@ PIG_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metada
 <h3>reformat profiling_sensor files</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucGF0aCA9IFxcQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9CSU8tTUFURS52MFxcXG5QUk9GX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcXHJlZm9ybWF0dGVkX2RhdGFcXCksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFxccHJvY2Vzc2luZ19tZXRhZGF0YVxcLFxcQzJcXCksdXNlcklEID0gXFxJTUFTVVRBU0tCXFwpXG5gYGBcbmBgYCJ9 -->
-<p><code>r</code>r path = :/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0<br />
-PROF_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metadata,2),userID = )</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9cIlxuUFJPRl90b19XSFBFKHBhdGhfb3V0ID0gZmlsZS5wYXRoKHBhdGgsXCJyZWZvcm1hdHRlZF9kYXRhXCIpLCBmaWxlX3BhdGggPSBmaWxlLnBhdGgocGF0aCxcIkJJTy1NQVRFXCIsXCJwcm9kdWN0X2RhdGFcIixcInByb2Nlc3NpbmdfbWV0YWRhdGFcIixcIkMyXCIpLHVzZXJJRCA9IFwiSU1BU1VUQVNLQlwiKVxuYGBgIn0= -->
+<pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
+PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C2&quot;),userID = &quot;IMASUTASKB&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -766,10 +698,9 @@ PROF_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metad
 <h3>reformat pigment files</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucGF0aCA9IFxcQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9CSU8tTUFURS52MFxcXG5QSUdfdG9fV0hQRShwYXRoX291dCA9IGZpbGUucGF0aChwYXRoLFxccmVmb3JtYXR0ZWRfZGF0YVxcKSwgZmlsZV9wYXRoID0gZmlsZS5wYXRoKHBhdGgsXFxwcm9jZXNzaW5nX21ldGFkYXRhXFwsXFxDMlxcKSx1c2VySUQgPSBcXElNQVNVVEFTS0JcXClcbmBgYFxuYGBgIn0= -->
-<p><code>r</code>r path = :/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0<br />
-PIG_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metadata,2),userID = )</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9cIlxuUElHX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcInJlZm9ybWF0dGVkX2RhdGFcIiksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFwiQklPLU1BVEVcIixcInByb2R1Y3RfZGF0YVwiLFwicHJvY2Vzc2luZ19tZXRhZGF0YVwiLFwiQzJcIiksdXNlcklEID0gXCJJTUFTVVRBU0tCXCIpXG5gYGAifQ== -->
+<pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
+PIG_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C2&quot;),userID = &quot;IMASUTASKB&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -781,10 +712,9 @@ PIG_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metada
 <h3>reformat profiling_sensor files</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucGF0aCA9IFxcQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9CSU8tTUFURS52MFxcXG5QUk9GX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcXHJlZm9ybWF0dGVkX2RhdGFcXCksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFxccHJvY2Vzc2luZ19tZXRhZGF0YVxcLFxcQzNcXCksdXNlcklEID0gXFxJTUFTVVRBU0tCXFwsIHJvd19zdGFydCA9IDIsIHJvd19lbmQgPSAyKVxuYGBgXG5gYGAifQ== -->
-<p><code>r</code>r path = :/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0<br />
-PROF_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metadata,3),userID = , row_start = 2, row_end = 2)</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9cIlxuUFJPRl90b19XSFBFKHBhdGhfb3V0ID0gZmlsZS5wYXRoKHBhdGgsXCJyZWZvcm1hdHRlZF9kYXRhXCIpLCBmaWxlX3BhdGggPSBmaWxlLnBhdGgocGF0aCxcIkJJTy1NQVRFXCIsXCJwcm9kdWN0X2RhdGFcIixcInByb2Nlc3NpbmdfbWV0YWRhdGFcIixcIkMzXCIpLHVzZXJJRCA9IFwiSU1BU1VUQVNLQlwiLCByb3dfc3RhcnQgPSAyLCByb3dfZW5kID0gMilcbmBgYCJ9 -->
+<pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
+PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C3&quot;),userID = &quot;IMASUTASKB&quot;, row_start = 2, row_end = 2)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -793,10 +723,9 @@ PROF_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metad
 <h3>reformat pigment files</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucGF0aCA9IFxcQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9CSU8tTUFURS52MFxcXG5QSUdfdG9fV0hQRShwYXRoX291dCA9IGZpbGUucGF0aChwYXRoLFxccmVmb3JtYXR0ZWRfZGF0YVxcKSwgZmlsZV9wYXRoID0gZmlsZS5wYXRoKHBhdGgsXFxwcm9jZXNzaW5nX21ldGFkYXRhXFwsXFxDM1xcKSx1c2VySUQgPSBcXElNQVNVVEFTS0JcXClcbmBgYFxuYGBgIn0= -->
-<p><code>r</code>r path = :/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0<br />
-PIG_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metadata,3),userID = )</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9cIlxuUElHX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcInJlZm9ybWF0dGVkX2RhdGFcIiksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFwiQklPLU1BVEVcIixcInByb2R1Y3RfZGF0YVwiLFwicHJvY2Vzc2luZ19tZXRhZGF0YVwiLFwiQzNcIiksdXNlcklEID0gXCJJTUFTVVRBU0tCXCIpXG5gYGAifQ== -->
+<pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
+PIG_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C3&quot;),userID = &quot;IMASUTASKB&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -808,14 +737,10 @@ PIG_to_WHPE(path_out = file.path(path,_data), file_path = file.path(path,_metada
 <h3>reformat profiling_sensor files</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9CSU8tTUFURS52MFwiXG5QUk9GX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcInJlZm9ybWF0dGVkX2RhdGFcIiksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFwiQklPLU1BVEVcIixcInByb2R1Y3RfZGF0YVwiLFwicHJvY2Vzc2luZ19tZXRhZGF0YVwiLFwiQzRcIiksdXNlcklEID0gXCJJTUFTVVRBU0tCXCIsIHJvd19zdGFydCA9IDE0KVxuYGBgIn0= -->
-<pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0&quot;
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURVwiXG5QUk9GX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcInJlZm9ybWF0dGVkX2RhdGFcIiksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFwiQklPLU1BVEVcIixcInByb2R1Y3RfZGF0YVwiLFwicHJvY2Vzc2luZ19tZXRhZGF0YVwiLFwiQzRcIiksdXNlcklEID0gXCJJTUFTVVRBU0tCXCIsIHJvd19zdGFydCA9IDE0KVxuYGBgIn0= -->
+<pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE&quot;
 PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C4&quot;),userID = &quot;IMASUTASKB&quot;, row_start = 14)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiY2Fubm90IGNyZWF0ZSBkaXIgJ0M6XFxVc2Vyc1xca2FiYWxkcnlcXE9uZURyaXZlIC0gVW5pdmVyc2l0eSBvZiBUYXNtYW5pYVxcRG9jdW1lbnRzXFxQcm9qZWN0c1xcQklPLU1BVEVcXEJJTy1NQVRFLnYwXFxyZWZvcm1hdHRlZF9kYXRhXFxwcm9maWxpbmdfc2Vuc29ycycsIHJlYXNvbiAnTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeSdFcnJvciBpbiBQUk9GX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCwgXCJyZWZvcm1hdHRlZF9kYXRhXCIpLCAgOiBcbiAgRXJyb3I6IFRoZXJlIGlzIG5vIGZpbGUgbmFtZWQgUFJPRl9tZXRhLmNzdiBsb2NhdGVkIGluIHRoZSBkaXJjdG9yeSBDOi9Vc2Vycy9rYWJhbGRyeS9PbmVEcml2ZSAtIFVuaXZlcnNpdHkgb2YgVGFzbWFuaWEvRG9jdW1lbnRzL1Byb2plY3RzL0JJTy1NQVRFL0JJTy1NQVRFLnYwL0JJTy1NQVRFL3Byb2R1Y3RfZGF0YS9wcm9jZXNzaW5nX21ldGFkYXRhL0M0XG4ifQ== -->
-<pre><code>cannot create dir 'C:\Users\kabaldry\OneDrive - University of Tasmania\Documents\Projects\BIO-MATE\BIO-MATE.v0\reformatted_data\profiling_sensors', reason 'No such file or directory'Error in PROF_to_WHPE(path_out = file.path(path, &quot;reformatted_data&quot;),  : 
-  Error: There is no file named PROF_meta.csv located in the dirctory C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0/BIO-MATE/product_data/processing_metadata/C4</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -841,12 +766,6 @@ PIG_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path =
 <pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
 BIOMATE::PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C5&quot;),userID = &quot;IMASUTASKB&quot;, row_start =12, row_end = 12 )</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZzogY2xvc2luZyB1bnVzZWQgY29ubmVjdGlvbiAzIChFOi9EYXRhX2Rvd25sb2Fkcy9UQVJBX1BBTkdFQUUvMzVYSTIwMDkwOTA1L2N0ZC9zcGxpdC8zNVhJMjAwOTA5MDVfVEFSQV8wOTFfZnJvbV9UQVJBX3BoeXNpY2FsLmNzdilcbiJ9 -->
-<pre><code>Warning: closing unused connection 3 (E:/Data_downloads/TARA_PANGEAE/35XI20090905/ctd/split/35XI20090905_TARA_091_from_TARA_physical.csv)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwicm93IDEyIEVYUE9DT0RFIDM1WEkyMDA5MDkwNSBzdWNjZXNzZnVsbHkgcnVuXCJcbiJ9 -->
-<pre><code>[1] &quot;row 12 EXPOCODE 35XI20090905 successfully run&quot;</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -854,16 +773,10 @@ BIOMATE::PROF_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), f
 <h3>reformat pigment files</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9cIlxuUElHX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcInJlZm9ybWF0dGVkX2RhdGFcIiksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFwiQklPLU1BVEVcIixcInByb2R1Y3RfZGF0YVwiLFwicHJvY2Vzc2luZ19tZXRhZGF0YVwiLFwiQzVcIiksdXNlcklEID0gXCJJTUFTVVRBU0tCXCIscm93X3N0YXJ0ID0gNDUpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGF0aCA9IFwiQzovVXNlcnMva2FiYWxkcnkvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIFRhc21hbmlhL0RvY3VtZW50cy9Qcm9qZWN0cy9CSU8tTUFURS9cIlxuUElHX3RvX1dIUEUocGF0aF9vdXQgPSBmaWxlLnBhdGgocGF0aCxcInJlZm9ybWF0dGVkX2RhdGFcIiksIGZpbGVfcGF0aCA9IGZpbGUucGF0aChwYXRoLFwiQklPLU1BVEVcIixcInByb2R1Y3RfZGF0YVwiLFwicHJvY2Vzc2luZ19tZXRhZGF0YVwiLFwiQzVcIiksdXNlcklEID0gXCJJTUFTVVRBU0tCXCIscm93X3N0YXJ0ID0gNDkpXG5gYGAifQ== -->
 <pre class="r"><code>path = &quot;C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/&quot;
-PIG_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C5&quot;),userID = &quot;IMASUTASKB&quot;,row_start = 45)</code></pre>
+PIG_to_WHPE(path_out = file.path(path,&quot;reformatted_data&quot;), file_path = file.path(path,&quot;BIO-MATE&quot;,&quot;product_data&quot;,&quot;processing_metadata&quot;,&quot;C5&quot;),userID = &quot;IMASUTASKB&quot;,row_start = 49)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwicm93IDQ1IEVYUE9DT0RFIDQ5TloyMDE3MDIwOCBTT1VSQ0UgR0xPREFQIE1FVEhPRCBXZWxzY2htZXllcl8xOTk0IHN1Y2Nlc3NmdWxseSBydW5cIlxuIn0= -->
-<pre><code>[1] &quot;row 45 EXPOCODE 49NZ20170208 SOURCE GLODAP METHOD Welschmeyer_1994 successfully run&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gaWYgKGdyZXBsKFwiREFURSA9XCIsIGxpbmUpKSB7IDogYXJndW1lbnQgaXMgb2YgbGVuZ3RoIHplcm9cbiJ9 -->
-<pre><code>Error in if (grepl(&quot;DATE =&quot;, line)) { : argument is of length zero</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
