@@ -17,7 +17,7 @@ library(tidyr)
 library(devtools)
 #devtools::install_github("KimBaldry/BIOMATE-Rpackage")
 library(BIOMATE)
-BIOMATE::add_bibstyle()
+
 ```
 
 # Split large data files from various sources
