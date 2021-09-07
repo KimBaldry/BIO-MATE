@@ -1,13 +1,51 @@
-"0","devtools::install_github(""KimBaldry/BIO-MATE"", subdir = ""Rpackage"")
+"0","#devtools::install_github(""KimBaldry/BIOMATE-Rpackage"")
+library(BIOMATE)
 "
-"2","Downloading GitHub repo KimBaldry/BIO-MATE@HEAD
+"2","Loading required package: purrr
 "
-"1","KimBaldry-BIO-MATE-0303327/product_data/supporting_information/cruise_reports/06AQ20040121.pdf: truncated gzip input
+"2","Loading required package: tools
 "
-"1","tar.exe: Error exit delayed from previous errors.
+"2","Loading required package: dplyr
 "
-"2","‘tar.exe -xf ""E:/Temp\RtmpKsjCmW\file4604711d23c0.tar.gz"" -C ""E:/Temp/RtmpKsjCmW/remotes460413357c6d""’ returned error code 1"
-"2","running command 'tar.exe -tf ""E:/Temp\RtmpKsjCmW\file4604711d23c0.tar.gz""' had status 1"
-"2","Error: Failed to install 'BIOMATE' from GitHub:
-  Does not appear to be an R package (no DESCRIPTION)
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"2","Loading required package: data.table
+"
+"2","data.table 1.14.0 using 2 threads (see ?getDTthreads).  Latest news: r-datatable.com
+"
+"2","
+Attaching package: ‘data.table’
+
+"
+"2","The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+"
+"2","The following object is masked from ‘package:purrr’:
+
+    transpose
+
+"
+"2","Loading required package: ncdf4
+"
+"2","Loading required package: readr
+"
+"2","Loading required package: geosphere
+"
+"2","Loading required package: stringi
+"
+"2","Loading required package: tidyr
 "

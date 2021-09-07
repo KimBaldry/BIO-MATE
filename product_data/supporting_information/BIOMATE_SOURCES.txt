@@ -1,0 +1,10 @@
+source,citations,url,aknowledgement
+PANGEAE,,https://www.pangaea.de/,
+SeaBASS,SEABASS_1;SEABASS_2,https://seabass.gsfc.nasa.gov/,
+AADC,,https://data.aad.gov.au/,
+IMOS,IMOS_biooptic,https://imos.org.au/data,Data was sourced from Australia's Integrated Marine Observing System (IMOS) - IMOS is enabled by the National Collaborative Research Infrastructure strategy (NCRIS).
+BCO-DMO,,https://www.bco-dmo.org/data,
+Palmer LTER,,https://pal.lternet.edu/data,
+GLODAP,GLODAPv2_1;GLODAPv2_2,https://www.glodap.info/,
+MGDS,MGDS,https://www.marine-geo.org/,
+CSIRO,,https://www.cmar.csiro.au/data/trawler/,
