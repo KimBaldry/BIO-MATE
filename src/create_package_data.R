@@ -66,4 +66,4 @@ method_info = read.csv("./product_data/supporting_information/BIOMATE_Methods.tx
 save(bib,source_info,method_info,platforms, countries,file =file.path("../Rpackage/data","BIOMATE.rda"))
 
 ### Compile package
-roxygen2::roxygenise()
+roxygen2::roxygenise("../Rpackage")
