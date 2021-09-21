@@ -1,16 +1,16 @@
-CTD,20210810IMASUTASKB
+CTD,20210920IMASUTASKB
 #semi-manual exchange
 #ORIGINAL_CTDFILE: event#03310615.csv
-#SOURCED_FROM: JGOFS
-#DOI: NA
-#CTDFILE_MOD_DATE: 2021-08-10 15:50:33 AEST
-#PI: John Morrison
-#INSTITUTION: WHOI
-#contact: http://usjgofs.whoi.edu/
+#CTDFILE_MOD_DATE: 2021-09-20 09:19:22 AEST
+#SOURCED_FROM: BCO-DMO(https://www.bco-dmo.org/data)
+#DATASET_CONTACT: John Morrison(http://usjgofs.whoi.edu/)
+#DOI/s: 
+#BIOMATE_CITE_TAGS: 320619980225_prof
+#DATA_CITATION/S: Morrison J (2005) “Final version CTD, including beam attenuation optics.” US JGOFS. US JGOFS. http://usjgofs.whoi.edu/jg/dir/jgofs/southern/nbp98_2/.
 #NOTE: 
 NUMBER_HEADERS = 18
 EXPOCODE = 320619980225
-SHIP = Nathaniel B. Palmer
+SHIP = NATHANIEL B. PALMER 
 STNNBR or EVENTNBR = CTD11
 CASTNO = 1
 CTDID = 320619980225_CTD_CTD11_1

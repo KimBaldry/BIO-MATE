@@ -1,16 +1,16 @@
-CTD,20210810IMASUTASKB
+CTD,20210920IMASUTASKB
 #semi-manual exchange
 #ORIGINAL_CTDFILE: 09SS19950115_42_ctd1.tsv
-#SOURCED_FROM: CSIRO
-#DOI: NA
-#CTDFILE_MOD_DATE: 2021-08-10 15:53:13 AEST
-#PI: Angela Way
-#INSTITUTION: CSIRO
-#contact: data-requests-hf@csiro.au
+#CTDFILE_MOD_DATE: 2021-09-20 09:22:09 AEST
+#SOURCED_FROM: CSIRO(https://www.cmar.csiro.au/data/trawler/)
+#DATASET_CONTACT: Angela Way(data-requests-hf@csiro.au)
+#DOI/s: 
+#BIOMATE_CITE_TAGS: 09SS19950114_prof
+#DATA_CITATION/S: CSIRO (2014) “Southern Surveyor Voyage SS 01/95 CTD Data.” CSIRO. CSIRO. https://marlin.csiro.au/geonetwork/srv/eng/catalog.search;jsessionid=fwib9h30l5g11n86sk9ouv655#/metadata/7780aa58-6434-453b-9bf6-b8ba0bb93533.
 #NOTE: 2m binned
 NUMBER_HEADERS = 18
 EXPOCODE = 09SS19950114
-SHIP = Southern Surveyor
+SHIP = SOUTHERN SURVEYOR 
 STNNBR or EVENTNBR = 43
 CASTNO = 1
 CTDID = 09SS19950114_CTD_43_1

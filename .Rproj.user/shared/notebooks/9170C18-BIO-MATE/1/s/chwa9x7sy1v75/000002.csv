@@ -1,0 +1,9 @@
+"0","file_path = file.path(path,""BIO-MATE"",""product_data"",""processing_metadata"",""C2"")
+"
+"2","Warning message:
+"
+"2","In for (i in seq_along(args)) { :"
+"2","
+ "
+"2"," closing unused connection 3 (C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE//reformatted_data/pigments/09AR19930105_PIG_AADC_Wright_1991.csv)
+"

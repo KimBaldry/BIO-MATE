@@ -1,16 +1,16 @@
-CTD,20210810IMASUTASKB
+CTD,20210920IMASUTASKB
 #semi-manual exchange
 #ORIGINAL_CTDFILE: 33LG20070101_630_from_CTD Downcast Data (Cruise).csv
-#SOURCED_FROM: Palmer LTER
-#DOI: NA
-#CTDFILE_MOD_DATE: 2021-08-10 16:53:41 AEST
-#PI: Richard Iannuzzi
-#INSTITUTION: Palmer LTER - NSF
-#contact: https://pal.lternet.edu/data - pallter-im@ucsd.edu - iannuzzi@ldeo.columbia.edu
+#CTDFILE_MOD_DATE: 2021-09-20 11:16:25 AEST
+#SOURCED_FROM: Palmer LTER(https://pal.lternet.edu/data)
+#DATASET_CONTACT: Richard Iannuzzi(https://pal.lternet.edu/data - pallter-im@ucsd.edu - iannuzzi@ldeo.columbia.edu)
+#DOI/s: 10.6073/pasta/12276fbc0d68568177702aed0d4b44bc
+#BIOMATE_CITE_TAGS: PAL-LTER_prof
+#DATA_CITATION/S: Iannuzzi R (2018) “Conductivity Temperature Depth (CTD) sensor profile data binned by depth from PAL LTER annual cruises, 1991 - 2017 (ongoing).” Palmer Station Antarctica LTER. Palmer Station Antarctica LTER. 10.6073/pasta/12276fbc0d68568177702aed0d4b44bc. https://oceaninformatics.ucsd.edu/datazoo/catalogs/pallter/datasets/269.
 #NOTE: Downcast data only
 NUMBER_HEADERS = 18
 EXPOCODE = 33LG20070101
-SHIP = Lawrence M. Gould
+SHIP = LAURENCE M. GOULD 
 STNNBR or EVENTNBR = 630
 CASTNO = 1
 CTDID = 33LG20070101_CTD_630_1

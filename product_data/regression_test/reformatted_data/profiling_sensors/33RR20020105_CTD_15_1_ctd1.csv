@@ -1,16 +1,16 @@
-CTD,20210810IMASUTASKB
+CTD,20210920IMASUTASKB
 #semi-manual exchange
 #ORIGINAL_CTDFILE: sta#15.tsv
-#SOURCED_FROM: JGOFS
-#DOI: NA
-#CTDFILE_MOD_DATE: 2021-08-10 15:36:36 AEST
-#PI: Kenneth Johnson
-#INSTITUTION: MBARI
-#contact: johnson@mbari.org
+#CTDFILE_MOD_DATE: 2021-09-20 09:17:22 AEST
+#SOURCED_FROM: BCO-DMO(https://www.bco-dmo.org/data)
+#DATASET_CONTACT: Kenneth Johnson(johnson@mbari.org)
+#DOI/s: 
+#BIOMATE_CITE_TAGS: 33RR20020105_prof
+#DATA_CITATION/S: Kenneth O. Buesseler KHC, Siegel D (2007) “USCGC Polar Star cruises COOK19MV, DRFT08RR, PS02_2002 from the Southern Ocean, south of New Zealand in 2002 (SOFeX project).” BCO-DMO. Biological and Chemical Oceanography Data Management Office (BCO-DMO). http://lod.bco-dmo.org/id/dataset/2851.
 #NOTE: 
 NUMBER_HEADERS = 18
 EXPOCODE = 33RR20020105
-SHIP = Roger Revelle
+SHIP = ROGER REVELLE 
 STNNBR or EVENTNBR = 15
 CASTNO = 1
 CTDID = 33RR20020105_CTD_15_1

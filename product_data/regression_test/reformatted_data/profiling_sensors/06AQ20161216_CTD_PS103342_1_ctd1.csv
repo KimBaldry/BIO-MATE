@@ -1,16 +1,16 @@
-CTD,20210810IMASUTASKB
+CTD,20210920IMASUTASKB
 #semi-manual exchange
 #ORIGINAL_CTDFILE: PS103342_from_PS103_phys_oce.csv
-#SOURCED_FROM: PANGEAE
-#DOI: NA
-#CTDFILE_MOD_DATE: 2021-08-10 15:29:42 AEST
-#PI: Gerd Rohardt
-#INSTITUTION: Alfred Wegener Institute
-#contact: gerd.rohardt@awi.de
+#CTDFILE_MOD_DATE: 2021-09-20 09:11:48 AEST
+#SOURCED_FROM: PANGEAE(https://www.pangaea.de/)
+#DATASET_CONTACT: Gerd Rohardt(gerd.rohardt@awi.de)
+#DOI/s: 10.1594/PANGAEA.881076
+#BIOMATE_CITE_TAGS: 06AQ20161216_prof
+#DATA_CITATION/S: Rohardt G, Boebel O (2017) “Physical oceanography during POLARSTERN cruise PS103 (ANT-XXXII/2).” PANGAEA. Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Bremerhaven. 10.1594/PANGAEA.881076. https://doi.org/10.1594/PANGAEA.881076.
 #NOTE: 
 NUMBER_HEADERS = 18
 EXPOCODE = 06AQ20161216
-SHIP = Polarstern
+SHIP = POLARSTERN 
 STNNBR or EVENTNBR = PS103342
 CASTNO = 1
 CTDID = 06AQ20161216_CTD_PS103342_1

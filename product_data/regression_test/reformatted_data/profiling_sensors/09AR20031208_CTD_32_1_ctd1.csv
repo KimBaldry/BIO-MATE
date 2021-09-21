@@ -1,16 +1,16 @@
-CTD,20210810IMASUTASKB
+CTD,20210920IMASUTASKB
 #semi-manual exchange
 #ORIGINAL_CTDFILE: a04043032.all
-#SOURCED_FROM: AADC
-#DOI: NA
-#CTDFILE_MOD_DATE: 2021-08-10 15:54:20 AEST
-#PI: Mark Rosenberg - Andrew Constable - Esmee van Wijk - Guy Williams
-#INSTITUTION: Australian Antarctic Division
-#contact: aadcwebqueries@aad.gov.au
+#CTDFILE_MOD_DATE: 2021-09-20 09:23:29 AEST
+#SOURCED_FROM: AADC(https://data.aad.gov.au/)
+#DATASET_CONTACT: Mark Rosenberg - Andrew Constable - Esmee van Wijk - Guy Williams(aadcwebqueries@aad.gov.au)
+#DOI/s: 10.4225/15/58afb50245d5c
+#BIOMATE_CITE_TAGS: AADC_prof
+#DATA_CITATION/S: Rosenberg M, Ronai B (2005) “Database of CTD data collected in the Southern Ocean by the AAD, ACE CRC and part of the Southern Ocean Atlas data set., Ver. 1.” AADC. AADC. 10.4225/15/58afb50245d5c. https://data.aad.gov.au/metadata/records/aad_ctd_database.
 #NOTE: 2m depth binned data
 NUMBER_HEADERS = 18
 EXPOCODE = 09AR20031208
-SHIP = Aurora Australis
+SHIP = AURORA AUSTRALIS 
 STNNBR or EVENTNBR = 32
 CASTNO = 1
 CTDID = 09AR20031208_CTD_32_1
