@@ -1,0 +1,120 @@
+### This calculates different MLD
+
+## MLD
+# use linear interpolation for now but look into using a smoothing fit
+# Assuptions
+MLD <- function(press, sal, temp, lat,dens_thresh)
+{
+  # flag 1 = good
+  # flag 2 = MLD cant be calculated due to not enough water column sampled
+  # flag 3 = reference density taken from deeper than 10 m
+
+  # create ctd data frame
+  ctd_data = data.frame(cbind(press, sal, temp))
+  colnames(ctd_data) = c("press","sal", "temp")
+
+  # calculate density
+  DENS = as.numeric(rho(S = ctd_data$sal, T = ctd_data$temp, P = 0))
+
+  # remove spikes or outliers (3 standard dev away from neighboring 5 measurements)
+  DENS_s = rm_out(DENS)
+
+  # calculate depth
+  DEPTH_gws = swDepth(ctd_data$press, latitude = lat)
+
+  # remove missing values
+  dens_prof = data.frame("depth" = DEPTH_gws,"density" = DENS_s)
+  dens_prof = dens_prof[complete.cases(dens_prof),]
+
+
+  max_d = max(dens_prof$depth, na.rm = T)
+  min_d = min(dens_prof$depth, na.rm = T)
+if(max_d <= 10){mld = NA
+flag = 2}else{
+  
+  if(min_d > 10){
+  DENS_10 = dens_prof$dens[which(dens_prof$depth == min_d)]
+  if(max(dens_prof$density,na.rm = T) < DENS_10 + dens_thresh){flag = 2
+  mld = NA}else{
+      mld = approx(x = dens_prof$dens, y = dens_prof$depth, xout = DENS_10 + dens_thresh)$y
+      flag = 3}
+
+  }else{
+    DENS_10 = approx(x = dens_prof$depth, y = dens_prof$dens, xout = 10)$y
+    if(max(dens_prof$density,na.rm = T) < DENS_10 + dens_thresh){flag = 2
+    mld = NA}else{
+      mld = approx(x = dens_prof$dens[which(dens_prof$depth >= 10)], y = dens_prof$depth[which(dens_prof$depth >= 10)], xout = DENS_10 + dens_thresh)$y
+      flag = 1}
+  }}
+  out = list()
+  out$MLD = mld
+  out$FLAG = flag
+  out
+}
+
+## calculate fit on increasing intervals
+sigmoid_fit <- function(depth, val, mld, max_d){9
+
+  dat = data.frame(x = depth, y = val)
+  mod = optim(par = c(0,1,0), fn = SS_res,method =  "BFGS", data = dat, lower = c(0,0,0), upper = c(max_d, Inf, max_d- (1.5*mld)))
+
+  r2 = 1 - (SS_res(dat, par, surf_val)/SS_tot(data))
+
+  z_0.5 = mod$par[1]
+  s = mod$par[2]
+  z_max = par[3]
+  val_res = with(data[1:(mld*1.5 + par[3]),], y - surf_val/(1 + (s*exp(z_0.5 - x))))
+
+}
+
+SS_res <- function(data, par, surf_val, mld) {
+  with(data[1:(mld*1.5 + par[3]),], sum((surf_val/(1 + (par[2]*exp(par[1] - x))) - y)^2))
+}
+
+SS_tot <- function(data){
+  with(data, sum((y-mean(data$y))^2))
+}
+
+Eco_MLD <- function(pres, fluor){
+  pres = pres[order(pres)]
+  fluor = fluor[order(pres)]
+  av_resolution = mean(pres[2:max_depth_idx] - pres[1:(max_depth_idx-1)])
+  window = ceiling(20/av_resolution)
+  if(window < 7){window = 7}
+  max_depth_idx = max(which(pres < 500))
+  FLUOR = fluor[1:max_depth_idx]
+  PRES = pres[1:max_depth_idx]
+  PRES_optic = PRES[7:(max_depth_idx-window)]
+  tan_theta = vector("list",max_depth_idx-(window +6))
+  for(sp in 1:length(tan_theta))
+  {
+    if(sp < window - 7){
+      m1 = lm(FLUOR[sp:(sp+7)]~PRES[sp:(sp+7)])$coefficients[2]
+      m2 = lm(FLUOR[(sp+7):(sp+2*window)]~PRES[(sp+7):(sp+2*window)])$coefficients[2]
+      tan_theta[[sp]] = (m2 - m1)/(1+(m2*m1))
+    }else{
+    m1 = lm(FLUOR[sp:(sp+window)]~PRES[sp:(sp+window)])$coefficients[2]
+    m2 = lm(FLUOR[(sp+window):(sp+2*window)]~PRES[(sp+window):(sp+2*window)])$coefficients[2]
+    tan_theta[[sp]] = (m2 - m1)/(1+(m2*m1))}
+  }
+  tan_theta = unlist(tan_theta)
+  bloom_idx = which(tan_theta == max(tan_theta,na.rm = T))
+  Bloom_depth = PRES_optic[bloom_idx]
+  idx_u = bloom_idx+50
+  if(idx_u > max_depth_idx){idx_u = max_depth_idx}
+  idx_l = bloom_idx-50
+  if(idx_l < 1){idx_l =1}
+  QI_bd = 1 - sd(FLUOR[bloom_idx:idx_u]-mean(FLUOR[bloom_idx:idx_u]))/
+    sd(FLUOR[idx_l:idx_u]-mean(FLUOR[idx_l:idx_u]))
+  if(QI_bd > 0.5){Bloom_depth}else{NA}
+}
+
+
+CHL_50 <- function(pres, fluor){
+  pres = pres[order(pres)]
+  fluor = fluor[order(pres)]
+  fluor = rm_out(fluor)
+  val = (range(fluor)[2]-range(fluor)[1])/2 + range(fluor)[1]
+  pres[max(which(fluor > val & pres < 300))]
+}
+  

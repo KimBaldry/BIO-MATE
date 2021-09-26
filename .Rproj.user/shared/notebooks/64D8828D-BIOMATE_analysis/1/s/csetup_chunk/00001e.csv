@@ -1,4 +1,0 @@
-"0","pig_expos = unique(substr(pig_files,1,12))
-"
-"2","Error in substr(pig_files, 1, 12) : object 'pig_files' not found
-"

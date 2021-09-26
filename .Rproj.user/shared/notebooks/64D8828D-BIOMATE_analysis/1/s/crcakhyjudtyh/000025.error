@@ -1,1 +1,0 @@
-{"frames":[],"message":"Error in mean_5m(prof_data$DEPTH[which(is.finite(prof_data$CTDSAL))],  : \n  could not find function \"mean_5m\"\n"}

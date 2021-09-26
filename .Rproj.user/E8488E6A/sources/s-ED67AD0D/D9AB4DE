@@ -1,20 +1,20 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1626858585753.000,
+    "created" : 1632699526568.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3629426742",
-    "id" : "E89E90C5",
-    "lastKnownWriteTime" : 1632181317,
-    "last_content_update" : 1632184971747,
+    "hash" : "0",
+    "id" : "D9AB4DE",
+    "lastKnownWriteTime" : 1632699492,
+    "last_content_update" : 1632699492,
     "path" : "~/Projects/BIO-MATE/BIO-MATE/BIO-MATE.Rmd",
     "project_path" : "BIO-MATE.Rmd",
     "properties" : {
         "chunk_output_type" : "inline",
-        "cursorPosition" : "354,45",
-        "scrollLine" : "350"
+        "cursorPosition" : "421,147",
+        "scrollLine" : "401"
     },
     "relative_order" : 1,
     "source_on_save" : false,

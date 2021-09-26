@@ -1,0 +1,30 @@
+## remove outlying data points
+rm_out <- function(y){
+  y <- as.numeric(y)
+  ny <- length(y)
+
+  if(ny < 5 & ny > 3){m <- mean(y, na.rm = T)
+  s <- sd(y, na.rm = T)
+  for(i in 1:(ny)){
+  if(y[i] < (m - 3*s) & y[i] > (m + 3*s)){y[i] <- NA}}
+  }
+
+  if(ny >5){
+  for(i in 1:(ny)){
+    if(i < 3){idx <- 1:5}
+    if(i > ny-3){idx <- (ny-5):ny}
+    if(i > 3 & i < ny-3){idx <- (i-2):(i+2)}
+
+    suby <- y[idx]
+    ok <- length(suby[!is.na(suby) & is.finite(suby)]) > 3
+    if(ok){
+      m <- mean(y[idx], na.rm = T)
+      s <- sd(y[idx], na.rm = T)
+      #replace outliers with missing value
+      if(is.finite(y[i])){
+        if(y[i] < (m - 3*s) & y[i] > (m + 3*s)){y[i] <- NA}}
+    }
+  }
+  }
+  y
+}

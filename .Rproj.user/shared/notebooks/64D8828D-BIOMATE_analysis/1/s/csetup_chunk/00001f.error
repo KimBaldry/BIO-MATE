@@ -1,1 +1,0 @@
-{"frames":[{"character_number":0,"end_character_number":0,"end_line_number":0,"file":"","func":"unique(substr(pig_files, 1, 12))","line_number":0},{"character_number":0,"end_character_number":0,"end_line_number":0,"file":"","func":"substr(pig_files, 1, 12)","line_number":0}],"message":"Error in substr(pig_files, 1, 12) : object 'pig_files' not found\n"}
