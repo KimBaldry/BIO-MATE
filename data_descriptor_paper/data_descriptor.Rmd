@@ -1,0 +1,82 @@
+---
+title: "BIO-MATE: A biological ocean data reformatting effort"
+author: 
+  name: |
+    [Kimberlee Baldry](kimberlee.baldry@utas.edu.au) <a href="https://orcid.org/0000-0003-3286-8624"><img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> $^{*,a}$
+    Robert Johnson <a href ="https://orcid.org/0000-0002-5915-5416"><img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> $^{b}$
+    Peter G. Strutton <a href="https://orcid.org/0000-0002-2395-9471"><img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /><a/> $^{a}$
+    Philip W. Boyd <a href="https://orcid.org/0000-0001-7850-1911"><img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /><a/> $^{a}$
+  
+  affiliation: |
+    $*$: Corresponding author. E-mail: kimberlee.baldry@utas.edu.au
+    $a$: Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Australia
+    $b$: Bureau National Operations Centre, Bureau of Meteorology, Hobart, Australia
+
+abstract: | 
+  Biological ocean data collected from ships find reuse within aggregations of historical data. These data are heavily relied upon to validate satellite algorithms for ocean biology and are useful in assessing the performance of autonomous platforms and bio-physical models. 
+  There is a need to combine subsurface biological and physical data into one aggregate data product to support reproducible research. This is provoked by an era where biogeochemical ocean models and autonomous observations are increasingly used in biological oceanography studies. Existing aggregate products are dissimilar in source data, have largely been isolated to the surface ocean and most also exhibit an absence of physical data. These products cannot easily be used to explore subsurface bio-physical relationships.
+  We present the first version of a biological ocean data reformatting effort (BIO-MATE). BIO-MATE is R software that reformats and aggregates openly sourced published datasets from oceanographic voyages (https://gitlab.com/KBaldry/BIO-MATE). Both biological and physical data from underway sensors, profiling sensors, pigments analysis and particulate organic carbon analysis are stored in BIO-MATE.
+
+bibliography: ["descriptor.bib"]
+output: html_document
+---
+
+# Background & Summary
+Marine phytoplankton blooms influence global climate through the biological carbon pump and support ocean food-webs (@schmitt2018; @ainley1991: @basu2018). Ocean physics and other environmental drivers control the timing, magnitude and extent of phytoplankton blooms through complex bio-physical relationships (@carranza2018; @prairie2012; @wihsgott2019; @brody2015). To study these bio-physical relationships integrated data structures that link biological and physical ocean data are needed. Ship-based data is the gold-standard for accurate biological oceanographic measurements (@mignot2019). These data are published separately to physical ocean data, stored across different repositories and information is held within multiple formats. This makes it difficult and time-consuming to aggregate and link biological and physical data. The described data product attempts to make this task easier.
+
+The biological ocean data reformatting effort (BIO-MATE) works to link existing, open-access biological and physical datasets across oceanographic voyages and promote their re-use. This has been done by developing R based software that not only reformats published datasets, but also cross-references between biological and physical data. The final data product thus allows users to easily access, manipulate and cite published ship-based datasets of different dimensions for multiple applications. 
+
+BIO-MATE can be accessed via the Australian Ocean Data Network (https://portal.aodn.org.au/). The aggregation includes data collected from shipboard underway sensors, profiling sensors mounted on sampling rosettes, lab analysis for phytoplankton pigments and lab analysis for particulate organic carbon (POC). These data are stored as four data streams within the product and are cross-referenced by unique expedition codes (EXPOCODE) and profile identifications (CTD_ID). An additional data stream contains metadata for the data product including a list of oceanographic voyages, investigator contact information, cruise reports, quality assurance plots and data citations for reformatted datasets. We have also included an aggregated data table for biological data. Users are required to refer to this metadata and cite all data products accessed through BIO-MATE, as well as the data product itself. We consulted the distribution licenses of all data sources and contacted authors for permissions where necessary to ensure that with this condition data is re-used lawfully.
+
+In the future BIO-MATE can be extended to include new cruises, new biological variables and an online interface to facilitate data submissions. Whilst currently restricted to voyages crossing the Southern Ocean, the product is formatted to facilitate a global database and for the addition of new biological parameters (e.g. microscopic abundances) in future versions. We chose to restrict this version of BIO-MATE to the Southern Ocean as it is historically underrepresented in previous aggregations of biological data: @valente2019, @sauzede2015, @davies2018, @uitz2006, MAREDAT (@peloquin2013) and NoMAD/SeaBASS (@SEABASS_1; @SEABASS_2; https://seabass.gsfc.nasa.gov/). This has led to a lack of understanding within analyses (@uitz2006) or the poor performance of models due to the unique biogeochemistry of the vast region (@sauzede2015; @johnson2013).
+
+To date, the data product has been used to address discrepancies in Southern Ocean satellite composites (Johnson et al. in prep), to understand how the response of in-situ fluorometers changes in the Southern Ocean (Baldry et al. in prep), and to investigate the role of ocean physics in mediating subsurface chlorophyll features (Baldry et al. in prep). These examples highlight the malleability of this data product to facilitate new understandings of biological oceanography in the Southern Ocean. Further uses include validating satellite observations (@valente2019; @johnson2013), developing new ways to validate in-situ bio-optical observations collected by autonomous profiling platforms in the presence of dynamic fronts (@sauzede2015b; @roesler2017; @mignot2019), training ocean state estimations (@verdy2017), informing bio-physical models () and using multi-variate analyses to understand bio-physical relationships ().
+
+We recognise the massive effort conducted by the oceanographic community in producing the thousands of data records within this data product. This includes the investigators and data officers who have spent countless hours in ship-time, project organisation, grant writing, laboratory analysis, post-processing data and report writing. Oceanographic data are often collected with regional studies in mind, but their value only increases with publication and re-use. We encourage all investigators to publish their data for re-use through data products like BIO-MATE.
+
+```{r method1, fig.cap = "a figure"}
+knitr::include_graphics("plot.png")
+```
+
+# Methods
+
+#### *Data Acquisition*
+Published datasets were identified within five data reprositories that host biological data (November 2019). The search term “chlorophyll” and a latitude bound of 30 $^\circ$S to 90 $^\circ$S was entered into PANGEA (https://www.pangaea.de/), SeaBASS (https://seabass.gsfc.nasa.gov/), the Australian Ocean Data Network (AODN, https://portal.aodn.org.au/), GLODAP (https://www.glodap.info/) and the Australian Antarctic Data Center (AADC, https://data.aad.gov.au/) to retrieve relevant data records. 
+
+From these data records, 'r length(all_expos)' relevant voyages were identified using unique 12-digit expedition codes (EXPOCODES) assigned as follows; National Oceanographic Data Centre (NODC) platform codes followed by voyage 8 digit start dates (YYYYMMDD). If the vessel name or voyage start/end dates were absent within data records, the information was obtained using the Google Search engine to discover further records (e.g. cruise reports). 
+
+Published datasets from these voages were openly sourced throgh CCHDO (https://cchdo.ucsd.edu/), PANGEA, SeaBASS, AODN, GLODAP and the AADC. These data includes records from 1) the vessels underway sensors 2) profiling sensors mounted to sampling rosettes 3) pigments measured in the laboratory and 4) POC measured in the laboratory. If a data record was not found within these repositories, a final search using the Google search engine was performed using keywords [i.e. ship name, synonyms for voyages, year, “underway”/ “CTD”, “chlorophyll”, ”POC”, “cruise report” and “data”]. Downloaded data files, and their ammendments, used in this version of BIO-MATE are not published within the product, but are available upon request to the corresponding author.
+
+#### *Reformatting data*
+Downloaded data files were reformatted to the WHP-Exchange format as described in (https://exchange-format.readthedocs.io/en/latest/index.html) using a semi-automated workflow and the BIO-MATE R software (https://github.com/KimBaldry/BIOMATE-Rpackage). The WHP-Exchange file format keeps metadata as multiple header names which is followed by a data table using pre-described headers. Pigment records were alternatively named according to the MAREDAT data product to conform with community expectations.
+
+The reformatted files are arranged into four data streams that include, for each EXPOCODE, 1) one WHP-Exchange file for underway sensors 2) a WHP-exchange file per profiling station for profiling sensors 3) one WHP-Exchange file for pigment measurements measured by a particular method and 4) one WHP-Exchange file for POC measurements measured by a particular method. Each data stream has its own reformatting function within the BIO-MATE R software (PIG_to_WHPE, PROF_to_WHPE, POC_to_WHPE).
+
+The semi-automated workflow was as follows. Downloaded data files were split by EXPOCODES if they existed in a larger dataset (e.g PALMER-LTER data records). Files for the profiling sensor data stream was further split into individual profiling events. Metadata was manually entered into a table to inform the reformatting software (https://gitlab.com/KimBaldry/BIO-MATE/product_data/processing_metadata) and perform a bulk run to reformat downloaded data files. Some manual reformatting of a small portion of downloaded data had to be performed on old datasets prior to the application of reformatting scripts due to formatting irregularities.
+
+#### *Matching profiling data*
+
+
+#### *Matching underway data*
+
+#### *Quality assurance*
+The initial integrity of these data records lies with the Principal Investigators of the published data record. As a result, reformatted data has varying levels of quality control and post-processing. We have included cruise report citations within our product to aid in data quality assurance efforts. Future versions of the product may include more detailed quality assurance assessments.
+
+# Data Records
+
+Reformatted files are arranged into four data streams: 1) underway sensors, 2) profile sensors, 3) pigments and 4) POC. These data streams are all stored on the IMAS data portal and are linked through unique EXPOCODES. Supporting data for these data streams contains a metadata table and BibTEX citation files.
+
+#### *Underway sensors*
+
+#### *Profiling sensors*
+
+#### *Pigments*
+
+#### *Particulate Organic Carbon*
+
+# Technical Validation
+
+# Usage Notes
+
+
+# References

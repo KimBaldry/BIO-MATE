@@ -1,3 +1,0 @@
-mean_5m <- function(depths, var, center = 0.25){
-  
-}
