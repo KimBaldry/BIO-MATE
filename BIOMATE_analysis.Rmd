@@ -164,8 +164,7 @@ CTD_df = data.frame("CTD_ID" = character(),"DATE" = character(), "TIME_s" = as.P
 
 
 ```{r}
- t_thresh = 6
- d_thresh = 1000
+
   # this small function prevents the drop of midnight 00:00:00
   calc.dist.min = function(x){
    mins = which.min(distGeo(c(unmatched_df_p$LON_analyser[x], unmatched_df_p$LAT_analyser[x]), as.matrix(CTD_df[,c("LON","LAT")])))[1]
@@ -209,11 +208,11 @@ for(ex in pig_expos){
 
   
       unmatched_df_t = sub_pig_data %>% filter(!is.na(TIME_analyser), !is.empty(TIME_analyser), !is.empty(DATE_analyser)) 
-      unmatched_df_t = unmatched_df_t[,c(1:64,67)] %>%
+      unmatched_df_t = unmatched_df_t[,-which(names(unmatched_df_t) %in% c("d_diff","t_diff"))] %>%
         mutate(time_m = as.POSIXct(paste(DATE_analyser,TIME_analyser), format = "%Y-%m-%d %H:%M:%S", tz = "UTC"))
       notime = ifelse(nrow(unmatched_df_t) == 0,T,F)
       unmatched_df_p = sub_pig_data %>% filter(!is.na(LAT_analyser))
-      unmatched_df_p = unmatched_df_p[,c(1:64,67)]
+      unmatched_df_p = unmatched_df_p[,-which(names(unmatched_df_p) %in% c("d_diff","t_diff"))]
       nopos = ifelse(nrow(unmatched_df_p) == 0,T,F)
       if(!nopos){
         ### match closest times
@@ -222,9 +221,7 @@ for(ex in pig_expos){
         #calculate time differences
         unmatched_df_t$closest_t = unlist(lapply(1:nrow(unmatched_df_t), calc.time.min))
         unmatched_df_t$t_diff = unlist(lapply(1:nrow(unmatched_df_t), calc.time.diff))
-
-          # check it is within 3 hours and assign CTD_ID
-          unmatched_df_t = unmatched_df_t %>% filter(!is.na(closest_t), t_diff < t_thresh)
+        unmatched_df_t = unmatched_df_t %>% filter(!is.na(closest_t))
 
           # Any matches?
           if(nrow(unmatched_df_t) > 0){
@@ -233,7 +230,7 @@ for(ex in pig_expos){
             if(is.empty(r)){r = CTD_df_sub$CTD_ID[nrow(CTD_df_sub)]}
             return(r)}))
             # join with data 2 IDs
-            joined_t = left_join(data.frame("STNCAST" = data2_stncast),unmatched_df_t , by = "STNCAST")
+            joined_t = left_join(data.frame("STNCAST" = data2_stncast),unmatched_df_t,which(names(unmatched_df_p) %in% c("STNCAST","d_diff","t_diff")) , by = "STNCAST")
           }}
 
 
@@ -243,8 +240,6 @@ for(ex in pig_expos){
         d_calc = lapply(1:nrow(unmatched_df_p), calc.dist.min)
         unmatched_df_p$dist_min  = unlist(lapply(d_calc,"[","min"))
         unmatched_df_p$d_diff = unlist(lapply(d_calc,"[","diff"))
-        # check within distance threshold
-        #unmatched_df_p  = unmatched_df_p %>% filter(d_diff < d_thresh)
 
 
         # Any matches?
@@ -258,22 +253,22 @@ for(ex in pig_expos){
           # get CTD_ID
           unmatched_df_p$CTD_ID = unlist(lapply(1:nrow(unmatched_df_p),function(x){CTD_df_sub$CTD_ID[unmatched_df_p$dist_min[x]]}))
           # join with data 2 IDs
-          joined_p = left_join(data.frame("STNCAST" = data2_stncast),unmatched_df_p[,64:65] , by = c("STNCAST"))
+          joined_p = left_join(data.frame("STNCAST" = data2_stncast),unmatched_df_p[,which(names(unmatched_df_p) %in% c("STNCAST","d_diff","t_diff"))] , by = c("STNCAST"))
           if(exists("joined_t")){
            # join with data 2 IDs
-           ## needs unique join columns. need to check if OK in PIG_to_WHPE
-          joined_t_p = left_join(joined_t,unmatched_df_p[,c("STNCAST","dist_min","d_diff")] , by = "STNCAST")
+          joined_t_p = left_join(joined_t,unmatched_df_p , by = "STNCAST")
           rm(joined_t)
           }else{joined_t_p = joined_p
           rm(joined_p)}
           }
-             
-      if(any(grepl(pattern = "d_diff", colnames(joined_t_p)))){
-        pig_data$d_diff[pig_data$EXPOCODE == ex] = joined_t_p$d_diff
-      }  
-      if(any(grepl(pattern = "t_diff", colnames(joined_t_p)))){
-        pig_data$t_diff[pig_data$EXPOCODE == ex] = joined_t_p$t_diff}
-        rm(joined_t_p)
+      if(exists("joined_t_p")){       
+        if(any(grepl(pattern = "d_diff", colnames(joined_t_p)))){
+          pig_data$d_diff[pig_data$EXPOCODE == ex] = joined_t_p$d_diff
+        }  
+        if(any(grepl(pattern = "t_diff", colnames(joined_t_p)))){
+          pig_data$t_diff[pig_data$EXPOCODE == ex] = joined_t_p$t_diff}
+          rm(joined_t_p)
+          }
 }}}
 ```
 
@@ -282,11 +277,18 @@ for(ex in pig_expos){
 # data descriptions
 ```{r}
 # row 1 = All, row 2 = subsurface profiles (>4 obs), row 3 = surface (<10 m)
+surf_pig = pig_data %>% filter(as.numeric(DEPTH) < 10)
+sub_pig = pig_data %>% mutate(nobs = length(which(pig_data$DEPTH)))
+unique = 
 # to add POC
 data_description = data.frame("voyages", "Records", "Unique",  "PhysicalMatches", "CTD", "PIG","HPLC", "Fluor", "Both", "CTDFluor", "CTDbbp", "CTDcp")
 
 # number of pig records
 
+data_description$Records = c(nrow(surf_pig),nrow(sub_pig),nrow(pig_data))
+
+# number of sampling points
+data_description$Unique = c(length(unique))
 # number of pig profiles
 
 # number of surface pigs

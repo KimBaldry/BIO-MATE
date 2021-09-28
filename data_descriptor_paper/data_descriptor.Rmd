@@ -18,25 +18,22 @@ abstract: |
   We present the first version of a biological ocean data reformatting effort (BIO-MATE). BIO-MATE is R software that reformats and aggregates openly sourced published datasets from oceanographic voyages (https://gitlab.com/KBaldry/BIO-MATE). Both biological and physical data from underway sensors, profiling sensors, pigments analysis and particulate organic carbon analysis are stored in BIO-MATE.
 
 bibliography: ["descriptor.bib"]
+csl: nature.csl
 output: html_document
 ---
 
 # Background & Summary
 Marine phytoplankton blooms influence global climate through the biological carbon pump and support ocean food-webs (@schmitt2018; @ainley1991: @basu2018). Ocean physics and other environmental drivers control the timing, magnitude and extent of phytoplankton blooms through complex bio-physical relationships (@carranza2018; @prairie2012; @wihsgott2019; @brody2015). To study these bio-physical relationships integrated data structures that link biological and physical ocean data are needed. Ship-based data is the gold-standard for accurate biological oceanographic measurements (@mignot2019). These data are published separately to physical ocean data, stored across different repositories and information is held within multiple formats. This makes it difficult and time-consuming to aggregate and link biological and physical data. The described data product attempts to make this task easier.
 
-The biological ocean data reformatting effort (BIO-MATE) works to link existing, open-access biological and physical datasets across oceanographic voyages and promote their re-use. This has been done by developing R based software that not only reformats published datasets, but also cross-references between biological and physical data. The final data product thus allows users to easily access, manipulate and cite published ship-based datasets of different dimensions for multiple applications. 
+The biological ocean data reformatting effort (BIO-MATE) works to link existing, open-access biological and physical datasets across oceanographic voyages and promote their re-use. This has been done by developing R based software that not only reformats published datasets, but also cross-references between biological and physical data (https://github.com/KimBaldry/BIOMATE-Rpackage). A final aggregate data product allows users to easily access, manipulate and cite published ship-based datasets of different dimensions for multiple applications. 
 
-BIO-MATE can be accessed via the Australian Ocean Data Network (https://portal.aodn.org.au/). The aggregation includes data collected from shipboard underway sensors, profiling sensors mounted on sampling rosettes, lab analysis for phytoplankton pigments and lab analysis for particulate organic carbon (POC). These data are stored as four data streams within the product and are cross-referenced by unique expedition codes (EXPOCODE) and profile identifications (CTD_ID). An additional data stream contains metadata for the data product including a list of oceanographic voyages, investigator contact information, cruise reports, quality assurance plots and data citations for reformatted datasets. We have also included an aggregated data table for biological data. Users are required to refer to this metadata and cite all data products accessed through BIO-MATE, as well as the data product itself. We consulted the distribution licenses of all data sources and contacted authors for permissions where necessary to ensure that with this condition data is re-used lawfully.
+The BIO-MATE aggregate data product can be accessed via the Australian Ocean Data Network (https://portal.aodn.org.au/). The aggregation includes data collected from shipboard underway sensors, profiling sensors mounted on sampling rosettes, lab analysis for phytoplankton pigments and lab analysis for particulate organic carbon (POC). These data are stored as four data streams within the product and are cross-referenced by unique expedition codes (EXPOCODE) and profile identifications (CTD_ID). An additional data stream contains metadata for the data product including a list of oceanographic voyages, investigator contact information, cruise reports, quality assurance plots and data citations for reformatted datasets. We have also included an aggregated data table for biological data. Users are required to refer to metadata and cite all data products accessed through BIO-MATE, as well as the BIO-MATE data product itself. We consulted the distribution licenses of all data sources to ensure that with this condition data is re-used lawfully.
 
 In the future BIO-MATE can be extended to include new cruises, new biological variables and an online interface to facilitate data submissions. Whilst currently restricted to voyages crossing the Southern Ocean, the product is formatted to facilitate a global database and for the addition of new biological parameters (e.g. microscopic abundances) in future versions. We chose to restrict this version of BIO-MATE to the Southern Ocean as it is historically underrepresented in previous aggregations of biological data: @valente2019, @sauzede2015, @davies2018, @uitz2006, MAREDAT (@peloquin2013) and NoMAD/SeaBASS (@SEABASS_1; @SEABASS_2; https://seabass.gsfc.nasa.gov/). This has led to a lack of understanding within analyses (@uitz2006) or the poor performance of models due to the unique biogeochemistry of the vast region (@sauzede2015; @johnson2013).
 
 To date, the data product has been used to address discrepancies in Southern Ocean satellite composites (Johnson et al. in prep), to understand how the response of in-situ fluorometers changes in the Southern Ocean (Baldry et al. in prep), and to investigate the role of ocean physics in mediating subsurface chlorophyll features (Baldry et al. in prep). These examples highlight the malleability of this data product to facilitate new understandings of biological oceanography in the Southern Ocean. Further uses include validating satellite observations (@valente2019; @johnson2013), developing new ways to validate in-situ bio-optical observations collected by autonomous profiling platforms in the presence of dynamic fronts (@sauzede2015b; @roesler2017; @mignot2019), training ocean state estimations (@verdy2017), informing bio-physical models () and using multi-variate analyses to understand bio-physical relationships ().
 
 We recognise the massive effort conducted by the oceanographic community in producing the thousands of data records within this data product. This includes the investigators and data officers who have spent countless hours in ship-time, project organisation, grant writing, laboratory analysis, post-processing data and report writing. Oceanographic data are often collected with regional studies in mind, but their value only increases with publication and re-use. We encourage all investigators to publish their data for re-use through data products like BIO-MATE.
-
-```{r method1, fig.cap = "a figure"}
-knitr::include_graphics("plot.png")
-```
 
 # Methods
 
@@ -66,6 +63,9 @@ The initial integrity of these data records lies with the Principal Investigator
 
 Reformatted files are arranged into four data streams: 1) underway sensors, 2) profile sensors, 3) pigments and 4) POC. These data streams are all stored on the IMAS data portal and are linked through unique EXPOCODES. Supporting data for these data streams contains a metadata table and BibTEX citation files.
 
+								
+
+
 #### *Underway sensors*
 
 #### *Profiling sensors*
@@ -77,6 +77,41 @@ Reformatted files are arranged into four data streams: 1) underway sensors, 2) p
 # Technical Validation
 
 # Usage Notes
+The community is welcome to contribute to the development of BIO-MATE software and to contribute published data to the aggregation. Outlined below are some notes on how the community can do this BIO-MATE and the intended use of the BIO-MATE aggregation in scientific studies. 
+
+#### *Contributing to BIO-MATE software development*
+It is recommended that changes to BIO-MATE be made within the GitHub environment. Contributors can fork the existing BIO-MATE repository and make changes directly to the source code. Once changes are made, they can be directed back to the BIO-MATE repository and released as an updated version of BIO-MATE. If the BIO-MATE source code is to be significantly developed, we suggest that the corresponding author is contacted and a hand-over of the software is negotiated. We encourage the addition of new data streams to BIO-MATE, the expansion of BIO-MATE capabilities, the addition of quality assurances and increases in software efficiency. 
+
+#### *Contributing data to BIO-MATE*
+Users can submit published biological ocean data to BIO-MATE using the R shiny app. Once data is submitted it can be downloaded by the user and is automatically held in the BIO-MATE GitHub repository for future addition into the product. We ask that all data submitted to BIO-MATE is published elsewhere and that users enter an accurate citation for the data they are submitting. 
+For large data submissions, users can create their own workflows using the BIO-MATE R package to reformat data and information described in Figure 2. Once data has been reformatted, it can be submitted to the corresponding author via GitHub or direct communication.
+Currently, BIO-MATE only supports data files stored in text-delimited formats, with structured headers and columns in a data table, and NetCDF format. The user is required to enter in some metadata to inform the software on input formats. 
+
+#### *Recommended use in Data Analyses*
+We encourage the use of the data aggregate product as a new integrated database of biological and physical data. Data files from selected voyages can be identified using unique EXPOCODES. This makes it easy to use multiple data streams in analysis, by indexing files across these EXPOCODES. Alternatively, the selection tool on the IMAS repository, or the included shapefile helps users to select voyages using spatial bounds.
+Limited quality assurance has been performed on the BIO-MATE aggregate product and is highly variable across published datasets. It is recommended that users process data using their own quality assurance procedures, suitable for their unique data analysis. This allows a range of users to benefit from the BIO-MATE aggregate product and ensures data remains to the standard it was published at.
+
+# Code Availablility
+All data processing was performed in R software (Version 1.1.423). The BIO-MATE R software is freely available (https://github.com/KimBaldry/BIOMATE-Rpackage). The semi-automated workflow and accompanying processing data used to construct the data product, along with the code used to create the data decrioptor is freely accessible via Git Hub (https://github.com/KBaldry/BIO-MATE).
+
+# Aknowledgements
+This research was supported under Australian Research Council's Special Research Initiative for Antarctic Gateway Partnership (Project ID SR140300001) and a 2019 Fellowship from the Scientififc Committee of Antarctic Research. Data included in the data product was made available by the following data repositories; PANGEAE, AODN, SeaBASS, CCHDO, AADC. Records of data access dates, source addresses and digital object identifiers are recorded as metadata within the product, alongside appropriate data citations. We acknowledge the enormous community effort undertaken in the collection, analysis and publication of this data and thank principle investigators for publishing their data in open access repositories.
+
+# Author Contributions
+KB designed the data product, performed the data aggregation and wrote the manuscript. RJ contributed to the data product design and manuscript edits.
+
+# Competing Interests
+The authors of this manuscript declare no conflicts of interest.
+
+# Figures
+
+# Figure Legends
+
+# Tables
+
+```{r abstract, fig.cap = "a figure"}
+knitr::include_graphics("F1_BIO-MATE.png")
+```
 
 
 # References

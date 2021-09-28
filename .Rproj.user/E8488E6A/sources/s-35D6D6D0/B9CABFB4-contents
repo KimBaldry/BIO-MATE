@@ -1,0 +1,11 @@
+---
+title: "Reference_test"
+output: html_document
+bibliography: 33LG20010104.bib 
+csl: apa.csl
+nocite: '@*'
+---
+
+blah [@33LG20010104_report_a]
+
+#References
