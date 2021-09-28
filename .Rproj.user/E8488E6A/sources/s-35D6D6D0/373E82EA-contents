@@ -353,7 +353,7 @@ beep(sound = 3)
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C1"),userID = "IMASUTASKB", row_start = 28)
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C1"),userID = "IMASUTASKB", row_start = 27, row_end = 27)
 beep(sound = 3)
 ```
 
@@ -383,7 +383,7 @@ beep(sound = 3)
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C3"),userID = "IMASUTASKB")
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C3"),userID = "IMASUTASKB", row_start = 18)
 beep(sound = 3)
 ```
 

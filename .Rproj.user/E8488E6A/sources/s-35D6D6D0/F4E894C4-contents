@@ -114,4 +114,10 @@ knitr::include_graphics("F1_BIO-MATE.png")
 ```
 
 
+```{r method, fig.cap = "a figure"}
+knitr::include_graphics("Method.png")
+```
+
+
+
 # References

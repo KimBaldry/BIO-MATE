@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "3611498422",
     "id" : "F4E894C4",
-    "lastKnownWriteTime" : 1632787970,
-    "last_content_update" : 1632787970802,
+    "lastKnownWriteTime" : 1632791713,
+    "last_content_update" : 1632791713308,
     "path" : "~/Projects/BIO-MATE/BIO-MATE/data_descriptor_paper/data_descriptor.Rmd",
     "project_path" : "data_descriptor_paper/data_descriptor.Rmd",
     "properties" : {
-        "cursorPosition" : "22,3",
-        "scrollLine" : "17"
+        "cursorPosition" : "120,0",
+        "scrollLine" : "98"
     },
     "relative_order" : 2,
     "source_on_save" : false,
