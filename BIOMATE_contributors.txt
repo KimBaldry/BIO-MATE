@@ -1,0 +1,5 @@
+Name	Affiliation	OrcID	Contribution	Notes
+Kimberlee Baldry	"Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Australia"	0000-0003-3286-8624	Owner	Corresponding author. E-mail: kimberlee.baldry@utas.edu.au
+Robert Johnson	"Bureau National Operations Centre, Bureau of Meteorology, Hobart, Australia"	0000-0002-5915-5416	Software	
+Peter G. Strutton	"Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Australia"	0000-0002-2395-9471	Supervisor	
+Philip W. Boyd	"Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, Australia"	/0000-0001-7850-1911	Supervisor	
