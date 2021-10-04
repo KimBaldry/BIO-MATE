@@ -255,7 +255,7 @@ colnames(p_meta) = c("Processing metadata variable", "Data stream/s","Descriptio
   
 knitr::kable(p_meta) %>% kable_paper("striped", full_width = F) %>% pack_rows("File format information", 1,7)  %>% pack_rows("Data aquisition information", 8,15) %>% pack_rows("Location data information", 16,41) %>%  pack_rows("Profiling sensor data information", 42,61) %>% pack_rows("Pigment and POC data information", 62,105)
 
-save(p_meta, file = "metadata_info.rda")
+save(p_meta, file = "metadata_info.RData")
 ```
 
 

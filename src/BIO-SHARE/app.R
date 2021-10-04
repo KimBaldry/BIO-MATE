@@ -66,6 +66,7 @@ ui <- navbarPage(
 
 # 2.server function
 server <- function(input, output){
+  load(url("https://github.com/KimBaldry/BIO-MATE/blob/main/data_descriptor_paper/metadata_info.rda"))
   file_paths = reactive({ # this should be where the files are stored not their names 
     req(input$upload)
     
@@ -75,8 +76,21 @@ server <- function(input, output){
   })
   
 #  split_delim_file(dirname(file_paths), input$upload$name, input$delim, input$line_start, input$expo_split, input$synonym_var_name, input$station_split, input$station_var_name, input$fillcell)
+  observe({
+    if (!is.null(input$hot)) {
+      p_meta = hot_to_r(input$hot)
+    } else {
+      if (is.null(values[["p_meta"]]))
+        p_meta <- p_meta
+      else
+        p_meta <- values[["p_meta"]]
+    }
+    values[["p_meta"]] <- p_meta
+  })
   
   
+  output$hot =  renderRHandsontable({p_meta$`User entry`
+    rhandsontable(p_meta) %>% hot_col(c(1:4), readOnly = TRUE)})
   # output$download <- downloadHandler(
   #   filename = function(){
   #     paste0(input$text,".zip")
