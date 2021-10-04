@@ -4111,8 +4111,6 @@
 "2","NAs introduced by coercion"
 "2","NAs introduced by coercion"
 "2","collapsing to unique 'x' values"
-"2","Error in file(out, ""wt"") : cannot open the connection
-"
 "2","NAs introduced by coercion"
 "2","NAs introduced by coercion"
 "2","collapsing to unique 'x' values"
@@ -5347,8 +5345,6 @@
 "2","NAs introduced by coercion"
 "2","NAs introduced by coercion"
 "2","collapsing to unique 'x' values"
-"2","Error in file(out, ""wt"") : cannot open the connection
-"
 "2","NAs introduced by coercion"
 "2","NAs introduced by coercion"
 "2","collapsing to unique 'x' values"
@@ -8819,8 +8815,6 @@
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
-"2","Error in file(out, ""wt"") : cannot open the connection
-"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
@@ -9348,8 +9342,6 @@
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
-"2","Error in file(out, ""wt"") : cannot open the connection
-"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
@@ -9885,8 +9877,6 @@
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
-"2","Error in file(out, ""wt"") : cannot open the connection
-"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
@@ -11315,11 +11305,6 @@
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
-"2","Warning in doTryCatch(return(expr), name, parentenv, handler) :"
-"2","
- "
-"2"," restarting interrupted promise evaluation
-"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
@@ -11388,8 +11373,6 @@
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
-"2","Error in file(out, ""wt"") : cannot open the connection
-"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
@@ -12398,8 +12381,6 @@
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
-"2","Error in file(out, ""wt"") : cannot open the connection
-"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
@@ -12418,9 +12399,6 @@
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
-"2","collapsing to unique 'x' values"
-"2","Error in file(out, ""wt"") : cannot open the connection
-"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"
 "2","collapsing to unique 'x' values"

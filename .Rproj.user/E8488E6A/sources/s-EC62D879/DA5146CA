@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1632700843886.000,
+    "created" : 1633325040397.000,
     "dirty" : false,
     "encoding" : "UTF-8",
-    "folds" : "34|6|52|0|\n59|6|61|0|\n63|6|67|0|\n70|6|81|0|\n87|6|110|0|\n113|6|127|0|\n131|6|141|0|\n146|6|148|0|\n152|6|189|0|\n193|6|206|0|\n210|6|223|0|\n227|6|249|0|\n253|6|292|0|\n298|6|310|0|\n315|6|319|0|\n",
-    "hash" : "1366362186",
-    "id" : "373E82EA",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DA5146CA",
     "lastKnownWriteTime" : 1632805509,
-    "last_content_update" : 1632805509637,
+    "last_content_update" : 1632805509,
     "path" : "~/Projects/BIO-MATE/BIO-MATE/BIO-MATE.Rmd",
     "project_path" : "BIO-MATE.Rmd",
     "properties" : {
@@ -16,7 +16,7 @@
         "cursorPosition" : "385,177",
         "scrollLine" : "379"
     },
-    "relative_order" : 1,
+    "relative_order" : 7,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_markdown"

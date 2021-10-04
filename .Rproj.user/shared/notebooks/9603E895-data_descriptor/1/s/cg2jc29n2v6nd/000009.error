@@ -1,0 +1,1 @@
+{"frames":[{"character_number":0,"end_character_number":0,"end_line_number":0,"file":"","func":"save(p_meta, file = \"./data_descriptor_paper/metadata_info.rda\")","line_number":0},{"character_number":0,"end_character_number":0,"end_line_number":0,"file":"","func":"gzfile(file, \"wb\")","line_number":0}],"message":"Error in gzfile(file, \"wb\") : cannot open the connection\n"}

@@ -1,0 +1,69 @@
+"0","p_meta = p_meta %>% 
+  add_row(variable = ""file_type"", stream = ""all"", description = ""The format of the file/s"", input = ""text delim or netcdf"") %>%   
+  add_row(variable = ""path"", stream = ""all"", description = ""A path to where the file/s is stored"", input = ""A pathname that is R compatible"") %>%   
+  add_row(variable = ""extention"", stream = ""all"", description = ""The extension of the file/s to be ingested"", input = ""text delim or netcdf"") %>%   
+  add_row(variable = ""delim"", stream = ""all"", description = ""Only fill if rectangular text-delimited file/s."", input = ""rect"") %>%  
+  add_row(variable = ""header_sep"", stream = ""all"", description = ""A separated used in headers of the file. Headers often store location data in profiling datasets and need extraction. Can be left empty."", input = ""colon, comma, dash, equals, space"") %>%  
+  add_row(variable = ""missing_value"", stream = ""all"", description = ""The value or character used to indicate a missing value"", input = ""rect"") %>%  
+  add_row(variable = ""not_detected"", stream = ""PIG, POC"", description = ""The value or character used to indicate an ocean variable was not detected in analysis."", input = """") %>%  
+  
+  add_row(variable = ""EXPOCODE"", stream = ""all"", description = ""The EXPOCODE of the voyage associated with the data."", input = ""12-digit code"") %>%
+  add_row(variable = ""source"", stream = ""all"", description = ""The data repository the data files are published in"", input = ""The short name of the data repository used within BIO-MATE. See https://github.com/KimBaldry/BIO-MATE/product_data/supporting_information/BIOMATE_SOURCES.txt."") %>%
+  add_row(variable = ""PI"", stream = ""all"", description = ""The principle investigator/s responsible for the published dataset"", input = ""Names sepparated by a dash"") %>%
+    add_row(variable = ""Institution"", stream = ""all"", description = ""The institution/s who collected the data"", input = ""Names sepparated by a dash"") %>%
+  add_row(variable = ""contact"", stream = ""all"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""citation"", stream = ""all"", description = ""The BIO-MATE citation tag/s used to reference a BibTEX entry for the published dataset"", input = ""A BIO-MATE citation tag"") %>%
+  add_row(variable = ""analysis_type"", stream = ""PIG, POC"", description = ""The type of analysis used to on water samples for the published dataset"", input = ""A code to reference an analysis type. See https://github.com/KimBaldry/BIO-MATE/product_data/supporting_information/BIOMATE_METHODS.txt"") %>%
+  add_row(variable = ""Method"", stream = ""PIG, POC"", description = ""The method used to analyse water samples for the published dataset"", input = ""A code to reference a method. See https://github.com/KimBaldry/BIO-MATE/product_data/supporting_information/BIOMATE_METHODS.txt"") %>%
+  
+  add_row(variable = ""TZ"", stream = ""all"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""STNNBR"", stream = ""all"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""CASTNO"", stream = ""all"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""DATE"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""DATE_analyser"", stream = ""PIG, POC"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""DATE_format"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""DATE_analyser_format"", stream = ""PIG, POC"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""TIME"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""TIME_s"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""TIME_b"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""TIME_e"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""TIME_analyser"", stream = ""PIG, POC"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""TIME_format"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""TIME_b_format"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""TIME_analyser_format"", stream = ""PIG, POC"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""Sample_ID"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""LATITUDE_s"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""LATITUDE_b"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""LATITUDE_e"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""LONGITUDE_s"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""LONGITUDE_b"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""LONGITUDE_e"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""LAT_analyser"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""LON_analyser"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""POSITION_format"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  add_row(variable = ""BOTTLE"", stream = ""PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  
+  add_row(variable = ""CTDPRS"", stream = ""PROF"", description = ""The name of the variable for pressure collected by the profiling sensor"", input = ""Text"") %>%
+  add_row(variable = ""CTDPRS_u"", stream = ""PROF"", description = ""The units for pressure collected by the profiling sensor"", input = ""Text"") %>%
+  add_row(variable = ""CTDTMP"", stream = ""PROF"", description = ""The name of the variable for temperature collected by the profiling sensor"", input = ""Text"") %>%
+  add_row(variable = ""CTDTMP_u"", stream = ""PROF"", description = ""The units for temperature collected by the profiling sensor"", input = ""Text"") %>%
+  add_row(variable = ""CTDSAL"", stream = ""PROF"", description = ""The name of the variable for salinity collected by the profiling sensor"", input = ""Text"") %>%
+  add_row(variable = ""CTDSAL_u"", stream = ""PROF"", description = ""The units for salinity collected by the profiling sensor"", input = ""Text"") %>%
+  add_row(variable = ""CTDOXY"", stream = ""PROF"", description = ""The name of the variable for oxygen collected by the profiling sensor"", input = ""Text"") %>%
+  add_row(variable = ""CTDOXY_u"", stream = ""PROF"", description = ""The units for oxygen collected by the profiling sensor"", input = ""Text"") %>%
+  add_row(variable = ""CTDFLUOR"", stream = ""PROF"", description = ""The name of the variable for oxygen collected by the profiling sensor"", input = ""Text"") %>%
+  add_row(variable = ""CTDFLUOR_u"", stream = ""PROF"", description = ""The units for oxygen collected by the profiling sensor"", input = ""Text"") %>%
+      add_row(variable = ""CTDOXY"", stream = ""PROF"", description = ""The name of the variable for oxygen collected by the profiling sensor"", input = ""Text"") %>%
+  add_row(variable = ""CTDOXY_u"", stream = ""PROF"", description = ""The units for oxygen collected by the profiling sensor"", input = ""Text"") %>%
+      add_row(variable = ""CTDOXY"", stream = ""PROF"", description = ""The name of the variable for oxygen collected by the profiling sensor"", input = ""Text"") %>%
+  add_row(variable = ""CTDOXY_u"", stream = ""PROF"", description = ""The units for oxygen collected by the profiling sensor"", input = ""Text"") %>%
+  
+  
+  add_row(variable = ""Underway_ID"", stream = ""PIG, PROF"", description = ""A contact for the published dataset"", input = ""E-mail address"") %>%
+  
+  
+knitr::kable(p_meta) %>% kable_paper(""striped"", full_width = F) %>% pack_rows(""File format information"", 1,7)  %>% pack_rows(""Data aquisition information"", 8,16) %>% pack_rows(""Location data"", 17,31) %>%  pack_rows(""Ocean data"", 32,) 
+"
+"2","Error in switch(format, pandoc = ""simple"", markdown = ""pipe"", format) : 
+  EXPR must be a length 1 vector
+"
