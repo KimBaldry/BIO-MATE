@@ -183,7 +183,7 @@ p_meta = p_meta %>%
   add_row(variable = "POSITION_format", stream = "PROF, PIG, POC", description = "The format of latitude and longitude data.", input = "A string describing the format made up of %deg (degrees), %min (minutes), %sec (seconds) and %pos (for N/S/E/W specification)") %>%
   add_row(variable = "Sample_ID", stream = "PIG, POC", description = "The name of the variable containing sample identification.", input = "Text") %>%
   add_row(variable = "BOTTLE", stream = "PIG, POC", description = "The name of the variable containing bottle identifications.", input = "Text") %>%
-  add_row(variable = "Underway_ID", stream = "PIG, PROF", description = "How underway samples are identified within the dataset. Leave blank if there are no underway values within the dataset.", input = "[variable name]-[value] or all") %>%  
+  add_row(variable = "Underway_ID", stream = "PIG, POC", description = "How underway samples are identified within the dataset. Leave blank if there are no underway values within the dataset.", input = "[variable name]-[value] or all") %>%  
   
   add_row(variable = "CTDPRS", stream = "PROF", description = "The name of the variable for pressure collected by the profiling sensor.", input = "Text") %>%
   add_row(variable = "CTDPRS_u", stream = "PROF", description = "The units for pressure collected by the profiling sensor.", input = "Text") %>%
@@ -251,11 +251,11 @@ p_meta = p_meta %>%
         add_row(variable = "Phide_a", stream = "PIG", description = "The name of the variable for HPLC derived phaeophorbide a.", input = "Text") %>%
   add_row(variable = "Phytin_a", stream = "PIG", description = "The name of the variable for HPLC derived phaeophytin a.", input = "Text")
   
-colnames(p_meta) = c("Processing metadata variable", "Data stream/s","Description", "Input" )  
+colnames(p_meta) = c("Processing metadata variable", "Data stream/s","Description", "Input Guide" )  
   
 knitr::kable(p_meta) %>% kable_paper("striped", full_width = F) %>% pack_rows("File format information", 1,7)  %>% pack_rows("Data aquisition information", 8,15) %>% pack_rows("Location data information", 16,41) %>%  pack_rows("Profiling sensor data information", 42,61) %>% pack_rows("Pigment and POC data information", 62,105)
 
-save(p_meta, file = "metadata_info.rda")
+save(p_meta, file = "metadata_info.RData")
 ```
 
 

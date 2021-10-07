@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "FB1A06C3",
-    "lastKnownWriteTime" : 1633337142,
-    "last_content_update" : 1633338419475,
+    "lastKnownWriteTime" : 1633555814,
+    "last_content_update" : 1633557568843,
     "path" : "~/Projects/BIO-MATE/BIO-MATE/data_descriptor_paper/data_descriptor.Rmd",
     "project_path" : "data_descriptor_paper/data_descriptor.Rmd",
     "properties" : {
-        "cursorPosition" : "258,0",
-        "scrollLine" : "240",
+        "cursorPosition" : "182,53",
+        "scrollLine" : "176",
         "source_window_id" : ""
     },
     "relative_order" : 8,
