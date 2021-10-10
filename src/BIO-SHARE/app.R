@@ -12,6 +12,7 @@ library(dplyr)
 library(rhandsontable)
 
 load(url("https://github.com/KimBaldry/BIO-MATE/raw/main/data_descriptor_paper/metadata_info.RData"))
+load(url("https://github.com/KimBaldry/BIO-MATE/raw/main/product_data/next_version/package_data/BIOMATE.rda"))
 
 p_meta$`User input` = ""
 p_meta = p_meta[,c(1:2,5,4:3)]
@@ -19,13 +20,24 @@ p_meta = p_meta[,c(1:2,5,4:3)]
 # 1. user interface object
 ui <- navbarPage(
  "BIO-SHARE",
-  tabPanel("Upload files", 
+ ################# Upload published data ###########################
+  tabPanel("Upload published data", 
            fluidPage(
              p("Upload published data files. BIO-SHARE can only handle processing one data stream at a time."),
-             fileInput("upload_PROF", NULL, accept = c(".csv", ".tsv",".tab",".nc",".all",".sb",".txt"),multiple = T), 
+             fileInput("upload", NULL, accept = c(".csv", ".tsv",".tab",".nc",".all",".sb",".txt"),multiple = T), 
              #selectInput("run_expocode", label = "EXPOCODE", choices(c("new", ))) # reference to existing expocodes in package metadata
-             selectInput("stream", label = "Data stream to run", choices = c("PROF", "PIG"))
+             selectInput("stream", label = "Data stream to ingest", choices = c("PROF", "PIG")),
+             p("Information is needed to properly cite the data"),
+             selectInput("source",label = "Source citation", choices = c("new source",source_info$source)), # translate to p_meta
+             conditionalPanel(condition = "input.source == 'new source'", 
+                              rHandsontableOutput("hot_source"), 
+                              fileInput("upload_source", "BibTEX files for source", accept = c(".bib"),multiple = T)),            
+             checkboxInput("showsource","Show existing BIO-MATE data sources"),
+             conditionalPanel(condition = "input.showsource == true", dataTableOutput("source_info"))
+             
+             
            )),
+########### Split files ########################################
   tabPanel("Split files",
            fluidPage(
              p("Fill in the below information to split your file. Note to use the split function for multiple streams, enter the information for one data stream then select run. After this do the same for the next data stream."),
@@ -48,16 +60,7 @@ ui <- navbarPage(
            selectInput("fillcell", "Fill cells", choices = c("T","F"), selected = "F"),
            p("logical. If TRUE then in case the rows have unequal length, blank fields are implicitly added. See 'fill' and 'Details' in 'read.table' for more information.")
            )), 
- tabPanel("Upload BibTEX files", 
-          fluidPage(
-            p("Profiling sensor citation"),
-            
-            p("Pigment data citation"), 
-            
-            p("Source citation"),
-            
-            p("Pigment method")
-          )), 
+ ### Enter metadata #####################################################
   tabPanel("Enter metadata",
            fluidPage(#p("EXPOCODE metadata") # check dates and ship to see if exists in system
              p("File format information"),
@@ -100,7 +103,7 @@ td.style.background = 'lightblue';
 server <- function(input, output){
   # check existence of EXPOCODE and stream data in the system
 
-  
+ ############## Upload published data #################### 
   file_paths = reactive({ # this should be where the files are stored not their names 
     req(input$upload)
     
@@ -108,6 +111,8 @@ server <- function(input, output){
     if(all(ext %in% c("csv", "tsv","tab","nc","all","sb","txt"))){input$upload$datapath
            }else{validate("Invalid file; Please upload a supported file: .all, .sb, .csv, .tab, .txt, .nc. Submit an issue to https://github.com/KimBaldry/BIO-MATE if you would like another file format supported in BIO-MATE.")}
   })
+  
+  output$source_info = renderDataTable(source_info) 
   
 #  split_delim_file(dirname(file_paths), input$upload$name, input$delim, input$line_start, input$expo_split, input$synonym_var_name, input$station_split, input$station_var_name, input$fillcell)
 
