@@ -180,7 +180,7 @@ p_meta = p_meta %>%
   add_row(variable = "LONGITUDE_e", stream = "PROF", description = "The name of the variable for longitude at the end of the profiling cast.", input = "Text") %>%
   add_row(variable = "LAT_analyser", stream = "PIG, POC", description = "The name of the variable for latitude recorded by the analyser.", input = "Text") %>%
   add_row(variable = "LON_analyser", stream = "PIG, POC", description = "The name of the variable for longitude recorded by the analyser.", input = "Text") %>%
-  add_row(variable = "POSITION_format", stream = "PROF, PIG, POC", description = "The format of latitude and longitude data.", input = "A string describing the format made up of %deg (degrees), %min (minutes), %sec (seconds) and %pos (for N/S/E/W specification)") %>%
+  add_row(variable = "POSITION_format", stream = "all", description = "The format of latitude and longitude data.", input = "A string describing the format made up of %deg (degrees), %min (minutes), %sec (seconds) and %pos (for N/S/E/W specification)") %>%
   add_row(variable = "Sample_ID", stream = "PIG, POC", description = "The name of the variable containing sample identification.", input = "Text") %>%
   add_row(variable = "BOTTLE", stream = "PIG, POC", description = "The name of the variable containing bottle identifications.", input = "Text") %>%
   add_row(variable = "Underway_ID", stream = "PIG, POC", description = "How underway samples are identified within the dataset. Leave blank if there are no underway values within the dataset.", input = "[variable name]-[value] or all") %>%  
