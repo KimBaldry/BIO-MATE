@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1633996910743.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E0D30456",
+    "lastKnownWriteTime" : 1633894936,
+    "last_content_update" : 1633996913186,
+    "path" : "~/Projects/BIO-MATE/BIO-MATE/data_descriptor_paper/data_descriptor.Rmd",
+    "project_path" : "data_descriptor_paper/data_descriptor.Rmd",
+    "properties" : {
+        "cursorPosition" : "258,0",
+        "scrollLine" : "247",
+        "source_window_id" : ""
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
