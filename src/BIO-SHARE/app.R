@@ -40,26 +40,25 @@ ui <- navbarPage(
            fluidPage(
              p("Upload published data files. BIO-SHARE can only handle processing one data stream at a time."),
              fileInput("upload", NULL, accept = c(".csv", ".tsv",".tab",".nc",".all",".sb",".txt"),multiple = T), 
-             verbatimTextOutput("error1"),
+             conditionalPanel(condition = "!is.null(output.error1)",textOutput("error1")),
              #selectInput("run_expocode", label = "EXPOCODE", choices(c("new", ))) # reference to existing expocodes in package metadata
              selectInput("stream", label = "Data stream to ingest", choices = c("PROF", "PIG")),
              p("Information is needed to properly cite the data"),
              ## Source Information
              selectInput("source",label = "Source citation", choices = c("new source",source_info$source)), # translate to p_meta
              conditionalPanel(condition = "input.source == 'new source'", 
-                              rHandsontableOutput("hot_source")), 
+                              rHandsontableOutput("hot_source")) ,
                         
              checkboxInput("showsource","Show existing BIO-MATE data sources", value = F),
-             conditionalPanel(condition = "input.showsource == true", dataTableOutput("source_info")), 
+             conditionalPanel(condition = "input.showsource == true", dataTableOutput("source_info_out")),
              ## Method information
-             conditionalPanel(condition = "input.stream == 'PIG'", 
-                              selectInput("method",label = "Method citation", choices = c("new method",method_info$Method)), # translate to p_meta
-             conditionalPanel(condition = "input.method == 'new method'", 
-                              rHandsontableOutput("hot_method")), 
-             
+             conditionalPanel(condition = "input.stream == 'PIG'", selectInput("method",label = "Method citation", choices = c("new method",method_info$Method))), # translate to p_meta
+             conditionalPanel(condition = "input.method == 'new method' ",
+                              rHandsontableOutput("hot_method")),
+
              checkboxInput("showmethod","Show existing BIO-MATE pigment measurement methods"),
-             conditionalPanel(condition = "input.showmethod == true", dataTableOutput("method_info"))), 
-             
+             conditionalPanel(condition = "input.showmethod == true", dataTableOutput("method_info_out")),
+
              fileInput("upload_bibtex", "BibTEX file/s", accept = c(".bib"),multiple = T)
              
              
@@ -139,18 +138,18 @@ server <- function(input, output, session){
 
   
   observeEvent(input$upload,{
-    ext <- tools::file_ext(input$upload$name)
+    ext_tmp <- tools::file_ext(input$upload$name)
     
-    values$ext <- paste(".",ext,sep = "")
+    values$ext <- paste(".",ext_tmp,sep = "")
     values$file_path = unique(dirname(input$upload$datapath))
     output$error1 <- renderText({
-      validate(need(all(ext %in% c("csv", "tsv","tab","nc","all","sb","txt")),"Invalid file; Please upload a supported file: .all, .sb, .csv, .tab, .txt, .nc. Submit an issue to https://github.com/KimBaldry/BIO-MATE if you would like another file format supported in BIO-MATE."))
+      validate(need(all(ext_tmp %in% c("csv", "tsv","tab","nc","all","sb","txt")),"Invalid file; Please upload a supported file: .all, .sb, .csv, .tab, .txt, .nc. Submit an issue to https://github.com/KimBaldry/BIO-MATE if you would like another file format supported in BIO-MATE."))
     })
  })
 
   
   ## sourceinfomation
-  output$source_info = renderDataTable(source_info)
+  output$source_info_out = renderDataTable(source_info)
   new_source = data.frame("source" = character(), "citations"= character(), "url"= character(), "aknowledgement" = character(), stringsAsFactors = F)
   new_source[1,] =  NA
 
@@ -192,7 +191,7 @@ server <- function(input, output, session){
 
   output$hot_method = renderRHandsontable(rhandsontable(new_method))
 
-  output$method_info = renderDataTable(method_info)
+  output$method_info_out = renderDataTable(method_info)
 
 
   ### read BibTEX files
@@ -266,16 +265,10 @@ server <- function(input, output, session){
        p_meta$`User input`[which(p_meta$`Processing metadata variable` == "extention")] = values$ext
      }
 
-    if(input$source != "new source"){
-      p_meta$`User input`[which(p_meta$`Processing metadata variable` == "source")] = input$source
-    }
-    if(input$method != "new method"){
-      p_meta$`User input`[which(p_meta$`Processing metadata variable` == "Method")] = input$method
-    }
-    if(!is.null(input$hot_source) & input$source == "new source"){
+    if(!is.null(input$hot_source)){
       p_meta$`User input`[which(p_meta$`Processing metadata variable` == "source")] = values$new_source$source
     }
-    if(!is.null(input$hot_method) & input$method == "new method"){
+    if(!is.null(input$hot_method)){
       p_meta$`User input`[which(p_meta$`Processing metadata variable` == "Method")] = values$new_method$Method
       p_meta$`User input`[which(p_meta$`Processing metadata variable` == "analysis_type")] = values$new_method$analysis_type
     }
@@ -324,9 +317,9 @@ server <- function(input, output, session){
     {dir.create(out_dir)}
     write.csv(process_meta, file.path(out_dir, paste(input$stream, "_meta.csv", sep = "")))
     if(input$stream == "PROF"){
-      BIOMATE::PROF_to_WHPE(outdir,file.path(local_out,"reformatted_data","BIO-SHARE" ))
+      BIOMATE::PROF_to_WHPE(outdir,file.path(local_out,"reformatted_data" ))
     }
-    if(input$stream == "PIG"){BIOMATE::PIG_to_WHPE(outdir,file.path(local_out,"reformatted_data","BIO-SHARE" ))}
+    if(input$stream == "PIG"){BIOMATE::PIG_to_WHPE(outdir,file.path(local_out,"reformatted_data" ))}
 
   })
   

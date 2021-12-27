@@ -1,0 +1,254 @@
+# Make standard rectangular distribution maps of BGC-Argo data
+# Author: K. Baldry
+# Created: 01 Jun 2020
+
+# this creates a temporary file for the GIF creation - remember to
+write("TMP = 'E:/Temp'", file=file.path(Sys.getenv('R_USER'), '.Renviron'))
+# to change back 
+write("TMP = 'C:/Users/kabaldry/AppData/Local/Temp'", file=file.path(Sys.getenv('R_USER'), '.Renviron'))
+
+
+
+# required packages
+library(data.table)
+library(RCurl)
+library(dplyr)
+library(marmap)
+library(ggmap)
+library(scales)
+library(ggpubr)
+library(raster)
+library(ncdf4)
+library(viridis)
+library(rgeos)
+library(rgdal)
+library(SOmap)
+library(rworldmap)
+library(broom)
+library(gifski)
+library(ggplot2)
+library(gganimate)
+library(tidyr)
+library(magick)
+
+# output images here
+out_folder = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/SCAR Fellowship/Tutorials/Data distribution"
+
+# read in the index file for BGC-Argo s-files [tutorial examples downloaded on 01/06/2020]
+url = "ftp://ftp.ifremer.fr/ifremer/argo/" 
+profiles = fread(paste(url,"argo_synthetic-profile_index.txt",sep = ""),sep = ",",header =T,sep2 = F)
+# only select ascending profiles
+# profiles with file names ending wit "D" indicate that the profile was taken on descent
+profiles <- profiles %>%  dplyr::filter(!(substr(basename(file),14,14) == "D")) # remove profiles taken on decsent
+
+### Bathymetry data
+# get NOAA bathymetry for the map 
+# this part takes a couple of minuites
+# bathy = getNOAA.bathy(lat1 =-90, lat2 = 90, lon1 = 180, lon2 = -180)
+# bathy2 = fortify.bathy(bathy)
+
+### Participating countries data
+theCountries <- c("USA", "GBR", "CAN","IND","FRA","AUS","ITA","DEU","ZAF","CHN","JPN","BRA")
+# These are the ISO3 names of the parcitipating countries
+countDF <- data.frame(country = theCountries,
+                    participation = rep(1, length(theCountries)))
+Map <- joinCountryData2Map(countDF, joinCode = "ISO3",
+                              nameJoinColumn = "country")
+map_data = tidy(Map)
+sub_Map =Map@data[,c("ADMIN","ISO3","participation")]
+colnames(sub_Map)[1] = c("id")
+map_data = data.table(left_join(map_data, sub_Map))
+
+#map_data$plot_col = as.factor(map_data$plot_col)
+### baseplot
+# This forms the base of all distribution maps - points are overlaid onto this map
+# because we are producing a global map - we will just use 
+baseWO =  ggplot() +
+  #geom_raster(data = bathy2, aes(x = x, y=y, fill = z)) +
+  geom_polygon(data =map_data, aes(x = long, y = lat, group = group),fill ="#80cdc1", colour = "#80cdc1") +
+  # we just plot red polygons over the top to avoid having to use scale_fill twice
+  geom_polygon(data =map_data[participation == 1], aes(x = long, y = lat, group = group), fill = "#018571", colour = "#80cdc1", lwd = 2) +
+  #scale_fill_gradient(limits = c(-5000,0),oob=squish, low = "steelblue2", high = "white")+
+  xlab("") + 
+  ylab("") +
+  geom_point(data = profiles, aes(x=longitude, y=latitude), col = "#dfc27d", cex = 3) +
+  # Adds axes
+  # Change theme to remove axes and ticks
+  theme(panel.background = element_blank(),legend.position = "none",
+        panel.grid.minor = element_blank(),axis.ticks=element_blank(), axis.text = element_blank())
+
+
+# note that there are some missing values for lat and lon 
+# these are likeley under-ice measurements that havent had position interpolated
+## create plots
+#one for each variable and save to the ouput folder
+# overlay points for each parameter
+var = c("DOXY", "NITRATE", "CHLA", "PH_IN_SITU_TOTAL", "DOWNWELLING_PAR")
+for(sp in var){
+  sub_prof = profiles  %>%  dplyr::filter(grepl(sp,parameters))
+  f = file.path(out_folder,paste("bgc_argo_",sp, "_dist.jpg",sep = ""))
+  ggsave(filename = f, plot = baseWO + geom_point(data = sub_prof, aes(x=longitude, y=latitude), col = "#a6611a", cex = 3), device = "jpeg", width = 80, height = 55, units = "cm")
+
+}
+
+### create GIF
+profiles = profiles %>% mutate(FloatID = unlist(strsplit(file, split = "/"))[seq(2,length(unlist(strsplit(file, split = "/"))),4)])
+profiles = profiles %>% mutate(dateR = as.POSIXct(as.character(date), format = "%Y%m%d%H%M%S"))
+profiles = profiles %>% filter(latitude != 99999, !is.na(dateR))
+
+# GIF
+
+baseGIF = ggplot() +
+  #geom_raster(data = bathy2, aes(x = x, y=y, fill = z)) +
+  geom_polygon(data =map_data, aes(x = long, y = lat, group = group),fill ="#80cdc1", colour = "#80cdc1") +
+  # we just plot red polygons over the top to avoid having to use scale_fill twice
+  geom_polygon(data =map_data[participation == 1], aes(x = long, y = lat, group = group), fill = "#018571", colour = "#80cdc1", lwd = 2) +
+  #scale_fill_gradient(limits = c(-5000,0),oob=squish, low = "steelblue2", high = "white")+
+  xlab("") + 
+  ylab("") +
+  geom_point(data = profiles, aes(x=longitude, y=latitude, group = FloatID), col = "#a6611a" , cex = 5) +
+  # Adds axes
+  # Change theme to remove axes and ticks
+  theme(panel.background = element_blank(),legend.position = "none",
+        panel.grid.minor = element_blank(),axis.ticks=element_blank(), axis.text = element_blank(),
+        plot.title = element_text(size = 72, colour = "#018571"))
+# build final ggplot object
+GIFfinal = baseGIF + transition_time(dateR) + shadow_mark(colour = "#dfc27d", cex = 3)+
+  labs(title = '{frame_time}')
+
+# code to display cumulative  number of profiles as a title: title =  paste("#profiles =",'{length(which(profiles$dateR <= frame_time))}')
+
+
+## play with res
+ggsave(file.path(out_folder, "test.jpg"), plot =baseGIF , width = 31.5, height = 21.6,  quality = 75, device = "jpeg")
+
+
+# create animation
+anim = animate(GIFfinal, width = 40, height = 26, units = "cm", res = 60 ,device = "png", end_pause = 50, renderer = magick_renderer(), nframes = 300, duration = 60)
+# before png res = 120
+### track number of active floats and cumulative number of profiles
+# now I want to create two sub-plots to go beside my world anumation
+# to do this I will use the information from the previous animation and create a new animation aligned to this
+# get the frame information
+frame_info = frame_vars(anim)
+frame_info= frame_info[1:(nrow(frame_info) - 50),]
+# add cumulative profiles 
+cum = function(x){length(which(profiles$dateR <= x))}
+frame_info = frame_info %>% mutate(cum_prof = unlist(lapply(frame_time, FUN = cum)))
+# add active float status
+floats = unique(profiles$FloatID)
+float_status = matrix(0, nrow = nrow(frame_info), ncol = length(floats))
+
+
+for(sp in 1:ncol(float_status)){
+  # for each float
+  # find min_time
+  min_t = min(profiles$dateR[profiles$FloatID == floats[sp]])
+  # find max time
+  max_t = max(profiles$dateR[profiles$FloatID == floats[sp]])
+  # place a 1 in the frame slots
+  idx = which(frame_info$frame_time >= min_t & frame_info$frame_time <= max_t)
+  float_status[idx,sp] = 1
+  }
+frame_info$n_float = rowSums(float_status)
+# last timestep isnt complete, replace with val from previous timestep
+frame_info$n_float[nrow(frame_info)] = frame_info$n_float[nrow(frame_info) -1] 
+
+baseGIF2 = ggplot() +
+  xlab("Time") +
+  ylab("") +
+  geom_line(data = frame_info, aes(x=frame_time, y=cum_prof), col = "#a6611a" , cex = 5) +
+
+  # Adds axes
+  # Change theme to remove axes and ticks
+  theme_bw() + theme(legend.position = "none",plot.title = element_text(size = 60, colour = "#018571"),
+                     panel.grid = element_line(colour = "#80cdc1", size = 2),
+                     panel.border = element_rect(colour = "#018571",size = 3), axis.ticks = element_line(colour = "#018571",size = 2),
+                     axis.ticks.length = unit(0.75,"cm"), axis.text.y = element_text(size = 38, colour = "#018571"), axis.title = element_blank(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
+
+GIFfinal2 = baseGIF2 + transition_reveal(frame_time) + labs(title = paste("#profiles =",'{frame_info$cum_prof[which(frame_info$frame_time == frame_along)]}'))
+
+
+
+# create animation
+anim2 = animate(GIFfinal2, width = 40, height = 26, units = "cm", res = 120,device = "png", end_pause = 50, renderer = magick_renderer(), nframes = 300, duration = 60)
+
+
+baseGIF3 = ggplot() +
+  xlab("Time") +
+  ylab("") +
+  geom_line(data = frame_info, aes(x=frame_time, y=n_float), col = "#a6611a" , cex = 5) +
+  
+  # Adds axes
+  # Change theme to remove axes and ticks
+  theme_bw() + theme(legend.position = "none",plot.title = element_text(size = 60, colour = "#018571"),
+                     panel.grid = element_line(colour = "#80cdc1", size = 2),
+                     panel.border = element_rect(colour = "#018571",size = 3), axis.ticks = element_line(colour = "#018571",size = 2),
+                     axis.ticks.length = unit(0.75,"cm"), axis.text = element_text(size = 38, colour = "#018571"), axis.title = element_text(size = 52, colour = "#018571"))
+
+GIFfinal3 = baseGIF3 + transition_reveal(frame_time) + labs(title = paste("#active floats =",'{frame_info$n_float[which(frame_info$frame_time == frame_along)]}'))
+
+
+# create animation
+anim3 = animate(GIFfinal3, width = 40, height = 29, units = "cm", res = 120,device = "png", end_pause = 50, renderer = magick_renderer(), nframes = 300, duration = 60)
+
+
+
+### combine GIFs
+#if using gifski_render
+# a_mgif <- image_read(anim)
+# b_mgif <- image_read(anim2)
+# c_mgif <- image_read(anim3)
+
+# if using magick_renderer
+a_mgif <- anim
+b_mgif <- anim2
+c_mgif <- anim3
+
+int_gif<-image_append(c(b_mgif[1], c_mgif[1]),stack = T)
+new_gif<-image_append(c(a_mgif[1], int_gif))
+for(i in 2:300){
+  int_gif<-image_append(c(b_mgif[i], c_mgif[i]),stack = T)
+  combined <- image_append(c(a_mgif[i], int_gif))
+  new_gif<-c(new_gif,combined)
+}
+
+image_write_video(new_gif, path = file.path(out_folder,"world_bgc_argo_movie.mp4"), framerate = 300/60)
+
+anim_save(filename = file.path(out_folder, "world_bgc_argo_animate_all_Sep2020.gif"),animation = new_gif)
+
+# optimise doesnt work...
+#new_gif_anim = image_animate(new_gif, fps = 300/60, optimize = T)
+
+anim_save(filename = file.path(out_folder, "test.gif"),animation = anim)
+
+# this doesnt work - cant get facet labeller to call dynamic variable 
+###__________________
+# plot_data = gather(frame_info[,c("frame_time","n_float", "cum_prof")],var,val,n_float:cum_prof)
+# colnames(plot_data)[1] = "time"
+# 
+# baseGIF2 = ggplot() +
+#   xlab("Time") + 
+#   ylab("") +
+#   geom_line(data = plot_data, aes(x=time, y=val), col = "#a6611a" , cex = 5) +
+#   
+#   # Adds axes
+#   # Change theme to remove axes and ticks
+#   theme_bw() + theme(legend.position = "none",strip.text = element_text(size = 52, colour = "#018571"), 
+#                           strip.background = element_rect(colour = "#018571",size = 3, fill = "white"), panel.grid = element_line(colour = "#80cdc1", size = 2),
+#                      panel.border = element_rect(colour = "#018571",size = 3), axis.ticks = element_line(colour = "#018571",size = 2),
+#                      axis.ticks.length = unit(0.75,"cm"), axis.text = element_text(size = 38, colour = "#018571"), axis.title = element_text(size = 52, colour = "#018571"))
+# 
+# GIFfinal2 = baseGIF2 + transition_reveal(time) +facet_wrap(~var,scales = "free_y",nrow = 2, labeller = label_parsed(labels =  c('eval({frame_along})', "A")))
+# 
+# # create animation
+# anim2 = animate(GIFfinal2, width = 40, height = 55, units = "cm", res = 120,device = "png", end_pause = 50, renderer = gifski_renderer(), nframes = 300, duration = 60)
+#________________________
+
+
+
+
+
+
+
+

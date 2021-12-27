@@ -1,0 +1,231 @@
+BA = read.csv(file.path("C:/Users/kabaldry/Documents/PhD/Introduction_review/Data","BGC_Argo_11022020.csv"), header = T, stringsAsFactors = F)
+
+
+
+
+#ARGO
+data_CTD = BA %>% filter(min_d <20, !is.na(MLD), !is.na(surf_val), isNight == "N", FZ_insitu %in% c("AZ","PFZ","SAFZ","SAZ","STZ"), !is.na(LAT))
+data_CTD$FZ_sokolov = data_CTD$FZ_insitu
+data_CTD$SCM_in = as.numeric(factor(data_CTD$SCM, levels = c("N","Y")))-1
+data_CTD$MM_p = data_CTD$MM + 6
+data_CTD$MM_p[data_CTD$MM_p > 12] = data_CTD$MM_p[data_CTD$MM_p > 12] - 12
+br_colours = c(rgb(140,81,10,maxColorValue = 255),rgb(216,179,101,maxColorValue = 255),rgb(240,232,195,maxColorValue = 255),rgb(199,234,229,maxColorValue = 255),rgb(90,180,172,maxColorValue = 255),rgb(1,102,94,maxColorValue = 255))
+data_CTD = data_CTD %>% mutate(DOY = as.numeric(as.Date(paste(sprintf("%02d",DD),sprintf("%02d",MM),YYYY , sep = ""), 
+                                                        format = "%d%m%Y") - as.Date(paste("01","07",YYYY - round((13-MM)/13), sep = ""), format = "%d%m%Y")))
+
+
+BR_data_CTD = data_CTD
+BR_data_CTD$Br = BR_data_CTD$FZ_sokolov
+###### Seasonal plot ###########
+## set up 
+n_seas_obs = stats::aggregate(BR_data_CTD$SCM, by = list(BR_data_CTD$MM), FUN = length)
+max_sa = max(n_seas_obs$x)/0.6
+n_seas_obs = stats::aggregate(BR_data_CTD$SCM, by = list(BR_data_CTD$MM, BR_data_CTD$Br), FUN = length)
+n_seas_SCM = stats::aggregate(BR_data_CTD$SCM[BR_data_CTD$SCM=="Y"], by = list(BR_data_CTD$MM[BR_data_CTD$SCM=="Y"], BR_data_CTD$Br[BR_data_CTD$SCM=="Y"]), FUN = length)
+# only plot proportion of SCM when there are more than ten profiles in a month bin
+n_seas_obs = n_seas_obs[which(n_seas_obs$x > 10),]
+n_seas_obs = left_join(n_seas_obs,n_seas_SCM, by = c("Group.1", "Group.2"))
+n_seas_obs$x.y[is.na(n_seas_obs$x.y)]= 0
+n_seas_prop = data.frame(n_seas_obs[,1], n_seas_obs[,2], n_seas_obs$x.y/n_seas_obs$x.x)
+all_names = data.frame(c(rep(c(1:12),5)), c(rep("AZ",12),rep("PFZ",12),rep("SAFZ",12),rep("SAZ",12),rep("STZ",12)))
+colnames(all_names) = c("MM","BR")
+colnames(n_seas_prop) = c("MM","BR","prop")
+n_seas_prop = left_join(all_names,n_seas_prop, by =c("MM","BR") )
+n_seas_prop$BR = as.factor(n_seas_prop$BR)
+n_seas_prop$BR = factor(n_seas_prop$BR, levels = levels(n_seas_prop$BR))
+n_seas_prop$prop = n_seas_prop$prop*max_sa
+#rearrange months variable fro plot to plot months Jul-June
+n_seas_prop$MM_p = n_seas_prop$MM + 6
+n_seas_prop$MM_p[n_seas_prop$MM_p > 12] = n_seas_prop$MM_p[n_seas_prop$MM_p > 12] - 12
+BR_data_CTD$MM_p = BR_data_CTD$MM + 6
+BR_data_CTD$MM_p[BR_data_CTD$MM_p > 12] = BR_data_CTD$MM_p[BR_data_CTD$MM_p > 12] - 12
+
+## plot
+seas_p = ggplot() + geom_bar(data = BR_data_CTD, aes(x = as.factor(MM_p)), fill = "grey69") + geom_line(data = n_seas_prop, aes(x=MM_p, y = prop ,colour = BR), lwd = 1.2)+
+  geom_point(data = n_seas_prop, aes(x=MM_p, y = prop ,colour = BR), cex = 2)+
+  theme(panel.background = element_blank(),legend.position = "top",
+        panel.grid.major = element_blank(),plot.title = element_text( size=12), axis.title.x =  element_text(size = 14),  axis.text.x = element_text(size = 14), 
+        axis.text.y.left  = element_text(size = 14),axis.text.y.right = element_text(size = 14, colour = "grey69"), axis.title.y = element_text(size = 14))+ 
+  scale_x_discrete(labels = c("J","A","S","O","N","D","J","F","M","A","M","J"), breaks = c(1:12))  + 
+  scale_y_continuous(name = "% SCM in region",breaks = seq(0,0.6*max_sa,0.2*max_sa), labels = seq(0,60,20),sec.axis = sec_axis(~., name = "number of observations", labels = seq(0,1000,250), breaks = seq(0,1000,250))) +
+  scale_color_manual("Region",values = br_colours[c(4:5,2,1,6)]) + xlab("Month") + 
+  theme(axis.line.y.right  = element_line(color="grey69", size = 1),
+        axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
+  )#legend.position = "none")
+
+
+
+
+
+
+
+
+
+s1 = mgcv::gam(SCM_in ~ s(DOY), data = data_CTD, family = binomial(logit))
+saz = mgcv::gam(SCM_in ~ s(DOY), data = data_CTD[which(data_CTD$FZ_sokolov == "AZ"),], family = binomial(logit))
+spfz = mgcv::gam(SCM_in ~ s(DOY), data = data_CTD[which(data_CTD$FZ_sokolov == "PFZ"),], family = binomial(logit))
+ssafz = mgcv::gam(SCM_in ~ s(DOY), data = data_CTD[which(data_CTD$FZ_sokolov == "SAFZ"),], family = binomial(logit))
+ssaz = mgcv::gam(SCM_in ~ s(DOY), data = data_CTD[which(data_CTD$FZ_sokolov == "SAZ"),], family = binomial(logit))
+#sstz = mgcv::gam(SCM_in ~ s(DOY), data = data_CTD[which(data_CTD$FZ_sokolov == "STZ"),], family = binomial(logit))
+
+
+# data_CTD$DOY2 = sin(data_CTD$DOY*pi/360*365/360)
+# model2 <- glm(SCM_in ~ (DOY, family = binomial(link = "logit"),
+#               data = data_CTD)
+pred1 = data.frame("DOY" =seq(2,345,0.1))
+Pred = predict(s1, newdata = pred1, type = "response", se.fit = T) 
+PredTbl = data.frame("DOY" = pred1, "fit" = unlist(Pred$fit), "se.fit" = unlist(Pred$se.fit))
+
+Pred1 = predict(saz, newdata = pred1, type = "response", se.fit = T) 
+PredTbl1 = data.frame("DOY" = pred1, "fit" = unlist(Pred1$fit), "se.fit" = unlist(Pred1$se.fit))
+Pred2 = predict(spfz, newdata = pred1, type = "response", se.fit = T) 
+PredTbl2 = data.frame("DOY" = pred1, "fit" = unlist(Pred2$fit), "se.fit" = unlist(Pred2$se.fit))
+Pred3 = predict(ssafz, newdata = pred1, type = "response", se.fit = T) 
+PredTbl3 = data.frame("DOY" = pred1, "fit" = unlist(Pred3$fit), "se.fit" = unlist(Pred3$se.fit))
+Pred4 = predict(ssaz, newdata = pred1, type = "response", se.fit = T) 
+PredTbl4 = data.frame("DOY" = pred1, "fit" = unlist(Pred4$fit), "se.fit" = unlist(Pred4$se.fit))
+#Pred5 = predict(sstz, newdata = pred1, type = "response", se.fit = T) 
+#PredTbl5 = data.frame("DOY" = pred1, "fit" = unlist(Pred5$fit), "se.fit" = unlist(Pred5$se.fit))
+
+library(tidymv)
+
+JFdata = data_CTD[which(data_CTD$MM %in% c(1,2)),]
+data_poly = data.frame("x" = c(min(JFdata$DOY),max(JFdata$DOY),max(JFdata$DOY),min(JFdata$DOY)),"y" = c(0,0,1,1))
+DOY1 = ggplot()  + geom_polygon(data = data_poly,aes(x=x,y=y), fill = "lightgrey", alpha = 0.3)+ 
+  geom_smooth_ci(data = PredTbl, aes(DOY, fit), ci_alpha = 0.5 ) + geom_rug(sides = "b",data = data_CTD, aes(DOY), inherit.aes = F)+ geom_point(data = data_CTD, aes(DOY,SCM_in), col = "#01665e")+
+  geom_smooth_ci(data = PredTbl1, aes(DOY, fit), ci_alpha = 0.5, col = br_colours[1], inherit.aes = F) + 
+  geom_smooth_ci(data = PredTbl2, aes(DOY, fit), ci_alpha = 0.5, col = br_colours[2] , inherit.aes = F) + 
+  geom_smooth_ci(data = PredTbl3, aes(DOY, fit), ci_alpha = 0.5, col = br_colours[3] , inherit.aes = F) + 
+  geom_smooth_ci(data = PredTbl4, aes(DOY, fit), ci_alpha = 0.5, col = br_colours[4] , inherit.aes = F) + 
+  #geom_smooth_ci(data = PredTbl5, aes(DOY, fit), ci_alpha = 0.5, col = br_colours[5] ) + 
+  geom_path(data = PredTbl, aes(DOY, fit),lwd = 1, inherit.aes = F) +
+  geom_path(data = PredTbl1, aes(DOY, fit),lwd = 1, col = br_colours[1], inherit.aes = F) +
+  geom_path(data = PredTbl2, aes(DOY, fit),lwd = 1, col = br_colours[2], inherit.aes = F) +
+  geom_path(data = PredTbl3, aes(DOY, fit),lwd = 1, col = br_colours[3], inherit.aes = F) +
+  geom_path(data = PredTbl4, aes(DOY, fit),lwd = 1, br_colours[4], inherit.aes = F) +
+  #geom_path(data = PredTbl, aes(DOY, fit),lwd = 1, br_colours[5]) +
+  scale_y_continuous(name = "Proportion of SCM occurance", sec.axis = sec_axis(~., breaks = c(0,1), labels = c("No SCM", "SCM")))+ 
+  xlab(expression(paste("Days since 1"^"st", " of July")))+  theme(axis.line.y.right  = element_blank(),
+        axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_blank()
+        ,panel.background = element_blank(),legend.position = "top",
+        panel.grid.major = element_blank(),plot.title = element_text( size=12), axis.title.x =  element_text(size = 12),  axis.text.x = element_text(size = 10), 
+        axis.text.y.left  = element_text(size = 10),axis.text.y.right = element_text(size = 12), axis.title.y = element_text(size = 12))
+
+
+# set clip latitude here
+clip_lat = -30
+# read map data 
+path = "C:/Users/kabaldry/Documents/PhD/PhD_Data/SOmap"
+coast_polys = readOGR(dsn = file.path(path,"polygons_trim30S"),layer = "polygons_trim30S")
+coast_polysdf = fortify(coast_polys)
+
+
+
+# create extent references for two projections (cartesian and stereographic)
+extent_p = data.frame("x"=c(0,90,180,-90), "y" = rep(clip_lat,4))
+extent_p1 = data.frame("x"=c(0,90,180,-90), "y" = c(clip_lat,clip_lat,-90,-90))
+coordinates(extent_p1) <- ~x+y
+projection(extent_p1) <- "+proj=longlat +datum=WGS84"
+coordinates(extent_p) <- ~x+y
+projection(extent_p) <- "+proj=longlat +datum=WGS84"
+extent_p2 = spTransform(extent_p,SOmap()$projection)
+extent_p2 = as.data.frame(extent_p2)
+extent_p2 = extent(extent_p2)
+
+# download bathymetry data and convert to data frame to stereographic coordinates
+
+
+bathy = getNOAA.bathy(lat1 = -30, lat2 = -90, lon1 = 180, lon2 = -180, resolution = 3)
+bathy2 = fortify.bathy(bathy)
+coordinates(bathy2) <- ~x+y
+projection(bathy2) <- "+proj=longlat +datum=WGS84"
+bathySO = spTransform(bathy2,SOmap()$projection)
+# rasterize to make square again in new coordinates and convert to data frame. fill with 1000m height
+rast = raster(x = bathySO, resolution = 10000)
+bathySOrast = rasterize(bathySO, rast, field = "z", fun = mean, background = -100000)
+bathySOdf = as(bathySOrast, "SpatialPixelsDataFrame")
+bathySOdf = as.data.frame(bathySOdf)
+# # save bathy DF for plot 
+# write.csv(bathySOdf, file.path("C:/Users/kabaldry/Documents/PhD/PhD_Data/SOmap/bathy_df","bathymetry_SO_trim30S.csv"), row.names = F)
+
+base_map = SOgg(SOmap(trim = clip_lat))
+base_map$bathy = NULL
+base_map$bathy_legend = NULL
+base_map$scale_fill= NULL
+base_map_gg = plot(base_map)
+
+data_SCM = data_CTD %>% filter(SCM == "Y")
+data_noSCM = data_CTD %>% filter(SCM == "N")
+coords_noSCM = data_noSCM[,c("LON","LAT", "DOY","MM")]
+coords_noSCM$DOY = round(coords_noSCM$DOY/30)*30
+coords_noSCM$MM_p = coords_noSCM$MM + 6
+coords_noSCM$MM_p[coords_noSCM$MM_p > 12] = coords_noSCM$MM_p[coords_noSCM$MM_p > 12] - 12
+
+coords_SCM = data_SCM[,c("LON","LAT","DOY","FZ_sokolov","MM")]
+coords_SCM$DOY = round(coords_SCM$DOY/30)*30
+coords_SCM$sz = data_SCM$SCM_val - data_SCM$surf_val +1
+coords_SCM$MM_p = coords_SCM$MM + 6
+coords_SCM$MM_p[coords_SCM$MM_p > 12] = coords_SCM$MM_p[coords_SCM$MM_p > 12] - 12
+
+colnames(coords_SCM) = c("LON","LAT")
+coordinates(coords_SCM) <- ~LON+LAT #check right way round
+projection(coords_SCM) <- "+proj=longlat +datum=WGS84"
+coords_SCM = data.frame(spTransform(coords_SCM,SOmap()$projection))
+
+colnames(coords_SCM)[1:5] = c("DOY", "FZ_sokolov","MM","sz","MM_p")
+colnames(coords_noSCM) = c("LON","LAT")
+coordinates(coords_noSCM) <- ~LON+LAT #check right way round
+projection(coords_noSCM) <- "+proj=longlat +datum=WGS84"
+coords_noSCM = data.frame(spTransform(coords_noSCM,SOmap()$projection))
+colnames(coords_noSCM)[1:3] = c("DOY","MM","MM_p")
+
+map = base_map_gg + 
+  stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-2000,0), geom = "polygon", fill = "lightgrey")+
+  geom_polygon(data = coast_polysdf,aes(x= long, y = lat, group = group), fill = "darkgrey" ,size = 2) + 
+  geom_point(data = coords_noSCM, aes(x = LON, y = LAT), col = "black", pch = 16) + 
+  geom_point(data = coords_SCM, aes(x = LON, y = LAT, col = FZ_sokolov, size = sz*2), pch = 16) +
+  scale_color_manual(values = br_colours[c(4:5,2,1,6)])
+
+
+
+anim_save(file.path("C:/Users/kabaldry/Documents/PhD/Introduction_review/Figures/Phenology","DOY_prog.GIF"),map + transition_time(DOY) +
+  labs(title = "Day: {frame_time}"),duration = 36)
+
+
+invisible(saveGIF({
+for(mn in c(6:12,1:5)){
+
+  step = which(c(6:12,1:5) == mn)
+  seas_p = ggplot() + geom_bar(data = BR_data_CTD, aes(x = as.factor(MM_p)), fill = "grey69") + geom_line(data = n_seas_prop[which(n_seas_prop$MM_p <= step),], aes(x=MM_p, y = prop ,colour = BR), lwd = 1.2)+
+    geom_point(data = n_seas_prop[which(n_seas_prop$MM_p <= step),], aes(x=MM_p, y = prop ,colour = BR), cex = 2)+
+    theme(panel.background = element_blank(),legend.position = "top",
+          panel.grid.major = element_blank(),plot.title = element_text( size=12), axis.title.x =  element_text(size = 14),  axis.text.x = element_text(size = 14), 
+          axis.text.y.left  = element_text(size = 14),axis.text.y.right = element_text(size = 14, colour = "grey69"), axis.title.y = element_text(size = 14))+ 
+    scale_x_discrete(labels = c("J","A","S","O","N","D","J","F","M","A","M","J"), breaks = c(1:12))  + 
+    scale_y_continuous(name = "% SCM in region",breaks = seq(0,0.8*max_sa,0.2*max_sa), labels = seq(0,80,20), limits = c(0,0.8*max_sa),sec.axis = sec_axis(~., name = "number of observations", labels = seq(0,1000,250), breaks = seq(0,1000,250))) +
+    scale_color_manual("Region",values = br_colours[c(4:5,2,1,6)]) + xlab("Month") + 
+    theme(axis.line.y.right  = element_line(color="grey69", size = 1),
+          axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
+    )#legend.position = "none")
+  
+  
+  map = base_map_gg + 
+    stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-2000,0), geom = "polygon", fill = "lightgrey")+
+    geom_polygon(data = coast_polysdf,aes(x= long, y = lat, group = group), fill = "darkgrey" ,size = 2) + 
+    geom_point(data = coords_noSCM[which(coords_noSCM$MM_p == step ),], aes(x = LON, y = LAT), col = "black", pch = 16) + 
+    geom_point(data = coords_SCM[which(coords_SCM$MM_p == step ),], aes(x = LON, y = LAT, col = FZ_sokolov, size = sz*2), pch = 16) +
+    scale_color_manual(values = br_colours[c(4:5,2,1,6)]) + theme(legend.position = "none")
+  
+  print(ggarrange(seas_p,map, nrow = 1, ncol = 2,widths = c(1,1)))
+}
+
+
+}, movie.name = "BGC_Argo_monthly.gif", interval = 1, ani.width = 900, ani.height = 300))
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1637097230995.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "16AD0E44",
+    "lastKnownWriteTime" : 1581442397,
+    "last_content_update" : 1637099559877,
+    "path" : "~/PhD/Ch4_SCM/SRC/Phenology.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "158,33",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

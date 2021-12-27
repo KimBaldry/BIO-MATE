@@ -1,0 +1,11 @@
+"0","```r
+library(magrittr)
+library(ggfortify)
+data_CTD$SCMdiff = data_CTD$SCM_val - data_CTD$surf_val
+data_CTD$SCM_norm = SCM_val/SCM_d
+df_mds = data_CTD[which(data_CTD$SCM == \"Y\"),c(\"SCMdiff\",\"SCM_norm\",\"SCM_d\",\"Br\")]
+
+
+autoplot(prcomp(df_mds[,1:3]),data = df_mds, colour = 'Br',, loadings = TRUE,loadings.label = TRUE)
+
+```"

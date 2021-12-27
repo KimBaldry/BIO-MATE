@@ -1,0 +1,92 @@
+# This collates data into CTD profiles
+path = "C:/Users/kabaldry/Documents/PhD/Introduction_review/Data"
+# read combined data
+data = read.csv(file.path(path,"combined_AAD_MAREDAT_GLODAPv2_100919.csv"), header = T, stringsAsFactors = F)
+data$A = paste(data$Cruise,data$Source, data$CTD.ID, data$Latitude..S., data$Longitude)
+data_CTD = data %>% dplyr::filter(is.finite(CHLA_1))
+data_CTD = data_CTD[order(data_CTD$A),]
+n_obs = stats::aggregate(data_CTD$Depth, by = list(data_CTD$A), FUN = length)
+min_d = stats::aggregate(data_CTD$Depth, by = list(data_CTD$A), FUN = min)
+max_d = stats::aggregate(data_CTD$Depth, by = list(data_CTD$A), FUN = max)
+data_CTD = data_CTD[!duplicated(data_CTD$A),c(1:8,11:12,17)]
+data_CTD$nobs = n_obs$x[order(n_obs$Group.1)]
+data_CTD$min_d = min_d$x[order(min_d$Group.1)]
+data_CTD$max_d = max_d$x[order(max_d$Group.1)]
+data_CTD = data_CTD %>% dplyr::filter(max_d > 75, min_d < 20, nobs >= 4)
+data_CTD$SCM_d = NA
+data_CTD$SCM_val = NA
+data_CTD$remove = NA
+#thresh = seq(0,0.5,0.025)
+# shape = seq(1.2,2,0.05)
+# sp = vector(,length = length(shape))
+# tr = matrix(,nrow = length(thresh),ncol = length(shape))
+# for(th in 1:length(thresh)){
+#   for(sh in 1:length(shape)){
+    #SCM_test = vector(,length = nrow(data_CTD))
+for(ctd in 1:nrow(data_CTD))
+{
+  chla_prof = data[which(data$A == data_CTD$A[ctd] & is.finite(data$CHLA_1)),c(13,16)]
+  #if(th == 1 & sh ==1){
+  chla_prof = chla_prof[order(chla_prof$Depth),]
+  chla_prof = chla_prof[is.finite(chla_prof$CHLA_1),]
+  data_CTD$surf_val[ctd] = max(chla_prof$CHLA_1[which(chla_prof$Depth <= 20)])
+
+    if(length(which(chla_prof$Depth > 20)) < 3 ){data_CTD$remove[ctd] = "Y"
+      next}
+    if((data_CTD$surf_val[ctd] + 0.2) < max(chla_prof$CHLA_1,na.rm = T) & data_CTD$surf_val[ctd] < 1)
+    {
+    data_CTD$SCM[ctd] = "Y"
+    data_CTD$SCM_d[ctd] = chla_prof$Depth[which.max(chla_prof$CHLA_1)]
+    data_CTD$SCM_val[ctd] = max(chla_prof$CHLA_1,na.rm = T)
+    if(data_CTD$SCM_d[ctd] <= 20){data_CTD$SCM[ctd] = "N"
+    data_CTD$SCM_d[ctd] = NA
+    data_CTD$SCM_val[ctd] = NA }
+  }else(if((1.2*data_CTD$surf_val[ctd]) < max(chla_prof$CHLA_1,na.rm = T) &  data_CTD$surf_val[ctd] > 1){
+    data_CTD$SCM[ctd] = "Y"
+  data_CTD$SCM_d[ctd] = chla_prof$Depth[which.max(chla_prof$CHLA_1)]
+  data_CTD$SCM_val[ctd] = max(chla_prof$CHLA_1,na.rm = T)
+  if(data_CTD$SCM_d[ctd] <= 20){data_CTD$SCM[ctd] = "N"
+  data_CTD$SCM_d[ctd] = NA
+  data_CTD$SCM_val[ctd] = NA }
+  }else(data_CTD$SCM[ctd] = "N"))
+
+  #}
+  # sensitivity test
+  # if((chla_prof$CHLA_1[1] + thresh[th]) < max(chla_prof$CHLA_1,na.rm = T) & (shape[sh]*chla_prof$CHLA_1[1]) < max(chla_prof$CHLA_1,na.rm = T))
+  # {if((
+  #   #must be larger than some measurement error threshold for large values...... say 20%
+  #   max(chla_prof$CHLA_1,na.rm = T) - chla_prof$CHLA_1[1]) > chla_prof$CHLA_1[1]*0.2 )
+  # {
+  #   SCM_test[ctd] = "TRUE"
+  #   }
+  #   else(SCM_test[ctd] = "FALSE")}
+  # else(SCM_test[ctd] = "FALSE")
+  #   sp[sh] = length(which(SCM_test == T))
+  #   }
+  #   tr[th,] = sp}
+}
+
+# #sensitivity plotting    
+# prop_tr = tr/nrow(data_CTD)
+# colnames(prop_tr) = shape
+# row.names(prop_tr) = thresh
+# colnames(tr) = shape
+# row.names(tr) = thresh
+# sh2 = NA
+# for(sp in 1:length(shape))
+# {
+#   sh2 = c(sh2,rep(shape[sp],length(thresh)))
+# }
+# 
+# heat = data.frame("Shape" = sh2[-1],"Magnitude" = rep(thresh,ncol(tr)), "SCM" = as.vector(prop_tr))
+# ggplot(data = heat, aes(x = Shape, y = Magnitude)) +
+#   geom_tile(aes(fill = SCM)) 
+# ggplot(data = heat[which(heat$Shape <2 & heat$Magnitude <1),], aes(x = Shape, y = Magnitude)) +
+#   geom_tile(aes(fill = SCM)) 
+# ggplot(data = heat[which(heat$Shape <2 & heat$Magnitude <1),], aes(x = Shape, y = SCM, colour = as.factor(Magnitude)))+ 
+#   geom_line()
+# ggplot(data = heat[which(heat$Shape < 2 & heat$Magnitude <0.3),], aes(x = Shape, y = SCM, colour = as.factor(Magnitude)))+ 
+#   geom_line()
+
+write.csv(data_CTD[which(is.na(data_CTD$remove)),],file.path(path,"SCM_dataset_100919.csv"), row.names = F)
+

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1640571281423.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3558056587",
+    "id" : "95FD1B50",
+    "lastKnownWriteTime" : 1640573740,
+    "last_content_update" : 1640573740793,
+    "path" : "~/Projects/BIO-MATE/BIO-MATE/src/PIG_to_WHPE.R",
+    "project_path" : "src/PIG_to_WHPE.R",
+    "properties" : {
+        "cursorPosition" : "162,26",
+        "scrollLine" : "156"
+    },
+    "relative_order" : 14,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,10 @@
+"0","```r
+data_CTD$Br[which(data_CTD$YYYY >2007 & data_CTD$Br %in% c(\"POOZ\",\"PFZ\",\"SAZ\",\"STZ\"))] = NA
+data_CTD$Br[which(data_CTD$YYYY <1993 & data_CTD$Br %in% c(\"POOZ\",\"PFZ\",\"SAZ\",\"STZ\"))] = NA
+length(which(is.na(data_CTD$Br)==F))
+
+print(\"The number of profiles unclassified are:\")
+length(which(is.na(data_CTD$Br)==T))
+print(\"number of profiles included biregion in analysis are\")
+length(which(is.na(data_CTD$Br)==F))
+```"

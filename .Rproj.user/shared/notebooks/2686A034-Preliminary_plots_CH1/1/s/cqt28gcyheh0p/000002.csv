@@ -1,0 +1,21 @@
+"0","```r
+
+n_obs = stats::aggregate(data_CTD$SCM, by = list(data_CTD$Br), FUN = length)
+n_SCM =  stats::aggregate(data_CTD$SCM[which(data_CTD$SCM == \"Y\")], by = list(data_CTD$Br[which(data_CTD$SCM == \"Y\")]), FUN = length)
+sum1 =  stats::aggregate(data_CTD$SCM_d[which(data_CTD$SCM == \"Y\")], by = list(data_CTD$Br[which(data_CTD$SCM == \"Y\")]), FUN = mean)
+sum2 =  stats::aggregate(data_CTD$SCM_d[which(data_CTD$SCM == \"Y\")], by = list(data_CTD$Br[which(data_CTD$SCM == \"Y\")]), FUN = sd)
+sum3 =  stats::aggregate(data_CTD$SCM_val[which(data_CTD$SCM == \"Y\")], by = list(data_CTD$Br[which(data_CTD$SCM == \"Y\")]), FUN = mean)
+sum4 =  stats::aggregate(data_CTD$SCM_val[which(data_CTD$SCM == \"Y\")], by = list(data_CTD$Br[which(data_CTD$SCM == \"Y\")]), FUN = sd)
+sum5 =  stats::aggregate(data_CTD$surf_val[which(data_CTD$SCM == \"Y\")], by = list(data_CTD$Br[which(data_CTD$SCM == \"Y\")]), FUN = mean)
+sum6 =  stats::aggregate(data_CTD$surf_val[which(data_CTD$SCM == \"Y\")], by = list(data_CTD$Br[which(data_CTD$SCM == \"Y\")]), FUN = sd)
+sum7 =  stats::aggregate(data_CTD$surf_val[which(data_CTD$SCM == \"N\")], by = list(data_CTD$Br[which(data_CTD$SCM == \"N\")]), FUN = mean)
+sum8 =  stats::aggregate(data_CTD$surf_val[which(data_CTD$SCM == \"N\")], by = list(data_CTD$Br[which(data_CTD$SCM == \"N\")]), FUN = sd)
+
+df = cbind(n_SCM,sum1[,2],sum2[,2],sum3[,2],sum4[,2],sum5[,2],sum6[,2])
+SCMsummary = left_join(n_obs,df, by = (\"Group.1\"))
+SCMsummary = cbind(SCMsummary,sum7[,2],sum8[,2])
+colnames(SCMsummary) = c(\"Bioregion\",\"n\",\"n(SCM = Y)\",\"mean(SCM depth)\", \"sd(SCM depth)\",\"mean(SCM [chla])\", \"sd(SCM [chla]\",\"mean(surf [chla] SCMs)\", \"sd(surf [chla] SCMs)\",\"mean(surf [chla] all)\", \"sd(surf [chla] all)\")
+SCMsummary = SCMsummary[c(1,6,4,3,5,7,2),]
+SCMsummary
+#write.csv(SCMsummary,file.path(path,\"SCM summary by bioregion_050919.csv\"),row.names = F)
+```"

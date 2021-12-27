@@ -1,0 +1,38 @@
+"0","```r
+p1 = ggplot(data = data_CTD, aes(x = coast_dist, y = surf_val, fill =BATHY_DEPTH_m > -1000)) + geom_point(pch = 21) + scale_fill_discrete(name = \"Bathymetry\", labels = c(\">1000\", \"<1000\", \"No coordinates\")) + theme(legend.position = c(0.9, 0.9))+ 
+  labs(x = \"Distance from coast\", y = \"surface [Chla]\")
+
+p2 = ggplot(data = data_CTD[which(data_CTD$coast_dist > 1000),], aes(x = coast_dist, y = surf_val, fill =BATHY_DEPTH_m > -1000)) + geom_point(pch = 21) + scale_fill_discrete(name = \"Bathymetry\", labels = c(\">1000\", \"<1000\", \"No coordinates\")) + theme(legend.position = c(0.9, 0.9)) + labs(x = \"Distance from coast\", y = \"surface [Chla]\")
+
+
+p3 = base + geom_point(data = data_CTD[which(data_CTD$surf_val > 5 ),], aes(x=Longitude, y = Latitude..S.),  pch = 16,size = 3) + ggtitle(\"surface [chla] > 5 mg/m3\") 
+
+p4 = ggplot(data = data_CTD, aes(x = coast_dist, y = SCM_val, fill =BATHY_DEPTH_m > -1000)) + geom_point(pch = 21) + scale_fill_discrete(name = \"Bathymetry\", labels = c(\">1000\", \"<1000\", \"No coordinates\")) + theme(legend.position = c(0.7, 0.8))+ 
+  labs(x = \"Distance from coast\", y = \"SCM [Chla]\")
+
+p5 = ggplot(data = data_CTD[which(data_CTD$coast_dist > 1000),], aes(x = coast_dist, y = SCM_val, fill =BATHY_DEPTH_m > -1000)) + geom_point(pch = 21) + scale_fill_discrete(name = \"Bathymetry\", labels = c(\">1000\", \"<1000\", \"No coordinates\")) + theme(legend.position = c(0.9, 0.9)) + labs(x = \"Distance from coast\", y = \"SCM [Chla]\")
+
+p6 = base + geom_point(data = data_CTD[which(data_CTD$coast_dist > 1300),], aes(x=Longitude, y = Latitude..S.),  pch = 16,col = \"black\",size = 3) + ggtitle(\"SCM > 1300 km from coast are red\") + geom_point(data = data_CTD[which(data_CTD$coast_dist > 1300 & data_CTD$SCM == \"Y\"),], aes(x=Longitude, y = Latitude..S.),  pch = 16, col = \"red\",size = 3)
+
+ggarrange(plotlist = list(p1,p4))
+ggarrange(plotlist = list(p2,p5))
+ggarrange(plotlist = list(p3,p6))
+
+
+
+print(\"The surace chla observed past 1000 km from coastlines is\")
+print(\"max\")
+max(data_CTD$surf_val[data_CTD$coast_dist > 1000], na.rm = T)
+print(\"mean\")
+mean(data_CTD$surf_val[data_CTD$coast_dist > 1000], na.rm = T)
+print(\"The SCM chla observed past 1000 km from coastlines is\")
+print(\"max\")
+max(data_CTD$SCM_val[data_CTD$coast_dist > 1000], na.rm = T)
+print(\"mean\")
+mean(data_CTD$SCM_val[data_CTD$coast_dist > 1000], na.rm = T)
+print(\"The number of SCMs past 1300 km from coast is\")
+length(which(data_CTD$coast_dist > 1300 & data_CTD$SCM == \"Y\"))
+print(\"which is (%)\")
+length(which(data_CTD$coast_dist > 1300 & data_CTD$SCM == \"Y\"))/length(which(data_CTD$coast_dist > 1300))*100
+print(\"they were collected in Feb 2017\")
+```"

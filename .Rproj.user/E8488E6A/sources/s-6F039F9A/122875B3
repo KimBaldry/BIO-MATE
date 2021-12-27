@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1636925944991.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4171767635",
+    "id" : "122875B3",
+    "lastKnownWriteTime" : 1580739418,
+    "last_content_update" : 1580739418,
+    "path" : "~/PhD/Ch4_SCM/SRC/water_column_structure.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

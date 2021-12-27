@@ -1,0 +1,357 @@
+### Chapter 1 Figure - Spatiotemporal distribution of profiles ###
+# Author: K. Baldry
+# Date of creation: 081019
+#
+#
+#
+# 
+# colour scheme: #8c510a #d8b365 #f6e8c3 #c7eae5 #5ab4ac #01665e
+library(ggplot2)
+library(mapproj)
+library(raster)
+library(ggpubr)
+library(sf)
+library(rgdal)
+library(dplyr)
+library(SOmap)
+library(ggnewscale)
+library(ggmap)
+library(scales)
+library(viridis)
+library(marmap)
+library(sp)
+library(maptools)
+library(rgeos)
+library(polyclip)
+library(GISTools)
+library(animation)
+library(gridExtra)
+library(gam)
+# read data
+path = "C:/Users/kabaldry/Documents/PhD/Introduction_review/Data"
+data_CTD = read.csv(file.path(path,"SCM_dataset_final_290919.csv"), header = T, stringsAsFactors = F)
+data_CTD = data_CTD %>% filter(is.finite(Longitude))
+data_CTD = data_CTD %>% mutate(DOY = as.numeric(as.Date(paste(sprintf("%02d",DD),sprintf("%02d",MM),YYYY , sep = ""), 
+                                             format = "%d%m%Y") - as.Date(paste("01","07",YYYY - round((13-MM)/13), sep = ""), format = "%d%m%Y")))
+data_CTD$SCM_in = as.numeric(factor(data_CTD$SCM, levels = c("N","Y")))-1
+data_CTD$MM_p = data_CTD$MM + 6
+data_CTD$MM_p[data_CTD$MM_p > 12] = data_CTD$MM_p[data_CTD$MM_p > 12] - 12
+# set clip latitude here
+clip_lat = -30
+# read map data 
+path = "C:/Users/kabaldry/Documents/PhD/PhD_Data/SOmap"
+bathySOdf2 = read.csv(file.path(path,"bathy_df", "bathymetry_SO_trim30S.csv"), stringsAsFactors = F, header = T)
+coast_polys = readOGR(dsn = file.path(path,"polygons_trim30S"),layer = "polygons_trim30S")
+coast_polysdf = fortify(coast_polys)
+fronts =  crop(orsifronts::orsifronts,extent(-180, 180, -70, clip_lat))
+fronts = spTransform(fronts,SOmap()$projection)
+
+
+# create extent references for two projections (cartesian and stereographic)
+extent_p = data.frame("x"=c(0,90,180,-90), "y" = rep(clip_lat,4))
+extent_p1 = data.frame("x"=c(0,90,180,-90), "y" = c(clip_lat,clip_lat,-90,-90))
+coordinates(extent_p1) <- ~x+y
+projection(extent_p1) <- "+proj=longlat +datum=WGS84"
+coordinates(extent_p) <- ~x+y
+projection(extent_p) <- "+proj=longlat +datum=WGS84"
+extent_p2 = spTransform(extent_p,SOmap()$projection)
+extent_p2 = as.data.frame(extent_p2)
+extent_p2 = extent(extent_p2)
+
+# download bathymetry data and convert to data frame to stereographic coordinates
+
+
+bathy = getNOAA.bathy(lat1 = -30, lat2 = -90, lon1 = 180, lon2 = -180, resolution = 3)
+bathy2 = fortify.bathy(bathy)
+coordinates(bathy2) <- ~x+y
+projection(bathy2) <- "+proj=longlat +datum=WGS84"
+bathySO = spTransform(bathy2,SOmap()$projection)
+# rasterize to make square again in new coordinates and convert to data frame. fill with 1000m height
+rast = raster(x = bathySO, resolution = 10000)
+bathySOrast = rasterize(bathySO, rast, field = "z", fun = mean, background = -100000)
+bathySOdf = as(bathySOrast, "SpatialPixelsDataFrame")
+bathySOdf = as.data.frame(bathySOdf)
+# # save bathy DF for plot 
+# write.csv(bathySOdf, file.path("C:/Users/kabaldry/Documents/PhD/PhD_Data/SOmap/bathy_df","bathymetry_SO_trim30S.csv"), row.names = F)
+
+
+
+# # create 1000m bathymetry contour spatial lines data frame
+
+
+cont <- contourLines(x=unique(bathy2$x), y=unique(bathy2$y), z=matrix(bathy2$z, nrow = length(unique(bathy2$x)), byrow = T), levels = c(-1000,0)) # generate contours
+c.lines <- ContourLine(cont) # create SpatialLines DF
+c.poly = SpatialLines2PolySet(c.lines)
+PolySet2SpatialPolygons()
+idx = point.in.polygon(point.x = coastlinesSO2$coords.x1, point.y = coastlinesSO2$coords.x2, pol.x = trim_points$x, pol.y = trim_points$y)
+coastlinesSO2 = coastlinesSO2[-which(idx == 0),]
+
+# # create a trim mask as a polygon
+#
+#
+trim_points = data.frame("x" = seq(-180,179.5,0.25), "y" = rep(clip_lat,length(seq(-180,179.5,0.25))))
+coordinates(trim_points) <- ~x+y
+projection(trim_points) <- "+proj=longlat +datum=WGS84"
+trim_points = spTransform(trim_points,SOmap()$projection)
+#trim_points = as(trim_points, "SpatialPointsDataFrame")
+trim_points = as.data.frame(trim_points)[-1,]
+trim_poly = Polygons(list(Polygon(trim_points)), "ID")
+trim_poly = SpatialPolygons(list(trim_poly), proj4string = CRS(SOmap()$projection))
+rm(trim_points)
+
+
+# # continent polygons from Jo: subsampled to 1 deg res from USGS
+#
+#
+setwd("C:/Users/kabaldry/Documents/PhD/PhD_Data/SOmap/Coastlines_shp")
+coastlines = readOGR(dsn = ".",layer = "Coastlines_shp")
+coastlines = spTransform(coastlines,SOmap()$projection)
+coastlines = as(coastlines, "SpatialPolygons")
+
+coast_polys1 = lapply(c(1:length(coastlines)), function(x){
+  if(length(which(coastlines@polygons[[x]]@Polygons[[1]]@coords[,1] < extent_p2@xmax)) > 1 & length(which(coastlines@polygons[[x]]@Polygons[[1]]@coords[,1] > extent_p2@xmin)) > 1 &
+     length(which(coastlines@polygons[[x]]@Polygons[[1]]@coords[,2] < extent_p2@ymax)) > 1 & length(which(coastlines@polygons[[x]]@Polygons[[1]]@coords[,2] > extent_p2@ymin)) > 1  ){
+  SpatialPolygons(list(coastlines@polygons[[x]]), proj4string = CRS(SOmap()$projection))}else{NA}})
+coast_polys1 =coast_polys1[which(is.na(coast_polys1) ==F)]
+coast_polys1df = SpatialPolygons(lapply(coast_polys1, function(x){x@polygons[[1]]}))
+coast_polys1df = as(coast_polys1df, "SpatialPolygonsDataFrame")
+setwd("C:/Users/kabaldry/Documents/PhD/PhD_Data/SOmap/relevent_polygons_trim30S")
+writeOGR(obj=coast_polys1df, dsn=".", layer="relevent_polygons_trim30S", driver="ESRI Shapefile") # this is in geographical projection
+
+coast_polys2 = lapply(c(1:length(coast_polys1)) ,function(x){gIntersection(coast_polys1[[x]],trim_poly)})
+coast_polys3 = lapply(c(1:length(coast_polys2)), function(x){if(is.null(coast_polys2[[x]]) == F){coast_polys2[[x]]}else{NA}})
+coast_polys3 = coast_polys3[which(is.na(coast_polys3) == F)]
+for(sp in c(1:length(coast_polys3))){ coast_polys3[[sp]]@polygons[[1]]@ID = as.character(sp)}
+coast_polys4 = SpatialPolygons(lapply(coast_polys3, function(x){x@polygons[[1]]}))
+coast_polysdf = as(coast_polys4, "SpatialPolygonsDataFrame")
+setwd("C:/Users/kabaldry/Documents/PhD/PhD_Data/SOmap/polygons_trim30S")
+writeOGR(obj=coast_polysdf, dsn=".", layer="polygons_trim30S", driver="ESRI Shapefile") # this is in geographical projection
+
+
+
+# ####### The density distribution of data #######
+# # all
+base_map = SOgg(SOmap(trim = clip_lat))
+base_map$bathy = NULL
+base_map$bathy_legend = NULL
+base_map$scale_fill= NULL
+base_map_gg = plot(base_map)
+
+
+points = data_CTD[,c("Longitude","Latitude..S.")]
+colnames(points) = c("long","lat")
+coordinates(points) <- ~long+lat #check right way round
+projection(points) <- "+proj=longlat +datum=WGS84"
+points_ster = spTransform(points,SOmap()$projection)
+rast <- raster(x = extent_p2, nrows = 30, ncols = 30)
+gridded_counts_profile = rasterize(points_ster, rast, field = 1, fun = "count", background = 0)
+gridded_counts_profile <- as(gridded_counts_profile, "SpatialPointsDataFrame")
+gridded_counts_profile <-as.data.frame(gridded_counts_profile)
+# background to NA
+gridded_counts_profile$layer[which(gridded_counts_profile$layer == 0)] = NA
+
+density_all =  base_map_gg + stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), geom = "polygon")+
+
+  geom_polygon(data = coast_polysdf,aes(x= long, y = lat, group = group), fill = "grey") +
+  geom_raster(data = gridded_counts_profile, aes(x=x, y=y, fill = layer)) +
+  scale_fill_gradient(name = "no. profiles",trans = "log",low = "#c7eae5", high = "#01665e", breaks = c(1,10,100,250), na.value = "#FFFFFF00") +
+  theme(legend.position = "top", legend.key.width = unit(2,"lines")) +
+  stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), col = "black") +
+  geom_path(data =fronts,aes(x=long,y=lat,group=group),col = "#8c510a") + geom_point(data = data.frame(points_ster), aes(x = long, y = lat))
+
+
+# # jan
+# points = data_CTD[which(data_CTD$MM == 1),c("Longitude","Latitude..S.")]
+# colnames(points) = c("long","lat")
+# coordinates(points) <- ~long+lat #check right way round
+# projection(points) <- "+proj=longlat +datum=WGS84"
+# points_ster = spTransform(points,SOmap()$projection)
+# rast <- raster(x = extent_p2, nrows = 30, ncols = 30)
+# gridded_counts_profile = rasterize(points_ster, rast, field = 1, fun = "count", background = 0)
+# gridded_counts_profile <- as(gridded_counts_profile, "SpatialPointsDataFrame")
+# gridded_counts_profile <-as.data.frame(gridded_counts_profile)
+# # background to NA
+# gridded_counts_profile$layer[which(gridded_counts_profile$layer == 0)] = NA
+# 
+# density_j =  base_map_gg + stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), geom = "polygon")+ 
+#   
+#   geom_polygon(data = coast_polysdf,aes(x= long, y = lat, group = group), fill = "grey") +
+#   geom_raster(data = gridded_counts_profile, aes(x=x, y=y, fill = layer)) + 
+#   scale_fill_gradient(name = "no. profiles",trans = "log",low = "#c7eae5", high = "#01665e", breaks = c(1,10,100,250), na.value = "#FFFFFF00") +
+#   theme(legend.position = "top", legend.key.width = unit(2,"lines")) +
+#   stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), col = "black") +
+#   geom_path(data =fronts,aes(x=long,y=lat,group=group),col = "#8c510a")
+# 
+# 
+# # feb
+# points = data_CTD[which(data_CTD$MM == 2),c("Longitude","Latitude..S.")]
+# colnames(points) = c("long","lat")
+# coordinates(points) <- ~long+lat #check right way round
+# projection(points) <- "+proj=longlat +datum=WGS84"
+# points_ster = spTransform(points,SOmap()$projection)
+# rast <- raster(x = extent_p2, nrows = 30, ncols = 30)
+# gridded_counts_profile = rasterize(points_ster, rast, field = 1, fun = "count", background = 0)
+# gridded_counts_profile <- as(gridded_counts_profile, "SpatialPointsDataFrame")
+# gridded_counts_profile <-as.data.frame(gridded_counts_profile)
+# # background to NA
+# gridded_counts_profile$layer[which(gridded_counts_profile$layer == 0)] = NA
+# 
+# density_f =  base_map_gg + stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), geom = "polygon")+ 
+#   
+#   geom_polygon(data = coast_polysdf,aes(x= long, y = lat, group = group), fill = "grey") +
+#   geom_raster(data = gridded_counts_profile, aes(x=x, y=y, fill = layer)) + 
+#   scale_fill_gradient(name = "no. profiles",trans = "log",low = "#c7eae5", high = "#01665e", breaks = c(1,10,100,250), na.value = "#FFFFFF00") +
+#   theme(legend.position = "top", legend.key.width = unit(2,"lines")) +
+#   stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), col = "black") +
+#   geom_path(data =fronts,aes(x=long,y=lat,group=group),col = "#8c510a")
+# 
+
+# jan + feb
+
+points = data_CTD[which(data_CTD$MM %in% c(1:2)),c("Longitude","Latitude..S.")]
+colnames(points) = c("long","lat")
+coordinates(points) <- ~long+lat #check right way round
+projection(points) <- "+proj=longlat +datum=WGS84"
+points_ster = spTransform(points,SOmap()$projection)
+rast <- raster(x = extent_p2, nrows = 30, ncols = 30)
+gridded_counts_profile = rasterize(points_ster, rast, field = 1, fun = "count", background = 0)
+gridded_counts_profile <- as(gridded_counts_profile, "SpatialPointsDataFrame")
+gridded_counts_profile <-as.data.frame(gridded_counts_profile)
+# background to NA
+gridded_counts_profile$layer[which(gridded_counts_profile$layer == 0)] = NA
+
+density_jf =  base_map_gg + stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), geom = "polygon")+ 
+  geom_polygon(data = coast_polysdf,aes(x= long, y = lat, group = group), fill = "grey") +
+  geom_raster(data = gridded_counts_profile, aes(x=x, y=y, fill = layer)) + 
+  scale_fill_gradient(name = "Number of profiles",trans = "log",low = "#c7eae5", high = "#01665e", breaks = c(1,10,100,250), na.value = "#FFFFFF00") +
+  theme(legend.position = "top", legend.key.width = unit(2,"lines"),plot.title = element_text(size =12)) +
+  stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), col = "black") +
+  geom_path(data =fronts,aes(x=long,y=lat,group=group),col = "#8c510a")+ guides(fill = guide_colourbar(title.position = "top",
+                                                                                                     title.hjust = .5,
+                                                                                                     label.position = "bottom"))
+
+#ggarrange(plotlist = list(density_all,density_j,density_f,density_jf), nrow = 2, ncol = 2)
+
+# ####### GIF to visualise ######
+# setwd("C:/Users/kabaldry/Documents/PhD/Introduction_review/Results/Season")
+# invisible(saveGIF({
+#   for(sp in c(7:12,1:5)){
+# points = data_CTD[which(data_CTD$MM == sp),c("Longitude","Latitude..S.")]
+# colnames(points) = c("long","lat")
+# coordinates(points) <- ~long+lat #check right way round
+# projection(points) <- "+proj=longlat +datum=WGS84"
+# points_ster = spTransform(points,SOmap()$projection)
+# rast <- raster(x = extent_p2, nrows = 30, ncols = 30)
+# gridded_counts_profile = rasterize(points_ster, rast, field = 1, fun = "count", background = 0)
+# gridded_counts_profile <- as(gridded_counts_profile, "SpatialPointsDataFrame")
+# gridded_counts_profile <-as.data.frame(gridded_counts_profile)
+# # background to NA
+# gridded_counts_profile$layer[which(gridded_counts_profile$layer == 0)] = NA
+# 
+# density =  base_map_gg + stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), geom = "polygon")+ 
+#   
+#   geom_polygon(data = coast_polysdf,aes(x= long, y = lat, group = group), fill = "grey") +
+#   geom_raster(data = gridded_counts_profile, aes(x=x, y=y, fill = layer)) + 
+#   scale_fill_gradient(name = "no. profiles",trans = "log",low = "#c7eae5", high = "#01665e", breaks = c(1,10,100,250), na.value = "#FFFFFF00", limits = c(1,120)) +
+#   theme(legend.position = "top", legend.key.width = unit(2,"lines"), title = element_text(size = 16)) +
+#   stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), col = "black") +
+#   geom_path(data =fronts,aes(x=long,y=lat,group=group),col = "#8c510a")+ 
+#   ggtitle(paste("Binned density of profiles in month ", sp, sep = " "))
+# # save individual images
+# jpeg(paste("month", sp, ".jpg", sep = ""), width = 700, height = 700, units = "px")
+# print(density)
+# dev.off()
+# 
+# #print(density)
+# 
+# }
+#   }, movie.name = "Obs_density_by_month.gif", interval = 2, ani.width = 1000, ani.height = 700))
+
+####### The monthly distribution of data #######
+## set up 
+# n_seas_obs = stats::aggregate(data_CTD$SCM, by = list(data_CTD$MM), FUN = length)
+# ma = max(n_seas_obs$x)*2
+# n_seas_SCM = stats::aggregate(data_CTD$SCM[data_CTD$SCM=="Y"], by = list(data_CTD$MM[data_CTD$SCM=="Y"]), FUN = length)
+# n_seas_obs = left_join(n_seas_obs,n_seas_SCM, by = c("Group.1"))
+# n_seas_obs$x.y[is.na(n_seas_obs$x.y)]= 0
+# n_seas_prop = data.frame(n_seas_obs[,1], n_seas_obs[,2], n_seas_obs$x.y/n_seas_obs$x.x)
+# colnames(n_seas_prop) = c("MM","n","SCMprop")
+# n_seas_prop$MM_p = n_seas_prop$MM + 6
+# n_seas_prop$MM_p[n_seas_prop$MM_p > 12] = n_seas_prop$MM_p[n_seas_prop$MM_p > 12] - 12
+# n_seas_prop$MM = as.factor(n_seas_prop$MM)
+# n_seas_prop$MM_p = as.factor(n_seas_prop$MM_p)
+# only plot prop
+# change to spline for day of the year
+seas_obs = ggplot() + geom_bar(data = data_CTD, aes(x = as.factor(MM_p)), fill = "grey69")+
+  scale_x_discrete(name = "Month",breaks = c(1:12), labels = c(7:12,1:6))+ scale_y_continuous(name = "Number of profiles")+
+  theme(axis.line.y.right  = element_line(color="grey69", size = 1),
+        axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
+        ,panel.background = element_blank(),legend.position = "top",
+        panel.grid.major = element_blank(),plot.title = element_text( size=12), axis.title.x =  element_text(size = 12),  axis.text.x = element_text(size = 10), 
+        axis.text.y.left  = element_text(size = 10),axis.text.y.right = element_text(size = 12, colour = "grey69"), axis.title.y = element_text(size = 12),
+        plot.margin = unit(c(1,3.5,1,1), "lines"))
+
+
+
+
+s1 = mgcv::gam(SCM_in ~ s(DOY), data = data_CTD, family = binomial(logit))
+plot(s1)
+
+# data_CTD$DOY2 = sin(data_CTD$DOY*pi/360*365/360)
+# model2 <- glm(SCM_in ~ (DOY, family = binomial(link = "logit"),
+#               data = data_CTD)
+pred1 = data.frame("DOY" =seq(2,345,0.1))
+Pred = predict(s1, newdata = pred1, type = "response", se.fit = T) 
+PredTbl = data.frame("DOY" = pred1, "fit" = unlist(Pred$fit), "se.fit" = unlist(Pred$se.fit))
+
+JFdata = data_CTD[which(data_CTD$MM %in% c(1,2)),]
+data_poly = data.frame("x" = c(min(JFdata$DOY),max(JFdata$DOY),max(JFdata$DOY),min(JFdata$DOY)),"y" = c(0,0,1,1))
+DOY1 = ggplot(data = PredTbl, aes(DOY, fit))  + geom_polygon(data = data_poly,aes(x=x,y=y), fill = "#8c510a", alpha = 0.3)+ 
+  geom_smooth_ci(ci_alpha = 0.5 ) + geom_path(lwd = 1) + geom_rug(sides = "b",data = data_CTD, aes(DOY), inherit.aes = F)+ geom_point(data = data_CTD, aes(DOY,SCM_in), col = "#01665e")+
+  scale_y_continuous(name = "Proportion of SCM occurance", sec.axis = sec_axis(~., breaks = c(0,1), labels = c("No SCM", "SCM")))+ 
+  xlab(expression(paste("Days since 1"^"st", " of July")))+ 
+  theme(axis.line.y.right  = element_blank(),
+        axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_blank()
+        ,panel.background = element_blank(),legend.position = "top",
+        panel.grid.major = element_blank(),plot.title = element_text( size=12), axis.title.x =  element_text(size = 12),  axis.text.x = element_text(size = 10), 
+        axis.text.y.left  = element_text(size = 10),axis.text.y.right = element_text(size = 12), axis.title.y = element_text(size = 12))
+
+####### Profile detection method plot ############
+# surface zone/ satellite detction zone
+surf = 20
+# minimum deepest measuement
+deepm = 75
+# Southern Ocean summer MLD
+
+#
+egctd = data = data.frame("x" = c(5,15,30,50,85), "y" = c(0.4,0.5,0.7,1.2,0.05))
+surf_zone = data.frame("x" = c(0.001,surf,surf,0.001), "y" = c(0.001,0.001,1.5,1.5))
+                                                    
+detection = ggplot() + 
+  geom_polygon(data = surf_zone,aes(x = x, y = y), fill = "#8c510a", alpha = 0.5)+
+  geom_vline(xintercept = deepm, col = "#8c510a")+
+  geom_hline(yintercept = 0.45, col =  "#01665e") + geom_hline(yintercept = 1.2, col = "#01665e")+
+  
+  geom_line(data = egctd, aes(x=x,y=y)) + geom_point(data = egctd, aes(x=x,y=y))+ 
+   scale_x_reverse(name = "Depth (m)",expand = c(0,0), limits = c(100,0))+ scale_y_continuous(name = NULL,limits = c(0,1.5),expand = c(0, 0), sec.axis = sec_axis(~., name = expression(paste("[Chl] (",mu,"g/L)", sep = "")), breaks = c(0.5,1,1.5)))+
+  coord_flip() + theme(axis.line.y.right  = element_line(color="grey69", size = 1),
+                       axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
+                       ,panel.background = element_blank(),legend.position = "top",
+                       panel.grid.major = element_blank(), axis.title.x =  element_text(size = 12),  axis.text.x = element_text(size = 10), 
+                       axis.text.y  = element_text(size = 10), axis.title.y = element_text(size = 12),
+                       axis.ticks.x.bottom = element_blank(), axis.text.x.bottom = element_blank(), axis.line.x.bottom = element_blank(), 
+                       plot.margin = unit(c(1,1,4,1), "lines"),plot.caption = element_text(size =12, hjust =-4) )
+
+plot.a = ggplotGrob(seas_obs + ggtitle("(a)"))
+plot.b = ggplotGrob(DOY1 + ggtitle("(b)"))
+plot.c = ggplotGrob(density_jf + ggtitle("(c)"))
+
+plot.a$layout$l[plot.a$layout$name == "title"] <- 1
+plot.b$layout$l[plot.b$layout$name == "title"] <- 1
+plot.c$layout$l[plot.c$layout$name == "title"] <- 1
+
+
+lay = rbind(c(1,1,1,3,3),c(2,2,2,3,3))
+jpeg(file.path("C:/Users/kabaldry/Documents/PhD/Introduction_review/Figures/Methods", "Method_plots.jpg"), width = 750, height = 450, units = "px", quality = 90, res =100)
+grid.arrange(plot.a, plot.b,plot.c, layout_matrix = lay)
+dev.off()

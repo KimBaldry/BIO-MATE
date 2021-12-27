@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1631697391049.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A79B52AD",
+    "lastKnownWriteTime" : 1639177570,
+    "last_content_update" : 1639177570048,
+    "path" : "~/Projects/BIO-MATE/BIO-MATE/src/compile_pigment_data.R",
+    "project_path" : "src/compile_pigment_data.R",
+    "properties" : {
+        "cursorPosition" : "47,6",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

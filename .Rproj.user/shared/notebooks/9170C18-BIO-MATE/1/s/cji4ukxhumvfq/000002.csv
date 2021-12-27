@@ -1,0 +1,7 @@
+"0","# rewrirte HPLC file
+write.csv(x = hplc,file = ""E:/Data_downloads/PAL-LTER/pigments/HPLC/33LG20131229/adjusted/33LG20131229_from_High Performance Liquid Chromatography Pigments.csv"",row.names = F)
+"
+"2","cannot open file 'E:/Data_downloads/PAL-LTER/pigments/HPLC/33LG20131229/adjusted/33LG20131229_from_High Performance Liquid Chromatography Pigments.csv': No such file or directory"
+"2","Error in file(file, ifelse(append, ""a"", ""w"")) : 
+  cannot open the connection
+"

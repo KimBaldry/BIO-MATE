@@ -1,0 +1,371 @@
+library(BIOMATE)
+library(seacarb)
+library(stringr)
+library(SOmap)
+library(rgdal)
+library(marmap)
+source("../src/compile_pigment_data.R")
+source("C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/PhD/Ch4_SCM/SRC/Water structure clustering/filters.R")
+source("C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/PhD/Ch4_SCM/SRC/Water structure clustering/MLD_calcs.R")
+
+calculate_expos = function(data_path){
+  # expocodes for PIG data
+  pig_path = file.path(data_path,"pigments")
+  pig_files = list.files(pig_path, pattern = "*.csv")
+  pig_expos = unique(substr(pig_files,1,12))
+  # expocodes for PROF data
+  prof_path = file.path(data_path,"profiling_sensors")
+  prof_files = list.files(prof_path, pattern = "*.csv")
+  prof_expos = unique(substr(prof_files,1,12))
+  # all expocodes with files
+  all_expos = unique(c(prof_expos,pig_expos))
+  return(list("All" = all_expos, "PROF" = prof_expos, "PIG" = pig_expos, "PROF_files" = prof_files, "PIG_files" = pig_files))
+}
+
+
+imported_meta = read.csv("../product_data/supporting_information/Metadata/EXPOCODE_metadata.csv")
+
+path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/reformatted_data"
+pig_data = compile_pigments(path)
+
+expo_info = calculate_expos(path)
+prof_files = expo_info$PROF_files
+pig_files = expo_info$PIG_files
+
+prof_path = file.path(path,"profiling_sensors")
+CTD_df = data.frame("CTD_ID" = character(),"DATE" = character(), "TIME_s" = as.POSIXct(character()), "TIME_b"= as.POSIXct(character()), "TIME_e"= as.POSIXct(character()), "LAT"=numeric(), "LON" = numeric(),"LAT_b" = numeric(), "LON_b" = numeric(), "LAT_e" = numeric(), "LON_e" = numeric(), "T_diff_b" =  as.difftime(character()), "T_diff_e" = as.difftime(character()), "POS_diff_b" = numeric(), "POS_diff_e" = numeric(), "BOT_DEPTH" = numeric(),"DEPTH_s" = numeric(), "CTDSAL_s" = numeric(), "CTDTEMP_s" = numeric(), "CTDSAL_10" = numeric(), "CTDTEMP_10" = numeric(), "MLD" = numeric(), "MLD_FLAG" = numeric(), "CTDPRS" = logical(),  "CTDSAL" = logical(), "CTDTMP" = logical(), "CTDOXY" = logical(), "CTDFLUOR" = logical(), "CTDBEAMCP" = logical(), "CTDBBP700" = logical(), "CTDXMISS" = logical(), "CTDPAR" = logical(), "CTDNITRATE" = logical())
+
+for(ctd in prof_files){
+  ctd_file = file.path(prof_path,ctd)
+  
+  time_s = NA
+  time_b = NA
+  time_e = NA
+  # open file and read relevent lines
+  f <- file(ctd_file, open = "r" )
+  n = 0
+  while( TRUE ){
+    line <- readLines( f, 1L ,skipNul = T)
+    n = n+1 
+    if( grepl( "DATE =", line ) ){
+      date <- trimws(sub("DATE =", "", line ))
+    }
+    if( grepl( "CTD_START_TIME =", line ) ){
+      t_line = line
+      time_s<- trimws(sub("UTC","",sub("CTD_START_TIME =", "", line )))
+      
+    }
+    if( grepl( "CTD_BOTTOM_TIME =", line ) ){
+      time_b <- trimws(sub("UTC","",sub( "CTD_BOTTOM_TIME =", "", line )))
+      
+    }
+    if( grepl( "CTD_END_TIME =", line ) ){
+      time_e <- trimws(sub("UTC","",sub( "CTD_END_TIME =", "", line )))
+      
+    }
+    if( grepl( "CTD_START_LATITUDE =", line ) ){
+      lat <- as.numeric(sub("CTD_START_LATITUDE =", "", line ))
+    }
+    if( grepl( "CTD_START_LONGITUDE =", line ) ){
+      lon <- as.numeric(sub("CTD_START_LONGITUDE =", "", line ))
+    }
+    if( grepl( "CTD_BOTTOM_LATITUDE =", line ) ){
+      lat_b <- as.numeric(sub("CTD_BOTTOM_LATITUDE =", "", line ))
+    }
+    if( grepl( "CTD_BOTTOM_LONGITUDE =", line ) ){
+      lon_b <- as.numeric(sub("CTD_BOTTOM_LONGITUDE =", "", line ))
+    }
+    if( grepl( "CTD_END_LATITUDE =", line ) ){
+      lat_e <- as.numeric(sub("CTD_END_LATITUDE =", "", line ))
+    }
+    if( grepl( "CTD_END_LONGITUDE =", line ) ){
+      lon_e <- as.numeric(sub("CTD_END_LONGITUDE =", "", line ))
+    }
+    
+    if(grepl("CTDPRS", line)){break}
+  }
+  close(f)
+  
+  times = as.POSIXct(c(paste(date,time_s), paste(date,time_b), paste(date,time_e)), format = "%Y-%m-%d %H:%M:%S", tz = "UTC")
+  # check forward in time, if not add 24 hrs as likely crossed days. 
+  # bottom and end CTD time information
+  if(!is.na(times[2]) & !is.na(times[1])){
+    t_diff_b = difftime(times[2], times[1], units = "secs")
+    if(t_diff_b < 0){times[2] = times[2] + (3600*24)
+    t_diff_b = difftime(times[2], times[1], units = "secs")}
+  }else{t_diff_b = NA}
+  if(!is.na(times[3])& !is.na(times[1])){
+    t_diff_e = difftime(times[3], times[1], units = "secs")
+    if(t_diff_e < 0){times[3] = times[3] + (3600*24)
+    t_diff_e = difftime(times[3], times[1], units = "secs")}
+  }else{t_diff_e = NA}
+  
+  # bottom and end CTD pos information
+  if(!is.na(lat_b) & !is.na(lon_b)){
+    pos_diff_b = distGeo(c(lon, lat), c(lon_b,lat_b))
+  }else{pos_diff_b = NA}
+  if(!is.na(lat_e) & !is.na(lon_e)){
+    pos_diff_e = distGeo(c(lon, lat), c(lon_e,lat_e))
+  }else{pos_diff_e = NA}
+  
+  
+  prof_data = as.data.frame(fread(ctd_file,strip.white = T , stringsAsFactors = F, skip = n+1,na.strings =  "-999"))
+  f_headers = as.character(fread(ctd_file,stringsAsFactors = F, skip = n-1, nrows = 1, header = F))
+  colnames(prof_data) = f_headers
+  # convert to depth
+  prof_data$DEPTH = swDepth(prof_data$CTDPRS, latitude = lat)
+  prof_data = prof_data %>% filter(is.finite(DEPTH))
+  if(any(grepl("CTDSAL",f_headers))){prof_data$CTDSAL = as.numeric(prof_data$CTDSAL)}
+  if(any(grepl("CTDTMP",f_headers))){prof_data$CTDTMP = as.numeric(prof_data$CTDTMP)}
+  
+  if(any(grepl("CTDSAL",f_headers)) & any(grepl("CTDTMP",f_headers))){
+    sdx = which(is.finite(prof_data$CTDSAL) & is.finite(prof_data$CTDTMP))
+    if(length(sdx) > 0 ){
+      DEPTH_s = prof_data$DEPTH[sdx[1]]}else{DEPTH_s = NA}
+  }else{sdx = 1}
+  if(any(grepl("CTDSAL",f_headers)) & any(!is.na(prof_data$CTDSAL))){
+    CTDSAL_s = prof_data$CTDSAL[sdx[1]]
+    if(prof_data$DEPTH[which(is.finite(prof_data$CTDSAL))][1]<10 & prof_data$DEPTH[which(is.finite(prof_data$CTDSAL))][length(prof_data$DEPTH[which(is.finite(prof_data$CTDSAL))])] >10){
+      CTDSAL_10 = approx(prof_data$DEPTH[which(is.finite(prof_data$CTDSAL))], prof_data$CTDSAL[which(is.finite(prof_data$CTDSAL))],10)$y  
+    }
+    
+  }else{CTDSAL_s = NA
+  CTDSAL_10 = NA}
+  if(any(grepl("CTDTMP",f_headers))& any(!is.na(prof_data$CTDTMP))){
+    CTDTEMP_s = prof_data$CTDTMP[sdx[1]]
+    if(prof_data$DEPTH[which(is.finite(prof_data$CTDTMP))][1]<10 & prof_data$DEPTH[which(is.finite(prof_data$CTDTMP))][length(prof_data$DEPTH[which(is.finite(prof_data$CTDTMP))])] >10){
+      CTDTEMP_10 = approx(prof_data$DEPTH[which(is.finite(prof_data$CTDTMP))], prof_data$CTDTMP[which(is.finite(prof_data$CTDTMP))],10)$y
+    }
+  }else{CTDTEMP_s = NA
+  CTDTEMP_10 = NA}
+  
+  ### MLD calculation - 0.03 density threshold - this is a typical definition of MLD for the SO
+  if(all(any(grepl("CTDPRS",f_headers)), any(grepl("CTDSAL",f_headers)), any(grepl("CTDTMP",f_headers)),!is.na(lat)) & length(which(prof_data$DEPTH[is.finite(prof_data$DEPTH) & is.finite(prof_data$CTDSAL) & is.finite(prof_data$CTDTMP)] > 10)) >= 2){
+    MLD_calc = MLD(prof_data$CTDPRS,prof_data$CTDSAL, prof_data$CTDTMP,lat = lat,dens_thresh = 0.03)
+    MLD_n = MLD_calc$MLD
+    MLD_FLAG = MLD_calc$FLAG
+  }else{MLD_n = NA
+  MLD_FLAG = NA}
+  
+  
+  # gather ctd information
+  CTD_df = CTD_df %>% add_row(CTD_ID = ctd, DATE = date, TIME_s = times[1], TIME_b= times[2], TIME_e= times[3], LAT = lat, LON = lon, LAT_b = lat_b, LON_b = lon_b, LAT_e = lat_e, LON_e = lon_e, T_diff_b = t_diff_b, T_diff_e = t_diff_e, POS_diff_b = pos_diff_b, POS_diff_e = pos_diff_e, BOT_DEPTH = max(prof_data$DEPTH, na.rm = T),DEPTH_s = DEPTH_s, CTDSAL_s = CTDSAL_s, CTDTEMP_s = CTDTEMP_s, CTDSAL_10 = CTDSAL_10, CTDTEMP_10 = CTDTEMP_10, MLD = MLD_n, MLD_FLAG = MLD_FLAG, CTDPRS = "CTDPRS" %in% f_headers,  CTDSAL = "CTDSAL" %in% f_headers, CTDTMP = "CTDTMP" %in% f_headers, CTDOXY = "CTDOXY" %in% f_headers, CTDFLUOR = "CTDFLUOR" %in% f_headers, CTDBEAMCP = "CTDBEAMCP" %in% f_headers, CTDBBP700 = "CTDBBP700" %in% f_headers, CTDXMISS = "CTDXMISS" %in% f_headers, CTDPAR = "CTDPAR" %in% f_headers, CTDNITRATE = "CTDNITRATE" %in% f_headers)
+  
+}
+
+
+# this small function prevents the drop of midnight 00:00:00
+calc.dist.min = function(x){
+  mins = which.min(distGeo(c(unmatched_df_p$LON_analyser[x], unmatched_df_p$LAT_analyser[x]), as.matrix(CTD_df[,c("LON","LAT")])))[1]
+  dists = distGeo(c(unmatched_df_p$LON_analyser[x], unmatched_df_p$LAT_analyser[x]), as.matrix(CTD_df[mins,c("LON","LAT")]))
+  if(any(!is.na(CTD_df$LON_b))){
+    minb = which.min(distGeo(c(unmatched_df_p$LON_analyser[x], unmatched_df_p$LAT_analyser[x]), as.matrix(CTD_df[,c("LON_b","LAT_b")])))[1]
+    mins = c(mins, minb)
+    distb = distGeo(c(unmatched_df_p$LON_analyser[x], unmatched_df_p$LAT_analyser[x]), as.matrix(CTD_df[minb,c("LON_b","LAT_b")]))
+    dists = c(dists, distb)}
+  if(any(!is.na(CTD_df$LON_e))){
+    mine = which.min(distGeo(c(unmatched_df_p$LON_analyser[x], unmatched_df_p$LAT_analyser[x]), as.matrix(CTD_df[,c("LON_e","LAT_e")])))[1]
+    mins = c(mins, mine)
+    diste = distGeo(c(unmatched_df_p$LON_analyser[x], unmatched_df_p$LAT_analyser[x]), as.matrix(CTD_df[mine,c("LON_e","LAT_e")]))
+    dists = c(dists, diste)}
+  data.frame(min = mins[which.min(dists)],diff = dists[which.min(dists)])
+}
+#calc.dist.diff = function(x){distGeo(c(unmatched_df_p$LON[x], unmatched_df_p$LAT[x]), as.matrix(CTD_df[unmatched_df_p$dist_min[x],c("LON","LAT")]))}
+calc.time.min = function(x){which.min(abs(unlist(lapply(col_t, FUN = function(y){difftime(CTD_df[,y], unmatched_df_t$time_m[x], units = "secs")}))))[1]}
+calc.time.diff =  function(x){abs(unlist(lapply(col_t, FUN = function(y){difftime(CTD_df[,y], unmatched_df_t$time_m[x], units = "secs")})))[unmatched_df_t$closest_t[x]]}
+
+
+# CTD data exists?. Closest position and closest times?
+pig_expos = expo_info$PIG
+pig_data$PROF_data = NA
+pig_data$d_diff = NA
+pig_data$t_diff = NA
+for(ex in pig_expos){
+  sub_prof_files = prof_files[which(substr(prof_files,1,12) == ex)]
+  sub_pig_data = pig_data %>% filter(EXPOCODE == ex) %>% mutate(STNCAST = paste(STNNBR_analyser,CASTNO_analyser))
+  data2_stncast = paste(sub_pig_data$STNNBR_analyser,sub_pig_data$CASTNO_analyser)
+  sub_pig_data = sub_pig_data[!duplicated(sub_pig_data$STNCAST),]
+  
+  pig_data$PROF_data[which(pig_data$EXPOCODE == ex)] = length(sub_prof_files) != 0
+  CTD_df_sub = CTD_df %>% filter(substr(prof_files,1,12) == ex)
+  
+  if(length(sub_prof_files) > 0){
+    # ctd_ids from CTD files
+    CTD_IDs = unlist(strsplit(sub_prof_files,"_ctd1.csv"))
+    # create a data frame with split info
+    ctd_split = strsplit(CTD_IDs, split = "_")
+    CTD_info = data.frame("CTD_ID" = CTD_IDs, "EXPOCODE" = sapply(ctd_split, "[[", 1), "STNNBR" = sapply(ctd_split, "[[", 3), "CASTNO"= sapply(ctd_split, "[[", 4), stringsAsFactors = F)
+    
+    
+    unmatched_df_t = sub_pig_data %>% filter(!is.na(TIME_analyser), !is.empty(TIME_analyser), !is.empty(DATE_analyser)) 
+    unmatched_df_t = unmatched_df_t[,-which(names(unmatched_df_t) %in% c("d_diff","t_diff"))] %>%
+      mutate(time_m = as.POSIXct(paste(DATE_analyser,TIME_analyser), format = "%Y-%m-%d %H:%M:%S", tz = "UTC"))
+    notime = ifelse(nrow(unmatched_df_t) == 0,T,F)
+    unmatched_df_p = sub_pig_data %>% filter(!is.na(LAT_analyser))
+    unmatched_df_p = unmatched_df_p[,-which(names(unmatched_df_p) %in% c("d_diff","t_diff"))]
+    nopos = ifelse(nrow(unmatched_df_p) == 0,T,F)
+    if(!nopos){
+      ### match closest times
+      col_t = c(3:5)[!colSums(is.na(CTD_df_sub[3:5])) == nrow(CTD_df_sub)]
+      if(!notime){
+        #calculate time differences
+        unmatched_df_t$closest_t = unlist(lapply(1:nrow(unmatched_df_t), calc.time.min))
+        unmatched_df_t$t_diff = unlist(lapply(1:nrow(unmatched_df_t), calc.time.diff))
+        unmatched_df_t = unmatched_df_t %>% filter(!is.na(closest_t))
+        
+        # Any matches?
+        if(nrow(unmatched_df_t) > 0){
+          # get CTD_IDs
+          unmatched_df_t$CTD_ID = unlist(lapply(1:nrow(unmatched_df_t),function(x){r = CTD_df_sub$CTD_ID[unmatched_df_t$closest_t[x]%%nrow(CTD_df_sub)]
+          if(is.empty(r)){r = CTD_df_sub$CTD_ID[nrow(CTD_df_sub)]}
+          return(r)}))
+          # join with data 2 IDs
+          joined_t = left_join(data.frame("STNCAST" = data2_stncast),unmatched_df_t,which(names(unmatched_df_p) %in% c("STNCAST","d_diff","t_diff")) , by = "STNCAST")
+        }}
+      
+      
+      ### match closest positions
+      
+      # match with closest lat/lon on same date
+      d_calc = lapply(1:nrow(unmatched_df_p), calc.dist.min)
+      unmatched_df_p$dist_min  = unlist(lapply(d_calc,"[","min"))
+      unmatched_df_p$d_diff = unlist(lapply(d_calc,"[","diff"))
+      
+      
+      # Any matches?
+      
+      if(nrow(unmatched_df_p) > 0 & notime){
+        # if no time matches consider date of position matches.
+        unmatched_df_p = unmatched_df_p %>% mutate(Date_match = ifelse(DATE_analyser == CTD_df_sub$DATE[dist_min],T,F))
+        unmatched_df_p = unmatched_df_p %>% filter(Date_match)
+      }
+      if(nrow(unmatched_df_p) > 0){
+        # get CTD_ID
+        unmatched_df_p$CTD_ID = unlist(lapply(1:nrow(unmatched_df_p),function(x){CTD_df_sub$CTD_ID[unmatched_df_p$dist_min[x]]}))
+        # join with data 2 IDs
+        joined_p = left_join(data.frame("STNCAST" = data2_stncast),unmatched_df_p[,which(names(unmatched_df_p) %in% c("STNCAST","d_diff","t_diff"))] , by = c("STNCAST"))
+        if(exists("joined_t")){
+          # join with data 2 IDs
+          joined_t_p = left_join(joined_t,unmatched_df_p , by = "STNCAST")
+          rm(joined_t)
+        }else{joined_t_p = joined_p
+        rm(joined_p)}
+      }
+      if(exists("joined_t_p")){       
+        if(any(grepl(pattern = "d_diff", colnames(joined_t_p)))){
+          pig_data$d_diff[pig_data$EXPOCODE == ex] = joined_t_p$d_diff
+        }  
+        if(any(grepl(pattern = "t_diff", colnames(joined_t_p)))){
+          pig_data$t_diff[pig_data$EXPOCODE == ex] = joined_t_p$t_diff}
+        rm(joined_t_p)
+      }
+    }}}
+
+
+
+pig_data[pig_data == -999000] = -999 # a couple of records have the wrong missing value number in PALLTER LM14-01 HPLC
+pig_data$HPLC =unlist(lapply(1:nrow(pig_data), function(x){any(is.finite(as.numeric(pig_data[x,25:58])))}))
+pig_data$CTDFLUOR = CTD_df$CTDFLUOR[match(pig_data$CTD_IDs, sapply(str_split(CTD_df$CTD_ID, pattern = "_ctd1"), "[[", 1))]
+pig_data$CTDBBP700 = CTD_df$CTDBBP700[match(pig_data$CTD_IDs, sapply(str_split(CTD_df$CTD_ID, pattern = "_ctd1"), "[[", 1))]
+pig_data$CTDBEAMCP = CTD_df$CTDBEAMCP[match(pig_data$CTD_IDs, sapply(str_split(CTD_df$CTD_ID, pattern = "_ctd1"), "[[", 1))]
+
+pig_data$LAT_analyser[which(is.na(pig_data$LAT_analyser) & !is.na(pig_data$LATITUDE))] = pig_data$LATITUDE[which(is.na(pig_data$LAT_analyser) & !is.na(pig_data$LATITUDE))]
+pig_data$LON_analyser[which(is.na(pig_data$LON_analyser) & !is.na(pig_data$LONGITUDE))] = pig_data$LONGITUDE[which(is.na(pig_data$LON_analyser) & !is.na(pig_data$LONGITUDE))]
+pig_data$DATE_analyser[which(is.na(pig_data$DATE_analyser) & !is.na(pig_data$DATE))] = pig_data$DATE[which(is.na(pig_data$DATE_analyser) & !is.na(pig_data$DATE))]
+
+
+
+pig_data_CTD = pig_data %>% filter(!(CTD_IDs %in% "U"))
+pig_data_CTD$A = paste(pig_data_CTD$EXPOCODE, pig_data_CTD$PIG_METHOD,pig_data_CTD$PIG_SOURCE ,pig_data_CTD$DATE_analyser, pig_data_CTD$LAT_analyser, pig_data_CTD$LON_analyser)
+pig_data_CTD = pig_data_CTD[order(pig_data_CTD$A),]
+pig_data_CTD$DEPTH = as.numeric(pig_data_CTD$DEPTH)
+n_obs = stats::aggregate(pig_data_CTD$DEPTH, by = list(pig_data_CTD$A), FUN = length)
+min_d = stats::aggregate(pig_data_CTD$DEPTH, by = list(pig_data_CTD$A), FUN =  function(x){min(x, na.rm = T)})
+max_d = stats::aggregate(pig_data_CTD$DEPTH, by = list(pig_data_CTD$A), FUN =  function(x){max(x, na.rm = T)})
+pig_data_CTD = pig_data_CTD[!duplicated(pig_data_CTD$A),c(1:15, 20:22, 66)]
+pig_data_CTD$nobs = n_obs$x[order(n_obs$Group.1)]
+pig_data_CTD$min_d = min_d$x[order(min_d$Group.1)]
+pig_data_CTD$max_d = max_d$x[order(max_d$Group.1)]
+
+#
+CTD_des = data.frame("voyages" = length(unique(substr(CTD_df$CTD_ID, 1,12))), "profiles" = nrow(CTD_df), "CTDPRS" = length(which(CTD_df$CTDPRS)),  "CTDSAL" = length(which(CTD_df$CTDSAL)), "CTDTMP" = length(which(CTD_df$CTDTMP)), "CTDOXY" = length(which(CTD_df$CTDOXY)), "CTDFLUOR" = length(which(CTD_df$CTDFLUOR)), "CTDBEAMCP" = length(which(CTD_df$CTDBEAMCP)), "CTDBBP700" = length(which(CTD_df$CTDBBP700)), "CTDXMISS" = length(which(CTD_df$CTDXMISS)) , "CTDPAR" = length(which(CTD_df$CTDPAR)), "CTDNITRATE" = length(which(CTD_df$CTDNITRATE)))
+
+CTD_des[,3:12] = CTD_des[,3:12]/CTD_des$profiles*100
+
+# row 1 = CTD, row 2 = all pigment, row 3 = subsurface pigment (>4 obs), row 4 = surface pigment (<10 m)
+surf_pig = pig_data %>% filter(as.numeric(DEPTH) < 10)
+sub_pig = pig_data_CTD %>%  dplyr::filter(max_d > 75, min_d < 20, nobs >= 4)
+
+pig_data_CTD2 = pig_data %>% filter(!(CTD_IDs %in% "U"))
+pig_data_CTD2$A = paste(pig_data_CTD2$EXPOCODE, pig_data_CTD2$PIG_METHOD,pig_data_CTD2$PIG_SOURCE ,pig_data_CTD2$DATE_analyser, pig_data_CTD2$LAT_analyser, pig_data_CTD2$LON_analyser)
+pig_data_CTD2 = pig_data_CTD2[order(pig_data_CTD2$A),]
+pig_data_CTD_prof = pig_data_CTD2 %>% filter(A %in% sub_pig$A)
+
+# to add POC
+data_description = data.frame("voyages" = numeric(), "Records" = numeric(), "Unique" = numeric(),"Unique2" = numeric(), "PhysicalMatches" = numeric(), "PIG_compare" = numeric(),"HPLC" = numeric(), "Fluor" = numeric())
+data_description[1:3,] = NA
+# number of voyages
+data_description$voyages = c(length(unique(pig_data$EXPOCODE)), length(unique(sub_pig$EXPOCODE)), length(unique(surf_pig$EXPOCODE)))
+
+# number of pig records
+data_description$Records = c(nrow(pig_data),nrow(pig_data_CTD_prof),nrow(surf_pig))
+
+# number of identifiable unique sampling points
+data_description$Unique = c(length(unique(paste(pig_data$EXPOCODE, pig_data$CTD_IDs, pig_data$LAT_analyser, pig_data$LON_analyser, pig_data$DATE_analyser, pig_data$TIME_analyser, pig_data$STNNBR_analyser, pig_data$PIG_METHOD, pig_data$PIG_SOURCE, pig_data$DEPTH))), 
+                            length(unique(paste(pig_data_CTD_prof$EXPOCODE, pig_data_CTD_prof$CTD_IDs, pig_data_CTD_prof$LAT_analyser, pig_data_CTD_prof$LON_analyser, pig_data_CTD_prof$DATE_analyser, pig_data_CTD_prof$TIME_analyser, pig_data_CTD_prof$STNNBR_analyser, pig_data_CTD_prof$PIG_METHOD, pig_data_CTD_prof$PIG_SOURCE, pig_data_CTD_prof$DEPTH))),
+                            length(unique(paste(surf_pig$EXPOCODE, surf_pig$CTD_IDs, surf_pig$LAT_analyser, surf_pig$LON_analyser, surf_pig$DATE_analyser, surf_pig$TIME_analyser, surf_pig$STNNBR_analyser, surf_pig$PIG_METHOD, surf_pig$PIG_SOURCE, surf_pig$DEPTH))))
+
+# number of unique sample locations
+pig_data2 = pig_data %>% filter(!is.na(LAT_analyser), !is.na(LON_analyser), any(!is.na(DATE), !is.na(DATE_analyser)))
+sub_pig2 = sub_pig %>% filter(!is.na(LAT_analyser), !is.na(LON_analyser), any(!is.na(DATE), !is.na(DATE_analyser)))
+surf_pig2 = surf_pig %>% filter(!is.na(LAT_analyser), !is.na(LON_analyser), any(!is.na(DATE), !is.na(DATE_analyser)))
+
+data_description$Unique2 = c(length(unique(paste(pig_data2$EXPOCODE, pig_data2$CTD_IDs, pig_data2$LAT_analyser, pig_data2$LON_analyser, pig_data2$DATE_analyser, pig_data2$TIME_analyser, pig_data2$STNNBR_analyser))), 
+                             length(unique(paste(sub_pig2$EXPOCODE, sub_pig2$CTD_IDs, sub_pig2$LAT_analyser, sub_pig2$LON_analyser, sub_pig2$DATE_analyser, sub_pig2$TIME_analyser, sub_pig2$STNNBR_analyser))),
+                             length(unique(paste(surf_pig2$EXPOCODE, surf_pig2$CTD_IDs, surf_pig2$LAT_analyser, surf_pig2$LON_analyser, surf_pig2$DATE_analyser, surf_pig2$TIME_analyser, surf_pig2$STNNBR_analyser))))
+
+# number of bio-physical matches
+data_description$PhysicalMatches = c(length(which(pig_data$CTD_IDs != "U" & !is.na(pig_data$CTD_IDs))), 
+                                     length(which(pig_data_CTD_prof$CTD_IDs != "U" & !is.na(pig_data_CTD_prof$CTD_IDs))), 
+                                     length(which(surf_pig$CTD_IDs != "U" & !is.na(surf_pig$CTD_IDs))))
+
+#HPLC-fluor matches
+B = data.frame("unique" = paste(pig_data$EXPOCODE, pig_data$DATE, pig_data$TIME_s, pig_data$TIME_b, pig_data$TIME_e, pig_data$DATE_analyser, pig_data$TIME_analyser, pig_data$STNNBR_analyser, pig_data$CTD_IDs, round(pig_data$LAT_analyser, digits = 1), round(pig_data$LON_analyser, digits = 1), pig_data$DEPTH), "method" = pig_data$PIG_METHOD)
+C = paste(B$unique, B$method)
+B = B[!duplicated(C),]
+n_method = stats::aggregate(B$method, by = list(B$unique), FUN = length)
+data_description$PIG_compare[1] = length(which(n_method$x == 2))
+
+
+B = data.frame("unique" = paste(pig_data_CTD_prof$EXPOCODE, pig_data_CTD_prof$DATE, pig_data_CTD_prof$TIME_s, pig_data_CTD_prof$TIME_b, pig_data_CTD_prof$TIME_e, pig_data_CTD_prof$DATE_analyser, pig_data_CTD_prof$TIME_analyser, pig_data_CTD_prof$STNNBR_analyser, pig_data_CTD_prof$CTD_IDs, round(pig_data_CTD_prof$LAT_analyser, digits = 1), round(pig_data_CTD_prof$LON_analyser, digits = 1), pig_data_CTD_prof$DEPTH), "method" = pig_data_CTD_prof$PIG_METHOD)
+C = paste(B$unique, B$method)
+B = B[!duplicated(C),]
+n_method = stats::aggregate(B$method, by = list(B$unique), FUN = length)
+data_description$PIG_compare[2] = length(which(n_method$x == 2))
+
+B = data.frame("unique" = paste(surf_pig$EXPOCODE, surf_pig$DATE, surf_pig$TIME_s, surf_pig$TIME_b, surf_pig$TIME_e, surf_pig$DATE_analyser, surf_pig$TIME_analyser, surf_pig$STNNBR_analyser, surf_pig$CTD_IDs, round(surf_pig$LAT_analyser, digits = 1), round(surf_pig$LON_analyser, digits = 1), surf_pig$DEPTH), "method" = surf_pig$PIG_METHOD)
+C = paste(B$unique, B$method)
+B = B[!duplicated(C),]
+n_method = stats::aggregate(B$method, by = list(B$unique), FUN = length)
+data_description$PIG_compare[3] = length(which(n_method$x == 2))
+
+# number of pig records
+data_description$Fluor = c(length(which(is.finite(pig_data$FCHLORA))), length(which(is.finite(pig_data_CTD_prof$FCHLORA))), length(which(is.finite(surf_pig$FCHLORA))))
+
+data_description$HPLC = c(length(which(pig_data$HPLC)), length(which(pig_data_CTD_prof$HPLC)), length(which(surf_pig$HPLC)))
+
+
+# fluor data
+data_description$CTDFluor = c(length(which(pig_data$CTDFLUOR)), 
+                              length(which(pig_data_CTD_prof$CTDFLUOR)), 
+                              length(which(surf_pig$CTDFLUOR)))
+
+data_description$CTDBBP700 = c(length(which(pig_data$CTDBBP700)), 
+                               length(which(pig_data_CTD_prof$CTDBBP700)), 
+                               length(which(surf_pig$CTDBBP700)))
+
+data_description$CTDBEAMCP = c(length(which(pig_data$CTDBEAMCP)), 
+                               length(which(pig_data_CTD_prof$CTDBEAMCP)), 
+                               length(which(surf_pig$CTDBEAMCP)))
+
+
