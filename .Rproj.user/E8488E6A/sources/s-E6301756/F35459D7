@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1633993987772.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F35459D7",
+    "lastKnownWriteTime" : 1637470873,
+    "last_content_update" : 1637470873,
+    "path" : "~/Projects/BIO-MATE/BIO-MATE/src/BIO-SHARE/app.R",
+    "project_path" : "src/BIO-SHARE/app.R",
+    "properties" : {
+        "cursorPosition" : "28,109",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

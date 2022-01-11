@@ -5,10 +5,12 @@ insert_phys <- function(data, BIOMATE_path){
   ctd_path =file.path(path,"profiling_sensors")
   data_clean$MLD = NA
   data_clean$CHL50 = NA
+  data_clean$EMLD = NA
+  data_clean$EMLD_QI = NA
   data_clean$MLD_FLAG = NA
   data_clean$CTDSAL = NA
   data_clean$CTDTMP =
-    data_clean$CTDFLUOR = NA
+  data_clean$CTDFLUOR = NA
   # add TRANSMittance later - need path lengths for some conversions
   data_clean$CTDBBP700 = NA
   ### match profiling sensor data
@@ -53,6 +55,9 @@ insert_phys <- function(data, BIOMATE_path){
         data_clean$CTDFLUOR[md] = mean_5m(prof_data$DEPTH[which(is.finite(prof_data$CTDFLUOR))], prof_data$CTDFLUOR[which(is.finite(prof_data$CTDFLUOR))],data_clean$DEPTH[md])
         # note eco MLD doesnt work with the low quality data
         data_clean$CHL50[mdx] = CHL_50(prof_data$CTDPRS[is.finite(prof_data$CTDFLUOR)],prof_data$CTDFLUOR[is.finite(prof_data$CTDFLUOR)])
+        E = Eco_MLD(prof_data$CTDPRS[is.finite(prof_data$CTDFLUOR)],prof_data$CTDFLUOR[is.finite(prof_data$CTDFLUOR)])
+        data_clean$EMLD[mdx] = E$EMLD
+        data_clean$EMLD_QI[mdx] = E$QI
       }
     }
     if(any(grepl("CTDBBP700",f_headers))& any(!is.na(prof_data$CTDBBP700))){

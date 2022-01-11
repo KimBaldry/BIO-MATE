@@ -1,3 +1,0 @@
-"0","chl = read.csv(""E:/Data_downloads/PAL-LTER/pigments/CHL/320619930325/old/320619930325_from_Chlorophyll (Cruise)_edited.csv"" , stringsAsFactors = F, header = T)"
-"0","chl$Latitude = -chl$Latitude"
-"0","write.csv(x = chl,file = ""E:/Data_downloads/PAL-LTER/pigments/CHL/320619930325/320619930325_from_Chlorophyll (Cruise)_edited.csv"",row.names = F)"

@@ -1,0 +1,40 @@
+CTD,20211228IMASUTASKB
+#semi-manual exchange
+#ORIGINAL_CTDFILE: heads_insert_p6609608.cnv
+#CTDFILE_MOD_DATE: 2021-12-28 12:27:37 AEST
+#SOURCED_FROM: MGDS(https://www.marine-geo.org/)
+#DATASET_CONTACT: Gregory B. Mitchell
+#DOI/s: 10.1594/IEDA/321960
+#BIOMATE_CITE_TAGS: 320620060703_prof,MGDS
+#DATA_CITATION/S: Gregory MB (2015) “Calibrated Hydrographic Data acquired with a CTD from the Scotia Sea, Antarctica acquired during the Nathaniel B. Palmer expedition NBP0606.” Interdisciplinary Earth Data Alliance. Interdisciplinary Earth Data Alliance. 10.1594/IEDA/321960. https://www.marine-geo.org/tools/entry/NBP0606.
+# andCarbotte S, Ryan W, Oâ€™Hara S, Arko R, Goodwillie A, Melkonian A, Weissel R, Ferrini V (2007) “Antarctic Multibeam Bathymetry and Geophysical Data Synthesis: An On-Line Digital Data Resource for Marine Geoscience Research in the Southern Ocean.” U.S. Geological Survey Open-File Report 2007-1047. 10.3133/of2007-1047.srp002. https://www.marine-geo.org/.
+#NOTE: 
+NUMBER_HEADERS = 18
+EXPOCODE = 320620060703
+SHIP = NATHANIEL B. PALMER 
+STNNBR or EVENTNBR = 39
+CASTNO = 1
+CTDID = 320620060703_CTD_39_1
+DATE = 2006-07-12
+TIMEZONE = UTC
+CTD_START_TIME = 01:09:45
+CTD_START_LATITUDE = -60.751
+CTD_START_LONGITUDE = -58.374
+CTD_BOTTOM_TIME = 
+CTD_BOTTOM_LATITUDE = 
+CTD_BOTTOM_LONGITUDE = 
+CTD_END_TIME = 
+CTD_END_LATITUDE = 
+CTD_END_LONGITUDE = 
+missing_value = -999
+CTDPRS, CTDTMP, CTDSAL, CTDOXY, CTDFLUOR, CTDBEAMCP
+DBAR, DEG C, PSU, ML/L, , /METER
+23, -0.8137, 33.8822, 8.01603, 0.1697, 13.8155
+24, -0.8266, 33.8842, 8.02476, 0.1438, 13.8155
+25, -0.8247, 33.8844, 8.0354, 0.1533, 13.8155
+26, -0.8177, 33.8833, 8.05749, 0.1604, 13.8155
+27, -0.8142, 33.8829, 8.06334, 0.1571, 13.8155
+28, -0.813, 33.8826, 8.06731, 0.1473, 13.8155
+29, -0.8134, 33.8826, 8.06768, 0.1543, 13.8155
+30, -0.8131, 33.8826, 8.0679, 0.1631, 13.8155
+31, -0.8136, 33.8821, 8.05981, 0.186, 13.8155

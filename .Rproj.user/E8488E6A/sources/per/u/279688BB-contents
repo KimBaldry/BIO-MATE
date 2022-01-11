@@ -1,0 +1,19 @@
+# this small function prevents the drop of midnight 00:00:00
+print.POSIXct2 <- function(x){format(x,"%Y-%m-%d %H:%M:%S %Z")}
+calc.dist.min = function(x){
+  mins = which.min(distGeo(c(unmatched_df_p$LON[x], unmatched_df_p$LAT[x]), as.matrix(CTD_df[,c("LON_s","LAT_s")])))[1]
+  dists = distGeo(c(unmatched_df_p$LON[x], unmatched_df_p$LAT[x]), as.matrix(CTD_df[mins,c("LON_s","LAT_s")]))
+  if(any(!is.na(CTD_df$LON_b))){
+    minb = which.min(distGeo(c(unmatched_df_p$LON[x], unmatched_df_p$LAT[x]), as.matrix(CTD_df[,c("LON_b","LAT_b")])))[1]
+    mins = c(mins, minb)
+    distb = distGeo(c(unmatched_df_p$LON[x], unmatched_df_p$LAT[x]), as.matrix(CTD_df[minb,c("LON_b","LAT_b")]))
+    dists = c(dists, distb)}
+  if(any(!is.na(CTD_df$LON_e))){
+    mine = which.min(distGeo(c(unmatched_df_p$LON[x], unmatched_df_p$LAT[x]), as.matrix(CTD_df[,c("LON_e","LAT_e")])))[1]
+    mins = c(mins, mine)
+    diste = distGeo(c(unmatched_df_p$LON[x], unmatched_df_p$LAT[x]), as.matrix(CTD_df[mine,c("LON_e","LAT_e")]))
+    dists = c(dists, diste)}
+  data.frame(min = mins[which.min(dists)],diff = dists[which.min(dists)])
+}
+calc.time.min = function(x){which.min(abs(unlist(lapply(col_t, FUN = function(y){difftime(CTD_df[,y], unmatched_df_t$time_m[x], units = "secs")}))))[1]}
+calc.time.diff =  function(x){abs(unlist(lapply(col_t, FUN = function(y){difftime(CTD_df[,y], unmatched_df_t$time_m[x], units = "secs")})))[unmatched_df_t$closest_t[x]]}

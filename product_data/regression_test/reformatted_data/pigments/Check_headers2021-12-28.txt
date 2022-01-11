@@ -1,0 +1,244 @@
+./product_data/regression_test/downloaded_data/PANGEAE/06AQ20161216/HPLC/Bracher_2019_PS103.tab
+The header line picked: Event	Station	Gear	Date	Latitude	Longitude	SampleID	Depth	Chlc3	MgDVP	Chlc1c2	Chlidea	Perid	Phidea	But-fuco	Fuco	Neo	Hex-fuco	Pras	Viola	Asta	Diadino	Dino	Anthera	Allo	Diato	Zea	Lut	Chlb	DVchla	Chla	Phytina	a-Car	b-Car
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: DEPTH
+The variables found: DVChla
+The variables found: Chla
+The variables found: Chla_ide
+The variables found: Chlb
+The variables found: Chlc1_Chlc2
+The variables found: Chlc3
+The variables found: MgDVP
+The variables found: 19Hex
+The variables found: 19But
+The variables found: Fucox
+The variables found: Perid
+The variables found: Prasino
+The variables found: Allox
+The variables found: Lutein
+The variables found: Zeax
+The variables found: Violax
+The variables found: Alpha_car
+The variables found: Beta_car
+The variables found: Neox
+The variables found: DD
+The variables found: DT
+The variables found: Phide_a
+The variables found: Phytin_a
+All good?
+ 
+./product_data/regression_test/downloaded_data/SeaBASS/096U20150320/HPLC/SOCCOM_SOTS_HPLC.csv
+The header line picked: year,month,day,sdy,time,sample,water_depth,lon,lat,station,bottle,depth,Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,MV_Chl_a,DV_Chl_a,Chlide_a,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Pras,quality
+The variables found: STNNBR
+The variables found: TIME_analyser
+The variables found: Sample_ID
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: BOTTLE
+The variables found: DEPTH
+The variables found: TCHLA
+The variables found: DVChla
+The variables found: Chla
+The variables found: Chla_ide
+The variables found: Chlc1_Chlc2_Mg_3_8_divinyl_pheoporphyrin_a5
+The variables found: Chlc3
+The variables found: 19Hex
+The variables found: 19But
+The variables found: Fucox
+The variables found: Perid
+The variables found: Prasino
+The variables found: Allox
+The variables found: Lutein
+The variables found: Violax
+The variables found: Neox
+The variables found: DD
+The variables found: DT
+All good?
+ 
+./product_data/regression_test/downloaded_data/PANGEAE/06AQ20161216/HPLC/Bracher_2019_PS103.tab
+The header line picked: Event	Station	Gear	Date	Latitude	Longitude	SampleID	Depth	Chlc3	MgDVP	Chlc1c2	Chlidea	Perid	Phidea	But-fuco	Fuco	Neo	Hex-fuco	Pras	Viola	Asta	Diadino	Dino	Anthera	Allo	Diato	Zea	Lut	Chlb	DVchla	Chla	Phytina	a-Car	b-Car
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: DEPTH
+The variables found: DVChla
+The variables found: Chla
+The variables found: Chla_ide
+The variables found: Chlb
+The variables found: Chlc1_Chlc2
+The variables found: Chlc3
+The variables found: MgDVP
+The variables found: 19Hex
+The variables found: 19But
+The variables found: Fucox
+The variables found: Perid
+The variables found: Prasino
+The variables found: Allox
+The variables found: Lutein
+The variables found: Zeax
+The variables found: Violax
+The variables found: Alpha_car
+The variables found: Beta_car
+The variables found: Neox
+The variables found: DD
+The variables found: DT
+The variables found: Phide_a
+The variables found: Phytin_a
+All good?
+ 
+./product_data/regression_test/downloaded_data/SeaBASS/096U20150320/HPLC/SOCCOM_SOTS_HPLC.csv
+The header line picked: year,month,day,sdy,time,sample,water_depth,lon,lat,station,bottle,depth,Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,MV_Chl_a,DV_Chl_a,Chlide_a,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Pras,quality
+The variables found: STNNBR
+The variables found: TIME_analyser
+The variables found: Sample_ID
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: BOTTLE
+The variables found: DEPTH
+The variables found: TCHLA
+The variables found: DVChla
+The variables found: Chla
+The variables found: Chla_ide
+The variables found: Chlc1_Chlc2_Mg_3_8_divinyl_pheoporphyrin_a5
+The variables found: Chlc3
+The variables found: 19Hex
+The variables found: 19But
+The variables found: Fucox
+The variables found: Perid
+The variables found: Prasino
+The variables found: Allox
+The variables found: Lutein
+The variables found: Violax
+The variables found: Neox
+The variables found: DD
+The variables found: DT
+All good?
+ 
+./product_data/regression_test/downloaded_data/PANGEAE/06AQ20161216/HPLC/Bracher_2019_PS103.tab
+The header line picked: Event	Station	Gear	Date	Latitude	Longitude	SampleID	Depth	Chlc3	MgDVP	Chlc1c2	Chlidea	Perid	Phidea	But-fuco	Fuco	Neo	Hex-fuco	Pras	Viola	Asta	Diadino	Dino	Anthera	Allo	Diato	Zea	Lut	Chlb	DVchla	Chla	Phytina	a-Car	b-Car
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: DEPTH
+The variables found: DVChla
+The variables found: Chla
+The variables found: Chla_ide
+The variables found: Chlb
+The variables found: Chlc1_Chlc2
+The variables found: Chlc3
+The variables found: MgDVP
+The variables found: 19Hex
+The variables found: 19But
+The variables found: Fucox
+The variables found: Perid
+The variables found: Prasino
+The variables found: Allox
+The variables found: Lutein
+The variables found: Zeax
+The variables found: Violax
+The variables found: Alpha_car
+The variables found: Beta_car
+The variables found: Neox
+The variables found: DD
+The variables found: DT
+The variables found: Phide_a
+The variables found: Phytin_a
+All good?
+ 
+./product_data/regression_test/downloaded_data/PANGEAE/06AQ20161216/HPLC/Bracher_2019_PS103.tab
+The header line picked: Event	Station	Gear	Date	Latitude	Longitude	SampleID	Depth	Chlc3	MgDVP	Chlc1c2	Chlidea	Perid	Phidea	But-fuco	Fuco	Neo	Hex-fuco	Pras	Viola	Asta	Diadino	Dino	Anthera	Allo	Diato	Zea	Lut	Chlb	DVchla	Chla	Phytina	a-Car	b-Car
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: DEPTH
+The variables found: DVChla
+The variables found: Chla
+The variables found: Chla_ide
+The variables found: Chlb
+The variables found: Chlc1_Chlc2
+The variables found: Chlc3
+The variables found: MgDVP
+The variables found: 19Hex
+The variables found: 19But
+The variables found: Fucox
+The variables found: Perid
+The variables found: Prasino
+The variables found: Allox
+The variables found: Lutein
+The variables found: Zeax
+The variables found: Violax
+The variables found: Alpha_car
+The variables found: Beta_car
+The variables found: Neox
+The variables found: DD
+The variables found: DT
+The variables found: Phide_a
+The variables found: Phytin_a
+All good?
+ 
+./product_data/regression_test/downloaded_data/SeaBASS/096U20150320/HPLC/SOCCOM_SOTS_HPLC.csv
+The header line picked: year,month,day,sdy,time,sample,water_depth,lon,lat,station,bottle,depth,Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,MV_Chl_a,DV_Chl_a,Chlide_a,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Pras,quality
+The variables found: STNNBR
+The variables found: TIME_analyser
+The variables found: Sample_ID
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: BOTTLE
+The variables found: DEPTH
+The variables found: TCHLA
+The variables found: DVChla
+The variables found: Chla
+The variables found: Chla_ide
+The variables found: Chlc1_Chlc2_Mg_3_8_divinyl_pheoporphyrin_a5
+The variables found: Chlc3
+The variables found: 19Hex
+The variables found: 19But
+The variables found: Fucox
+The variables found: Perid
+The variables found: Prasino
+The variables found: Allox
+The variables found: Lutein
+The variables found: Violax
+The variables found: Neox
+The variables found: DD
+The variables found: DT
+All good?
+ 
+./product_data/regression_test/downloaded_data/AADC/HPLC/09AR20031208/HPLC.csv
+The header line picked: ﻿Sample_Date,Sample_ID,YYYY,MM,DD,Time,DateTime_FLAG,CTD_ID,bottle,Analysis_Date,Latitude,Longitude,NominalDepth,chlc3,MgDVP,chlc2,chlc1,per,uriolide,but,fuc,neox,prx,micromonol,violax,hex,Mmal,ddx,alx,dtx,zea,lut,dihlut,Gyrox,crocox,chl_b,np_chl_c2,unk micromonas,TChla,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: Sample_ID
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: DEPTH
+The variables found: TCHLA
+The variables found: Chlb
+The variables found: Chlc1
+The variables found: Chlc2
+The variables found: Chlc3
+The variables found: MgDVP
+The variables found: 19Hex
+The variables found: 19But
+The variables found: Fucox
+The variables found: Perid
+The variables found: Prasino
+The variables found: Allox
+The variables found: Lutein
+The variables found: Violax
+The variables found: Neox
+The variables found: DD
+The variables found: DT
+All good?
+ 

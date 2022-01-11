@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1636844713887.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2085466028",
+    "id" : "CB433A44",
+    "lastKnownWriteTime" : 1639257238,
+    "last_content_update" : 1639346381861,
+    "path" : "~/Projects/BIO-MATE/BIO-MATE/BIOMATE_analysis.Rmd",
+    "project_path" : "BIOMATE_analysis.Rmd",
+    "properties" : {
+        "cursorPosition" : "363,160",
+        "last_setup_crc32" : "",
+        "scrollLine" : "357",
+        "source_window_id" : "",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

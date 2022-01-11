@@ -1,0 +1,72 @@
+# In this file, write the R-code necessary to load your original data file
+# (e.g., an SPSS, Excel, or SAS-file), and convert it to a data.frame. Then,
+# use the function open_data(your_data_frame) or closed_data(your_data_frame)
+# to store the data.
+
+BIOMATEpath = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0/reformatted_data"
+
+library(worcs)
+library(data.table)
+library(dplyr)
+library(seacarb)
+path_load = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE.v0"
+source(file.path(path_load,"src","compile_pigment_data.R"))
+source(file.path(path_load,"src","isempty.R"))
+source(file.path(path_load,"src","calc_TCHLA.R"))
+source(file.path(path_load,"src","insert_phys.R"))
+source(file.path(path_load,"src","rm_duplicates.R"))
+rm(path_load)
+source(file.path("C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/Multi-platform_SCM/src/old_src/Water structure clustering","MLD_calcs.R"))
+source(file.path("C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/Multi-platform_SCM/src/old_src/Water structure clustering","filters.R"))
+
+QIM =function(l,m,u){
+  if(l %% 2 == 0){l = l-1}
+  idx1 = which(DEPTH_bins %in% seq(l,m,2))
+  idx2 = which(DEPTH_bins %in% seq(l,u,2))
+  1 - ( (sd(DENS_bins[idx1] - mean(DENS_bins[idx1], na.rm = T), na.rm = T)) / (sd(DENS_bins[idx2] - mean(DENS_bins[idx2], na.rm = T), na.rm = T)))}
+
+
+VOI = read.table("./data/Voyages_of_interest.txt", stringsAsFactors = F)
+
+pig_data = compile_pigments(BIOMATEpath, c(VOI$V1))
+pig_data[pig_data == -888] = 0
+pig_data$DEPTH[which(pig_data$CTD_IDs == "U")] = 0
+
+# add CTD data
+pig_data = insert_phys(pig_data, BIOMATEpath)
+
+# delete duplicates
+pig_data = rm_duplicates(pig_data, fuzzy = F)
+
+# calculate TCHLA 
+pig_data = calc_TCHLA(pig_data)
+
+# pick out relevant profiles
+data_fluor = pig_data %>% filter(is.finite(CTDFLUOR))
+data_fluor$CHL = data_fluor$TCHLA
+data_fluor$CHL[is.finite(data_fluor$FCHLORA)] = data_fluor$FCHLORA[is.finite(data_fluor$FCHLORA)]
+data_fluor = data_fluor %>% mutate( FR = ifelse(CHL > 0.2 ,CTDFLUOR/CHL,NA))
+
+# we want profiles with a measurement > 75 m and one < 20 m
+data_CTD = data_fluor
+data_CTD$A = paste(data_CTD$CTD_IDs,data_CTD$PIG_METHOD)
+data_CTD = data_CTD[order(data_CTD$A),]
+n_obs = stats::aggregate(data_CTD$DEPTH, by = list(data_CTD$A), FUN = length)
+min_d = stats::aggregate(data_CTD$DEPTH, by = list(data_CTD$A), FUN = min)
+max_d = stats::aggregate(data_CTD$DEPTH, by = list(data_CTD$A), FUN = max)
+max_chl = stats::aggregate(data_CTD$CHL, by = list(data_CTD$A), FUN = function(x){max(x,na.rm = T)})
+max_fr = stats::aggregate(data_CTD$FR, by = list(data_CTD$A), 
+                          FUN = function(x){res = max(x,na.rm = T)
+                            if(res == -Inf){res = NA}
+                            res})
+data_CTD = data_CTD[!duplicated(data_CTD$A),c("CTD_IDs","PIG_METHOD","MLD","MLD_FLAG","CHL50")]
+data_CTD$nobs = n_obs$x[order(n_obs$Group.1)]
+data_CTD$min_d = min_d$x[order(min_d$Group.1)]
+data_CTD$max_d = max_d$x[order(max_d$Group.1)]
+data_CTD$max_chl = max_chl$x[order(max_chl$Group.1)]
+data_CTD$max_fr = max_fr$x[order(max_fr$Group.1)]
+# choose profiles
+data_CTD = data_CTD %>% dplyr::filter(ifelse(is.na(MLD),max_d > 75 ,max_d > min(MLD,CHL50,na.rm = T)), min_d < 20, nobs >= 4, max_chl > 0.2)
+
+
+save(pig_data, data_CTD, data_fluor, file = file.path("./data","pig_data_08022021.RData"))

@@ -1,0 +1,25 @@
+Eco_MLD <- function(pres, fluor, smoothing_window){
+  max_depth_idx = which.closest(pres,500)
+  av_resolution = mean(pres[2:max_depth_idx] - pres[1:(max_depth_idx-1)])
+  window = ceiling(smoothing_window/av_resolution)
+  tan_theta = vector("list",length(optic_idx500)-window-1)
+for(sp in 2:(length(optic_idx500)-window))
+{
+  if(sp <= window)
+  {
+    m1 = lm(FLUOR[1:sp]~PRES_optic[1:sp])$coefficients[2]}
+  else{m1 = lm(FLUOR[(sp-window):sp]~PRES_optic[(sp-window):sp])$coefficients[2]}
+  m2 = lm(FLUOR[sp:(sp+window)]~PRES_optic[sp:(sp+window)])$coefficients[2]
+  tan_theta[[sp]] = (m2 - m1)/(1+(m2*m1))}
+
+tan_theta = unlist(tan_theta)
+bloom_idx = which(tan_theta == max(tan_theta[FLUOR_dir == T],na.rm = T))+3
+Bloom_depth[[fl]] = PRES_optic[bloom_idx]
+idx_u = bloom_idx+ceiling(100/ctd_meta$res_50[fl])
+idx_l = bloom_idx-ceiling(0.5*100/ctd_meta$res_50[fl])
+if(idx_l<0){idx_l=1}
+QI_bd[[fl]] = 1 - sd(FLUOR[bloom_idx:idx_u]-mean(FLUOR[bloom_idx:idx_u]))/
+  sd(FLUOR[idx_l:idx_u]-mean(FLUOR[idx_l:idx_u]))
+  
+}
+

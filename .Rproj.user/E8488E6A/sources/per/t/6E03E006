@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1641183244402.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2121840660",
+    "id" : "6E03E006",
+    "lastKnownWriteTime" : 1641190711,
+    "last_content_update" : 1641190711926,
+    "path" : "~/Projects/BIO-MATE/Rpackage/R/UWY_to_WHPE.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "449,52",
+        "scrollLine" : "439",
+        "source_window_id" : "w2y7qf63qrtk0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
