@@ -1,7 +1,7 @@
-20211229IMASUTASKB
+20220803IMASUTASKB
 #semi-manual exchange
 #ORIGINAL_CHLFILE/S: ./product_data/regression_test/downloaded_data/SeaBASS/096U20150320/HPLC/SOCCOM_SOTS_HPLC.csv
-#CHLFILE_MOD_DATE: 2021-12-29 11:17:43 AEST
+#CHLFILE_MOD_DATE: 2022-08-03 18:18:10 AEST
 #SOURCED_FROM: SeaBASS(https://seabass.gsfc.nasa.gov/)
 #ANALYSIS_METHOD: High Performance Liquid Chromatography according to the Hooker_2012 method. See BIOMATE supplementary information and method citations for more information.
 #DATASET_CONTACT: Emmanuel Boss - Lynne Talley(emmanuel.boss@maine.edu)
@@ -9,7 +9,7 @@
 #BIOMATE_CITE_TAGS: SOCCOM_pig,SEABASS_1,SEABASS_2
 #DATA_CITATION/S: Boss E, Talley L (2020) “SOCCOM HPLC pigments.” SeaBASS. SeaBASS. 10.5067/SeaBASS/SOCCOM/DATA001. https://seabass.gsfc.nasa.gov/experiment/SOCCOM.
 # and Werdell PJ, Bailey S, Fargion G, Pietras C, Knobelspiesse K, Feldman G, McClain C (2003). “Unique data repository facilitates ocean color satellite validation.” _Eos, Transactions American Geophysical Union_, *84*(38), 377-387. doi: 10.1029/2003EO380001 (URL: https://doi.org/10.1029/2003EO380001), https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2003EO380001, <URL: https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2003EO380001>.
-# and Werdell PJ, Bailey S, Fargion G, Pietras C, Knobelspiesse K, Feldman G, McClain C (2003). “Unique data repository facilitates ocean color satellite validation.” _Eos, Transactions American Geophysical Union_, *84*(38), 377-387. doi: 10.1029/2003EO380001 (URL: https://doi.org/10.1029/2003EO380001), https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2003EO380001, <URL: https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2003EO380001>.
+# and Werdell PJ, Bailey S (2002) “The SeaWiFS Bio-optical Archive and Storage System (SeaBASS): Current architecture and implementation.” NASA Goddard Space Flight Center.
 #METHOD_CITATION/S: Hooker S, Clementson L, Thomas C, Schlüter L, Allerup M, Ras J, others (2012) “The Fifth SeaWiFS HPLC Analysis Round-Robin Experiment (SeaHARRE-5) Rep.” National Aeronautics and Space Administration.
 #NOTE: HPLC performed at CSIRO by Lesley Clementson.
 NUMBER_HEADERS = 6

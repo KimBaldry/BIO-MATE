@@ -8,7 +8,7 @@
 #
 library(bibtex)
 library(roxygen2)
-
+source("./src/compile_metadata.R")
 # update_package <- function(){}
 
 ### EXPOCODE tables
@@ -62,8 +62,11 @@ method_info = read.csv("./product_data/supporting_information/BIOMATE_Methods.tx
 # Mdf = Mdf[order(Mdf$analysis_type),]
 # write.csv(Mdf, file=file.path("./product_data/supporting_information","BIOMATE_METHODS.txt"),row.names = F)
 
+BIOMATE_overview = compile_metadata()
+
+
 ### save data
-save(bib,source_info,method_info,platforms, countries,file =file.path("../Rpackage/data","BIOMATE.rda"))
+save(BIOMATE_overview, bib,source_info,method_info,platforms, countries,file =file.path("../Rpackage/data","BIOMATE.rda"))
 
 ### Compile package
 roxygen2::roxygenise("../Rpackage")

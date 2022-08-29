@@ -2,7 +2,7 @@ insert_phys <- function(data, BIOMATE_path){
   
   data_clean = data %>% filter(CTD_IDs != "U", !is.na(CTD_IDs) )
   data_clean$DEPTH = as.numeric(data_clean$DEPTH)
-  ctd_path =file.path(path,"profiling_sensors")
+  ctd_path =file.path(BIOMATE_path,"profiling_sensors")
   data_clean$MLD = NA
   data_clean$CHL50 = NA
   data_clean$EMLD = NA
@@ -14,7 +14,8 @@ insert_phys <- function(data, BIOMATE_path){
   # add TRANSMittance later - need path lengths for some conversions
   data_clean$CTDBBP700 = NA
   ### match profiling sensor data
-  for(pf in unique(data_clean$CTD_IDs[data_clean$CTD_IDs != "U" & !is.na(data_clean$CTD_IDs)])){
+  for(pf in unique(data_clean$CTD_IDs)){
+    print(pf)
     mdx = which(data_clean$CTD_IDs == pf)
     ctd_file = file.path(ctd_path,paste(pf,"_ctd1.csv",sep = ""))
     
@@ -38,44 +39,61 @@ insert_phys <- function(data, BIOMATE_path){
     # insert into the table
     # For underway this will be a 15 min average
     prof_data$DEPTH = swDepth(prof_data$CTDPRS, latitude = data_clean$LATITUDE[mdx[1]])
+    prof_data = prof_data %>% filter(!is.na(DEPTH))
+    max_depth = max(prof_data$DEPTH, na.rm = T)
     
-    
-    if(any(grepl("CTDSAL",f_headers)) & any(!is.na(prof_data$CTDSAL))){
+    if(any(grepl("CTDSAL",f_headers)) & any(!is.na(prof_data$CTDSAL)) & !sd(prof_data$CTDSAL, na.rm = T) %in% c(NA,0)){
       for(md in mdx){
         data_clean$CTDSAL[md] = mean_5m(prof_data$DEPTH[which(is.finite(prof_data$CTDSAL))], prof_data$CTDSAL[which(is.finite(prof_data$CTDSAL))],data_clean$DEPTH[md])
       }
     }
-    if(any(grepl("CTDTMP",f_headers))& any(!is.na(prof_data$CTDTMP))){
+    if(any(grepl("CTDTMP",f_headers))& any(!is.na(prof_data$CTDTMP)) & !sd(prof_data$CTDTMP, na.rm = T)  %in% c(NA,0)){
       for(md in mdx){
         data_clean$CTDTMP[md] = mean_5m(prof_data$DEPTH[which(is.finite(prof_data$CTDTMP))], prof_data$CTDTMP[which(is.finite(prof_data$CTDTMP))],data_clean$DEPTH[md])
       }
     }
-    if(any(grepl("CTDFLUOR",f_headers)) & any(!is.na(prof_data$CTDFLUOR))){
+    if(any(grepl("CTDFLUOR",f_headers)) & any(!is.na(prof_data$CTDFLUOR)) & !sd(prof_data$CTDFLUOR, na.rm = T)  %in% c(NA,0)){
+      # note eco MLD doesnt work with the low quality data
+        fluor_mod = apply_bsm(prof_data$DEPTH[prof_data$DEPTH < 500], prof_data$CTDFLUOR[prof_data$DEPTH < 500])
+        if(!is.na(fluor_mod)){
+        fluor_smth = fluor_mod$fluor.out
+        if(max_depth >= 500){
+        fluor_smth[prof_data$DEPTH >= 500] = prof_data$CTDFLUOR[prof_data$DEPTH >= 500]}
+        data_clean$CHL50[mdx] = CHL_50(prof_data$DEPTH[is.finite(fluor_smth)],fluor_smth[is.finite(fluor_smth)])
+        E = Eco_MLD(prof_data$DEPTH[is.finite(fluor_smth)],fluor_smth[is.finite(fluor_smth)])
+        data_clean$EMLD[mdx] = E$EMLD}
+      
       for(md in mdx){
         data_clean$CTDFLUOR[md] = mean_5m(prof_data$DEPTH[which(is.finite(prof_data$CTDFLUOR))], prof_data$CTDFLUOR[which(is.finite(prof_data$CTDFLUOR))],data_clean$DEPTH[md])
-        # note eco MLD doesnt work with the low quality data
-        data_clean$CHL50[mdx] = CHL_50(prof_data$CTDPRS[is.finite(prof_data$CTDFLUOR)],prof_data$CTDFLUOR[is.finite(prof_data$CTDFLUOR)])
-        E = Eco_MLD(prof_data$CTDPRS[is.finite(prof_data$CTDFLUOR)],prof_data$CTDFLUOR[is.finite(prof_data$CTDFLUOR)])
-        data_clean$EMLD[mdx] = E$EMLD
-        data_clean$EMLD_QI[mdx] = E$QI
+        
       }
     }
-    if(any(grepl("CTDBBP700",f_headers))& any(!is.na(prof_data$CTDBBP700))){
+    if(any(grepl("CTDBBP700",f_headers))& any(!is.na(prof_data$CTDBBP700))  & !sd(prof_data$CTDBBP700, na.rm = T)  %in% c(NA,0)){
       for(md in mdx){
         data_clean$CTDBBP700[md] = mean_5m(prof_data$DEPTH[which(is.finite(prof_data$CTDBBP700))], prof_data$CTDBBP700[which(is.finite(prof_data$CTDBBP700))],data_clean$DEPTH[md])
       }
     }
     
     ### MLD calculation - 0.03 density threshold - this is a typical definition of MLD for the SO
-    if(all(any(grepl("CTDPRS",f_headers)), any(grepl("CTDSAL",f_headers)), any(grepl("CTDTMP",f_headers)),!is.na(data_clean$LATITUDE[mdx[1]]))){
-      MLD_calc = MLD(prof_data$CTDPRS,prof_data$CTDSAL, prof_data$CTDTMP,lat = data_clean$LATITUDE[mdx[1]],dens_thresh = 0.03)
+    if(all(any(grepl("CTDPRS",f_headers)), any(grepl("CTDSAL",f_headers)), any(grepl("CTDTMP",f_headers)),!is.na(data_clean$LATITUDE[mdx[1]])) & !sd(prof_data$CTDSAL, na.rm = T) %in% c(NA,0) & !sd(prof_data$CTDTMP, na.rm = T) %in% c(NA,0)){
+      sal_mod = fit_bp_segmented(prof_data$DEPTH[prof_data$DEPTH < 500], prof_data$CTDSAL[prof_data$DEPTH < 500])
+      if(!is.na(sal_mod)){
+        sal_smth = sal_mod$fluor.out
+      if(max_depth >= 500){
+        sal_smth[prof_data$DEPTH >= 500] = prof_data$CTDSAL[prof_data$DEPTH >= 500]}
+      
+      tmp_mod = fit_bp_segmented(prof_data$DEPTH[prof_data$DEPTH < 500], prof_data$CTDTMP[prof_data$DEPTH < 500])
+      if(!is.na(tmp_mod)){
+      tmp_smth = tmp_mod$fluor.out
+      if(max_depth >= 500){
+        tmp_smth[prof_data$DEPTH >= 500] = prof_data$CTDTMP[prof_data$DEPTH >= 500]}
+      
+      MLD_calc = MLD(prof_data$CTDPRS,sal_smth, tmp_smth,lat = data_clean$LATITUDE[mdx[1]],dens_thresh = 0.03)
       data_clean$MLD[mdx] = MLD_calc$MLD
       data_clean$MLD_FLAG[mdx] = MLD_calc$FLAG
-      
-      
+      }
+      }
     }
-    
-    
     
   }
   data_clean$DEPTH = as.character(data_clean$DEPTH)

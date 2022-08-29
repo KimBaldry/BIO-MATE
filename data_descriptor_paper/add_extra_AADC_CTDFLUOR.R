@@ -41,9 +41,9 @@ for(ex in 1:nrow(extra_data)){
    close(f)
    
    if(grepl("fluorescence",lines[extra_data$n_heads[ex] - 1])){
-   new_data = as.data.frame(read_table2(nf,col_names = F, skip = extra_data$n_heads[ex], na = extra_data$na.string[ex],col_types = cols(),))
+   new_data = as.data.frame(read_table2(nf,col_names = F, skip = extra_data$n_heads[ex], na = extra_data$na.string[ex],col_types = cols()))
    prof_data$CTDFLUOR = new_data[,extra_data$F_col[ex]]
-   prof_data[prof_data == "NA"] <- -999
+   prof_data[is.na(prof_data)] <- -999
    
    # rewrite BIOMATE data file   
    f <- file( fl, open = "r" )

@@ -16,7 +16,7 @@ library(stringi)
 library(tidyr)
 library(devtools)
 library(beepr)
- #devtools::install_github("KimBaldry/BIOMATE-Rpackage")
+devtools::install_github("KimBaldry/BIOMATE-Rpackage", force = T)
 library(BIOMATE)
 add_bibstyle() 
 ```
@@ -357,7 +357,7 @@ beep(sound = 3)
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE"
-PIG_to_WHPE(path_out = file.path(path,"BIO-MATE","product_data","regression_test","reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","regression_test"),userID = "IMASUTASKB", row_start = 24)
+PIG_to_WHPE(path_out = file.path(path,"BIO-MATE","product_data","regression_test","reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","regression_test"),userID = "IMASUTASKB")
 beep(sound = 3)
 ```
 ### reformat underway files
@@ -385,7 +385,7 @@ beep(sound = 3)
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C1"),userID = "IMASUTASKB", row_start = 26)
+PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C1"),userID = "IMASUTASKB")
 
 beep(sound = 3)
 ```
@@ -393,7 +393,7 @@ beep(sound = 3)
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C1"),userID = "IMASUTASKB", row_start = 36)
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C1"),userID = "IMASUTASKB")
 beep(sound = 3)
 ```
 
@@ -401,14 +401,14 @@ beep(sound = 3)
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C2"),userID = "IMASUTASKB", row_end = 2)
+PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C2"),userID = "IMASUTASKB")
 beep(sound = 3)
 ```
 
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C2"),userID = "IMASUTASKB", row_end = 2)
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C2"),userID = "IMASUTASKB")
 beep(sound = 3)
 ```
 
@@ -423,7 +423,7 @@ beep(sound = 3)
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C3"),userID = "IMASUTASKB", row_start = 19)
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C3"),userID = "IMASUTASKB")
 beep(sound = 3)
 ```
 
@@ -431,7 +431,7 @@ beep(sound = 3)
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE"
-PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C4"),userID = "IMASUTASKB", row_start = 18, row_end = 18)
+PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C4"),userID = "IMASUTASKB")
 beep(sound = 3)
 ```
 
@@ -445,14 +445,14 @@ PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path
 ### reformat profiling_sensor files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-BIOMATE::PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C5"),userID = "IMASUTASKB", row_start = 12, row_end = 12)
+BIOMATE::PROF_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C5"),userID = "IMASUTASKB")
 beep(sound = 3)
 ```
 
 ### reformat pigment files
 ```{r}
 path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C5"),userID = "IMASUTASKB", row_start = 30)
+PIG_to_WHPE(path_out = file.path(path,"reformatted_data"), file_path = file.path(path,"BIO-MATE","product_data","processing_metadata","C5"),userID = "IMASUTASKB")
 ```
 
 ## Cluster 6

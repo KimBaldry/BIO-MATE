@@ -1,7 +1,0 @@
-"0","```r
-p1 = base + 
-  geom_point(data = data_CTD[which(data_CTD$SCM == \"N\"),], aes(x=Longitude, y = Latitude..S.),col = \"black\") +
-  geom_point(data = data_CTD[which(is.na(data_CTD$Br2) == F & data_CTD$SCM_val-data_CTD$surf_val > 0.5),], aes(x=Longitude, y = Latitude..S., size = SCM_val - surf_val),pch=21, fill = br_colours[5]) 
-
-p1 = base + geom_point(data = data_CTD[which(data_CTD$Br2 == \"SIZ\" ),], aes(x=Longitude, y = Latitude..S.,fill = as.factor(SCM), size = SCM_val - surf_val),pch=21)
-```"

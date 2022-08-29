@@ -34,7 +34,6 @@ abstract: "Biological ocean data collected from ships find reuse in aggregations
 ---
 
 ```{r, include=FALSE}
-library(kableExtra)
 library(tidyverse)
 library(flextable)
 library(gridExtra)

@@ -1,9 +1,0 @@
-"0","```r
-p0 = base + geom_point(data = data_CTD[is.finite(data_CTD$fr),], aes(x=Longitude, y = Latitude..S.),  pch = 16) + ggtitle(\"has frontal region\")
-p1 = base + geom_point(data = data_CTD[is.na(data_CTD$fr),], aes(x=Longitude, y = Latitude..S.),  pch = 16) + ggtitle(\"Missing frontal region\")
-ggarrange(p0,p1)
-
-p4 = base + geom_point(data = data_CTD[!is.na(data_CTD$Br2),], aes(x=Longitude, y = Latitude..S., fill = as.factor(Br2)),  pch = 21) + ggtitle(\"Bioregions\") + geom_line(data = data.frame(poly2),aes(x=poly2[,1], y=poly2[,2],col = \"red\"))+ theme(legend.title = element_blank())
-p5 = base + geom_point(data = data_CTD[is.na(data_CTD$Br2),], aes(x=Longitude, y = Latitude..S.),  pch = 16) + ggtitle(\"missing Bioregion\") + geom_line(data = data.frame(poly2),aes(x=poly2[,1], y=poly2[,2],col = \"red\")) +  scale_colour_manual(labels = \"Median September sea-ice extent\",values = \"red\") + theme(legend.title = element_blank())
-ggarrange(p4,p5)
-```"

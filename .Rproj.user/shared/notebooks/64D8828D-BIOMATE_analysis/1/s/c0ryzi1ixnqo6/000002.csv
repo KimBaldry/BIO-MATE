@@ -1,4 +1,0 @@
-"0","midnight_times = pig_data[which(pig_data$TIME_analyser == ""00:00:00""),]"
-"0","for(ex in unique(midnight_times$EXPOCODE)){"
-"0","  if(length(which(pig_data$EXPOCODE == ex)) == length(which(midnight_times$EXPOCODE == ex))){print(ex)}"
-"0","}"

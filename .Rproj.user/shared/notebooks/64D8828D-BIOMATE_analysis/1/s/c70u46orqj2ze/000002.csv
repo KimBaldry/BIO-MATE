@@ -1,4 +1,0 @@
-"0","out_of_bounds = pig_data[which(pig_data$LAT_analyser > -30), ]"
-"0","for(ex in unique(out_of_bounds$EXPOCODE)){"
-"0","  if(length(which(pig_data$EXPOCODE == ex)) == length(which(out_of_bounds$EXPOCODE == ex))){print(ex)}"
-"0","}"

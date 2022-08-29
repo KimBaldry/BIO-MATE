@@ -640,10 +640,10 @@ PIG_to_WHPE = function(file_path, path_out,userID = "IMASUTASKB",row_start = 1,r
             data2[un,c("CTD_IDs")] = joined_t_p$CTD_ID}
           
           }
-      rm(unmatched_df, CTD_df,times, joined_t, joined_t_p,joined_p, unmatched_df_p, unmatched_df_t) 
-      }
     }
-    
+    rm(unmatched_df, CTD_df,times, joined_t, joined_t_p,joined_p, unmatched_df_p, unmatched_df_t) 
+    }
+    rm(un)
 
     # append CTD_ID, STNNBR, CASTNO, LAT, LON, DATE, TIME
     # Now get the data from files that have identified matches

@@ -1,8 +1,0 @@
-"0","```r
-p1 = base + geom_point(aes(x=Longitude, y = Latitude..S.,col = SCM),pch=16) + ggtitle(\"SCM detected\") + 
-  facet_wrap(.~MM)
-p2 = base + geom_point(data = data_CTD[which(data_CTD$SCM == \"N\" & data_CTD$Br2 == \"PFZ\"),], aes(x=Longitude, y = Latitude..S.,fill = as.factor(MM)),pch = 21) + ggtitle(\"No SCM detected\")
-
-ggarrange(p1,p2)
-
-```"
