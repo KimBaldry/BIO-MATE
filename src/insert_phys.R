@@ -11,6 +11,7 @@ insert_phys <- function(data, BIOMATE_path){
   data_clean$CTDSAL = NA
   data_clean$CTDTMP =
   data_clean$CTDFLUOR = NA
+  data_clean$FZ_insitu = NA
   # add TRANSMittance later - need path lengths for some conversions
   data_clean$CTDBBP700 = NA
   ### match profiling sensor data
@@ -24,6 +25,9 @@ insert_phys <- function(data, BIOMATE_path){
     while( TRUE ){
       line <- readLines( f, 1L)
       n = n+1
+      if( grepl( "#BIOMATE_CITE_TAGS:", line ) ){
+        cite <- trimws(sub("#BIOMATE_CITE_TAGS:", "", line ))
+      }
       
       if(grepl("CTDPRS", line)){break}
     }
@@ -55,7 +59,7 @@ insert_phys <- function(data, BIOMATE_path){
     if(any(grepl("CTDFLUOR",f_headers)) & any(!is.na(prof_data$CTDFLUOR)) & !sd(prof_data$CTDFLUOR, na.rm = T)  %in% c(NA,0)){
       # note eco MLD doesnt work with the low quality data
         fluor_mod = apply_bsm(prof_data$DEPTH[prof_data$DEPTH < 500], prof_data$CTDFLUOR[prof_data$DEPTH < 500])
-        if(!is.na(fluor_mod)){
+        if(!all(is.na(fluor_mod))){
         fluor_smth = fluor_mod$fluor.out
         if(max_depth >= 500){
         fluor_smth[prof_data$DEPTH >= 500] = prof_data$CTDFLUOR[prof_data$DEPTH >= 500]}
@@ -77,26 +81,33 @@ insert_phys <- function(data, BIOMATE_path){
     ### MLD calculation - 0.03 density threshold - this is a typical definition of MLD for the SO
     if(all(any(grepl("CTDPRS",f_headers)), any(grepl("CTDSAL",f_headers)), any(grepl("CTDTMP",f_headers)),!is.na(data_clean$LATITUDE[mdx[1]])) & !sd(prof_data$CTDSAL, na.rm = T) %in% c(NA,0) & !sd(prof_data$CTDTMP, na.rm = T) %in% c(NA,0)){
       sal_mod = fit_bp_segmented(prof_data$DEPTH[prof_data$DEPTH < 500], prof_data$CTDSAL[prof_data$DEPTH < 500])
-      if(!is.na(sal_mod)){
+      if(!all(is.na(sal_mod))){
         sal_smth = sal_mod$fluor.out
       if(max_depth >= 500){
         sal_smth[prof_data$DEPTH >= 500] = prof_data$CTDSAL[prof_data$DEPTH >= 500]}
-      
+
       tmp_mod = fit_bp_segmented(prof_data$DEPTH[prof_data$DEPTH < 500], prof_data$CTDTMP[prof_data$DEPTH < 500])
-      if(!is.na(tmp_mod)){
+      if(!all(is.na(tmp_mod))){
       tmp_smth = tmp_mod$fluor.out
       if(max_depth >= 500){
         tmp_smth[prof_data$DEPTH >= 500] = prof_data$CTDTMP[prof_data$DEPTH >= 500]}
-      
+
       MLD_calc = MLD(prof_data$CTDPRS,sal_smth, tmp_smth,lat = data_clean$LATITUDE[mdx[1]],dens_thresh = 0.03)
       data_clean$MLD[mdx] = MLD_calc$MLD
       data_clean$MLD_FLAG[mdx] = MLD_calc$FLAG
+      data_clean$FZ_insitu[mdx] = front_class_insitu( prof_data$CTDPRS, prof_data$CTDTMP, prof_data$CTDSAL,data_clean$LATITUDE[mdx[1]],data_clean$LONGITUDE[mdx[1]])
+      DENS = as.numeric(rho(sal_smth,tmp_smth,P = 0))
+      if(!is.na(data_clean$MLD[mdx[1]])){
+      data_clean$TLD[mdx] = TLD(data_clean$MLD[mdx[1]], DENS,prof_data$DEPTH)}
+
       }
       }
+
     }
     
   }
   data_clean$DEPTH = as.character(data_clean$DEPTH)
+  data_clean$PROF_cite = cite
    data2 = left_join(data, data_clean)
   
   return(data2)

@@ -179,7 +179,7 @@ for(ex in pig_expos){
     meta$PIG_HPLC[which(meta$EXPOCODE == ex)] = any(HPLC_exists)
     meta$PIG_doi[which(meta$EXPOCODE == ex)] = paste(doi, collapse = "; ")
     meta$PIG_contact[which(meta$EXPOCODE == ex)] = paste(con, collapse = "; ")
-    meta$PIG_cite[which(meta$EXPOCODE == ex)] = cite
+    meta$PIG_cite[which(meta$EXPOCODE == ex)] = paste(cite, collapse = "; ")
     meta$PIG_source[which(meta$EXPOCODE == ex)] = paste(sc, collapse = "; ")
     meta$PIG_method[which(meta$EXPOCODE == ex)] = paste(mt, collapse = "; ")
     meta$PIG_nfiles[which(meta$EXPOCODE == ex)] = length(sub_pig_files)

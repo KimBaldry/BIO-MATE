@@ -1,10 +1,10 @@
-path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/reformatted_data"
+
 
 
 library(data.table)
 library(dplyr)
 
-compile_pigments <- function(path, ex.list = NULL){
+compile_pigments <- function(path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/reformatted_data", ex.list = NULL){
   
     # profiling sensor path
     ctd_path =file.path(path,"profiling_sensors")
@@ -34,6 +34,9 @@ compile_pigments <- function(path, ex.list = NULL){
         if( grepl( "#SOURCED_FROM:", line ) ){
           sc <- trimws(sub("#SOURCED_FROM:", "", line ))
         }
+        if( grepl( "#BIOMATE_CITE_TAGS:", line ) ){
+          cite <- trimws(sub("#BIOMATE_CITE_TAGS:", "", line ))
+        }
         if(grepl("CTD_IDs | DATE | TIME_s | TIME_b| TIME_e | LATITUDE", line)){break}
       }
       close( f )
@@ -50,11 +53,13 @@ compile_pigments <- function(path, ex.list = NULL){
       file_data$STNNBR = as.character(file_data$STNNBR)
       file_data$CASTNO = as.character(file_data$CASTNO)
       file_data$LONGITUDE = as.numeric(file_data$LONGITUDE)
+      file_data$LATITUDE = as.numeric(file_data$LATITUDE)
       
       file_data = file_data[,which(!is.na(colnames(file_data)))]
       # add header data
       file_data$PIG_SOURCE = sc
       file_data$PIG_METHOD = mt
+      file_data$PIG_cite = cite
       file_data$EXPOCODE = ex
       if(!exists("data",inherits = F)){data = file_data}else{
         # append file data

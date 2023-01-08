@@ -9,6 +9,9 @@
 library(bibtex)
 library(roxygen2)
 source("./src/compile_metadata.R")
+source("./src/compile_pigment_data.R")
+source("./src/compile_profile_data.R")
+source("./src/compile_underway_data.R")
 # update_package <- function(){}
 
 ### EXPOCODE tables
@@ -46,27 +49,36 @@ source_info = read.csv("./product_data/supporting_information/BIOMATE_SOURCES.tx
 method_info = read.csv("./product_data/supporting_information/BIOMATE_Methods.txt", stringsAsFactors = F)
 
 # compile processing metadata - only do once
-# library(data.table)
-# library(BIOMATE)
-# path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
-# 
-# for(c in c("regression_test", "C1", "C2", "C3", "C4", "C5")){
-#   meta = fread(file.path(path,"BIO-MATE","product_data","processing_metadata",c,"PIG_meta.csv"),header = T,strip.white = T,stringsAsFactors = F)
-#   if(c != "regression_test"){
-#     META = rbind(META,meta)}else{META = meta}
-# }
-# META = META[rowSums(matrix(unlist(lapply(as.matrix(META),is.empty)), ncol = ncol(META))) != ncol(META),]
-# 
-# # Methods look-up table
-# Mdf = unique((META[,c("analysis_type","Method")]))
-# Mdf = Mdf[order(Mdf$analysis_type),]
-# write.csv(Mdf, file=file.path("./product_data/supporting_information","BIOMATE_METHODS.txt"),row.names = F)
+library(data.table)
+library(BIOMATE)
+path = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/"
+
+for(c in c("regression_test", "C1", "C2", "C3", "C4", "C5")){
+  meta = fread(file.path(path,"BIO-MATE","product_data","processing_metadata",c,"PIG_meta.csv"),header = T,strip.white = T,stringsAsFactors = F)
+  if(c != "regression_test"){
+    META = rbind(META,meta)}else{META = meta}
+}
+META = META[rowSums(matrix(unlist(lapply(as.matrix(META),is.empty)), ncol = ncol(META))) != ncol(META),]
+
+# Methods look-up table
+Mdf = unique((META[,c("analysis_type","Method")]))
+Mdf = Mdf[order(Mdf$analysis_type),]
+write.csv(Mdf, file=file.path("./product_data/supporting_information","BIOMATE_METHODS.txt"),row.names = F)
 
 BIOMATE_overview = compile_metadata()
 
+pig_layer = compile_pigments()
+prof_layer = compile_prof()
+uwy_layer = compile_uwy()
+
 
 ### save data
-save(BIOMATE_overview, bib,source_info,method_info,platforms, countries,file =file.path("../Rpackage/data","BIOMATE.rda"))
+save(BIOMATE_overview, bib,source_info,method_info,platforms, countries, pig_layer, prof_layer, uwy_layer,file =file.path("../Rpackage/data","BIOMATE.rda"))
 
 ### Compile package
 roxygen2::roxygenise("../Rpackage")
+
+# write summary tables
+write.csv(pig_layer,file = "../reformatted_data/pigment_summary.csv" ,row.names = F)
+write.csv(prof_layer,file = "../reformatted_data/profiling_sensor_summary.csv" ,row.names = F)
+write.csv(uwy_layer,file = "../reformatted_data/underway_sensor_summary.csv" ,row.names = F)
