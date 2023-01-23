@@ -8,26 +8,42 @@
 
 library(shiny)
 library(shinyWidgets)
+library(shinyjs)
 library(dplyr)
 library(rhandsontable)
 library(BIOMATE)
+library(RCurl)
+library(git2r)
+add_bibstyle()
 
 load(url("https://github.com/KimBaldry/BIO-MATE/raw/main/data_descriptor_paper/metadata_info.RData"))
 load(url("https://github.com/KimBaldry/BIO-MATE/raw/main/product_data/next_version/package_data/BIOMATE.rda"))
+pig_summary = fread("https://data.imas.utas.edu.au/attachments/3e0afabb-ebd2-4972-bb67-8626c2643129/reformatted_data/pigment_summary.csv")
+#poc_summary =  fread("https://data.imas.utas.edu.au/attachments/3e0afabb-ebd2-4972-bb67-8626c2643129/reformatted_data/poc_summary.csv")
+profiling_summary = fread("https://data.imas.utas.edu.au/attachments/3e0afabb-ebd2-4972-bb67-8626c2643129/reformatted_data/profiling_sensor_summary.csv")
+underway_summary =  fread("https://data.imas.utas.edu.au/attachments/3e0afabb-ebd2-4972-bb67-8626c2643129/reformatted_data/underway_sensor_summary.csv")
+
 local_out = "C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/BIO-MATE/BIO-MATE/product_data/next_version"
+
+github_out = url("https://github.com/KimBaldry/BIO-MATE/raw/main/product_data/next_version/reformatted_data")
 
 p_meta$`User input` = ""
 p_meta = p_meta[,c(1:2,5,4:3)]
+expocodes = unique(c(pig_summary$EXPOCODE, underway_summary$EXPOCODE, profiling_summary$EXPOCODE))
 
 #To implement:
 # add data citation tags
-# check existing EXPOCODES
-# show citations existing for EXPOCODE
-# show available data for EXPOCODE
 # integrate uploaded citations to bib object DONE
 # integrate uploaded method citations to bib object
 # when running biomate upload metadata to github including new_source and new_method info and new bib objects
 # run split file code
+# add POC and UWY options
+
+# nice to havs
+# add extended  details on methods from references/BibTEX
+# show citations existing for EXPOCODE 
+# show available data for EXPOCODE
+
 
 
 
@@ -39,27 +55,31 @@ ui <- navbarPage(
   tabPanel("Upload published data", 
            fluidPage(
              p("Upload published data files. BIO-SHARE can only handle processing one data stream at a time."),
-             fileInput("upload", NULL, accept = c(".csv", ".tsv",".tab",".nc",".all",".sb",".txt"),multiple = T), 
-             conditionalPanel(condition = "!is.null(output.error1)",textOutput("error1")),
-             #selectInput("run_expocode", label = "EXPOCODE", choices(c("new", ))) # reference to existing expocodes in package metadata
-             selectInput("stream", label = "Data stream to ingest", choices = c("PROF", "PIG")),
+             fileInput("upload", NULL, accept = c(".csv", ".tsv",".tab",".nc",".all",".sb",".txt"),multiple = T),
+              conditionalPanel(condition = "output.error1 !== 'undefined'",textOutput("error1")),
+             p("Upload citation information for published data files, new methods and new sources. Enter citation tag information contained within tese file in the appropriate places when filling in metadata."),
+             fileInput("upload_bibtex", "Upload BibTEX file/s", accept = c(".bib"),multiple = T),
+             
+             selectInput("run_expocode", label = "EXPOCODE", choices =c("new", expocodes)),
+             selectInput("stream", label = "Data stream to ingest", choices = c("PROF", "PIG","POC","UWY")),
              p("Information is needed to properly cite the data"),
+             
              ## Source Information
-             selectInput("source",label = "Source citation", choices = c("new source",source_info$source)), # translate to p_meta
+             selectInput("source",label = "Source citation tag", choices = c("new source",source_info$source)), # translate to p_meta
              conditionalPanel(condition = "input.source == 'new source'", 
                               rHandsontableOutput("hot_source")) ,
                         
              checkboxInput("showsource","Show existing BIO-MATE data sources", value = F),
              conditionalPanel(condition = "input.showsource == true", dataTableOutput("source_info_out")),
              ## Method information
-             conditionalPanel(condition = "input.stream == 'PIG'", selectInput("method",label = "Method citation", choices = c("new method",method_info$Method))), # translate to p_meta
-             conditionalPanel(condition = "input.method == 'new method' ",
+             conditionalPanel(condition = "input.stream == 'PIG'", selectInput("method",label = "Method citation tag", choices = c("new method",method_info$Method))), # translate to p_meta
+             conditionalPanel(condition = "input.method == 'new method' && input.stream == 'PIG'",
                               rHandsontableOutput("hot_method")),
 
-             checkboxInput("showmethod","Show existing BIO-MATE pigment measurement methods"),
-             conditionalPanel(condition = "input.showmethod == true", dataTableOutput("method_info_out")),
+             conditionalPanel(condition = "input.stream == 'PIG'",checkboxInput("showmethod","Show existing BIO-MATE pigment measurement methods", value = F)),
+             conditionalPanel(condition = "input.showmethod == true && input.stream == 'PIG'", dataTableOutput("method_info_out"))
 
-             fileInput("upload_bibtex", "BibTEX file/s", accept = c(".bib"),multiple = T)
+             
              
              
            )),
@@ -104,19 +124,10 @@ ui <- navbarPage(
 
   tabPanel("Run BIOMATE",
            fluidPage(
-             actionButton("runBIOMATE", label = "Run BIO-MATE")
+             actionButton("runBIOMATE", label = "Run BIO-MATE"),
+             p("Download the reformatted files"),
+             downloadButton("download"))
            )
-           ),
-  tabPanel("Upload to GitHub"
-           ),
-  tabPanel("Download data files", 
-           fluidPage(
-             downloadButton("download")
-           )
-           )
-  
-  
-  
   
 )
 
@@ -132,6 +143,7 @@ td.style.background = 'lightblue';
 server <- function(input, output, session){
   # check existence of EXPOCODE and stream data in the system
   
+
   
   values <- reactiveValues()
  ############## Upload published data #################### 
@@ -143,51 +155,65 @@ server <- function(input, output, session){
     values$ext <- paste(".",ext_tmp,sep = "")
     values$file_path = unique(dirname(input$upload$datapath))
     output$error1 <- renderText({
-      validate(need(all(ext_tmp %in% c("csv", "tsv","tab","nc","all","sb","txt")),"Invalid file; Please upload a supported file: .all, .sb, .csv, .tab, .txt, .nc. Submit an issue to https://github.com/KimBaldry/BIO-MATE if you would like another file format supported in BIO-MATE."))
+      validate(need(
+      all(ext_tmp %in% c("csv", "tsv","tab","nc","all","sb","txt")),"Invalid file; Please upload a supported file: .all, .sb, .csv, .tab, .txt, .nc. Submit an issue to https://github.com/KimBaldry/BIO-MATE if you would like another file format supported in BIO-MATE."))
     })
  })
 
   
   ## sourceinfomation
   output$source_info_out = renderDataTable(source_info)
-  new_source = data.frame("source" = character(), "citations"= character(), "url"= character(), "aknowledgement" = character(), stringsAsFactors = F)
+  
+  new_source = data.frame("source" = character(), "citation tag"= character(), "url"= character(), "aknowledgement" = character(), stringsAsFactors = F)
   new_source[1,] =  NA
+
 
   observe({
     if(!is.null(input$hot_source)){
       new_source = hot_to_r(input$hot_source)
-
-    } else {
-      if (is.null(values[["new_source"]]))
-        new_source <- new_source
-      else
-        new_source <- values[["new_source"]]
+      
+    }else{
+      if(is.null(values[["new_source"]])){
+        new_source <- new_source}else{
+        new_source <- values[["new_source"]]}
     }
     values[["new_source"]] <- new_source
-  })
 
+    })
+    if(!all(is.na(new_source))){
+      new_source_info <- reactive({rbind(source_info, values[["new_source"]])}) 
+    }
+    
+      
+     
+       
+    
+  
+  
   output$hot_source= renderRHandsontable(rhandsontable(new_source))
 
   output$source_info = renderDataTable(source_info)
 
 
   ## Method informaton
-  new_method = data.frame("analysis_type" = character(), "Method"= character(), "citation"= character(), "long_AT" = character(), stringsAsFactors = F)
+  new_method = data.frame("analysis_type" = character(), "Method"= character(), "citation tag"= character(), "long_AT" = character(), stringsAsFactors = F)
   new_method[1,] =  NA
 
-  values <- reactiveValues()
 
   observe({
     if(!is.null(input$hot_method)){
       new_method = hot_to_r(input$hot_method)
-    } else {
-      if (is.null(values[["new_method"]]))
-        new_method <- new_method
-      else
-        new_method <- values[["new_method"]]
+    }else{
+      if(is.null(values[["new_method"]])){
+        new_method <- new_method}else{
+        new_method <- values[["new_method"]]}
     }
     values[["new_method"]] <- new_method
   })
+  
+  if(!all(is.na(new_method))){
+    new_method_info <- reactive({rbind(method_info, values[["new_method"]])}) 
+  }
 
   output$hot_method = renderRHandsontable(rhandsontable(new_method))
 
@@ -198,7 +224,7 @@ server <- function(input, output, session){
   observeEvent(input$upload_bibtex, {
 
     combined_bib <- ""
-  for (path_to_bib_file in input$upload_bibtex) {
+  for(path_to_bib_file in input$upload_bibtex$datapath) {
 
     fileCon <- file(path_to_bib_file)
     content <- readLines(fileCon)
@@ -207,13 +233,23 @@ server <- function(input, output, session){
     combined_bib <- paste0(combined_bib, "\n", "\n", trimws(paste0(content, collapse="\n")))
 
   }
-  bibpath = unique(dirname(input$upload_bibtex))
+  # fileCon <- file(url("https://github.com/KimBaldry/BIOMATE-Rpackage/tree/main/inst/citations/BIO-MATE_references.bib"))
+  # content <- readLines(fileCon)
+  # close(fileCon)
+  # 
+  # combined_bib <- paste0( trimws(paste0(content, collapse="\n")),"\n", "\n",combined_bib)
+  
+  
+  bibpath = unique(dirname(input$upload_bibtex$datapath))
   # write temp file
-  cat(combined_bib, file=file.path(unique(dirname(input$upload_bibtex)),"BIO-MATE_references.bib"), "\n")
+  cat(combined_bib, file=file.path(unique(dirname(input$upload_bibtex$datapath)),"BIO-MATE_references.bib"), "\n")
   # create bib object from temp file
-  values$new_bib = read.bib(file.path(bibpath,"BIO-MATE_references.bib"))
+  values[["new_bib"]] = read.bib(file.path(bibpath,"BIO-MATE_references.bib"))
 })
 
+    new_bib <- reactive({values[["new_bib"]]}) 
+  
+  
 
  ############## Split data ######################
   observeEvent(input$split,{
@@ -251,11 +287,10 @@ server <- function(input, output, session){
         idx = unlist(lapply(temp[,1], function(x){which(p_meta[,1] == x)}))
         p_meta[idx,] = hot_to_r(input$hot5)
       }
-      } else {
-      if (is.null(values[["p_meta"]]))
-        p_meta <- p_meta
-      else
-        p_meta <- values[["p_meta"]]
+      }else{
+      if(is.null(values[["p_meta"]])){
+        p_meta <- p_meta}else{
+        p_meta <- values[["p_meta"]]}
     }
 
     # ## metadata already entered
@@ -310,17 +345,45 @@ server <- function(input, output, session){
   ####### Run BIO-MATE ##########
   observeEvent(input$runBIOMATE, {
     req(input$stream, input$upload)
+    
+    #set up Git
+    path <- file.path(tempfile(pattern="BIO-MATE-"), "BIO-MATE")
+    dir.create(path, recursive=TRUE)
+    ## Clone the git2r repository
+    repo <- clone("https://github.com/KimBaldry/BIO-MATE", path)
+    
+    
     process_meta = t(values$p_meta[,3])
     colnames(process_meta) = values$p_meta[,1]
-    out_dir = file.path(values$file_path,"meta")
+    out_dir = file.path(path,"product_data/next_version","submitted_metadata")
+    out_dir2 = file.path(path,"product_data/next_version","reformatted_data")
+    out_dir3 = file.path(path,"product_data/next_version/package_data")
     if(!file.exists(out_dir))
     {dir.create(out_dir)}
-    write.csv(process_meta, file.path(out_dir, paste(input$stream, "_meta.csv", sep = "")))
+    if(!file.exists(out_dir2))
+    {dir.create(out_dir2)}
+    if(!file.exists(out_dir3))
+    {dir.create(out_dir3)}
+    write.csv(process_meta, file.path(out_dir, paste(input$stream, "_meta.csv", sep = "")),row.names = F)
+    print("written meta")
+     
     if(input$stream == "PROF"){
-      BIOMATE::PROF_to_WHPE(outdir,file.path(local_out,"reformatted_data" ))
+      BIOMATE::PROF_to_WHPE(out_dir,out_dir2)
     }
-    if(input$stream == "PIG"){BIOMATE::PIG_to_WHPE(outdir,file.path(local_out,"reformatted_data" ))}
+    if(input$stream == "PIG"){PIG_to_WHPE_share(out_dir,out_dir2)}
+    print("reformatted files")
+    method_info = new_method_info
+    source_info = new_source_info
+    bib = new_bib
+    save(method_info, underway_summary, source_info, bib, countries, platforms, file = file.path(out_dir3,"BIOMATE.rda")) # save new package data
+    print("daved data")
 
+    # write new summary files
+    # write.csv(pig_summary, file.path(out_dir, paste(input$stream, "_meta.csv", sep = "")))
+    commit(repo, "BIO-SHARE Submission")
+    print("comitment made")
+    # add USERID option
+    
   })
   
   # WHEN WRITING new data TO GITHUB
@@ -334,31 +397,22 @@ server <- function(input, output, session){
   
   ####### Download Files ########
   
-  # output$download <- downloadHandler(
-  #   filename = function(){
-  #     paste0(input$text,".zip")
-  #     
-  #   },
-  #   content = function(file){
-  #     #go to a temp dir to avoid permission issues
-  #     owd <- setwd(tempdir())
-  #     on.exit(setwd(owd))
-  #     files <- NULL;
-  #     
-  #     #loop through the sheets
-  #     for (i in 1:input$sheet){
-  #       #write each sheet to a csv file, save the name
-  #       fileName <- paste(input$text,"_0",i,".csv",sep = "")
-  #       write.table(data()$wb[i],fileName,sep = ';', row.names = F, col.names = T)
-  #       files <- c(fileName,files)
-  #     }
-  #     #create the zip file
-  #     zip(file,files)
-  #   }
-  # )
+  output$download <- downloadHandler(
+    filename = function(){
+      paste0("reformatted_",input$stream,"files.zip")
+
+    },
+    content = function(file){
+
+      files <- list.files(out_dir, out_dir2,include.dirs = F)
+      #create the zip file
+      zip(file,files)
+    }
+  )
   
   
 }
+
 
 # 3. call to shinyApp
 

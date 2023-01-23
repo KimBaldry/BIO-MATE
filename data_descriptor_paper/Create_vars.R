@@ -5,8 +5,8 @@ library(SOmap)
 library(rgdal)
 library(marmap)
 source("../src/compile_pigment_data.R")
-source("C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/PhD/Ch4_SCM/SRC/Water structure clustering/filters.R")
-source("C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/PhD/Ch4_SCM/SRC/Water structure clustering/MLD_calcs.R")
+source("C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/Ocean_code/cleaning/filters.R")
+source("C:/Users/kabaldry/OneDrive - University of Tasmania/Documents/Projects/Ocean_code/ocean_calcs/MLD_calcs.R")
 
 calculate_expos = function(data_path){
   # expocodes for PIG data
@@ -293,6 +293,8 @@ CTD_des = data.frame("voyages" = length(unique(substr(CTD_df$CTD_ID, 1,12))), "p
 CTD_des[,3:12] = CTD_des[,3:12]/CTD_des$profiles*100
 
 # row 1 = CTD, row 2 = all pigment, row 3 = subsurface pigment (>4 obs), row 4 = surface pigment (<10 m)
+pig_data_CTD$EXPOCODE = substr(pig_data_CTD$CTD_IDs, 1, 12)
+pig_data_CTD$A = paste(pig_data_CTD$EXPOCODE, pig_data_CTD$PIG_METHOD,pig_data_CTD$PIG_SOURCE ,pig_data_CTD$DATE_analyser, pig_data_CTD$LAT_analyser, pig_data_CTD$LON_analyser)
 surf_pig = pig_data %>% filter(as.numeric(DEPTH) < 10)
 sub_pig = pig_data_CTD %>%  dplyr::filter(max_d > 75, min_d < 20, nobs >= 4)
 

@@ -29,7 +29,7 @@ abstract: "Biological ocean data collected from ships find reuse in aggregations
   data reformatting effort (BIO-MATE, https://gitlab.com/KBaldry/BIO-MATE). BIO-MATE uses R software that reformats
   openly sourced published datasets from oceanographic voyages.
   These reformatted biological and physical data from underway sensors, profiling sensors, pigments
-  analysis and particulate organic carbon analysis are stored in an interoperable and reproducible BIO-MATE data product for easy access and use ([AODNlink]).\n"
+  analysis and particulate organic carbon analysis are stored in an interoperable and reproducible BIO-MATE data product for easy access and use.\n"
 
 ---
 
@@ -44,27 +44,27 @@ source("./Create_vars.R")
 # Background & Summary
 Marine phytoplankton blooms support ocean food-webs and influence global climate through the biological carbon pump (@schmitt2018; @ainley1991: @basu2018). Ocean physics and other environmental drivers control the timing, magnitude and extent of phytoplankton blooms through complex bio-physical relationships (@carranza2018; @prairie2012; @wihsgott2019; @brody2015). To study these relationships integrated data structures that link biological and physical ocean data are needed. Ship-based data are the gold standard for accurate biological oceanographic measurements (@mignot2019). These data are often published separately to physical ocean data, stored across different repositories and in multiple formats. This makes it difficult and time-consuming to aggregate and link biological and physical data. The described data product attempts to make this task easier.
 
-The biological ocean data reformatting effort (BIOMATE) works to link existing, open-access biological and physical datasets across oceanographic voyages and promote their re-use. This has been done by developing a BIOMATE R software package that not only reformats published datasets, but also cross-references between biological and physical data and allows access to citation information (https://git hub.com/KimBaldry/BIOMATE-Rpackage). The resulting BIOMATE data product allows users to easily access, manipulate and cite published ship-based datasets of different dimensions for multiple applications. 
+The biological ocean data reformatting effort (BIOMATE) works to link existing, open-access biological and physical datasets across oceanographic voyages and promote their re-use. This has been done by developing a BIOMATE R software package that not only reformats published datasets, but also cross-references between biological and physical data and allows access to citation information (https://github.com/KimBaldry/BIOMATE-Rpackage). The resulting BIOMATE data product allows users to easily access, manipulate and cite published ship-based datasets of different dimensions for multiple applications. 
 
 The BIO-MATE data product can be accessed via the Australian Ocean Data Network (https://portal.aodn.org.au/). The aggregation includes data collected from shipboard underway sensors, profiling sensors mounted on sampling rosettes, lab analysis for phytoplankton pigments and lab analysis for particulate organic carbon (POC). These data are stored as four data streams, cross-referenced by unique expedition codes (EXPOCODE) and profiling station identifications (CTD_ID). An additional data stream contains supporting information for the data product including a list of oceanographic voyages, investigator contact information and data citations for reformatted datasets. We have also included an aggregated data table for biological data. Users are required to refer to supporting data and cite all data products accessed through BIO-MATE, as well as the BIO-MATE data product itself. We consulted the distribution licenses of all data sources to ensure that with this condition data are re-used lawfully.
 
-
-The data product is currently has been used to address discrepancies between Southern Ocean satellite and in-situ measurements (Johnson *et al.* in prep), to understand how the response of in-situ fluorometers changes in the Southern Ocean (Baldry *et al*. in prep), and to investigate the role of ocean physics in mediating subsurface chlorophyll features (Baldry *et al.* in prep). These examples highlight the malleability of this data product to improve our understanding of biological oceanography in the Southern Ocean. Further uses include validating satellite observations (@valente2019; @johnson2013), developing new ways to validate in-situ bio-optical observations collected by autonomous profiling platforms in the presence of dynamic fronts (@sauzede2015b; @roesler2017; @mignot2019), training ocean state estimations (@verdy2017), informing bio-physical models () and using multi-variate analyses to understand bio-physical relationships ().
+The data product is currently has been used to understand how the response of in-situ fluorometers changes in the Southern Ocean and to investigate the role of ocean physics in mediating subsurface chlorophyll features (Baldry *et al.* in prep). These examples highlight the malleability of this data product to improve our understanding of biological oceanography in the Southern Ocean. Further uses include validating satellite observations (@valente2019; @johnson2013), developing new ways to validate in-situ bio-optical observations collected by autonomous profiling platforms in the presence of dynamic fronts (@sauzede2015b; @roesler2017; @mignot2019), training ocean state estimations (@verdy2017), informing bio-physical models and using multi-variate analyses to understand bio-physical relationships.
 
 We recognise the massive effort in producing the thousands of data records in this data product. This includes the investigators and data officers who have spent countless hours in ship time, project organisation, grant writing, laboratory analysis, data processing and report writing. Oceanographic data are often collected with regional studies in mind, but their value increases with publication and re-use. We encourage all investigators to publish their data for re-use through data products like BIO-MATE.
 
 # Methods
 
 #### *Published datasets in BIO-MATE* 
-The BIO-MATE aggregate data product brings together ship-based data that have been collected by a Principal Investigator (PI) and openly published by a to a publicly accessible data (Figure \@ref(fig:method)). The first version of BIO-MATE includes published datasets associated with four types of measurements:
+The BIO-MATE aggregate data product brings together ship-based data that have been collected by a Principal Investigator (PI) and published by a to a publicly accessible database (Figure \@ref(fig:method)). The first version of BIO-MATE includes published datasets associated with four types of measurements:
+
 1. sensors in the vessels underway seawater in-take  (underway sensor data stream),  
 2. profiling sensors mounted to sampling rosettes (profiling sensor data stream),  
-3. pigments measured in the laboratory (pigment data stream),   
-and 4. POC measured in the laboratory (POC data stream).  
+3. pigments measured in the laboratory (pigment data stream), and
+4. POC measured in the laboratory (POC data stream).  
 
 Data records from the pigment data stream were first identified in data repositories that host biological data (November 2019). Pigment data records were identified using the search term “chlorophyll” and a latitude bound of 30 $^\circ$S to 90 $^\circ$S from PANGAEA (https://www.pangaea.de/), SeaBASS (https://seabass.gsfc.nasa.gov/), the Australian Ocean Data Network (AODN, https://portal.aodn.org.au/), GLODAP (https://www.glodap.info/), the Palmer Long Term Ecological Record (Pal-LTER, https://pal.lternet.edu/data), the Biological and Chemical Oceanography Data Management Office (BCO-DMO, https://www.bco-dmo.org/data), the CSIRO Marlin Data Trawler (Marlin, https://www.cmar.csiro.au/data/trawler/) and the Australian Antarctic Data Center (AADC, https://data.aad.gov.au/). Data records from the profiling sensors and underway sensors data streams were then identified in these repositories and in the CCHDO (https://cchdo.ucsd.edu/) and MGDS (https://www.marine-geo.org/).
 
-From pigment data records, `r length(expo_info$All) ` relevant voyages were identified using unique 12-digit expedition codes (EXPOCODES) assigned as follows; National Oceanographic Data Centre (NODC) platform codes followed by voyage 8 digit start dates (YYYYMMDD). NODC platform and country codes are recorded on Git Hub (https://github.com/KimBaldry/BIO-MATE/product_data/supporting_information/codes) and within the BIOMATE software (https://github.com/KimBaldry/BIOMATE-Rpackage/inst/codes). If the vessel name or voyage start/end dates were absent, this information was found using Google to discover voyage records. This voyage information was used to do a final Google keywords search (i.e. ship name, synonyms for voyages, year, “underway”/ “CTD”, “chlorophyll”, ”POC”, “cruise report” and “data”) to determine if any absent records were findable and find accompanying cruise reports.
+From pigment data records, `r length(expo_info$All) ` relevant voyages were identified using unique 12-digit expedition codes (EXPOCODES) assigned as follows; National Oceanographic Data Centre (NODC) platform codes followed by voyage 8 digit start dates (YYYYMMDD). NODC platform and country codes are recorded on Git Hub (https://github.com/KimBaldry/BIO-MATE/product_data/supporting_information/codes) and within the BIOMATE software (https://github.com/KimBaldry/BIOMATE-Rpackage/inst/codes). If the vessel name or voyage start/end dates were absent, this information was found using Google to discover voyage records. This voyage information was used to do a final Google keywords search (i.e. ship name, synonyms for voyages, year, “underway”/ “CTD”, “chlorophyll”, ”POC”, “cruise report” and “data”) to determine any absent records and to discover accompanying cruise reports.
 
 #### *Semi-automated BIO-MATE workflow for reformatting datasets*
 A semi-automated workflow and the BIO-MATE R software (https://github.com/KimBaldry/BIOMATE-Rpackage) were used to reformat published datasets, and produce the BIO-MATE data product (Figure \@ref(fig:userguide)). Downloaded data files were split by EXPOCODES if they recorded data within a larger dataset (e.g PALMER-LTER data records). Files for the profiling sensor data stream were further split into individual profiles. Processing metadata were manually entered into a table to inform the BIO-MATE R software and a bulk run of the software was performed to reformat data files. The workflow is described in  more detail in the following subsections (Figure \@ref(fig:method)).
@@ -75,7 +75,7 @@ Published datasets were manually downloaded from open source repositories and st
 ##### *Splitting large datasets with BIO-MATE software*
 The BIO-MATE R software requires each file to only contain observations from a single voyage. Further, the profiling sensor data stream requires each file to only contain observations from a single profiling cast, held in a discrete directory for each voyage. 
 
-The *split_delim_file* function splits files using identified variables containing EXPOCODE synonyms and/or profiling station information. This function can be used to split a single, large data file into smaller files as required. For this version of the data product, a number of files had to be split to be ingested into the BIO-MATE core functions. A record of these can be found in Git Hub ().
+The *split_delim_file* function splits files using identified variables containing EXPOCODE synonyms and/or profiling station information. This function can be used to split a single, large data file into smaller files as required. For this version of the data product, a number of files had to be split to be ingested into the BIO-MATE core functions. A record of these can be found in Git Hub in the project notebook (https://github.com/KimBaldry/BIO-MATE/blob/main/BIO-MATE.Rmd).
 
 ##### *Processing metadata*
 Information on file formats, dataset information, citation information, location data variables and ocean data variables are needed to reformat published datasets with BIO-MATE software. This information is called processing metadata herein, and was manually entered and stored as comma delimited text files. The processing metadata required to run BIO-MATE software is described in Table \@ref(tab:processingmetadata), and differs for each data stream. All processing metadata used to construct the BIOMATE aggregated data product is stored in Git Hub (https://github.com/KimBaldry/BIO-MATE/tree/main/product_data/processing_metadata).
@@ -83,17 +83,14 @@ Information on file formats, dataset information, citation information, location
 ##### *Dataset citation with BibTEX files*
 Information is included in the BIO-MATE data product, for citing published datasets, laboratory analysis methodologies (for the PIG and POC data streams) and the data repositories through which published data records were accessed. Each citation was recorded as a BibTeX entry, compatible with EndNote, R and LaTeX. Each BibTeX entry has a tag that is referenced in the processing metadata. This tag is used to link citations to their corresponding data records when datasets are ingested in the BIO-MATE software. Citation information is then printed in the header information in reformatted files. Where possible BibTeX entries were sourced from data repositories. If BibTeX entries were not found, they were created manually.
 
-All BibTeX entries are stored on Git Hub (https://github.com/KimBaldry/BIO-MATE/product_data/supporting_information/citations) and in the BIOMATE software (https://github.com/KimBaldry/BIOMATE-Rpackage/inst/citations). A look-up table is included in the BIO-MATE software to help users find relevant BibTeX entries needed to cite datasets appropriately (). A function *export_ref* supports the export of a smaller BibTeX file based on user selections of EXPOCODES and data streams that they have accessed through the product.
+All BibTeX entries are stored on Git Hub (https://github.com/KimBaldry/BIO-MATE/product_data/supporting_information/citations) and in the BIOMATE software (https://github.com/KimBaldry/BIOMATE-Rpackage/inst/citations). A look-up table is included in the BIO-MATE software to help users find relevant BibTeX entries needed to cite datasets appropriately (https://github.com/KimBaldry/BIOMATE-Rpackage/tree/main/data). A function *export_ref* supports the export of a smaller BibTeX file based on user selections of EXPOCODES and data streams that they have accessed through the product. This allows references to be easily appended to a bibliography as required.
 
 ##### *Reformatting and linking data streams with BIO-MATE R software*
 The BIO-MATE R software was run to reformat data files to the WHP-Exchange format  (https://exchange-format.readthedocs.io/en/latest/index.html), using the original or split data files, processing metadata and citation information as input. The software arranges reformatted WHPE files into four data streams in local directories that include separate WHPE files, for each EXPOCODE, and for underway sensors, profiling sensor casts, pigment measurements, and POC measurements.
 
 Each data stream has its own reformatting function within the BIO-MATE R software (*UWY_to_WHPE*, *PROF_to_WHPE*, *PIG_to_WHPE*, *POC_to_WHPE*). The software requites physical (underway sensor and profiling sensor) data streams to be reformatted before biological (pigment and POC) data streams to accommodate a biological-physical matching algorithm within the PIG_to_WHPE and POC_to_WHPE functions. The algorithm links biological data in the pigment and POC data streams to the physical data in the profiling sensor and underway sensor data streams. Biological data records are given a profiling sensor identification tag (CTD_ID) if matched to physical data in BIO-MATE.
 
-To match biological data to physical data, the algorithm first uses EXPOCODES to find relevant physical data in profiling sensor data streams. It then matches biological and physical data records by comparing station number (STNBR) and cast number (CASTNO) records. If matches are detected using STNBR and CASTNO, the validity of these matches is checked by comparing time and position information. If position and time were not recorded in biological datasets, it is assumed that the STNNBR and CASTNO records are correct. Otherwise, a match is recorded if both the biological and physical data record data either within 24 hours of each other or within 8 km (@johnson2017). After this routine, if unmatched biological data still exist, a database of time and position information from all profiling sensor data relating to the EXPOCODE is created. Matches are found for biological data, if it contains position information, by finding the closest profiling sensor record within 1km in the database. If time information exits, matches are identified as the closest profiling sensor record within 6 hours, otherwise only matching date information is required.
-
-[underway matching info if developed]
-
+To match biological data to physical data, the algorithm first uses EXPOCODES to find relevant physical data in profiling sensor data streams. It then matches biological and physical data records by comparing station number (STNBR) and cast number (CASTNO) records. If matches are detected using STNBR and CASTNO, the validity of these matches is checked by comparing time and position information. If position and time were not recorded in biological datasets, it is assumed that the STNNBR and CASTNO records are correct. Otherwise, a match is recorded if both the biological and physical data record data either within 24 hours of each other or within 8 km (@johnson2017). After this routine, if unmatched biological data still exist, a database of time and position information from all profiling sensor data relating to the EXPOCODE is created. Matches are found for biological data, if it contains position information, by finding the closest profiling sensor record within 1km in the database. If time information exits, matches are identified as the closest profiling sensor record within 6 hours, otherwise only matching date information is required. Matching has only been inplemented with physical profiling sensor data and not yet to physical underway data.
 
 #### *Quality assurance*
 Limited quality assurance has been performed on the BIO-MATE data product and is variable across published datasets. The initial integrity of these data records lies with the Principal Investigators of the published data record. As a result, reformatted data have varying levels of quality control and post-processing. We have included cruise report citations in our product to aid in further data quality assurance efforts.
@@ -102,7 +99,7 @@ This allows a range of users to benefit from the BIO-MATE aggregate product and 
 
 
 # Data Records
-The four data streams are all stored on the IMAS data portal (https://data.imas.utas.edu.au/portal/search), linked through unique EXPOCODES. Supporting data contains a metadata table and BibTeX citation files. The spatial extent of the data records is confined largely to the Southern Ocean, and was collected from XXXX - XXXX (Figure \@ref(fig:spatiotemporaldist)). A summary of the data records in the BIO-MATE aggregate data product is presented in Table \@ref(tab:datarecordsummary). 
+The four data streams are all stored on the IMAS data portal (https://data.imas.utas.edu.au/portal/search), linked through unique EXPOCODES. Supporting data contains a metadata table and BibTeX citation files. The spatial extent of the data records is confined largely to the Southern Ocean, and was collected from 1985 - 2018 (Figure \@ref(fig:spatiotemporaldist)). A summary of the data records in the BIO-MATE aggregate data product is presented in Table \@ref(tab:datarecordsummary). 
 
 #### *Underway sensor data stream*
 The underway sensor data stream contains a comma delimited WHP-Exchange file for each voyage ([EXPOCODE]_UWY.csv). The format of this file consists of headers to store metadata, followed by a data table that reports records collected by underway sensors mounted on the vessel (Table \@ref(tab:uwyrecords)). 
@@ -122,12 +119,12 @@ Supporting data are included in the BIO-MATE aggregate data product to support t
 # Technical Validation
 We validated the quality of the BIO-MATE data compilation, by displaying a number of key data distributions and trends. This validation does not confirm the quality of individual data points, in which the authors have placed no additional quality assurance to the published datasets.
 
-The location data associated with the published datasets has been interpreted correctly by the software. This is evident from the success of the biophysical matching algorithm, along with the spatial distribution of the data and recorded sampling depths (Figure \@ref(fig:spatiotemporaldist)). The data are spread over `r min(pig_data$YYYY, na.rm = T)` - `r max(pig_data$YYYY, na.rm = T)` and predominantly collected in the month of January. This is consistent with the fact that ship-based sampling in the Southern Ocean is conducted during Austral summer, and displays a lag time in publishing most recent datasets to data repositories. All data are in the ocean, not on land, confirming the absence of spurious location data, and most samples are located in the Southern Ocean which is consistent with our search constraints. Finally information on sampling time of ship-based biological data is as expected, and CTD sampling times (start, bottom and end) are sequential and follow a trend with sampling depth (Figure \@ref(fig:CTDdist)).
+The location data associated with the published datasets has been interpreted correctly by the software. This is evident from the success of the biophysical matching algorithm, along with the spatial distribution of the data and recorded sampling depths (Figure \@ref(fig:spatiotemporaldist)). The data are predominantly collected in the month of January between 1991-2010. This is consistent with the fact that ship-based sampling in the Southern Ocean is conducted during Austral summer, and displays a lag time in publishing most recent datasets to data repositories. All data are in the ocean, not on land, confirming the absence of spurious location data, and most samples are located in the Southern Ocean which is consistent with our search constraints. Finally information on sampling time of ship-based biological data is as expected, and CTD sampling times (start, bottom and end) are sequential and follow a trend with sampling depth (Figure \@ref(fig:CTDdist)).
 
-The biological ocean data associated with the published datasets has been interpreted correctly by the software. Over-all fluorometrically derived chlorophyll (FCHLORA), HPLC derived chlorophyll a (Chl a) and HPLC derived total chlorophyll (TCHLA) measurements show a log-normal distribution, as expected. High values (>20 \u03BCg/l) are constrained to the coastal zones as expected (Figure \@ref(fig:chldist)). There is a linear relationship between chlorophyll-a derived from HPLC methods and chlorophyll derived from 
+The biological ocean data associated with the published datasets has been interpreted correctly by the software. Over-all fluorometrically derived chlorophyll (FCHLORA), HPLC derived chlorophyll a (Chl a) and HPLC derived total chlorophyll (TCHLA) measurements show a log-normal distribution, as expected. High values (>10 \U03BCg/l) are constrained to the coastal zones as expected (Figure \@ref(fig:chldist)). There is a linear relationship between chlorophyll-a derived from HPLC methods and chlorophyll derived from 
 fluorometric methods (Figure \@ref(fig:hplcvsfluor)). This is expected, although considerable variability is expected due to the influence of phaeopigments and other accessory pigments on fluorometrically derived chlorophyll measurements. 
 
-Five fluorometric methods to derive chlorophyll have coincident HPLC measurements. Briefly, the ANTXVIII_2 and JGOFS method shows good correlation between the two. The PALMER_LTER method shows considerable variability between methods. This may be due to the coastal location of most samples and the influence of accessory pigments, but further investigation is needed. Finally, only a small number of records were collected with Mueller *et al.* (2003) and unknown fluorometric methods (< X), making it difficult to assess the quality of the measurements.
+Five fluorometric methods to derive chlorophyll have coincident HPLC measurements. Briefly, the ANTXVIII_2 and JGOFS method shows good correlation between the two. The PALMER_LTER method shows considerable variability between methods. This may be due to the coastal location of most samples and the influence of accessory pigments, but further investigation is needed. Finally, only a small number of coincident HPLC measurements were collected alongside fluorometry by Mueller *et al.* (2003) and unknown fluorometric methods (< 11), making it difficult to assess the quality of these methods.
 
 The physical ocean data associated with published datasets has been interpreted correctly by the software. Temperature and salinity ranges fall within expected vales for the ocean, and display expected trends with latitude  (Figure\@ref(fig:physvariabledist)).
 
@@ -152,10 +149,10 @@ We encourage the use of the data aggregate product as a new integrated database 
 All data processing was performed in R software (Version 1.1.423). The BIO-MATE R software is freely available (https://github.com/KimBaldry/BIOMATE-Rpackage). The semi-automated workflow and accompanying processing data used to construct the data product, along with the code used to create the data descriptor is freely accessible via Git Hub (https://github.com/KBaldry/BIO-MATE).
 
 # Acknowledgements
-This research was supported under Australian Research Council's Special Research Initiative for Antarctic Gateway Partnership (Project ID SR140300001) and a 2019 Fellowship from the Scientific Committee of Antarctic Research. It was also partially supported by Geoscience Australia, in the form of funded study leave. Data included in the data product were made available by the following data repositories; PANGAEA, AODN/IMOS, SeaBASS, CCHDO, AADC, GLODAP, PAL-LTER, CSIRO, MDGS and BCO-DMO. Records of data access dates, source addresses and digital object identifiers are recorded as metadata, alongside appropriate data citations. We acknowledge the enormous community effort undertaken in the collection, analysis and publication of this data and thank principle investigators for publishing their data in open access repositories.
+This research was supported under Australian Research Council's Special Research Initiative for Antarctic Gateway Partnership (Project ID SR140300001) and a 2019 Fellowship from the Scientific Committee of Antarctic Research. It was also partially supported by Geoscience Australia, in the form of paid study leave from employment. Data included in the data product were made available by the following data repositories; PANGAEA, AODN/IMOS, SeaBASS, CCHDO, AADC, GLODAP, PAL-LTER, CSIRO, MDGS and BCO-DMO. Records of data access dates, source addresses and digital object identifiers are recorded as metadata, alongside appropriate data citations. We acknowledge the enormous community effort undertaken in the collection, analysis and publication of this data and thank principle investigators for publishing their data in open access repositories.
 
 # Author Contributions
-KB designed the data product, performed the data aggregation and wrote the manuscript. RJ contributed to the data product design and manuscript edits.
+KB designed the data product, performed the data aggregation and wrote the manuscript. RJ contributed to the data product design and manuscript. PGS and PWB contributed to the manuscript. 
 
 # Competing Interests
 The authors of this manuscript declare no conflicts of interest.
@@ -190,7 +187,7 @@ library(gridExtra)
 ```
 
 
-```{r}
+```{r, include = FALSE, message = FALSE, warning=FALSE}
 pig_data$SA = unlist(lapply(1:nrow(pig_data),FUN = function(x){
   if(!is.na(pig_data$DATE_analyser[x]) & !is.na(pig_data$TIME_analyser[x]) & !is.na(pig_data$LAT_analyser[x]) & !is.na(pig_data$LON_analyser[x])){SA = sunAngle( t = as.POSIXct(paste(pig_data$DATE_analyser[x], pig_data$TIME_analyser[x]), tz = "UTC"), longitude = pig_data$LON_analyser[x], latitude = pig_data$LAT_analyser[x])$altitude}else{SA = NA}
   SA
@@ -212,8 +209,8 @@ knitr::include_graphics("F1_BIO-MATE.png")
 ```
 
 
-```{r method, fig.cap = "The origins of the data in the BIO-MATE data streams.", echo = FALSE, message = FALSE, warning=FALSE}
-knitr::include_graphics("Method.png")
+```{r method, fig.cap = "Typical data collection and treatment process for biological oceanographic data within the BIO-MATE data compilation.", echo = FALSE, message = FALSE, warning=FALSE}
+knitr::include_graphics("Method.jpg")
 ```
 
 ```{r userguide, fig.cap = "A schematic demonstrating the BIO-MATE workflow and how it is implemented in BIO-SHARE", echo = FALSE,message = FALSE, warning=FALSE}
@@ -258,8 +255,8 @@ density_all_pig =  ggplot() +
         panel.grid.minor = element_blank(),axis.ticks=element_blank(), axis.text = element_blank())+
 
   geom_raster(data = gridded_counts_profile, aes(x=x, y=y, fill = layer)) +
-  scale_fill_gradient(name = "no. records",trans = "log",low = "#c7eae5", high = "#01665e",  na.value = "#FFFFFF00") +
-  theme(legend.position = "right", legend.text = element_text(size = 6), legend.title = element_text(size = 6), legend.key.size = unit(0.5,"lines"))+ coord_fixed(ratio=1) #+
+  scale_fill_viridis(name = "no. records",trans = "log", na.value = "#FFFFFF00", breaks = c(1,20,400,8100)) +
+  theme(legend.position = "right", legend.text = element_text(size = 6), legend.title = element_text(size = 6), legend.key.size = unit(0.5,"lines"), plot.tag = element_text(size = 10), plot.title = element_text(size = 8))+ coord_fixed(ratio=1) + labs(tag = "a)", title = "Pigment") #+
   # stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), col = "black") +
   # geom_path(data =fronts,aes(x=long,y=lat,group=group),col = "#8c510a") + geom_point(data = data.frame(points_ster), aes(x = long, y = lat))
 
@@ -267,39 +264,40 @@ density_all_pig =  ggplot() +
 
 # annual observation plot (include depth distribution, split into HPLC and fluor)
 ann_obs = ggplot() + geom_bar(data = loc_data, aes(x = as.factor(YYYY)), fill = "grey69")+
-  scale_x_discrete(name = "Year",breaks = seq(min(loc_data$YYYY, na.rm = T), max(loc_data$YYYY, na.rm = T),by = 5), labels = seq(min(loc_data$YYYY, na.rm = T), max(loc_data$YYYY, na.rm = T), 5)) + scale_y_continuous(name = "Number of records")+
+  scale_x_discrete(name = "Year",breaks = seq(min(loc_data$YYYY, na.rm = T), max(loc_data$YYYY, na.rm = T),by = 5), labels = seq(min(loc_data$YYYY, na.rm = T), max(loc_data$YYYY, na.rm = T), 5)) + scale_y_continuous(name = "No. of records")+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1),
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
-        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
+        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6), plot.tag = element_text(size = 10))+ labs(tag = "b)")
 
 
 # seasonal plot (include depth distribution, split into HPLC and fluor)
 seas_obs = ggplot() + geom_bar(data = loc_data, aes(x = as.factor(MM_p)), fill = "grey69")+
-  scale_x_discrete(name = "Month",breaks = c(1,6,12), labels = c("July", "Jan","June"))+ scale_y_continuous(name = "Number of records")+
+  scale_x_discrete(name = "Month",breaks = c(1,6,12), labels = c("July", "Jan","June"))+ scale_y_continuous(name = "No. of records")+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1),
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
-        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
+        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6), plot.tag = element_text(size = 10))+ labs(tag = "c)")
 
 # time of day
 hour_obs = ggplot() + geom_histogram(data = loc_data %>% filter(!is.na(SA)), aes(x = SA), fill = "grey69", binwidth = 15)+
-  scale_x_discrete(name = "Sun Angle",breaks = seq(-90,90,45), labels = seq(-90,90,45))+ scale_y_continuous(name = "Number of records")+
+  #scale_x_discrete(name = "Sun Angle",breaks = seq(-90,90,15), labels = seq(-90,90,15))+ 
+  scale_y_continuous(name = "No. of records")+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1),
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
-        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
+        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6), plot.tag = element_text(size = 10))+ labs(tag = "d)")
 
 #depth
-depth_obs = ggplot() + geom_histogram(data = loc_data %>% filter(!is.na(DEPTH)), aes(y = DEPTH), fill = "grey69", binwidth = 10)+ scale_y_reverse(limits = c(500,0))+ scale_x_continuous(position = "top", name = "Number of records", limits =c(0,10000))+
+depth_obs = ggplot() + geom_histogram(data = loc_data %>% filter(!is.na(DEPTH)), aes(y = DEPTH), fill = "grey69", binwidth = 10)+ scale_y_reverse(limits = c(500,0))+ scale_x_continuous(position = "top", name = "No. of records", limits =c(0,10000))+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1), 
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
-        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
+        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6), plot.tag = element_text(size = 10))
 
 
 #### Profiling Sensor stream ####
@@ -347,46 +345,47 @@ density_all_CTD =  ggplot() +
         panel.grid.minor = element_blank(),axis.ticks=element_blank(), axis.text = element_blank())+
 
   geom_raster(data = gridded_counts_profile, aes(x=x, y=y, fill = layer)) +
-  scale_fill_gradient(name = "no. profiles",trans = "log",low = "#c7eae5", high = "#01665e",  na.value = "#FFFFFF00") +
-  theme(legend.position = "right", legend.text = element_text(size = 6), legend.title = element_text(size = 6), legend.key.size = unit(0.5,"lines"))+ coord_fixed(ratio=1) #+
+  scale_fill_viridis(name = "no. profiles",trans = "log",  na.value = "#FFFFFF00", breaks = c(1,10,50,400)) +
+  theme(legend.position = "right", legend.text = element_text(size = 6), legend.title = element_text(size = 6),plot.title = element_text(size = 8), legend.key.size = unit(0.5,"lines"), plot.tag = element_text(size = 10))+ coord_fixed(ratio=1)+ labs(tag = "e)", title = "Profiling Sensor") #+
   # stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), col = "black") +
   # geom_path(data =fronts,aes(x=long,y=lat,group=group),col = "#8c510a") + geom_point(data = data.frame(points_ster), aes(x = long, y = lat))
 
 # annual observation plot (include depth distribution, split into HPLC and fluor)
 ann_obs_CTD = ggplot() + geom_bar(data = loc_CTD, aes(x = as.factor(YYYY)), fill = "grey69")+
-  scale_x_discrete(name = "Year",breaks = seq(min(loc_CTD$YYYY, na.rm = T), max(loc_CTD$YYYY, na.rm = T),by = 5), labels = seq(min(loc_CTD$YYYY, na.rm = T), max(loc_CTD$YYYY, na.rm = T), 5)) + scale_y_continuous(name = "Number of profiles")+
+  scale_x_discrete(name = "Year",breaks = seq(min(loc_CTD$YYYY, na.rm = T), max(loc_CTD$YYYY, na.rm = T),by = 5), labels = seq(min(loc_CTD$YYYY, na.rm = T), max(loc_CTD$YYYY, na.rm = T), 5)) + scale_y_continuous(name = "No. of profiles")+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1),
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
-        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
+        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6), plot.tag = element_text(size = 10))+ labs(tag = "f)")
 
 
 # seasonal plot (include depth distribution, split into HPLC and fluor)
 seas_obs_CTD = ggplot() + geom_bar(data = loc_CTD, aes(x = as.factor(MM_p)), fill = "grey69")+
-  scale_x_discrete(name = "Month",breaks = c(1,6,12), labels = c("July", "Jan","June"))+ scale_y_continuous(name = "Number of profiles")+
+  scale_x_discrete(name = "Month",breaks = c(1,6,12), labels = c("July", "Jan","June"))+ scale_y_continuous(name = "No. of profiles")+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1),
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
-        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
+        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6), plot.tag = element_text(size = 10))+ labs(tag = "g)")
 
 # time of day
 hour_obs_CTD = ggplot() + geom_histogram(data = loc_CTD %>% filter(!is.na(SA)), aes(x = SA), fill = "grey69", binwidth = 15)+
-  scale_x_discrete(name = "Sun Angle",breaks = seq(-90,90,45), labels = seq(-90,90,45))+ scale_y_continuous(name = "Number of profiles")+
+  #scale_x_discrete(name = "Sun Angle",breaks = seq(-80,90,15), labels = seq(-90,90,15))+ 
+  scale_y_continuous(name = "No. of profiles")+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1),
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
-        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
+        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6), plot.tag = element_text(size = 10))+ labs(tag = "h)")
 
 #depth
-depth_CTD = ggplot() + geom_histogram(data = loc_CTD, aes(y = BOT_DEPTH), fill = "grey69", binwidth = 10)+ scale_y_reverse()+ scale_x_continuous(position = "top", name = "Number of profiles")+
+depth_CTD = ggplot() + geom_histogram(data = loc_CTD, aes(y = BOT_DEPTH), fill = "grey69", binwidth = 10)+ scale_y_reverse()+ scale_x_continuous(position = "top", name = "No. of profiles")+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1), 
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
-        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
+        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6), plot.tag = element_text(size = 10))
 
 
 ##### Biophysical matches #### 
@@ -425,8 +424,8 @@ density_all_match =  ggplot() +
         panel.grid.minor = element_blank(),axis.ticks=element_blank(), axis.text = element_blank())+
 
   geom_raster(data = gridded_counts_profile, aes(x=x, y=y, fill = layer)) +
-  scale_fill_gradient(name = "no. records",trans = "log",low = "#c7eae5", high = "#01665e",  na.value = "#FFFFFF00") +
-  theme(legend.position = "right", legend.text = element_text(size = 6), legend.title = element_text(size = 6), legend.key.size = unit(0.5,"lines"))+ coord_fixed(ratio=1) #+
+  scale_fill_viridis(name = "no. records",trans = "log", na.value = "#FFFFFF00", breaks = c(1,20,400,8100)) +
+  theme(legend.position = "right", legend.text = element_text(size = 6),plot.title = element_text(size = 8), legend.title = element_text(size = 6), legend.key.size = unit(0.5,"lines"), plot.tag = element_text(size = 10))+ coord_fixed(ratio=1)+ labs(tag = "i)", title = "Biophysical match") #+
   # stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), col = "black") +
   # geom_path(data =fronts,aes(x=long,y=lat,group=group),col = "#8c510a") + geom_point(data = data.frame(points_ster), aes(x = long, y = lat))
 
@@ -434,79 +433,81 @@ density_all_match =  ggplot() +
 
 # annual observation plot (include depth distribution, split into HPLC and fluor)
 ann_obs_match = ggplot() + geom_bar(data = loc_match, aes(x = as.factor(YYYY)), fill = "grey69")+
-  scale_x_discrete(name = "Year",breaks = seq(min(loc_match$YYYY, na.rm = T), max(loc_match$YYYY, na.rm = T),by = 5), labels = seq(min(loc_match$YYYY, na.rm = T), max(loc_match$YYYY, na.rm = T), 5)) + scale_y_continuous(name = "Number of records")+
+  scale_x_discrete(name = "Year",breaks = seq(min(loc_match$YYYY, na.rm = T), max(loc_match$YYYY, na.rm = T),by = 5), labels = seq(min(loc_match$YYYY, na.rm = T), max(loc_match$YYYY, na.rm = T), 5)) + scale_y_continuous(name = "No. of records")+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1),
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
-        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
+        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6), plot.tag = element_text(size = 10))+ labs(tag = "j)")
 
 
 # seasonal plot (include depth distribution, split into HPLC and fluor)
 seas_obs_match = ggplot() + geom_bar(data = loc_match, aes(x = as.factor(MM_p)), fill = "grey69")+
-  scale_x_discrete(name = "Month",breaks = c(1,6,12), labels = c("July", "Jan","June"))+ scale_y_continuous(name = "Number of records")+
+  scale_x_discrete(name = "Month",breaks = c(1,6,12), labels = c("July", "Jan","June"))+ scale_y_continuous(name = "No. of records")+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1),
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
-        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
+        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6), plot.tag = element_text(size = 10))+ labs(tag = "k)")
 
 # time of day
-hour_obs_match = ggplot() + geom_bar(data = loc_match %>% filter(!is.na(SA)), aes(x = SA), fill = "grey69", binwidth = 15)+
-  scale_x_discrete(name = "Sun Angle",breaks = seq(-90,90,45), labels = seq(-90,90,45))+ scale_y_continuous(name = "Number of records")+
+hour_obs_match = ggplot() + geom_histogram(data = loc_match, aes(x = SA), fill = "grey69", binwidth = 15)+
+  #scale_x_discrete(name = "Sun Angle",breaks = seq(-90,90,15), labels = seq(-90,90,15))+ 
+  scale_y_continuous(name = "No. of records")+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1),
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
-        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
+        axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6), plot.tag = element_text(size = 10))+ labs(tag = "l)")
 
 #depth
-depth_obs_match = ggplot() + geom_histogram(data = loc_match %>% filter(!is.na(DEPTH)), aes(y = DEPTH), fill = "grey69", binwidth = 10)+ scale_y_reverse(limits = c(500,0))+ scale_x_continuous(position = "top", name = "Number of records", limits =c(0,10000))+
+depth_obs_match = ggplot() + geom_histogram(data = loc_match %>% filter(!is.na(DEPTH)), aes(y = DEPTH), fill = "grey69", binwidth = 10)+ scale_y_reverse(limits = c(500,0))+ scale_x_continuous(position = "top", name = "No. of records", limits =c(0,10000))+
   theme(axis.line.y.right  = element_line(color="grey69", size = 1), 
         axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
         ,panel.background = element_blank(),
         panel.grid.major = element_blank(),plot.title = element_text( size=6), axis.title.x =  element_text(size = 6),  axis.text.x = element_text(size = 6), 
         axis.text.y.left  = element_text(size = 6),axis.text.y.right = element_text(size = 6, colour = "grey69"), axis.title.y = element_text(size = 6))
 
-lay = rbind(c(1,1,2,2,5),
-            c(1,1,2,2,5),
-            c(1,1,3,4,5),
-            c(1,1,3,4,5),
-            c(6,6,7,7,10),
-            c(6,6,7,7,10),
-            c(6,6,8,9,10),
-            c(6,6,8,9,10),
-            c(11,11,12,12,15),
-            c(11,11,12,12,15),
-            c(11,11,13,14,15),
-            c(11,11,13,14,15))
+lay = rbind(c(1,1,2,2),
+            c(1,1,2,2),
+            c(1,1,3,4),
+            c(1,1,3,4),
+            c(5,5,6,6),
+            c(5,5,6,6),
+            c(5,5,7,8),
+            c(5,5,7,8),
+            c(9,9,10,10),
+            c(9,9,10,10),
+            c(9,9,11,12),
+            c(9,9,11,12))
 
-grid.arrange(density_all_pig, ann_obs, seas_obs, hour_obs, depth_obs, density_all_CTD, ann_obs_CTD, seas_obs_CTD, hour_obs_CTD, depth_CTD, density_all_match, ann_obs_match, seas_obs_match, hour_obs_match, depth_obs_match, layout_matrix = lay)
+grid.arrange(density_all_pig, ann_obs, seas_obs, hour_obs,  density_all_CTD, ann_obs_CTD, seas_obs_CTD, hour_obs_CTD,  density_all_match, ann_obs_match, seas_obs_match, hour_obs_match, layout_matrix = lay)
 
 
 ```
 
 
-```{r physvariabledist, fig.cap = "The distribution of temperature and salinity data measured at 10m by profiling sensors in the BIOMATE data compilation", echo = FALSE, message = FALSE, warning=FALSE, fig.width= 8, fig.height= 10}
+```{r physvariabledist, fig.cap = "The distribution of temperature and salinity data measured at 10m by profiling sensors in the BIOMATE data compilation", echo = FALSE, message = FALSE, warning=FALSE, fig.width= 3.5, fig.height= 6}
 lat_data = data.frame(lat = CTD_df$LAT, sal = CTD_df$CTDSAL_10, temp = (CTD_df$CTDTEMP_10+50)/2)
 lat_data = melt(lat_data, id.var = "lat")
 
-sal_hist = ggplot()+ geom_histogram(data = CTD_df, aes(x = CTDSAL_10), binwidth = 0.1)+ xlim(c(25,40)) +xlab("Salinity at 10 m") + ylab("Number of records")
-temp_hist = ggplot()+ geom_histogram(data = CTD_df, aes(x = CTDTEMP_10), binwidth = 0.5) + xlab("Temperature at 10 m (\u00B0C)") + ylab("Number of records")
+sal_hist = ggplot()+ geom_histogram(data = CTD_df, aes(x = CTDSAL_10), binwidth = 0.1)+ xlim(c(25,40)) +xlab("Salinity at 10 m") + ylab("No. of records")+ labs(tag = "a)")+ theme_bw()+ theme(plot.tag = element_text(size = 10),legend.text = element_text(size = 8), legend.title = element_text(size = 8), axis.text = element_text(size = 8), axis.title = element_text(size = 8)) 
+temp_hist = ggplot()+ geom_histogram(data = CTD_df, aes(x = CTDTEMP_10), binwidth = 0.5) + xlab("Temperature at 10 m (\u00B0C)") + ylab("No. of records")+ labs(tag = "b)") + theme_bw() + theme(plot.tag = element_text(size = 10),legend.text = element_text(size = 8), legend.title = element_text(size = 8), axis.text = element_text(size = 8), axis.title = element_text(size = 8))
 
-lat_plot = ggplot() + geom_point(data = lat_data, aes(x = lat, y = value, colour = variable)) + scale_colour_manual(values = c("black","blue"))+ theme(legend.position = "none") + xlab("Latitude  (\u00B0N)") + scale_y_continuous(name = "Salinity at 10 m",limits =c(25, 40),  sec.axis = sec_axis(~(. - 25)*2, name = "Temperature at 10 m (\u00B0C)"))  + theme(axis.title.y.right = element_text(color = "blue"))
+lat_plot = ggplot() + geom_point(data = lat_data, aes(x = lat, y = value, colour = variable)) + scale_colour_manual(values = c("black","#01665e"))+ theme(legend.position = "none") + xlab("Latitude  (\u00B0N)") + scale_y_continuous(name = "Salinity at 10 m",limits =c(25, 40),  sec.axis = sec_axis(~(. - 25)*2, name = "Temperature at 10 m (\u00B0C)")) + theme_bw()  + theme(axis.title.y.right = element_text(color = "#01665e", size = 8), plot.tag = element_text(size = 10), legend.text = element_text(size = 8), legend.title = element_text(size = 8), axis.text = element_text(size = 8),axis.title = element_text(size = 8), legend.position = "none")+ labs(tag = "c)")
 
 grid.arrange(sal_hist, temp_hist, lat_plot, layout_matrix = rbind(c(1,1), c(2,2), c(3,3)))
 ```
 
-```{r chldist, fig.cap = "The (a) distribution of Chla, TCHLA and FCHLA in the BIO-MATE data compilation and (b) the location of high (>10 \u03BCg/l) Chla, TCHLA and FCHLA measurements.", echo = FALSE, message = FALSE, warning=FALSE, fig.width = 5, fig.height = 5}
+```{r chldist, fig.cap = "The (a) distribution of Chla, TCHLA and FCHLA in the BIO-MATE data compilation and (b) the location of high (>10 \u03BCg/l) Chla, TCHLA and FCHLA measurements.", echo = FALSE, message = FALSE, warning=FALSE, fig.width = 4, fig.height = 6}
+br_colours = c(rgb(140,81,10,maxColorValue = 255),rgb(216,179,101,maxColorValue = 255),rgb(240,232,195,maxColorValue = 255),rgb(199,234,229,maxColorValue = 255),rgb(90,180,172,maxColorValue = 255),rgb(1,102,94,maxColorValue = 255),"lightgrey")
 
 # variable histograms (chla, fchla, temp, sal)
 chl_data = data.frame(TCHLA = pig_data$TCHLA, Chla = pig_data$Chla, FChla = pig_data$FCHLORA)
 chl_data = melt(chl_data) %>% filter(!is.na(value))
 # chl_data = chl_data[-which(chl_data$value == -999),]
 # chl_data = chl_data[-which(chl_data$value == -888),]
-chl_hist = ggplot()+ geom_histogram(data = chl_data, aes(x = value, fill = variable), binwidth = 0.2) + xlim(c(0,10)) + ylab("Number of Records") + scale_fill_discrete(labels = c("HPLC derrived Total Chlorophyll", "HPLC derrived Total Chlorophyll-a", "Fluorometrically derrived Chlorophyl")) + xlab("Concentration (\u03BCg/L)") + theme(legend.position = "top", legend.text = element_text(size = 8))
+chl_hist = ggplot()+ geom_histogram(data = chl_data, aes(x = value, fill = variable), binwidth = 0.2) + xlim(c(0,10)) + ylab("No. of records") + scale_fill_manual(values = c(br_colours[1], br_colours[5], br_colours[6]),labels = c("HPLC Chla", "HPLC TCHLA", "Fluorometric FCHLA")) + xlab("Concentration (\u03BCg/L)")+theme_bw() + theme(legend.position = "top", legend.text = element_text(size = 8),plot.tag = element_text(size = 10), axis.title = element_text(size = 8),axis.text = element_text(size = 8), legend.title = element_blank())+ labs(tag = "a)")
 
 #plot high chlorophyll values
 points = loc_data %>% filter(FCHLORA > 10 | Chla > 10 | TCHLA > 10)
@@ -541,15 +542,15 @@ density_all_high =  ggplot() +
         panel.grid.minor = element_blank(),axis.ticks=element_blank(), axis.text = element_blank())+
 
   geom_raster(data = gridded_counts_profile, aes(x=x, y=y, fill = layer)) +
-  scale_fill_gradient(name = "no. records",trans = "log",low = "#c7eae5", high = "#01665e",  na.value = "#FFFFFF00") +
-  theme(legend.position = "right", legend.key.size = unit(0.5,"lines"), legend.text = element_text(size = 6), legend.title = element_blank())+ coord_fixed(ratio=1) #+
+  scale_fill_viridis(name = "no. records",trans = "log",  na.value = "#FFFFFF00", breaks = c(1,7,55,404),labels = c(1,7,55,404)) +
+  theme(legend.position = "right", legend.key.size = unit(0.5,"lines"), legend.text = element_text(size = 8), legend.title = element_text(size = 8),plot.tag = element_text(size = 10), axis.title = element_text(size = 8),axis.text = element_text(size = 8))+ coord_fixed(ratio=1) + labs(tag = "b)") #+
   # stat_contour(data = bathySOdf,aes(x=x,y=y,z=layer),breaks = c(-1000,0), col = "black") +
   # geom_path(data =fronts,aes(x=long,y=lat,group=group),col = "#8c510a") + geom_point(data = data.frame(points_ster), aes(x = long, y = lat))
 
-grid.arrange(chl_hist, density_all_high, layout_matrix = rbind(c(1),c(2)))
+grid.arrange(chl_hist, density_all_high, layout_matrix = cbind(c(1,1,2,2)))
 ```
 
-```{r CTDdist, fig.cap = "The time difference between the bottom and end possitions of a profiling sensor cast versus the bottom depth of the cast.", echo = FALSE, message = FALSE, warning=FALSE}
+```{r CTDdist, fig.cap = "The time difference between the bottom and end possitions of a profiling sensor cast versus the bottom depth of the cast.", echo = FALSE, message = FALSE, warning=FALSE, fig.width= 4, fig.height = 4}
 
 #CTD cast times vs depth
 #If you do a regression, rmeove BOT_depth <150 and T_diff_e >60 000
@@ -559,26 +560,27 @@ grid.arrange(chl_hist, density_all_high, layout_matrix = rbind(c(1),c(2)))
 CTD_diff_df = melt(CTD_df[,c("BOT_DEPTH", "T_diff_e", "T_diff_b")], id.vars = "BOT_DEPTH", value = "value") %>% filter(!is.na(value))
 CTD_diff_df$value = CTD_diff_df$value/(60*60)
 
-ggplot()+ geom_point(data = CTD_diff_df, aes(x = BOT_DEPTH, y = value, colour = variable)) +ylim(c(0,10)) +scale_colour_manual(values = c("#a6611a", "#01665e"), labels = c("Start to bottom position", "Start to end position")) + xlab("Bottom depth (meters)") + ylab("Time difference (hours)")+
+ggplot()+ geom_point(data = CTD_diff_df, aes(x = BOT_DEPTH, y = value, colour = variable)) +ylim(c(0,10)) +scale_colour_manual(values = c("#a6611a", "#01665e"), labels = c("Start to bottom position", "Start to end position")) + xlab("Bottom depth (meters)") + ylab("Time difference (hours)")+ theme_bw() +
    theme(axis.line.y.right  = element_line(color="grey69", size = 1),
-        axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69")
-        ,panel.background = element_blank(),legend.position = "top",
-        panel.grid.major = element_blank(),plot.title = element_text( size=12), axis.title.x =  element_text(size = 12),  axis.text.x = element_text(size = 10), 
-        axis.text.y.left  = element_text(size = 10),axis.text.y.right = element_text(size = 12, colour = "grey69"), axis.title.y = element_text(size = 12),
-        plot.margin = unit(c(1,3.5,1,1), "lines"), legend.title = element_blank()) 
+        axis.line.x = element_line(color="black", size = 1),axis.line.y.left = element_line(color="black", size = 1), axis.ticks.y.right = element_line(colour = "grey69"),
+        legend.position = "top",
+        plot.title = element_text( size=8), axis.title.x =  element_text(size = 8),  axis.text.x = element_text(size = 8), 
+        axis.text.y.left  = element_text(size = 8),axis.text.y.right = element_text(size = 8, colour = "grey69"), axis.title.y = element_text(size = 8),
+        plot.margin = unit(c(1,3.5,1,1), "lines"), legend.title = element_blank(), legend.text = element_text(size = 8)) 
 
 ```
 
-```{r hplcvsfluor, fig.cap = "A comparison of fluorometrically derived chlorophyll (Chl) methods against total chlorophyll-a (TChla) derived from HPLC measurments", echo = FALSE, message = FALSE, warning=FALSE}
+```{r hplcvsfluor, fig.cap = "A comparison of fluorometrically derived chlorophyll (Chl) methods against total chlorophyll-a (TChla) derived from HPLC measurments", echo = FALSE, message = FALSE, warning=FALSE, fig.width= 8, fig.height = 6}
+library(scales)
 # HPLC vs fluor
 # maybe look at bathymetry in PALMER
 method_info = BIOMATE::method_info
-B = data.frame("unique" = paste(pig_data$EXPOCODE, pig_data$DATE, pig_data$TIME_s, pig_data$TIME_b, pig_data$TIME_e, pig_data$DATE_analyser, pig_data$CTD_IDs, round(pig_data$LAT_analyser, digits = 1), round(pig_data$LON_analyser, digits = 1), round(pig_data$DEPTH, digits = 0), pig_data$STNNBR_analyser), "method" = pig_data$PIG_METHOD)
+B = data.frame("unique" = paste(pig_data$EXPOCODE, pig_data$DATE, pig_data$TIME_s, pig_data$TIME_b, pig_data$TIME_e, pig_data$DATE_analyser, pig_data$CTD_IDs, round(pig_data$LAT_analyser, digits = 1), round(pig_data$LON_analyser, digits = 1), round(as.numeric(pig_data$DEPTH), digits = 0), pig_data$STNNBR_analyser), "method" = pig_data$PIG_METHOD)
 C = paste(B$unique, B$method)
 B = B[!duplicated(C),]
 n_method = stats::aggregate(B$method, by = list(B$unique), FUN = length)
 
-pig_compare  = data.frame("unique" = paste(pig_data$EXPOCODE, pig_data$DATE, pig_data$TIME_s, pig_data$TIME_b, pig_data$TIME_e, pig_data$DATE_analyser, pig_data$CTD_IDs, round(pig_data$LAT_analyser, digits = 1), round(pig_data$LON_analyser, digits = 1), round(pig_data$DEPTH, digits = 0), pig_data$STNNBR_analyser), "hplc" = pig_data$TCHLA, "fluor" = pig_data$FCHLORA)
+pig_compare  = data.frame("unique" = paste(pig_data$EXPOCODE, pig_data$DATE, pig_data$TIME_s, pig_data$TIME_b, pig_data$TIME_e, pig_data$DATE_analyser, pig_data$CTD_IDs, round(pig_data$LAT_analyser, digits = 1), round(pig_data$LON_analyser, digits = 1), round(as.numeric(pig_data$DEPTH), digits = 0), pig_data$STNNBR_analyser), "hplc" = pig_data$TCHLA, "fluor" = pig_data$FCHLORA)
 #pig_compare = pig_compare[-which(pig_data$Chla == -999),]
 #pig_compare = pig_compare[-which(pig_data$Chla == -2997),]
 tchla_calc = rowSums(pig_data[,c("Chla","Chla_ide","Chla_allom", "Chla_prime", "DVChla")], na.rm = T)
@@ -610,12 +612,16 @@ for(mt in 1:nrow(method_info)){
 
 #pig_compare$density <- get_density(pig_compare$value.x, pig_compare$value.y, n = 5000)
 pig_compare = pig_compare %>% filter(!method %in% c("Mueller_2003", "Unknown_fluorometry"))
-ggplot() + geom_point(data = pig_compare, aes(x = value.x, y = value.y, colour = method)) + facet_grid(vars(method)) + xlim(c(0,30)) + ylim(c(0,30)) + xlab("TCHLA derrived from HPLC") + ylab("Chl derrived fluorometrically")
+p1 = ggplot() + geom_bin2d(data = pig_compare, aes(x = value.x, y = value.y), bins = 1000) + facet_grid(vars(method)) + coord_cartesian(xlim = c(0,5), ylim =c(0,5)) + xlab("TCHLA derrived from HPLC") + ylab("Chl derrived from fluorometry") + theme_bw()  +scale_fill_gradientn(name = "density",colors = viridisLite::viridis(80), na.value = NA, limits = c(0,50), oob = squish ,breaks = seq(0,50,10), labels = c(as.character(seq(0,40,10)), "50+")) + geom_abline(slope = 1, intercept = 0) + theme(plot.tag = element_text(size = 10), axis.title = element_text(size = 8),axis.text = element_text(size = 8), legend.text = element_text(size = 8),legend.title = element_text(size = 8))+ labs(tag = "b)")
+p2 = ggplot() + geom_bin2d(data = pig_compare, aes(x = value.x, y = value.y), bins = 100) + facet_grid(vars(method)) + xlab("TCHLA from HPLC (\u03BCg/L)") + ylab("Chl from fluorometry (\u03BCg/L)") + theme_bw()  +scale_fill_gradientn(colors = viridisLite::viridis(80), na.value = NA, limits = c(0,50), oob = squish ,breaks = seq(0,50,10), labels = c(as.character(seq(0,40,10)), "50+")) + geom_abline(slope = 1, intercept = 0)+ coord_cartesian(xlim = c(0,30), ylim =c(0,30))+ theme(legend.position = "none",plot.tag = element_text(size = 10), axis.title = element_text(size = 8),axis.text = element_text(size = 8), legend.text = element_text(size = 8),legend.title = element_text(size = 8))+ labs(tag = "a)")
+
+grid.arrange(p2,p1, layout_matrix = rbind(c(1,1,1,1,2,2,2,2,2)))
 
 ```
+
 # Tables
 
-```{r processingmetadata, tab.cap = "a figure", echo = FALSE, message = FALSE, warning=FALSE}
+```{r processingmetadata, tab.cap = "Description of the processing metadata required to ingest data into BIO-MATE for semi-automated reformatting.", echo = FALSE, message = FALSE, warning=FALSE}
 p_meta = data.frame("variable"= character(), "stream" = character(), "description" = character(), "input"= character())
 p_meta = p_meta %>% 
   add_row(variable = "file_type", stream = "all", description = "The format of the file/s.", input = "text delim or netcdf") %>%   
@@ -740,12 +746,13 @@ save(p_meta, file = "metadata_info.RData")
 ```
 
 <br>
-```{r datarecordsummary, tab.cap = "a figure", echo = FALSE, message = FALSE, warning=FALSE}
+```{r datarecordsummary, tab.cap = "Summary of the pigment data records contained in the first version of BIO-MATE", echo = FALSE, message = FALSE, warning=FALSE}
 data_description= as.data.frame(t(data_description))
 colnames(data_description) = c("All pigment records","Subsurface profile records (>4 depth samples above 75 m)","Surface records (<10 m)")
 
   
-data_description$group =   c("Number of voyages", "Number of Records", "Unique samples (no replicates)", "Unique samples in lat and lon (not depth)", "Bio-physical matches", "HPLC and fluorometry matches", "Number of HPLC records", "Number of Fluorometry records", "Matches with CTDFLUOR records", "Matches with CTDBBP700 records", "Matches with CTDBEAMCP records")
+data_description$group =   c("Number of voyages", "Number of records", "Unique samples (no replicates)", "Unique samples in lat and lon (not depth)", "Bio-physical matches", "HPLC and fluorometry matches", "Number of HPLC records", "Number of Fluorometry records", "Matches with CTDFLUOR records", "Matches with CTDBBP700 records", "Matches with CTDBEAMCP records")
+colnames(data_description)[4] = "Statistic"
 
 
 data_description[,c(4,1:3)] %>%  flextable() %>% autofit() %>% set_table_properties(layout = "autofit")
@@ -755,16 +762,21 @@ data_description[,c(4,1:3)] %>%  flextable() %>% autofit() %>% set_table_propert
 ```
 <br>
 
-```{r CTD_des, echo = FALSE, message = FALSE, warning=FALSE}
+```{r CTD_des, tab.cap = "Summary of the profiling sensor data contained within the first version of BIO-MATE", echo = FALSE, message = FALSE, warning=FALSE}
 CTD_des = as.data.frame(t(CTD_des))
-CTD_des$group = c("Number of voyages", "Number of profiles", "Profiles with pressure records (%)", "Profiles with salinity records", "Profiles with temperature records", "Profiles with oxygen records", "Profiles with fluorescence records", "Profiles with beam attenuation records", "Profiles with backscatter 700nm records", "profiles with transmittance records", "Profiles with PAR records", "Profiles with nitrate records")
 
+CTD_des$group = c("Number of voyages", "Number of profiles", "Profiles with pressure records (%)", "Profiles with salinity records (%)", "Profiles with temperature records (%)", "Profiles with oxygen records (%)", "Profiles with fluorescence records (%)", "Profiles with beam attenuation records (%)", "Profiles with backscatter 700nm records (%)", "profiles with transmittance records (%)", "Profiles with PAR records (%)", "Profiles with nitrate records (%)")
+
+CTD_des = CTD_des[,c(2,1)]
+colnames(CTD_des)[1] = "Statistic"
+CTD_des[1:2,2] = round(CTD_des[1:2,2], digits = 0)
+CTD_des[3:6,2] = round(CTD_des[3:6,2], digits = 2)
 CTD_des %>% head() %>%  flextable() %>% autofit() %>% set_table_properties(layout = "autofit")
 ```
 
 <br>
 
-```{r profrecords, tab.cap = "a figure", echo = FALSE, message = FALSE, warning=FALSE}
+```{r profrecords, tab.cap = "Information contained in the reformatted profiling sensor files.", echo = FALSE, message = FALSE, warning=FALSE}
 prof_rec = data.frame("var" = as.character(), "des" = as.character())
 # Header variables
 prof_rec = prof_rec %>% 
@@ -818,7 +830,7 @@ prof_rec_adj %>% flextable() %>% autofit() %>% merge_h() %>% bold(i = c(1, 9, 27
 
 ```
 
-```{r pigrecords, tab.cap = "a figure", echo = FALSE, message = FALSE, warning=FALSE}
+```{r pigrecords, tab.cap = "Information contained in the reformatted pigment files.", echo = FALSE, message = FALSE, warning=FALSE}
 pig_rec = data.frame("var" = as.character(), "des" = as.character())
 # Header information
 pig_rec = pig_rec %>% 
@@ -914,16 +926,99 @@ pig_rec_adj %>% flextable() %>% autofit() %>% merge_h() %>% bold(i = c(1, 11,18)
 
 
 
-```{r uwyrecords, tab.cap = "a figure", echo = FALSE, message = FALSE, warning=FALSE}
+```{r uwyrecords, tab.cap = "Information contained in the reformatted underway sensor files.", echo = FALSE, message = FALSE, warning=FALSE}
+uwy_rec = data.frame("var" = as.character(), "des" = as.character())
+# Header variables
+uwy_rec = uwy_rec %>% 
+  add_row(var = "ORIGINAL_UWYFILE/S", des = "The name of the original file/s") %>%
+  add_row(var = "UWYFILE_MOD_DATE", des = "The modification date of the file") %>%
+  add_row(var = "SOURCED_FROM", des = "The repository where data was originally sourced from") %>%
+  add_row(var = "DATASET_CONTACT", des = "Name and email of the listed dataset contact") %>%
+  add_row(var ="DOI/s", des = "Doi/s of original files") %>%
+  add_row(var = "BIOMATE_CITE_TAGS", des = "The BIOMATE citation tags that are associated with the data, methods and source repository") %>%
+  add_row(var = "DATA_CITATION/S", des = "The full citations associted with the data" ) %>%
+  
+  # Header variables
+  add_row(var = "NUMBER_HEADERS", des = "The number of header variables") %>%
+  add_row(var = "EXPOCODE", des = "The EXPOCODE associated with the data" ) %>% 
+  add_row(var = "SHIP", des = "The vessel on which the data was collected") %>%
+  add_row(var = "TIMEZONE", des = "The timezone the data was collected in") %>%
+  add_row(var = "missing_value", des = "The value that corresponds to missing data within the data table") %>% 
+
+  # Ocean data variables
+  add_row(var = "DATE", des = "Date of sample") %>%
+  add_row(var = "TIME", des = "Time of sample") %>%
+  add_row(var = "LATITUDE", des = "Latitude of sample position") %>%
+  add_row(var = "LONGITUDE", des = "Longitude of sample position") %>%
+  add_row(var = "CTDTMP", des = "Temperature") %>%
+  add_row(var = "CTDSAL", des = "Salinity") %>%
+  add_row(var = "CTDDOXY", des = "Dissolved oxygen") %>%
+  add_row(var = "CTDFLUOR", des = "Fluorescence") %>%
+  add_row(var = "CTDBEAMCP", des = "Beam attenuation") %>%
+  add_row(var = "CTDXMISS", des = "Transmissometer") %>%
+  add_row(var = "CTDPAR", des = "Photosynthetically active radiation") %>%
+  add_row(var = "CTDNITRATE", des ="Nitrate")
+    
+colnames(uwy_rec) = c("Variable", "Description")
+
+uwy_rec_adj = rbind(rep("Header information", 2), uwy_rec[1:7,], rep("Header variables",2), uwy_rec[8:12,], rep("Ocean data variables", 2), uwy_rec[13:24,])
+
+uwy_rec_adj %>% flextable() %>% autofit() %>% merge_h() %>% bold(i = c(1, 9, 27)) %>% set_table_properties(layout = "autofit")
+
 
 ```
 
-```{r pocrecords, tab.cap = "a figure", echo = FALSE, message = FALSE, warning=FALSE}
+```{r pocrecords, tab.cap = "Information contained in the reformatted POC files.", echo = FALSE, message = FALSE, warning=FALSE}
+poc_rec = data.frame("var" = as.character(), "des" = as.character())
+# Header information
+poc_rec = poc_rec %>% 
+  add_row(var = "ORIGINAL_CHLFILE/S", des = "The name of the original file/s") %>%
+  add_row(var = "CHLFILE_MOD_DATE", des = "The modification date of the file") %>%
+  add_row(var = "SOURCED_FROM", des = "The repository where data was originally sourced from") %>%
+  add_row(var = "ANALYSIS_METHOD", des = "The analysis method used to obtain data") %>% 
+  add_row(var = "DATASET_CONTACT", des = "Name and email of the listed dataset contact") %>%
+  add_row(var ="DOI/s", des = "Doi/s of original files") %>%
+  add_row(var = "BIOMATE_CITE_TAGS", des = "The BIOMATE citation tags that are associated with the data, methods and source repository") %>%
+  add_row(var = "DATA_CITATION/S", des = "The full citations associted with the data" ) %>%
+  add_row(var = "METHOD_CITATION/S", des = "The full citation associated with the method used to analyse the water sample for pigments") %>%
+  
+# Header variables
+  add_row(var = "NUMBER_HEADERS", des = "The number of header variables") %>%
+  add_row(var = "EXPOCODE", des = "The EXPOCODE associated with the data" ) %>% 
+  add_row(var = "SHIP", des = "The vessel on which the data was collected") %>%
+  add_row(var = "TIMEZONE", des = "The timezone the data was collected in") %>%
+  add_row(var = "missing_value", des = "The value that corresponds to missing data within the data table") %>% 
+  add_row(var = "not_detected", des = "The value that corresponds to data not detected in analysis within the data table") %>%
+
+  # Ocean data variables
+  add_row(var = "CTD_IDs", des = "An identifcation for a matching profiling station in the profiling sensor stream") %>% 
+  add_row(var = "DATE", des = "The date of the profiling station") %>% 
+  add_row(var = "TIME_s", des = "The start time of the profiling station") %>%
+  add_row(var = "TIME_b", des = "The bottom time of the profiling start date") %>% 
+  add_row(var = "TIME_e", des = "The end time of the profiling station") %>%
+  add_row(var = "LATITUDE", des = "The start latitude of the profiling station") %>%
+  add_row(var = "LONGITUDE", des = "The start longitude of the profiling station") %>%
+  add_row(var = "STNNBR", des = "The station number of the profiling station") %>% 
+  add_row(var = "CASTNO", des = "The cast number of the profiling station") %>% 
+  add_row(var = "DATE_analyser", des = "The date of sampling as recorded by the analyser") %>%
+  add_row(var = "TIME_analyser", des = "The time of samping as recorded by the analyser") %>%
+  add_row(var = "LAT_analyser", des = "The latitude at sampling as recorded by the analyser") %>%
+  add_row(var = "LON_analyser", des = "The longitude at sampling as recorded by the analyser") %>%
+  add_row(var = "STNNBR_analyser", des = "The station number of the profiling station as recorded by the analyser") %>%
+  add_row(var = "CASTNO_analyser", des = "The cast number of the profiling station as recorded by the analyser") %>%
+  add_row(var = "Sample_ID", des = "The sample identification as recorded by the analyser") %>%
+  add_row(var = "BOTTLE", des = "The rosette bottle number as recorded by the analyser") %>%
+  add_row(var = "DEPTH", des = "The depth the sample was taken") %>% 
+  add_row(var = "POC", des = "Particulate organic carbon") 
+
+  
+colnames(poc_rec) = c("Variable", "Description")
+  
+poc_rec_adj = rbind(rep("Header information", 2), poc_rec[1:9,], rep("Header variables",2), poc_rec[10:15,], rep("Ocean data variables", 2), poc_rec[16:34,])
+
+poc_rec_adj %>% flextable() %>% autofit() %>% merge_h() %>% bold(i = c(1, 11,18)) %>% set_table_properties(layout = "autofit")
 
 ```
-
-
-
 
 
 # References

@@ -1,0 +1,84 @@
+C:/Users/kabaldry/ONEDRI~1/DOCUME~1/R/temp/RtmpsRaHPu/513f0f320ff7608d75f0bf4b/0.txt
+The header line picked: /fields=date,time,station,lat,lon,depth,hpl_id,Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,alpha-beta-Car,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,Chl_a,DV_Chl_a,Chlide_a,Chl_b,DV_Chl_b,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Phytin_a,Phide_a,Pras,Gyro,TChl,PPC,PSC,PSP,Tcar,Tacc,Tpg,DP,TAcc_Tchla,PSC_Tcar,PPC_Tcar,TChl_Tcar,PPC_Tpg,PSP_Tpg,TChla_Tpg,mPF,nPF,pPF
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: Sample_ID
+The variables found: DEPTH
+The variables found: TCHLA
+All good?
+ 
+C:/Users/kabaldry/ONEDRI~1/DOCUME~1/R/temp/RtmpsRaHPu/c559f91cc828391bf1fada7a/0.txt
+The header line picked: /fields=date,time,station,lat,lon,depth,hpl_id,Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,alpha-beta-Car,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,Chl_a,DV_Chl_a,Chlide_a,Chl_b,DV_Chl_b,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Phytin_a,Phide_a,Pras,Gyro,TChl,PPC,PSC,PSP,Tcar,Tacc,Tpg,DP,TAcc_Tchla,PSC_Tcar,PPC_Tcar,TChl_Tcar,PPC_Tpg,PSP_Tpg,TChla_Tpg,mPF,nPF,pPF
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: Sample_ID
+The variables found: DEPTH
+The variables found: TCHLA
+All good?
+ 
+E:/Data_downloads/SeaBASS/318M20110220/HPLC/MV1102_HPLC_pigment.txt
+The header line picked: /fields=date,time,station,lat,lon,depth,hpl_id,Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,alpha-beta-Car,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,Chl_a,DV_Chl_a,Chlide_a,Chl_b,DV_Chl_b,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Phytin_a,Phide_a,Pras,Gyro,TChl,PPC,PSC,PSP,Tcar,Tacc,Tpg,DP,TAcc_Tchla,PSC_Tcar,PPC_Tcar,TChl_Tcar,PPC_Tpg,PSP_Tpg,TChla_Tpg,mPF,nPF,pPF
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: Sample_ID
+The variables found: DEPTH
+The variables found: TCHLA
+All good?
+ 
+E:/Data_downloads/SeaBASS/318M20110220/HPLC/MV1102_HPLC_pigment.txt
+The header line picked: /fields=date,time,station,lat,lon,depth,hpl_id,Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,alpha-beta-Car,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,Chl_a,DV_Chl_a,Chlide_a,Chl_b,DV_Chl_b,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Phytin_a,Phide_a,Pras,Gyro,TChl,PPC,PSC,PSP,Tcar,Tacc,Tpg,DP,TAcc_Tchla,PSC_Tcar,PPC_Tcar,TChl_Tcar,PPC_Tpg,PSP_Tpg,TChla_Tpg,mPF,nPF,pPF
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: Sample_ID
+The variables found: DEPTH
+The variables found: TCHLA
+All good?
+ 
+E:/Data_downloads/SeaBASS/318M20110220/HPLC/MV1102_HPLC_pigment.txt
+The header line picked: /fields=date,time,station,lat,lon,depth,hpl_id,Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,alpha-beta-Car,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,Chl_a,DV_Chl_a,Chlide_a,Chl_b,DV_Chl_b,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Phytin_a,Phide_a,Pras,Gyro,TChl,PPC,PSC,PSP,Tcar,Tacc,Tpg,DP,TAcc_Tchla,PSC_Tcar,PPC_Tcar,TChl_Tcar,PPC_Tpg,PSP_Tpg,TChla_Tpg,mPF,nPF,pPF
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: Sample_ID
+The variables found: DEPTH
+The variables found: TCHLA
+All good?
+ 
+E:/Data_downloads/SeaBASS/318M20110220/HPLC/MV1102_HPLC_pigment.txt
+The header line picked: /fields=date,time,station,lat,lon,depth,hpl_id,Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,alpha-beta-Car,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,Chl_a,DV_Chl_a,Chlide_a,Chl_b,DV_Chl_b,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Phytin_a,Phide_a,Pras,Gyro,TChl,PPC,PSC,PSP,Tcar,Tacc,Tpg,DP,TAcc_Tchla,PSC_Tcar,PPC_Tcar,TChl_Tcar,PPC_Tpg,PSP_Tpg,TChla_Tpg,mPF,nPF,pPF
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: Sample_ID
+The variables found: DEPTH
+The variables found: TCHLA
+All good?
+ 
+C:/Users/kabaldry/ONEDRI~1/DOCUME~1/R/temp/RtmpsRaHPu/56d4c0768d067c98c4c0d9ae/0.txt
+The header line picked: /fields=date,time,station,lat,lon,depth,hpl_id,Tot_Chl_a,Tot_Chl_b,Tot_Chl_c,alpha-beta-Car,But-fuco,Hex-fuco,Allo,Diadino,Diato,Fuco,Perid,Zea,Chl_a,DV_Chl_a,Chlide_a,Chl_b,DV_Chl_b,Chl_c1c2,Chl_c3,Lut,Neo,Viola,Phytin_a,Phide_a,Pras,Gyro,TChl,PPC,PSC,PSP,Tcar,Tacc,Tpg,DP,TAcc_Tchla,PSC_Tcar,PPC_Tcar,TChl_Tcar,PPC_Tpg,PSP_Tpg,TChla_Tpg,mPF,nPF,pPF
+The variables found: STNNBR
+The variables found: DATE_analyser
+The variables found: TIME_analyser
+The variables found: LAT_analyser
+The variables found: LON_analyser
+The variables found: Sample_ID
+The variables found: DEPTH
+The variables found: TCHLA
+All good?
+ 
