@@ -4,3 +4,5 @@
 .Ruserdata
 .Renviron
 .gitconfig
+src/BIO-SHARE/.Renviron
+src/BIO-SHARE/.gitconfig
