@@ -1,0 +1,11 @@
+name: bio-share
+title:
+username:
+account: bio-share
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8109789
+bundleId: 6792261
+url: https://bio-share.shinyapps.io/bio-share/
+when: 1675141478.70914
+lastSyncTime: 1675141478.70914
